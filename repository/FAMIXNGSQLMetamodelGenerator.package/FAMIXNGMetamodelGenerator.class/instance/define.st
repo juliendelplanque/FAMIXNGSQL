@@ -1,12 +1,15 @@
-initialization
+accessing
 define
-
-	self defineFamixClasses.
-	self defineSQL2Classes.
+	self
+		defineFamixMetaModelEntities;
+		defineFamixMetaModelEntitiesRelations;
+		defineFamixMetaModelEntitiesProperties.
 	
-	self defineRelationsForTable.	
-	self defineRelationsForColumn.
-	self defineRelationsForType.
-	self defineRelationsForQuery.
-	self defineRelationsForView.
-	self defineRelationsForFunction.
+	self
+		defineSQLMetaModelEntities;
+		defineRelationsForTable;
+		defineRelationsForColumn;
+		defineRelationsForType;
+		defineRelationsForQuery;
+		defineRelationsForView;
+		defineRelationsForFunction

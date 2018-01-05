@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForType
 
 	(type as: #TType property: #columns)

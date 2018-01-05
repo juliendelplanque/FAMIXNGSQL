@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForView
 
 	(view as: #TView property: #query)

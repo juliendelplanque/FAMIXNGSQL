@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForFunction
 
 	(function as: #TFunction property: #triggers)

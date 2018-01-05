@@ -5,6 +5,6 @@ initialize
 	
 	builder := FamixMetamodelBuilder new.
 	builder 
-		prefix: 'FamixNGTest';
-		packageName: 'FamixNGTest'.
+		prefix: 'FamixNGSQL';
+		packageName: 'FamixNGSQL'.
 	

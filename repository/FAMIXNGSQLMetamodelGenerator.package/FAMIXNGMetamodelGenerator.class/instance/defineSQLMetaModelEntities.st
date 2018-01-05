@@ -1,5 +1,5 @@
-initialization
-defineSQL2Classes
+definitions - SQL
+defineSQLMetaModelEntities
 
 	relationalEntity := builder newClassNamed: #RelationalEntity.
 	namedEntity <|-- relationalEntity.
@@ -46,9 +46,9 @@ defineSQL2Classes
 	dataType := builder newClassNamed: #DataType.
 	type <|-- dataType.
 	
-	rewriteRule := builder newClassNamed: #RewriteRule.
+	"rewriteRule := builder newClassNamed: #RewriteRule.
 	behaviouralEntity <|-- rewriteRule.
 	
 	aggregate := builder newClassNamed: #Aggregate.
-	behaviouralEntity <|-- aggregate.
+	behaviouralEntity <|-- aggregate."
 	

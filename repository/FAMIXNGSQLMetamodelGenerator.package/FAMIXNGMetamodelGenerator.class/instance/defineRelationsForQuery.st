@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForQuery
 
 	(query as: #TQuery property: #withQueries)

@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForColumn
 
 "	(column as: #TColumn property: #fkColumn)

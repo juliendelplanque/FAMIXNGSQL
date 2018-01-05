@@ -1,4 +1,4 @@
-initialization
+definitions - SQL
 defineRelationsForTable 
 
 	(table as: #TTable property: #columns)
