@@ -32,6 +32,6 @@
 		"rewriteRule",
 		"aggregate"
 	],
-	"name" : "FAMIXNGMetamodelGenerator",
+	"name" : "FAMIXNGSQLMetamodelGenerator",
 	"type" : "normal"
 }
