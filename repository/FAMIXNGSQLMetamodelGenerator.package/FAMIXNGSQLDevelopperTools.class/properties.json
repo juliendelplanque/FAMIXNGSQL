@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JulienDelplanque 1/7/2018 14:40",
+	"super" : "Object",
+	"category" : "FAMIXNGSQLMetamodelGenerator",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXNGSQLDevelopperTools",
+	"type" : "normal"
+}

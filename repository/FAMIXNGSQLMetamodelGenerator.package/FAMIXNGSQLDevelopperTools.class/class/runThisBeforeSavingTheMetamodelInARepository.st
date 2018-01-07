@@ -1,0 +1,5 @@
+helpers
+runThisBeforeSavingTheMetamodelInARepository
+	<script>
+	StatefulTraitsManager uniqueInstance cleanAll.
+	StatefulTraitsManager reset.
