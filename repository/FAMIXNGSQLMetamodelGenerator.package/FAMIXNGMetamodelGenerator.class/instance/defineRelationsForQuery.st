@@ -5,6 +5,6 @@ defineRelationsForQuery
 		-*
 	(query as: #TQuery property: #withParentQuery).
 	
-	(query as: #TQuery property: #parentRewriteRule)
+	"(query as: #TQuery property: #parentRewriteRule)
 		*-<>
-	(rewriteRule as: #TRewriteRule property: #queries).
+	(rewriteRule as: #TRewriteRule property: #queries)."

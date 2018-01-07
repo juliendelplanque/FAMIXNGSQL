@@ -5,13 +5,13 @@ defineRelationsForFunction
 		-*
 	(trigger as: #TTrigger property: #function).
 
-	(function as: #TFunction property: #usersAsState)
+	"(function as: #TFunction property: #usersAsState)
 		-*
-	(aggregate as: #TAggregate property: #stateFunction).
+	(aggregate as: #TAggregate property: #stateFunction)."
 
-	(function as: #TFunction property: #usersAsFinal)
+	"(function as: #TFunction property: #usersAsFinal)
 		-*
-	(aggregate as: #TAggregate property: #finalFunction).
+	(aggregate as: #TAggregate property: #finalFunction)."
 
 	(function as: #TFunction property: #queries)
 		<>-*
