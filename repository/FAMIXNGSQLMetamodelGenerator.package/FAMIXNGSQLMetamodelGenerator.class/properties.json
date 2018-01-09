@@ -30,7 +30,8 @@
 		"sequence",
 		"dataType",
 		"rewriteRule",
-		"aggregate"
+		"aggregate",
+		"database"
 	],
 	"name" : "FAMIXNGSQLMetamodelGenerator",
 	"type" : "normal"

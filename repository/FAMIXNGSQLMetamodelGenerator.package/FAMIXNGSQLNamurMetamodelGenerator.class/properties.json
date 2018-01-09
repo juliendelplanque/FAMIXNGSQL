@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "FamixMetamodelGenerator",
+	"category" : "FAMIXNGSQLMetamodelGenerator",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"namedEntity",
+		"entity",
+		"structuralEntity",
+		"column",
+		"table"
+	],
+	"name" : "FAMIXNGSQLNamurMetamodelGenerator",
+	"type" : "normal"
+}

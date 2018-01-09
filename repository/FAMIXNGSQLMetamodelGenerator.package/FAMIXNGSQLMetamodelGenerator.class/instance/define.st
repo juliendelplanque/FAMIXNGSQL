@@ -7,6 +7,7 @@ define
 	
 	self
 		defineSQLMetaModelEntities;
+		defineSQLMetaModelInheritanceRelations;
 		defineRelationsForTable;
 		defineRelationsForColumn;
 		defineRelationsForType;

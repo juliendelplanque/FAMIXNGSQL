@@ -1,0 +1,5 @@
+accessing
+define
+	self
+		defineSQLMetaModelBasicEntities
+		defineSQLMetaModelStructuralEntities

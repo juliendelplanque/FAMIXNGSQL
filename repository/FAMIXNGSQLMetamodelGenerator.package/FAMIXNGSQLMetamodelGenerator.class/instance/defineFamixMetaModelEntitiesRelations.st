@@ -1,10 +1,10 @@
 definitions - FAMIX
 defineFamixMetaModelEntitiesRelations
 	"Inheritance relations definitions."
-	namedEntity --|> entity.
-	sourceLanguage --|> namedEntity.
-	behaviouralEntity --|> namedEntity.
-	containerEntity --|> namedEntity.
-	scopingEntity --|> containerEntity.
-	type --|> containerEntity.
-	namespace --|> scopingEntity.
+	entity <|-- namedEntity.
+	namedEntity <|-- sourceLanguage.
+	namedEntity <|-- behaviouralEntity.
+	namedEntity <|-- containerEntity.
+	containerEntity <|-- scopingEntity.
+	containerEntity <|-- type.
+	scopingEntity <|-- namespace.
