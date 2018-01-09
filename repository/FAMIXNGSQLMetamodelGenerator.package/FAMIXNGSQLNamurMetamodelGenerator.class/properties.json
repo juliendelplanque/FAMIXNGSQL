@@ -10,7 +10,14 @@
 		"entity",
 		"structuralEntity",
 		"column",
-		"table"
+		"table",
+		"codeFragment",
+		"storedProcedureCall",
+		"columnAccess",
+		"tableAccess",
+		"storedProcedure",
+		"behaviouralEntity",
+		"behaviouralEntityWithSourceCode"
 	],
 	"name" : "FAMIXNGSQLNamurMetamodelGenerator",
 	"type" : "normal"
