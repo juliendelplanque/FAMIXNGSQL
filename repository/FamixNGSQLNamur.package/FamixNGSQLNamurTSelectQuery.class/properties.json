@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "FamixNGSQLNamur",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#calls => FMMany type: #FamixNGSQLNamurTStoredProcedureCall opposite: #callingSelectQuery",
+		"#viewDefined => FMOne type: #FamixNGSQLNamurTView opposite: #selectQuery"
+	],
+	"name" : "FamixNGSQLNamurTSelectQuery",
+	"type" : "normal"
+}

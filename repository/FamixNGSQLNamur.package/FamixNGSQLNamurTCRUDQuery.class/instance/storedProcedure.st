@@ -1,0 +1,6 @@
+accessing
+storedProcedure
+
+	<container>
+
+	^ storedProcedure

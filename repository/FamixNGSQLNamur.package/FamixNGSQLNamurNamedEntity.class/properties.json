@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FamixNGSQLNamurEntity",
+	"category" : "FamixNGSQLNamur",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "FamixNGSQLNamurNamedEntity",
+	"type" : "normal"
+}

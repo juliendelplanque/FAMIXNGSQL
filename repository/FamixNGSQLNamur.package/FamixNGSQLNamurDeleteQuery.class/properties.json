@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FamixNGSQLNamurCRUDQuery",
+	"category" : "FamixNGSQLNamur",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FamixNGSQLNamurDeleteQuery",
+	"type" : "normal"
+}

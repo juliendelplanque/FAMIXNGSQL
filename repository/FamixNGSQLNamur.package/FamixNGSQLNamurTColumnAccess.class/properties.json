@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "FamixNGSQLNamur",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#column => FMOne type: #FamixNGSQLNamurTColumn opposite: #accesses",
+		"#accessingStoredProcedures => FMOne type: #FamixNGSQLNamurTStoredProcedure opposite: #columnAccesses",
+		"#accessingCRUDQuery => FMOne type: #FamixNGSQLNamurTCRUDQuery opposite: #columnsAccessed"
+	],
+	"name" : "FamixNGSQLNamurTColumnAccess",
+	"type" : "normal"
+}
