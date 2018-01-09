@@ -8,4 +8,5 @@ define
 		defineSQLMetaModelBehaviouralEntities;
 		"Then the other relations between them."
 		defineSQLMetaModelStructuralRelations;
-		defineSQLCodeFragmentRelations
+		defineSQLCodeFragmentRelations;
+		defineSQLMetaModelBehaviouralRelations

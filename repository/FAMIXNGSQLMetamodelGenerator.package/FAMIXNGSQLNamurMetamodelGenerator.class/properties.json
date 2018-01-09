@@ -17,7 +17,15 @@
 		"tableAccess",
 		"storedProcedure",
 		"behaviouralEntity",
-		"behaviouralEntityWithSourceCode"
+		"behaviouralEntityWithSourceCode",
+		"constraint",
+		"query",
+		"crudQuery",
+		"selectQuery",
+		"insertQuery",
+		"deleteQuery",
+		"updateQuery",
+		"view"
 	],
 	"name" : "FAMIXNGSQLNamurMetamodelGenerator",
 	"type" : "normal"
