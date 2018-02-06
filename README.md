@@ -80,5 +80,5 @@ you need to:
 ```
 StatefulTraitsManager uniqueInstance cleanAll.
 StatefulTraitsManager reset.
-StatefulTraitsManager uniqueInstance managePackageNamed: #FamixNGTest.
+StatefulTraitsManager uniqueInstance managePackageNamed: #FamixNGSQL.
 ```
