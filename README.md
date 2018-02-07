@@ -49,7 +49,7 @@ StatefulTraitsManager reset.
 ```
 3. You can now re-generate the meta-model:
 ```
-g := FAMIXNGMetamodelGenerator new.
+g := FAMIXNGSQLMetamodelGenerator new.
 g cleanPackage.
 g generate.
 ```
@@ -80,5 +80,5 @@ you need to:
 ```
 StatefulTraitsManager uniqueInstance cleanAll.
 StatefulTraitsManager reset.
-StatefulTraitsManager uniqueInstance managePackageNamed: #FamixNGTest.
+StatefulTraitsManager uniqueInstance managePackageNamed: #FamixNGSQL.
 ```
