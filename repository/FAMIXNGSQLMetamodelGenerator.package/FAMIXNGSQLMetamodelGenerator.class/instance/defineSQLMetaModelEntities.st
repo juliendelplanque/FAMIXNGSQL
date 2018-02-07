@@ -1,23 +1,35 @@
 definitions - SQL
 defineSQLMetaModelEntities
 	"Abstract entities."
-	relationalEntity := builder newClassNamed: #RelationalEntity.
-	query := builder newClassNamed: #Query.
-	"Concrete entities."
-	database := builder newClassNamed: #Database.
+	structuralEntity := builder newClassNamed: #StructuralEntity.
+	constraint := builder newClassNamed: #Constraint.
+	columnsContainer := builder newClassNamed: #ColumnsContainer.
+	queryContainer := builder newClassNamed: #QueryContainer.
+	crudQuery := builder newClassNamed: #CRUDQuery.
+	reference := builder newClassNamed: #Reference.
+	"Concrete structural entities."
 	table := builder newClassNamed: #Table.
 	column := builder newClassNamed: #Column.
+	type := builder newClassNamed: #Type.
+	checkConstraint := builder newClassNamed: #CheckConstraint.
+	primaryKeyConstraint := builder newClassNamed: #PrimaryKeyConstraint.
+	foreignKeyConstraint := builder newClassNamed: #ForeignKeyConstraint.
+	notNullConstraint := builder newClassNamed: #NotNullConstraint.
+	uniqueConstraint := builder newClassNamed: #UniqueConstraint.
+	"Concrete behavioural entities."
 	view := builder newClassNamed: #View.
-	function := builder newClassNamed: #Function.
+	storedProcedure := builder newClassNamed: #StoredProcedure.
+	triggerStoredProcedure := builder newClassNamed: #TriggerStoredProcedure.
 	trigger := builder newClassNamed: #Trigger.
-	expression := builder newClassNamed: #Expression.
 	selectQuery := builder newClassNamed: #SelectQuery.
 	insertQuery := builder newClassNamed: #InsertQuery.
 	updateQuery := builder newClassNamed: #UpdateQuery.
 	deleteQuery := builder newClassNamed: #DeleteQuery.
-	constraint := builder newClassNamed: #Constraint.
-	sequence := builder newClassNamed: #Sequence.
-	dataType := builder newClassNamed: #DataType.
-	"rewriteRule := builder newClassNamed: #RewriteRule.
-	aggregate := builder newClassNamed: #Aggregate."
-	
+	parameter := builder newClassNamed: #Parameter.
+	localVariable := builder newClassNamed: #LocalVariable.
+	"Concrete reference entities."
+	tableReference := builder newClassNamed: #TableReference.
+	leafAccess := builder newClassNamed: #LeafAccess.
+	columnReference := builder newClassNamed: #ColumnReference.
+	typeReference := builder newClassNamed: #TypeReference.
+	storedProcedureCall := builder newClassNamed: #StoredProcedureCall

@@ -2,7 +2,7 @@ meta-model regeneration
 regenerateMetaModel
 	<script>
 	"1. Ensure that no more instances of the meta-model exist in the system."
-	FamixNGSQLEntity allSubInstances do: [ :e | e becomeForward: nil ].
+	Smalltalk globals at: #FamixNGSQLEntity ifPresent: [ :c | c allSubInstances do: [ :e | e becomeForward: nil ] ].
 	Smalltalk garbageCollect.
 	
 	"2. Reset stateful traits."

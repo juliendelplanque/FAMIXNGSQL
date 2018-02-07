@@ -1,4 +1,4 @@
-accessing
+definition
 define
 	self
 		defineFamixMetaModelEntities;
@@ -8,9 +8,5 @@ define
 	self
 		defineSQLMetaModelEntities;
 		defineSQLMetaModelInheritanceRelations;
-		defineRelationsForTable;
-		defineRelationsForColumn;
-		defineRelationsForType;
-		defineRelationsForQuery;
-		defineRelationsForView;
-		defineRelationsForFunction
+		defineSQLStructuralEntitiesRelations;
+		defineSQLReferenceEntitiesRelations

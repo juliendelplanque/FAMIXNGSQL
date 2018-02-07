@@ -6,5 +6,6 @@ initialize
 	builder := FamixMetamodelBuilder new.
 	builder 
 		prefix: 'FamixNGSQL';
-		packageName: 'FamixNGSQL'.
+		packageName: 'FamixNGSQL';
+		traitsFlattening: true
 	

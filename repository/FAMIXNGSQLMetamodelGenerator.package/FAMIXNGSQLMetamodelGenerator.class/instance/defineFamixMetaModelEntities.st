@@ -1,11 +1,9 @@
 definitions - FAMIX
 defineFamixMetaModelEntities
-	"Define basic entities that will be used by the SQL meta-model."
 	entity := builder newClassNamed: #Entity.
+	sourceAnchor := builder newClassNamed: #SourceAnchor.
 	namedEntity := builder newClassNamed: #NamedEntity.
+	sourcedEntity := builder newClassNamed: #SourcedEntity.
+	leafEntity := builder newClassNamed: #LeafEntity.
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
-	containerEntity := builder newClassNamed: #ContainerEntity.
-	scopingEntity := builder newClassNamed: #ScopingEntity.
-	namespace := builder newClassNamed: #Namespace.
-	sourceLanguage := builder newClassNamed: #SourceLanguage.
-	type := builder newClassNamed: #Type.
+	

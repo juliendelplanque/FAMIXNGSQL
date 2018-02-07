@@ -3,7 +3,7 @@ baseline: spec
 	<baseline>
 	spec for: #'common' do: [
 		spec
-			package: #'FAMIXNGSQLMetamodelGenerator';
+			package: #FAMIXNGSQLMetamodelGeneratorOld;
 			package: #'FAMIXNGSQLNamur';
 			group: 'default' with: #('FAMIXNGSQLNamur');
-			group: 'meta-builder' with: #('FAMIXNGSQLMetamodelGenerator') ]
+			group: 'meta-builder' with: #(#FAMIXNGSQLMetamodelGeneratorOld) ]
