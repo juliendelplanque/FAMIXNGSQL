@@ -1,5 +1,10 @@
 definitions - SQL
 defineSQLReferenceEntitiesRelations
+	"A reference contains a source anchor"
+	(reference as: #TReference property: #sourceAnchor)
+		<>-
+	(sourceAnchor as: #TSourceAnchor property: #reference).
+	
 	"A leaf access references a leaf entity."
 	(leafAccess as: #TLeafAccess property: #leafEntity)
 		*-
@@ -28,4 +33,9 @@ defineSQLReferenceEntitiesRelations
 	"A stored procedure call can contain other references (in its arguments)."
 	(storedProcedureCall as: #TStoredProcedureCall property: #arguments)
 		<>-*
-	(reference as: #TReference property: #storedProcedureContainer)
+	(reference as: #TReference property: #storedProcedureContainer).
+	
+	"A CRUDQuery can contain references."
+	(crudQuery as: #TCRUDQuery property: #references)
+		<>-*
+	(reference as: #TReference property: #crudQueryContainer)

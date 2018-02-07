@@ -5,7 +5,7 @@ defineSQLMetaModelInheritanceRelations
 	structuralEntity <|-- constraint.
 	structuralEntity <|-- columnsContainer.
 	behaviouralEntity <|-- queryContainer.
-	behaviouralEntity <|-- crudQuery.
+	queryContainer <|-- crudQuery.
 	entity <|-- reference.
 	"Concrete structural entities inheritance relations."
 	columnsContainer <|-- table.

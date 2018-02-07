@@ -9,4 +9,6 @@ define
 		defineSQLMetaModelEntities;
 		defineSQLMetaModelInheritanceRelations;
 		defineSQLStructuralEntitiesRelations;
+		defineSQLBehaviouralEntitiesRelations;
+		defineSQLCRUDQueriesRelations;
 		defineSQLReferenceEntitiesRelations
