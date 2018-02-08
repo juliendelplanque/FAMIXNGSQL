@@ -21,15 +21,15 @@ defineSQLMetaModelEntities
 	storedProcedure := builder newClassNamed: #StoredProcedure comment: self storedProcedureComment.
 	triggerStoredProcedure := builder newClassNamed: #TriggerStoredProcedure comment: self triggerStoredProcedureComment.
 	trigger := builder newClassNamed: #Trigger comment: self triggerComment.
-	selectQuery := builder newClassNamed: #SelectQuery.
-	insertQuery := builder newClassNamed: #InsertQuery.
-	updateQuery := builder newClassNamed: #UpdateQuery.
-	deleteQuery := builder newClassNamed: #DeleteQuery.
-	parameter := builder newClassNamed: #Parameter.
-	localVariable := builder newClassNamed: #LocalVariable.
+	selectQuery := builder newClassNamed: #SelectQuery comment: self selectQueryComment.
+	insertQuery := builder newClassNamed: #InsertQuery comment: self insertQueryComment.
+	updateQuery := builder newClassNamed: #UpdateQuery comment: self updateQueryComment.
+	deleteQuery := builder newClassNamed: #DeleteQuery comment: self deleteQueryComment.
+	parameter := builder newClassNamed: #Parameter comment: self parameterComment.
+	localVariable := builder newClassNamed: #LocalVariable comment: self localVariableComment.
 	"Concrete reference entities."
-	tableReference := builder newClassNamed: #TableReference.
-	leafAccess := builder newClassNamed: #LeafAccess.
-	columnReference := builder newClassNamed: #ColumnReference.
-	typeReference := builder newClassNamed: #TypeReference.
-	storedProcedureCall := builder newClassNamed: #StoredProcedureCall
+	tableReference := builder newClassNamed: #TableReference comment: self tableReferenceComment.
+	leafAccess := builder newClassNamed: #LeafAccess comment: self leafAccessComment.
+	columnReference := builder newClassNamed: #ColumnReference comment: self columnReferenceComment.
+	typeReference := builder newClassNamed: #TypeReference comment: self typeReferenceComment.
+	storedProcedureCall := builder newClassNamed: #StoredProcedureCall comment: self storedProcedureCallComment
