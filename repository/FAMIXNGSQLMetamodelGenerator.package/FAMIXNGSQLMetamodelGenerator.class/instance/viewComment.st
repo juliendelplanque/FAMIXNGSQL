@@ -1,0 +1,3 @@
+comments - SQL
+viewComment
+	^ 'I am a view. I can be used transparently as a table but I do not hold data. My data are fetched by the SELECT query which defines myself.'

@@ -1,32 +1,26 @@
 definitions - SQL
 defineSQLMetaModelEntities
 	"Abstract entities."
-	structuralEntity := builder newClassNamed: #StructuralEntity.
-	structuralEntity
-		comment: 'I am an abstract superclass for structural entities. A structural entity is an entity that defines how data are structured by the database.'.
-	constraint := builder newClassNamed: #Constraint.
-	constraint
-		comment: 'I am an abstract superclass for constraints. A constraint restrict the possible values that can be stored in a column of a table.'.
-	columnsContainer := builder newClassNamed: #ColumnsContainer.
-	columnsContainer
-		comment: 'I am an abstract super ckass for entities that contain columns. Two of my well-known subclasses are the table and the view.'.
-	queryContainer := builder newClassNamed: #QueryContainer.
-	crudQuery := builder newClassNamed: #CRUDQuery.
-	reference := builder newClassNamed: #Reference.
+	structuralEntity := builder newClassNamed: #StructuralEntity comment: self structuralEntityComment.
+	constraint := builder newClassNamed: #Constraint comment: self constraintComment.
+	columnsContainer := builder newClassNamed: #ColumnsContainer comment: self columnsContainerComment.
+	queryContainer := builder newClassNamed: #QueryContainer comment: self queryContainerComment.
+	crudQuery := builder newClassNamed: #CRUDQuery comment: self crudQueryComment.
+	reference := builder newClassNamed: #Reference comment: self referenceComment.
 	"Concrete structural entities."
-	table := builder newClassNamed: #Table.
-	column := builder newClassNamed: #Column.
-	type := builder newClassNamed: #Type.
-	checkConstraint := builder newClassNamed: #CheckConstraint.
-	primaryKeyConstraint := builder newClassNamed: #PrimaryKeyConstraint.
-	foreignKeyConstraint := builder newClassNamed: #ForeignKeyConstraint.
-	notNullConstraint := builder newClassNamed: #NotNullConstraint.
-	uniqueConstraint := builder newClassNamed: #UniqueConstraint.
+	table := builder newClassNamed: #Table comment: self tableComment.
+	column := builder newClassNamed: #Column comment: self columnComment.
+	type := builder newClassNamed: #Type comment: self typeComment.
+	checkConstraint := builder newClassNamed: #CheckConstraint comment: self checkConstraintComment.
+	primaryKeyConstraint := builder newClassNamed: #PrimaryKeyConstraint comment: self primaryKeyConstraintComment.
+	foreignKeyConstraint := builder newClassNamed: #ForeignKeyConstraint comment: self foreignKeyConstraintComment.
+	notNullConstraint := builder newClassNamed: #NotNullConstraint comment: self nullConstraintComment.
+	uniqueConstraint := builder newClassNamed: #UniqueConstraint comment: self uniqueConstraintComment.
 	"Concrete behavioural entities."
-	view := builder newClassNamed: #View.
-	storedProcedure := builder newClassNamed: #StoredProcedure.
-	triggerStoredProcedure := builder newClassNamed: #TriggerStoredProcedure.
-	trigger := builder newClassNamed: #Trigger.
+	view := builder newClassNamed: #View comment: self viewComment.
+	storedProcedure := builder newClassNamed: #StoredProcedure comment: self storedProcedureComment.
+	triggerStoredProcedure := builder newClassNamed: #TriggerStoredProcedure comment: self triggerStoredProcedureComment.
+	trigger := builder newClassNamed: #Trigger comment: self triggerComment.
 	selectQuery := builder newClassNamed: #SelectQuery.
 	insertQuery := builder newClassNamed: #InsertQuery.
 	updateQuery := builder newClassNamed: #UpdateQuery.
