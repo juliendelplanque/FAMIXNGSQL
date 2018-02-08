@@ -2,28 +2,9 @@
 A meta-model for SQL databases using FAMIXNG with its generator.
 
 ## Install
-From a fresh Pharo 6.1 image, execute the following script in a playground:
+Download the latest FamixNG image from the [CI](https://ci.inria.fr/moose/view/Moose%206.1/job/FamixNG/), open a playground and execute the following script:
+
 ```
-"-- Update Iceberg --"
-MetacelloPharoPlatform select. #( 'BaselineOfTonel' 'BaselineOfLibGit' 'BaselineOfIceberg' 'Iceberg-UI'  'Iceberg-Plugin-GitHub' 'Iceberg-Plugin'  'Iceberg-Metacello-Integration'  'Iceberg-Libgit-Tonel'  'Iceberg-Libgit-Filetree'  'Iceberg-Libgit'  'Iceberg'  'LibGit-Core' 'BaselineOfTonel' 'Iceberg-Libgit-Tonel' 'MonticelloTonel-Tests'  'MonticelloTonel-FileSystem' 'MonticelloTonel-Core'
- ) do: [ :each | (each asPackageIfAbsent: [ nil ]) ifNotNil: #removeFromSystem ]. ReRuleManager reset. Metacello new baseline: 'Iceberg'; repository: 'github://pharo-vcs/iceberg:v0.6.4'; load. 5 timesRepeat: [ Smalltalk garbageCollect ].
-(Smalltalk classNamed: #Iceberg) enableMetacelloIntegration: true.
-
-"--  Load FAMIXNG  --"
-
-target := 'Moose' asFileReference ensureCreateDirectory.
-repository := IceRepositoryCreator new
-	remote: (IceRemote url: 'git@github.com:pavel-krivanek/Moose.git');
-	location: target;
-	subdirectory:'src/all';
-	createRepository.
-repository backend checkoutBranch: 'FamixNG-metamodelBuilder-qa'.
-repository register.
-Metacello new
-  baseline: 'Moose';
-  repository: 'tonel://./Moose/src/all';
-  load.
-
 Metacello new
   repository: 'github://juliendelplanque/FAMIXNGSQL/repository';
   baseline: 'FAMIXNGSQL';
