@@ -2,8 +2,14 @@ definitions - SQL
 defineSQLMetaModelEntities
 	"Abstract entities."
 	structuralEntity := builder newClassNamed: #StructuralEntity.
+	structuralEntity
+		comment: 'I am an abstract superclass for structural entities. A structural entity is an entity that defines how data are structured by the database.'.
 	constraint := builder newClassNamed: #Constraint.
+	constraint
+		comment: 'I am an abstract superclass for constraints. A constraint restrict the possible values that can be stored in a column of a table.'.
 	columnsContainer := builder newClassNamed: #ColumnsContainer.
+	columnsContainer
+		comment: 'I am an abstract super ckass for entities that contain columns. Two of my well-known subclasses are the table and the view.'.
 	queryContainer := builder newClassNamed: #QueryContainer.
 	crudQuery := builder newClassNamed: #CRUDQuery.
 	reference := builder newClassNamed: #Reference.

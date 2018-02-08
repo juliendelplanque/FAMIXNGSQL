@@ -1,10 +1,5 @@
 definitions - SQL
 defineSQLReferenceEntitiesRelations
-	"A reference contains a source anchor"
-	(reference as: #TReference property: #sourceAnchor)
-		<>-
-	(sourceAnchor as: #TSourceAnchor property: #reference).
-	
 	"A leaf access references a leaf entity."
 	(leafAccess as: #TLeafAccess property: #leafEntity)
 		*-

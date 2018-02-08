@@ -1,5 +1,10 @@
 definitions - SQL
 defineSQLBehaviouralEntitiesRelations
+	"A sourced entity contains a source anchor"
+	(sourcedEntity as: #TSourcedEntity property: #sourceAnchor)
+		<>-
+	(sourceAnchor as: #TSourceAnchor property: #behaviouralEntity).
+	
 	"A CheckConstraint can call StoredProcedures"
 	(checkConstraint as: #TCheckConstraint property: #storedProceduresCalled)
 		*-*
