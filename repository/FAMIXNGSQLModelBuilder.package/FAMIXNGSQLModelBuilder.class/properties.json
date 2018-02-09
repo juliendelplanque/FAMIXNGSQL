@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JulienDelplanque 2/9/2018 15:02",
+	"super" : "Object",
+	"category" : "FAMIXNGSQLModelBuilder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"databaseName",
+		"connection",
+		"metadata"
+	],
+	"name" : "FAMIXNGSQLModelBuilder",
+	"type" : "normal"
+}
