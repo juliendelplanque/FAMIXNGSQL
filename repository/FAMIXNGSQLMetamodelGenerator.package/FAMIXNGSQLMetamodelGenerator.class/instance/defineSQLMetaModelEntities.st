@@ -3,7 +3,7 @@ defineSQLMetaModelEntities
 	"Abstract entities."
 	structuralEntity := builder newClassNamed: #StructuralEntity comment: self structuralEntityComment.
 	constraint := builder newClassNamed: #Constraint comment: self constraintComment.
-	columnsContainer := builder newClassNamed: #ColumnsContainer comment: self columnsContainerComment.
+	tColumnsContainer := builder newTraitNamed: #ColumnsContainer comment: self columnsContainerComment.
 	queryContainer := builder newClassNamed: #QueryContainer comment: self queryContainerComment.
 	crudQuery := builder newClassNamed: #CRUDQuery comment: self crudQueryComment.
 	reference := builder newClassNamed: #Reference comment: self referenceComment.
@@ -18,6 +18,7 @@ defineSQLMetaModelEntities
 	uniqueConstraint := builder newClassNamed: #UniqueConstraint comment: self uniqueConstraintComment.
 	"Concrete behavioural entities."
 	view := builder newClassNamed: #View comment: self viewComment.
+	derivedTable := builder newClassNamed: #DerivedTable comment: self derivedTableComment.
 	storedProcedure := builder newClassNamed: #StoredProcedure comment: self storedProcedureComment.
 	triggerStoredProcedure := builder newClassNamed: #TriggerStoredProcedure comment: self triggerStoredProcedureComment.
 	trigger := builder newClassNamed: #Trigger comment: self triggerComment.
@@ -29,6 +30,8 @@ defineSQLMetaModelEntities
 	localVariable := builder newClassNamed: #LocalVariable comment: self localVariableComment.
 	"Concrete reference entities."
 	tableReference := builder newClassNamed: #TableReference comment: self tableReferenceComment.
+	viewReference := builder newClassNamed: #ViewReference comment: self viewReferenceComment.
+	derivedTableReference := builder newClassNamed: #DerivedTableReference comment: self derivedTableReferenceComment.
 	leafAccess := builder newClassNamed: #LeafAccess comment: self leafAccessComment.
 	columnReference := builder newClassNamed: #ColumnReference comment: self columnReferenceComment.
 	typeReference := builder newClassNamed: #TypeReference comment: self typeReferenceComment.

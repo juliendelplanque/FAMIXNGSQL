@@ -6,14 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"namedEntity",
 		"sourcedEntity",
 		"leafEntity",
 		"behaviouralEntity",
 		"entity",
 		"sourceAnchor",
 		"constraint",
-		"columnsContainer",
 		"queryContainer",
 		"crudQuery",
 		"table",
@@ -40,7 +38,12 @@
 		"columnReference",
 		"typeReference",
 		"storedProcedureCall",
-		"structuralEntity"
+		"structuralEntity",
+		"derivedTable",
+		"viewReference",
+		"derivedTableReference",
+		"tNamedEntity",
+		"tColumnsContainer"
 	],
 	"name" : "FAMIXNGSQLMetamodelGenerator",
 	"type" : "normal"

@@ -1,12 +1,12 @@
 definitions - FAMIX
 defineFamixMetaModelEntitiesProperties
-	(namedEntity as: #TNamedEntity) trait
+	tNamedEntity
 		property: #name type: #String.
 		
-	(sourcedEntity as: #TSourcedEntity) trait
+	(sourcedEntity as: #TSourcedEntity)
 		property: #sourceCode type: #String.
 		
-	(sourceAnchor as: #TSourceAnchor) trait
+	(sourceAnchor as: #TSourceAnchor)
 		property: #lineBegin type: #Integer;
 		property: #lineEnd type: #Integer;
 		property: #columnBegin type: #Integer;

@@ -1,14 +1,13 @@
 definitions - SQL
 defineSQLMetaModelInheritanceRelations
 	"Abstract entities inheritance relations."
-	namedEntity <|-- structuralEntity.
+	tNamedEntity <|-- structuralEntity.
 	structuralEntity <|-- constraint.
-	structuralEntity <|-- columnsContainer.
 	behaviouralEntity <|-- queryContainer.
 	queryContainer <|-- crudQuery.
 	sourcedEntity <|-- reference.
 	"Concrete structural entities inheritance relations."
-	columnsContainer <|-- table.
+	tColumnsContainer <|-- table.
 	structuralEntity <|-- column.
 	structuralEntity <|-- type.
 	behaviouralEntity <|-- checkConstraint.
@@ -18,8 +17,11 @@ defineSQLMetaModelInheritanceRelations
 	constraint <|-- notNullConstraint.
 	constraint <|-- uniqueConstraint.
 	"Concrete behavioural entities inheritance relations."
-	columnsContainer <|-- view.
+	tColumnsContainer <|-- view.
 	queryContainer <|-- view.
+	tNamedEntity <|-- view.
+	tColumnsContainer <|-- derivedTable.
+	queryContainer <|-- derivedTable.
 	queryContainer <|-- storedProcedure.
 	storedProcedure <|-- triggerStoredProcedure.
 	behaviouralEntity <|-- trigger.
@@ -31,6 +33,8 @@ defineSQLMetaModelInheritanceRelations
 	leafEntity <|-- localVariable.
 	"Concrete reference entities inheritance relations."
 	reference <|-- tableReference.
+	reference <|-- tableReference.
+	reference <|-- viewReference.
 	reference <|-- leafAccess.
 	reference <|-- columnReference.
 	reference <|-- typeReference.

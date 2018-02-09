@@ -1,7 +1,7 @@
 definitions - SQL
 defineSQLStructuralEntitiesRelations
 	"A columns container contains columns."
-	(columnsContainer as: #TColumnsContainer property: #columns)
+	(tColumnsContainer as: #TColumnsContainer property: #columns)
 		<>-*
 	(column as: #TColumn property: #container).
 	

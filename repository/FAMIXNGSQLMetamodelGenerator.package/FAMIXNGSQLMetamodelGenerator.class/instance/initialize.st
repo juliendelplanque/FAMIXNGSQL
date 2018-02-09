@@ -4,8 +4,8 @@ initialize
 	super initialize.
 	
 	builder := FamixMetamodelBuilder new.
-	builder 
-		prefix: 'FamixNGSQL';
-		packageName: 'FamixNGSQL';
+	builder
+		packageName: self class packageName;
+		prefix: self class prefix;
 		traitsFlattening: true
 	

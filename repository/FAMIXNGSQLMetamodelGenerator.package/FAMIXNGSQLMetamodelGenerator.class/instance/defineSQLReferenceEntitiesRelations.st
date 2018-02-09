@@ -15,6 +15,16 @@ defineSQLReferenceEntitiesRelations
 		*-
 	(table as: #TTable property: #references).
 	
+	"A view reference references a view."
+	(viewReference as: #TViewReference property: #view)
+		*-
+	(view as: #TView property: #references).
+	
+	"A derived table reference references a derived table."
+	(derivedTableReference as: #TDerivedTableReference property: #derivedTable)
+		*-
+	(derivedTable as: #TDerivedTable property: #references).
+	
 	"A column reference references a column."
 	(columnReference as: #TColumnReference property: #column)
 		*-

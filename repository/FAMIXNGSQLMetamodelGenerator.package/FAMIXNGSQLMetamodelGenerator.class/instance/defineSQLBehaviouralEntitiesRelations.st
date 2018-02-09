@@ -13,7 +13,17 @@ defineSQLBehaviouralEntitiesRelations
 	"A View is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
 	(view as: #TView property: #query)
 		<>-
-	(selectQuery as: #TSelectQuery property: #viewDefined).
+	(selectQuery as: #TSelectQuery property: #viewDefining).
+	
+	"A DerivedTable is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
+	(derivedTable as: #TDerivedTable property: #query)
+		<>-
+	(selectQuery as: #TSelectQuery property: #derivedTableDefining).
+	
+	"A SelectQuery can define multiple derived tables."
+	(selectQuery as: #TSelectQuery property: #derivedTablesDefined)
+		<>-*
+	(derivedTable as: #TDerivedTable property: #parentQuery).
 	
 	"A StoredProcedure has a return type."
 	(storedProcedure as: #TStoredProcedure property: #returnType)
