@@ -8,7 +8,8 @@
 	"instvars" : [
 		"databaseName",
 		"connection",
-		"metadata"
+		"metadata",
+		"pgToFamixEntities"
 	],
 	"name" : "FAMIXNGSQLModelBuilder",
 	"type" : "normal"

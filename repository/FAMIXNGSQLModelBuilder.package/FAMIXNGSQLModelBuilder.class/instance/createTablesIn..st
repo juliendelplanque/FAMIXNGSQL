@@ -6,11 +6,14 @@ createTablesIn: mooseModel
 						name: pgTable name;
 						mooseModel: mooseModel;
 						yourself.
+		pgToFamixEntities at: pgTable put: table.
 						
 		pgTable columns do: [ :pgColumn |
-			FmxSQLColumn new
-				name: pgColumn name;
-				mooseModel: mooseModel;
-				table: table;
-				type: (self typeNamed: pgColumn datatype name in: mooseModel);
-				yourself ] ]
+			pgToFamixEntities
+				at: pgColumn
+				put: (FmxSQLColumn new
+						name: pgColumn name;
+						mooseModel: mooseModel;
+						table: table;
+						type: (pgToFamixEntities at: pgColumn datatype);
+						yourself) ] ]

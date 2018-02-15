@@ -5,11 +5,16 @@ buildModel
 	mooseModel := MooseModel new
 						name: self databaseName;
 						yourself.
+	pgToFamixEntities := Dictionary new.
 	self
 		loadMetaData;
 		createTypesIn: mooseModel;
 		createTablesIn: mooseModel;
+		createConstraintsIn: mooseModel;
 		createViewsIn: mooseModel;
 		createStoredProceduresIn: mooseModel;
 		createTriggersIn: mooseModel.
+	
+	pgToFamixEntities := nil.
+	
 	^ mooseModel
