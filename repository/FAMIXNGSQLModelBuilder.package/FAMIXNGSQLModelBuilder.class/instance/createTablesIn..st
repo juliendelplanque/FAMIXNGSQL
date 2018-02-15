@@ -14,6 +14,6 @@ createTablesIn: mooseModel
 				put: (FmxSQLColumn new
 						name: pgColumn name;
 						mooseModel: mooseModel;
-						table: table;
+						columnsContainer: table;
 						type: (pgToFamixEntities at: pgColumn datatype);
 						yourself) ] ]
