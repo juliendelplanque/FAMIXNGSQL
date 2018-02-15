@@ -7,6 +7,7 @@ buildModel
 						yourself.
 	self
 		loadMetaData;
+		createTypesIn: mooseModel;
 		createTablesIn: mooseModel;
 		createViewsIn: mooseModel;
 		createStoredProceduresIn: mooseModel;

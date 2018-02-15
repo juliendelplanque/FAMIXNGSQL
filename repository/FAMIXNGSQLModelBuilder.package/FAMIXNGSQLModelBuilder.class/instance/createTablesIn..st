@@ -11,5 +11,6 @@ createTablesIn: mooseModel
 			FmxSQLColumn new
 				name: pgColumn name;
 				mooseModel: mooseModel;
-				table: table
+				table: table;
+				type: (self typeNamed: pgColumn datatype name in: mooseModel);
 				yourself ] ]
