@@ -3,7 +3,7 @@ defineSQLStructuralEntitiesRelations
 	"A columns container contains columns."
 	(tColumnsContainer as: #TColumnsContainer property: #columns)
 		<>-*
-	(column as: #TColumn property: #container).
+	(column as: #TColumn property: #table).
 	
 	"A column references a type."
 	(column as: #TColumn property: #type)
