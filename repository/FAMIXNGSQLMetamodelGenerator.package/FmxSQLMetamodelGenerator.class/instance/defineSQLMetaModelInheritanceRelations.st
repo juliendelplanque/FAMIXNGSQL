@@ -27,6 +27,7 @@ defineSQLMetaModelInheritanceRelations
 	tNamedEntity <|-- storedProcedure.
 	storedProcedure <|-- triggerStoredProcedure.
 	behaviouralEntity <|-- trigger.
+	tNamedEntity <|-- trigger.
 	crudQuery <|-- selectQuery.
 	crudQuery <|-- insertQuery.
 	crudQuery <|-- updateQuery.
