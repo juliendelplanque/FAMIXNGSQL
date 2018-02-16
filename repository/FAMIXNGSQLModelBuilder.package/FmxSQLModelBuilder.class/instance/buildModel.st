@@ -13,6 +13,7 @@ buildModel
 		createConstraintsIn: mooseModel;
 		createViewsIn: mooseModel;
 		createStoredProceduresIn: mooseModel;
+		createTriggerStoredProceduresIn: mooseModel;
 		createTriggersIn: mooseModel.
 	
 	pgToFamixEntities := nil.
