@@ -46,7 +46,7 @@ defineSQLBehaviouralEntitiesRelations
 	(type as: #TType property: #localVariables).
 	
 	"A Parameter has a type."
-	(parameter as: #TParameter property: #parameter)
+	(parameter as: #TParameter property: #type)
 		*-
 	(type as: #TType property: #parameters).
 	
