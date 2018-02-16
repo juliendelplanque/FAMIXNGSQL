@@ -1,11 +1,13 @@
 analyzing
 analyze
-	dependencies := (self mooseModel allWithType: FmxSQLTable)
+	dependencies := (self mooseGroup allWithType: FmxSQLTable)
 							inject: OrderedCollection new
 							into: [ :collection :table |
-								|fks|
+								|fks tablesDependingOn|
 								fks := table constraints select: [ :c | c class = FmxSQLForeignKeyConstraint ].
-								fks do: [ :fk |
-									(fk referencedColumns collect: #columnsContainer) asSet do: [ :tableDependence |
-										collection add: table -> tableDependence ] ].
+								tablesDependingOn := (fks collect: [ :fk | (fk referencedColumns collect: #columnsContainer) ]) flattened asSet.
+								tablesDependingOn
+									ifEmpty: [ collection add: table -> nil ]
+									ifNotEmpty: [ 
+										tablesDependingOn do: [ :t | collection add: table -> t ] ].
 								collection ]
