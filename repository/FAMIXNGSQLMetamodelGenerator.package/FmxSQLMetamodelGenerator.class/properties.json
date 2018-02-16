@@ -45,6 +45,6 @@
 		"tNamedEntity",
 		"tColumnsContainer"
 	],
-	"name" : "FAMIXNGSQLMetamodelGenerator",
+	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"
 }

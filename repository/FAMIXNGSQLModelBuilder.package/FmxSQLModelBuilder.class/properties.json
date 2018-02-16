@@ -11,6 +11,6 @@
 		"metadata",
 		"pgToFamixEntities"
 	],
-	"name" : "FAMIXNGSQLModelBuilder",
+	"name" : "FmxSQLModelBuilder",
 	"type" : "normal"
 }

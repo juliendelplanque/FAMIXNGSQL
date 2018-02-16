@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FAMIXNGSQLDevelopperTools",
+	"name" : "FmxSQLDevelopperTools",
 	"type" : "normal"
 }
