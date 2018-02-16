@@ -20,6 +20,11 @@ defineSQLStructuralEntitiesRelations
 		<>-*
 	(constraint as: #TConstraint property: #table).
 	
+	"A foreign key constraint references at least one column from another table."
+	(foreignKeyConstraint as: #TForeignKeyConstraint property: #referencedColumns)
+		*-*
+	(column as: #TColumn property: #foreignKeyConstraintsReferencing).
+	
 	"A table eventually has inheritance sub tables and zero or one inheritance super table."
 	(table as: #TTable property: #superTable)
 		*-
