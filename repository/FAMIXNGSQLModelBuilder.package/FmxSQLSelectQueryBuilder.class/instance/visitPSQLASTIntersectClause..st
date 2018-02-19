@@ -1,0 +1,3 @@
+visiting
+visitPSQLASTIntersectClause: aPSQLASTIntersectClause
+	self shouldBeImplemented

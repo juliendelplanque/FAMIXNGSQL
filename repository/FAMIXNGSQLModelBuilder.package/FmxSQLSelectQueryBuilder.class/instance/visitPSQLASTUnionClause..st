@@ -1,0 +1,3 @@
+visiting
+visitPSQLASTUnionClause: aPSQLASTUnionClause
+	self shouldBeImplemented

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JulienDelplanque 2/19/2018 13:51",
+	"super" : "PSQLASTVisitor",
+	"category" : "FAMIXNGSQLModelBuilder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLSelectQueryBuilder",
+	"type" : "normal"
+}

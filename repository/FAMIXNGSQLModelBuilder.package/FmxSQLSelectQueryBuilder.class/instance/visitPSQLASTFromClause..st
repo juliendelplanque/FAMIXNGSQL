@@ -1,0 +1,3 @@
+visiting
+visitPSQLASTFromClause: aPSQLASTFromClause
+	self shouldBeImplemented
