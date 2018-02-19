@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JulienDelplanque 2/19/2018 14:15",
+	"super" : "Object",
+	"category" : "FAMIXNGSQLAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"analyzer",
+		"color",
+		"legendBlock"
+	],
+	"name" : "FmxSQLVisualizer",
+	"type" : "normal"
+}
