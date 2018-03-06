@@ -18,4 +18,7 @@ regenerateMetaModel
 	"3. Re-generate the meta-model."
 	self new
 		cleanPackage;
-		generate
+		generate.
+		
+	"4. Recompile the whole system to avoid obsolete class references."
+	Smalltalk recompile
