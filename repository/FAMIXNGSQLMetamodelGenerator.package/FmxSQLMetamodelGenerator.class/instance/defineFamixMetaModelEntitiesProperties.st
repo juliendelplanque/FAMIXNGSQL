@@ -7,7 +7,7 @@ defineFamixMetaModelEntitiesProperties
 		property: #sourceCode type: #String.
 		
 	(sourceAnchor as: #TSourceAnchor)
-		property: #lineBegin type: #Integer;
-		property: #lineEnd type: #Integer;
-		property: #columnBegin type: #Integer;
-		property: #columnEnd type: #Integer
+		property: #lineBegin type: #Number;
+		property: #lineEnd type: #Number;
+		property: #columnBegin type: #Number;
+		property: #columnEnd type: #Number
