@@ -10,11 +10,11 @@ createStoredProceduresIn: aMooseModel
 				mooseModel: aMooseModel;
 				yourself.
 			pgToFamixEntities at: pgFunction put: function.
-			pgFunction arguments
+			"pgFunction arguments
 				do: [ :pgArgument | 
 					FmxSQLParameter new
 						name: pgArgument name;
 						type: (pgToFamixEntities at: pgArgument datatype);
 						storedProcedure: function;
 						mooseModel: aMooseModel;
-						yourself ]	"TODO: local variables" ]
+						yourself ]"	"TODO: local variables" ]
