@@ -7,5 +7,6 @@ initialize
 	builder
 		packageName: self class packageName;
 		prefix: self class prefix;
+		generator: self;
 		traitsFlattening: true
 	
