@@ -1,6 +1,6 @@
 visualizing
-buildVisualization
-	| dependencies view lb circuits |
+buildVisualizationOnView: view
+	| dependencies lb circuits |
 	dependencies := self analyzer analyze; dependencies.
 	circuits := MalCyclesCoverage new
 					nodes: (dependencies collect: #head) asSet;
@@ -8,7 +8,6 @@ buildVisualization
 					run;
 					circuits.
 	
-	view := RTMondrian new.
 	self buildInteractions: view forDependencies: dependencies.
 	view shape rectangle
 		size: 10;
@@ -33,6 +32,4 @@ buildVisualization
 		addText: 'A table of a given layer has a FK referencing a column of a table of the layer under it.';
 		addText: 'Red lines represent FK references included in a cycle.'.
 	self legendBlock value: lb.
-	lb build.
-	
-	^ view
+	lb build
