@@ -9,6 +9,7 @@ buildVisualization
 					circuits.
 	
 	view := RTMondrian new.
+	self buildInteractions: view forDependencies: dependencies.
 	view shape rectangle
 		size: 10;
 		color: self color.
@@ -22,6 +23,7 @@ buildVisualization
 	view edges useAssociations: dependencies.
 	view layout sugiyama
 		verticalGap: 50.
+	
 	view build.
 	
 	lb := RTLegendBuilder new.
