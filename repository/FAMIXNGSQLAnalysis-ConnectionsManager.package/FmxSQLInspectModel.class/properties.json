@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "JulienDelplanque 3/13/2018 15:13",
 	"super" : "DBConnectionsManagerWidgetCommand",
 	"category" : "FAMIXNGSQLAnalysis-ConnectionsManager",
 	"classinstvars" : [ ],
