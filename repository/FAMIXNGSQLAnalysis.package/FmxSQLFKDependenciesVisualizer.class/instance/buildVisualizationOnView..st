@@ -1,7 +1,7 @@
 visualizing
 buildVisualizationOnView: view
 	| dependencies lb circuits |
-	dependencies := self analyzer analyze; dependencies.
+	dependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	circuits := MalCyclesCoverage new
 					nodes: (dependencies collect: #head) asSet;
 					edges: dependencies from: #head to: #tail;
@@ -11,7 +11,10 @@ buildVisualizationOnView: view
 	self buildInteractions: view forDependencies: dependencies.
 	view shape rectangle
 		size: 10;
-		color: self color.
+		color: [ :e | 
+			(dependencies anySatisfy: [ :any | any head = e and: [ any tail = e ] ])
+				ifTrue:[ Color red ]
+				ifFalse: [ self color ] ].
 	view nodes: (dependencies collect: #head) asSet.
 	view shape line
 		color: [ :e | 
@@ -30,6 +33,6 @@ buildVisualizationOnView: view
 	
 	lb
 		addText: 'A table of a given layer has a FK referencing a column of a table of the layer under it.';
-		addText: 'Red lines represent FK references included in a cycle.'.
+		addText: 'Red elements are table having a FK referencing their own PK. Red lines represent FK references included in a cycle.'.
 	self legendBlock value: lb.
 	lb build

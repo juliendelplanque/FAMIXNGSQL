@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"analyzer",
+		"mooseGroup",
 		"color",
 		"legendBlock"
 	],

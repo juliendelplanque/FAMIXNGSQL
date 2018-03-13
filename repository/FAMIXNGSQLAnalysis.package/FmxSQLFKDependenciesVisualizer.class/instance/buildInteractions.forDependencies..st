@@ -1,5 +1,7 @@
 interacting
 buildInteractions: aView forDependencies: aCollectionOfDependencies
+	"aView interaction
+		noInteractions."
 	aView interaction
 		highlightNeighbors: [ :table | 
 			((Array with: table) , (aCollectionOfDependencies select: [ :dep | dep head = table and: [ dep tail isNotNil ] ] thenCollect: #tail)) ]
