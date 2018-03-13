@@ -1,12 +1,5 @@
 execute
 execute
-	| connection builder m |
-	connection := self connectionsManagerWidget selectedConnectionDescription.
-	builder := FmxSQLModelBuilder new
-		connection: connection;
-		databaseName: connection name;
-		yourself.
-	m := builder buildModel.
 	(FmxSQLCircularTableDependencies new
-		mooseGroup: m;
+		mooseGroup: self connectionsManagerWidget selectedConnectionDescription fmxSQLModel;
 		buildVisualization) inspect
