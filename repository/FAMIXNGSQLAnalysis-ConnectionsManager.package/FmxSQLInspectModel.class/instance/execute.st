@@ -1,0 +1,3 @@
+execute
+execute
+	self connectionsManagerWidget selectedConnectionDescription fmxSQLModel inspect

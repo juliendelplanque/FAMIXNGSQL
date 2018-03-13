@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DBConnectionsManagerWidgetCommand",
+	"category" : "FAMIXNGSQLAnalysis-ConnectionsManager",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLReloadModel",
+	"type" : "normal"
+}

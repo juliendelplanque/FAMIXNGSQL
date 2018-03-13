@@ -1,0 +1,3 @@
+accessing
+commandName
+	^ 'Inspect model'
