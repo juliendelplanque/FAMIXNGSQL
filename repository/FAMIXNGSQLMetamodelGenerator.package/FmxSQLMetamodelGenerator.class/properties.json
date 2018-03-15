@@ -6,9 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"sourcedEntity",
 		"leafEntity",
-		"behaviouralEntity",
 		"entity",
 		"sourceAnchor",
 		"constraint",
@@ -43,7 +41,9 @@
 		"viewReference",
 		"derivedTableReference",
 		"tNamedEntity",
-		"tColumnsContainer"
+		"tColumnsContainer",
+		"tSourcedEntity",
+		"behaviouralEntity"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

@@ -3,16 +3,18 @@ defineSQLMetaModelInheritanceRelations
 	"Abstract entities inheritance relations."
 	tNamedEntity <|-- structuralEntity.
 	structuralEntity <|-- constraint.
+	tSourcedEntity <|-- behaviouralEntity.
 	behaviouralEntity <|-- queryContainer.
 	queryContainer <|-- crudQuery.
-	sourcedEntity <|-- reference.
+	tSourcedEntity <|-- reference.
 	"Concrete structural entities inheritance relations."
 	structuralEntity <|-- table.
 	tColumnsContainer <|-- table.
 	structuralEntity <|-- column.
 	structuralEntity <|-- type.
-	behaviouralEntity <|-- checkConstraint.
 	constraint <|-- checkConstraint.
+	"behaviouralEntity <|-- checkConstraint."
+	tSourcedEntity <|-- checkConstraint. self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.
 	constraint <|-- primaryKeyConstraint.
 	constraint <|-- foreignKeyConstraint.
 	constraint <|-- notNullConstraint.

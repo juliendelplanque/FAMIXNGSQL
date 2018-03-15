@@ -2,5 +2,5 @@ definitions - FAMIX
 defineFamixMetaModelEntitiesRelations
 	"Inheritance relations definitions."
 	entity <|-- sourceAnchor.
-	sourcedEntity <|-- behaviouralEntity.
-	sourcedEntity <|-- leafEntity
+	tSourcedEntity <|-- behaviouralEntity.
+	tSourcedEntity <|-- leafEntity

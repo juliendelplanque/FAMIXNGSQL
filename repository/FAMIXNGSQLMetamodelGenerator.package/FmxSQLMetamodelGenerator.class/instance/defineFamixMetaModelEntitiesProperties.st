@@ -3,7 +3,7 @@ defineFamixMetaModelEntitiesProperties
 	tNamedEntity
 		property: #name type: #String.
 		
-	(sourcedEntity as: #TSourcedEntity)
+	tSourcedEntity
 		property: #sourceCode type: #String.
 		
 	(sourceAnchor as: #TSourceAnchor)

@@ -21,7 +21,7 @@ buildVisualizationOnView: view
 			(circuits anySatisfy: [ :any | 
 				((any includes: e head) and: [ any includes: e tail ]) ])
 					ifTrue: [ Color red ]
-					ifFalse: [ Color white ] ].
+					ifFalse: [ Color gray ] ].
 	view edges useAssociations: dependencies.
 	view layout sugiyama
 		verticalGap: 50.
