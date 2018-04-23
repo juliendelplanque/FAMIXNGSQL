@@ -4,11 +4,11 @@ baseline: spec
 	spec for: #'common' do: [
 		spec
 			package: #FAMIXNGSQLMetamodelGenerator;
-			package: #FAMIXNGSQLModelBuilder with: [ spec requires: #('PostgreSQL' 'PgMetadata') ];
+			package: #FAMIXNGSQLModelBuilder with: [ spec requires: #('PostgreSQLParser' 'PgMetadata') ];
 			package: #FAMIXNGSQLAnalysis;
 			package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
 			
-		spec baseline: 'PostgreSQL' with: [ 
+		spec baseline: 'PostgreSQLParser' with: [ 
 			spec
 				repository: 'github://juliendelplanque/PostgreSQLParser/src' ].
 		spec baseline: 'PgMetadata' with: [ 
