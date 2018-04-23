@@ -10,7 +10,7 @@ baseline: spec
 			
 		spec baseline: 'PostgreSQL' with: [ 
 			spec
-				repository: 'github://juliendelplanque/PostgreSQLParser/repository' ].
+				repository: 'github://juliendelplanque/PostgreSQLParser/src' ].
 		spec baseline: 'PgMetadata' with: [ 
 			spec
 				repository: 'github://olivierauverlot/PgMetadata' ].
