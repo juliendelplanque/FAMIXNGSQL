@@ -1,6 +1,6 @@
 visualizing
 buildVisualizationOnView: view
-	| dependencies |
+	| dependencies lb |
 	dependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	
 	view shape rectangle
@@ -20,11 +20,10 @@ buildVisualizationOnView: view
 	
 	view build.
 	
-	"lb := RTLegendBuilder new.
+	lb := RTLegendBuilder new.
 	lb view: view view.
 	
 	lb
-		addText: 'A table of a given layer has a FK referencing a column of a table of the layer under it.';
-		addText: 'Red elements are table having a FK referencing their own PK. Red lines represent FK references included in a cycle.'.
+		addText: 'Each rectange represent a table. The width of a rectangle shows the number of FK referencing it and height the number of tables referenced.'.
 	self legendBlock value: lb.
-	lb build"
+	lb build
