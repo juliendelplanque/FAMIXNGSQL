@@ -11,14 +11,6 @@ regenerateMetaModel
 			ifAbsent: [ UIManager default inform: className , ' not present, could not make references become forward nil.' ] ].
 	Smalltalk garbageCollect.
 	
-	"2. Reset stateful traits."
-	StatefulTraitsManager uniqueInstance cleanAll.
-	StatefulTraitsManager reset.
-	
-	"3. Re-generate the meta-model."
+	"2. Re-generate the meta-model."
 	self new
-		cleanPackage;
-		generate.
-		
-	"4. Recompile the whole system to avoid obsolete class references."
-	Smalltalk recompile
+		generateWithoutCleaning

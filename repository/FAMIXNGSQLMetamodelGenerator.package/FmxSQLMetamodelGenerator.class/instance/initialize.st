@@ -8,5 +8,5 @@ initialize
 		packageName: self class packageName;
 		prefix: self class prefix;
 		generator: self;
-		traitsFlattening: true
+		traitsFlattening: false
 	
