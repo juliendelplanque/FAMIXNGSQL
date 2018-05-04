@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#columnsContainer => FMOne type: #FmxSQLColumnsContainer opposite: #columns",
+		"#constraints => FMMany type: #FmxSQLTConstraint opposite: #columns",
+		"#foreignKeyConstraintsReferencing => FMMany type: #FmxSQLTForeignKeyConstraint opposite: #referencedColumns",
+		"#references => FMMany type: #FmxSQLTColumnReference opposite: #column",
+		"#type => FMOne type: #FmxSQLTType opposite: #columns"
+	],
+	"name" : "FmxSQLTColumn"
+}

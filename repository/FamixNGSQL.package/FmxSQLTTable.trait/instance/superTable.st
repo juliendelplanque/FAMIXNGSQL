@@ -1,0 +1,5 @@
+accessing
+superTable
+
+	<generated>
+	^ superTable

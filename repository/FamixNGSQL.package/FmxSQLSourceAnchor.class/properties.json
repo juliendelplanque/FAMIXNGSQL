@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLTSourceAnchor classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLSourceAnchor",
+	"commentStamp" : "",
+	"super" : "FmxSQLEntity",
+	"traitcomposition" : "FmxSQLTSourceAnchor",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

@@ -1,0 +1,5 @@
+accessing
+storedProceduresCalled
+
+	<generated>
+	^ storedProceduresCalled

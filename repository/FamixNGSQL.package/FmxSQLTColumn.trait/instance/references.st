@@ -1,0 +1,5 @@
+accessing
+references
+
+	<generated>
+	^ references

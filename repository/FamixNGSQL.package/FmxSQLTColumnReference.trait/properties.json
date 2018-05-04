@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#column => FMOne type: #FmxSQLTColumn opposite: #references",
+		"#triggerStoredProceduresReferencing => FMOne type: #FmxSQLTTriggerStoredProcedure opposite: #columnsReferenced"
+	],
+	"name" : "FmxSQLTColumnReference"
+}

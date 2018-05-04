@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#sourceAnchor => FMOne type: #FmxSQLTSourceAnchor opposite: #behaviouralEntity",
+		"#sourceCode"
+	],
+	"name" : "FmxSQLSourcedEntity"
+}

@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#storedProceduresCalled => FMMany type: #FmxSQLTStoredProcedure opposite: #checkConstraintsCalling"
+	],
+	"name" : "FmxSQLTCheckConstraint"
+}

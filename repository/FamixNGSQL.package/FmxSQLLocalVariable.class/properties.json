@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLNamedEntity classTrait + FmxSQLTLocalVariable classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLLocalVariable",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLLeafEntity",
+	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTLocalVariable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

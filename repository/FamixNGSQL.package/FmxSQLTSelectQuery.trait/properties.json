@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#appearingInExceptClauseOf => FMOne type: #FmxSQLTSelectQuery opposite: #exceptClause",
+		"#appearingInIntersectClauseOf => FMOne type: #FmxSQLTSelectQuery opposite: #intersectClause",
+		"#appearingInUnionClauseOf => FMOne type: #FmxSQLTSelectQuery opposite: #unionClause",
+		"#derivedTableDefining => FMOne type: #FmxSQLTDerivedTable opposite: #query",
+		"#derivedTablesDefined => FMMany type: #FmxSQLTDerivedTable opposite: #parentQuery",
+		"#exceptClause => FMOne type: #FmxSQLTSelectQuery opposite: #appearingInExceptClauseOf",
+		"#fromClause => FMMany type: #FmxSQLTReference opposite: #appearingInFromClauseOfSelectQuery",
+		"#groupByClause => FMMany type: #FmxSQLTReference opposite: #appearingInGroupByClauseOf",
+		"#havingClause => FMMany type: #FmxSQLTReference opposite: #appearingInHavingClauseOf",
+		"#intersectClause => FMOne type: #FmxSQLTSelectQuery opposite: #appearingInIntersectClauseOf",
+		"#joinClause => FMMany type: #FmxSQLTReference opposite: #appearingInJoinClauseOf",
+		"#orderByClause => FMMany type: #FmxSQLTReference opposite: #appearingInOrderByClauseOf",
+		"#selectClause => FMMany type: #FmxSQLTReference opposite: #appearingInSelectClauseOf",
+		"#unionClause => FMOne type: #FmxSQLTSelectQuery opposite: #appearingInUnionClauseOf",
+		"#viewDefining => FMOne type: #FmxSQLTView opposite: #query",
+		"#whereClause => FMMany type: #FmxSQLTReference opposite: #appearingInWhereClauseOfSelectQuery"
+	],
+	"name" : "FmxSQLTSelectQuery"
+}

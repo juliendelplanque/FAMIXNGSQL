@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #localVariables",
+		"#type => FMOne type: #FmxSQLTType opposite: #localVariables"
+	],
+	"name" : "FmxSQLTLocalVariable"
+}

@@ -10,12 +10,14 @@ createStoredProceduresIn: aMooseModel
 				yourself.
 			pgToFamixEntities at: pgFunction put: function.
 			pgFunction isStub
-				ifFalse: [ pgFunction ast acceptVisitor: (PSQLASTReflectiveVisitor model: aMooseModel) ]
-			"pgFunction arguments
+				ifFalse: [ "pgFunction arguments
 				do: [ :pgArgument | 
 					FmxSQLParameter new
 						name: pgArgument name;
 						type: (pgToFamixEntities at: pgArgument datatype);
 						storedProcedure: function;
 						mooseModel: aMooseModel;
-						yourself ]"	"TODO: local variables" ]
+						yourself ]"
+					"TODO: local variables"
+					pgFunction ast
+						acceptVisitor: (PSQLASTReflectiveVisitor model: aMooseModel function: function) ] ]

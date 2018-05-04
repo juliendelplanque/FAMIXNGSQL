@@ -1,0 +1,5 @@
+accessing
+intersectClause
+
+	<generated>
+	^ intersectClause

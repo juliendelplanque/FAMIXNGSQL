@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLTCRUDQuery classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLCRUDQuery",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLQueryContainer",
+	"traitcomposition" : "FmxSQLTCRUDQuery",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

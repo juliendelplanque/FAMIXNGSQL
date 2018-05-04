@@ -1,0 +1,5 @@
+accessing
+joinClause
+
+	<generated>
+	^ joinClause

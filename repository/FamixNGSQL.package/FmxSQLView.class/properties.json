@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait + FmxSQLNamedEntity classTrait + FmxSQLTView classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLView",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLQueryContainer",
+	"traitcomposition" : "FmxSQLColumnsContainer + FmxSQLNamedEntity + FmxSQLTView",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

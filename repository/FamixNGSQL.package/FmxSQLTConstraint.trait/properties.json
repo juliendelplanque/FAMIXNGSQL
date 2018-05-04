@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#columns => FMMany type: #FmxSQLTColumn opposite: #constraints",
+		"#table => FMOne type: #FmxSQLTTable opposite: #constraints"
+	],
+	"name" : "FmxSQLTConstraint"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#calls => FMMany type: #FmxSQLTStoredProcedureCall opposite: #storedProcedure",
+		"#checkConstraintsCalling => FMMany type: #FmxSQLTCheckConstraint opposite: #storedProceduresCalled",
+		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #storedProcedure",
+		"#parameters => FMMany type: #FmxSQLTParameter opposite: #storedProcedure",
+		"#returnType => FMOne type: #FmxSQLTType opposite: #storedProceduresReturning"
+	],
+	"name" : "FmxSQLTStoredProcedure"
+}

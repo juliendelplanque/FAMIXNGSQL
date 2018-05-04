@@ -1,0 +1,5 @@
+accessing
+selectClause
+
+	<generated>
+	^ selectClause

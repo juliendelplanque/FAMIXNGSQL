@@ -1,0 +1,5 @@
+accessing
+query
+
+	<generated>
+	^ query

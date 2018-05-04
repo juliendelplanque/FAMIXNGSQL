@@ -1,0 +1,5 @@
+accessing
+exceptClause
+
+	<generated>
+	^ exceptClause

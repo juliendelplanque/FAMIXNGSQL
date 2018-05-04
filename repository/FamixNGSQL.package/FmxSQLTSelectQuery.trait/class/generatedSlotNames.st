@@ -1,0 +1,4 @@
+generator
+generatedSlotNames
+	<generated>
+	^ #(derivedTableDefining appearingInExceptClauseOf joinClause selectClause fromClause whereClause groupByClause havingClause orderByClause unionClause appearingInUnionClauseOf intersectClause viewDefining appearingInIntersectClauseOf exceptClause derivedTablesDefined)

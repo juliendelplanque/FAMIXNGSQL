@@ -1,0 +1,5 @@
+accessing
+sourceAnchor
+
+	<generated>
+	^ sourceAnchor

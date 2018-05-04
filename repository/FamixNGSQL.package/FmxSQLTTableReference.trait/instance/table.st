@@ -1,0 +1,5 @@
+accessing
+table
+
+	<generated>
+	^ table

@@ -1,0 +1,5 @@
+accessing
+type
+
+	<generated>
+	^ type

@@ -1,0 +1,5 @@
+accessing
+havingClause
+
+	<generated>
+	^ havingClause

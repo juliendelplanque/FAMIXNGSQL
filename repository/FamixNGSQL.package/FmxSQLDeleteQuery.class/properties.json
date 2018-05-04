@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLTDeleteQuery classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLDeleteQuery",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLCRUDQuery",
+	"traitcomposition" : "FmxSQLTDeleteQuery",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

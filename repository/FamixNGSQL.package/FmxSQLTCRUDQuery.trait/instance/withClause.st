@@ -1,0 +1,5 @@
+accessing
+withClause
+
+	<generated>
+	^ withClause

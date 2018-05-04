@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #calls",
+		"#arguments => FMMany type: #FmxSQLTReference opposite: #storedProcedureContainer"
+	],
+	"name" : "FmxSQLTStoredProcedureCall"
+}

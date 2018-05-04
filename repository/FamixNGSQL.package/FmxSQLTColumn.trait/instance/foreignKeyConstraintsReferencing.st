@@ -1,0 +1,5 @@
+accessing
+foreignKeyConstraintsReferencing
+
+	<generated>
+	^ foreignKeyConstraintsReferencing

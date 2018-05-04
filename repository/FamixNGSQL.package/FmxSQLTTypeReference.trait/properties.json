@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#type => FMOne type: #FmxSQLTType opposite: #references"
+	],
+	"name" : "FmxSQLTTypeReference"
+}

@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#onConflictClause => FMMany type: #FmxSQLTReference opposite: #appearingInOnConflictClauseOf",
+		"#returningClause => FMMany type: #FmxSQLTReference opposite: #appearingInReturningClauseOfInsertQuery"
+	],
+	"name" : "FmxSQLTInsertQuery"
+}

@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#referencedColumns => FMMany type: #FmxSQLTColumn opposite: #foreignKeyConstraintsReferencing"
+	],
+	"name" : "FmxSQLTForeignKeyConstraint"
+}

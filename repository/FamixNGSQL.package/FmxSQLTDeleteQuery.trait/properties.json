@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#returningClause => FMMany type: #FmxSQLTReference opposite: #appearingInReturningClauseOfDeleteQuery",
+		"#whereClause => FMMany type: #FmxSQLTReference opposite: #appearingInWhereClauseOfDeleteQuery"
+	],
+	"name" : "FmxSQLTDeleteQuery"
+}

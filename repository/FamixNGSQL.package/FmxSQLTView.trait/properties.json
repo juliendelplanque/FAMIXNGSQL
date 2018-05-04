@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#query => FMOne type: #FmxSQLTSelectQuery opposite: #viewDefining",
+		"#references => FMMany type: #FmxSQLTViewReference opposite: #view"
+	],
+	"name" : "FmxSQLTView"
+}

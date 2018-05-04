@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLNamedEntity classTrait + FmxSQLTTrigger classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLTrigger",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLBehaviouralEntity",
+	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTTrigger",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

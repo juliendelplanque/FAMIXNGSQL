@@ -1,0 +1,5 @@
+accessing
+setClause
+
+	<generated>
+	^ setClause

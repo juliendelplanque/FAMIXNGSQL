@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLSourcedEntity classTrait + FmxSQLTCheckConstraint classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLCheckConstraint",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLConstraint",
+	"traitcomposition" : "FmxSQLSourcedEntity + FmxSQLTCheckConstraint",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}
