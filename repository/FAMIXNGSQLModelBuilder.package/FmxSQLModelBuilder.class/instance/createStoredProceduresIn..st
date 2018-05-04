@@ -1,6 +1,5 @@
 model building - entities
 createStoredProceduresIn: aMooseModel
-	self flag: #TODO.	"Parse the body."
 	metadata getFunctions
 		do: [ :pgFunction | 
 			| function |
@@ -10,6 +9,8 @@ createStoredProceduresIn: aMooseModel
 				mooseModel: aMooseModel;
 				yourself.
 			pgToFamixEntities at: pgFunction put: function.
+			pgFunction isStub
+				ifFalse: [ pgFunction ast acceptVisitor: (PSQLASTReflectiveVisitor model: aMooseModel) ]
 			"pgFunction arguments
 				do: [ :pgArgument | 
 					FmxSQLParameter new
