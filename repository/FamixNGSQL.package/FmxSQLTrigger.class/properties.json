@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLNamedEntity classTrait + FmxSQLTTrigger classTrait",
+	"classtraitcomposition" : "FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTTrigger classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLTrigger",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLBehaviouralEntity",
-	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTTrigger",
+	"traitcomposition" : "FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTTrigger",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

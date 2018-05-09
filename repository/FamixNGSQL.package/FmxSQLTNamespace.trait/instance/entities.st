@@ -1,0 +1,5 @@
+accessing
+entities
+
+	<generated>
+	^ entities

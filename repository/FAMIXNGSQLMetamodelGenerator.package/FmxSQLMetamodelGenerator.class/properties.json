@@ -43,7 +43,9 @@
 		"tNamedEntity",
 		"tColumnsContainer",
 		"tSourcedEntity",
-		"behaviouralEntity"
+		"behaviouralEntity",
+		"namespace",
+		"tEntityInNamespace"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

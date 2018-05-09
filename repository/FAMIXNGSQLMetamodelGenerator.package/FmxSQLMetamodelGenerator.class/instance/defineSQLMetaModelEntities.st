@@ -1,6 +1,7 @@
 definitions - SQL
 defineSQLMetaModelEntities
 	"Abstract entities."
+	tEntityInNamespace := builder newTraitNamed: #EntityInNamespace comment: self entityInNamespaceComment.
 	structuralEntity := builder newClassNamed: #StructuralEntity comment: self structuralEntityComment.
 	constraint := builder newClassNamed: #Constraint comment: self constraintComment.
 	tColumnsContainer := builder newTraitNamed: #ColumnsContainer comment: self columnsContainerComment.
@@ -8,6 +9,7 @@ defineSQLMetaModelEntities
 	crudQuery := builder newClassNamed: #CRUDQuery comment: self crudQueryComment.
 	reference := builder newClassNamed: #Reference comment: self referenceComment.
 	"Concrete structural entities."
+	namespace := builder newClassNamed: #Namespace comment: self namespaceComment.
 	table := builder newClassNamed: #Table comment: self tableComment.
 	column := builder newClassNamed: #Column comment: self columnComment.
 	type := builder newClassNamed: #Type comment: self typeComment.

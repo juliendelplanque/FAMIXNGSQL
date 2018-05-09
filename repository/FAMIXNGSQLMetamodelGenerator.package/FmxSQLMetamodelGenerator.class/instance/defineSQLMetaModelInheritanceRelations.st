@@ -8,6 +8,7 @@ defineSQLMetaModelInheritanceRelations
 	queryContainer <|-- crudQuery.
 	tSourcedEntity <|-- reference.
 	"Concrete structural entities inheritance relations."
+	structuralEntity <|-- namespace.
 	structuralEntity <|-- table.
 	tColumnsContainer <|-- table.
 	structuralEntity <|-- column.
@@ -22,13 +23,16 @@ defineSQLMetaModelInheritanceRelations
 	"Concrete behavioural entities inheritance relations."
 	tColumnsContainer <|-- view.
 	queryContainer <|-- view.
+	tEntityInNamespace <|-- view.
 	tNamedEntity <|-- view.
 	tColumnsContainer <|-- derivedTable.
 	queryContainer <|-- derivedTable.
 	queryContainer <|-- storedProcedure.
+	tEntityInNamespace <|-- storedProcedure.
 	tNamedEntity <|-- storedProcedure.
 	storedProcedure <|-- triggerStoredProcedure.
 	behaviouralEntity <|-- trigger.
+	tEntityInNamespace <|-- trigger.
 	tNamedEntity <|-- trigger.
 	crudQuery <|-- selectQuery.
 	crudQuery <|-- insertQuery.
