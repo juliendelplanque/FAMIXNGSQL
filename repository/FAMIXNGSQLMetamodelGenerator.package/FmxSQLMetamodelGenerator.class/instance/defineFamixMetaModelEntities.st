@@ -6,4 +6,5 @@ defineFamixMetaModelEntities
 	tSourcedEntity := builder newTraitNamed: #SourcedEntity.
 	leafEntity := builder newClassNamed: #LeafEntity.
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
+	tAbstractType := builder newTraitNamed: #AbstractType
 	

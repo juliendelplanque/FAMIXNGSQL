@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FmxSQLColumnsContainer FmxSQLTTable)
+	^ #(FmxSQLAbstractType FmxSQLColumnsContainer FmxSQLTTable)

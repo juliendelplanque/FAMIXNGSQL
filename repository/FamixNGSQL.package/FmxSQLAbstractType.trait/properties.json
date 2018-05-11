@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #type",
+		"#parameters => FMMany type: #FmxSQLTParameter opposite: #type",
+		"#storedProceduresReturning => FMMany type: #FmxSQLTStoredProcedure opposite: #returnType"
+	],
+	"name" : "FmxSQLAbstractType"
+}

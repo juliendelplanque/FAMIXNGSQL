@@ -13,6 +13,8 @@ defineSQLMetaModelInheritanceRelations
 	tColumnsContainer <|-- table.
 	structuralEntity <|-- column.
 	structuralEntity <|-- type.
+	tAbstractType <|-- type.
+	tAbstractType <|-- table.
 	constraint <|-- checkConstraint.
 	"behaviouralEntity <|-- checkConstraint."
 	tSourcedEntity <|-- checkConstraint. self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.

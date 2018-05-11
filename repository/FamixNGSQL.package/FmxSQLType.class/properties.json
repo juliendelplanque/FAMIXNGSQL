@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTType classTrait",
+	"classtraitcomposition" : "FmxSQLAbstractType classTrait + FmxSQLTType classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLType",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FmxSQLTType",
+	"traitcomposition" : "FmxSQLAbstractType + FmxSQLTType",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

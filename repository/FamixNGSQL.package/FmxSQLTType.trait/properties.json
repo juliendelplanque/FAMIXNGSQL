@@ -4,10 +4,7 @@
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
 		"#columns => FMMany type: #FmxSQLTColumn opposite: #type",
-		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #type",
-		"#parameters => FMMany type: #FmxSQLTParameter opposite: #type",
-		"#references => FMMany type: #FmxSQLTTypeReference opposite: #type",
-		"#storedProceduresReturning => FMMany type: #FmxSQLTStoredProcedure opposite: #returnType"
+		"#references => FMMany type: #FmxSQLTTypeReference opposite: #type"
 	],
 	"name" : "FmxSQLTType"
 }

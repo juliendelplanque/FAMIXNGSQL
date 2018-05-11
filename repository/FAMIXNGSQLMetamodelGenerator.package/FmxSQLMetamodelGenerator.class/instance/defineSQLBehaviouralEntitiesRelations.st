@@ -25,10 +25,10 @@ defineSQLBehaviouralEntitiesRelations
 		<>-*
 	(derivedTable as: #TDerivedTable property: #parentQuery).
 	
-	"A StoredProcedure has a return type."
+	"A StoredProcedure has a return AbstractType."
 	(storedProcedure as: #TStoredProcedure property: #returnType)
 		*-
-	(type as: #TType property: #storedProceduresReturning).
+	(tAbstractType property: #storedProceduresReturning).
 	
 	"A StoredProcedure may have parameters."
 	(storedProcedure as: #TStoredProcedure property: #parameters)
@@ -40,15 +40,15 @@ defineSQLBehaviouralEntitiesRelations
 		<>-*
 	(localVariable as: #TLocalVariable property: #storedProcedure).
 	
-	"A LocalVariable has a Type."
+	"A LocalVariable has an AbstractType."
 	(localVariable as: #TLocalVariable property: #type)
 		*-
-	(type as: #TType property: #localVariables).
+	(tAbstractType property: #localVariables).
 	
-	"A Parameter has a type."
+	"A Parameter has an AbstractType."
 	(parameter as: #TParameter property: #type)
 		*-
-	(type as: #TType property: #parameters).
+	(tAbstractType property: #parameters).
 	
 	"A stored procedure used by a trigger can reference Columns."
 	(triggerStoredProcedure as: #TTriggerStoredProcedure property: #columnsReferenced)
