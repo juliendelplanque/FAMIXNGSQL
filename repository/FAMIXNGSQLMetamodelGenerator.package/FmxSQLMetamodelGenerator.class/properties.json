@@ -46,7 +46,8 @@
 		"behaviouralEntity",
 		"namespace",
 		"tEntityInNamespace",
-		"tAbstractType"
+		"tAbstractType",
+		"localVariableAccess"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

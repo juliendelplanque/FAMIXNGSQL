@@ -1,5 +1,10 @@
 definitions - SQL
 defineSQLReferenceEntitiesRelations
+	"A stored procedure contains abstract references (regrouping variable accesses, references to views, tables...)"
+	(storedProcedure as: #TStoredProcedure property: #references)
+		<>-*
+	(reference as: #TReference property: #storedProcedure).
+
 	"A leaf access references a leaf entity."
 	(leafAccess as: #TLeafAccess property: #leafEntity)
 		*-
@@ -43,4 +48,9 @@ defineSQLReferenceEntitiesRelations
 	"A CRUDQuery can contain references."
 	(crudQuery as: #TCRUDQuery property: #references)
 		<>-*
-	(reference as: #TReference property: #crudQueryContainer)
+	(reference as: #TReference property: #crudQueryContainer).
+	
+	"A Local variable access must point a local variable."
+	(localVariableAccess as: #TLocalVariableAccess property: #localVariable)
+		*-
+	(localVariable as: #TLocalVariable property: #accesses).

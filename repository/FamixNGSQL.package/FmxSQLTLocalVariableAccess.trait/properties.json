@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#localVariable => FMOne type: #FmxSQLTLocalVariable opposite: #accesses"
+	],
+	"name" : "FmxSQLTLocalVariableAccess"
+}

@@ -19,6 +19,7 @@
 		"#appearingInWhereClauseOfSelectQuery => FMOne type: #FmxSQLTSelectQuery opposite: #whereClause",
 		"#appearingInWhereClauseOfUpdateQuery => FMOne type: #FmxSQLTUpdateQuery opposite: #whereClause",
 		"#crudQueryContainer => FMOne type: #FmxSQLTCRUDQuery opposite: #references",
+		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #references",
 		"#storedProcedureContainer => FMOne type: #FmxSQLTStoredProcedureCall opposite: #arguments"
 	],
 	"name" : "FmxSQLTReference"

@@ -51,4 +51,5 @@ defineSQLMetaModelInheritanceRelations
 	reference <|-- leafAccess.
 	reference <|-- columnReference.
 	reference <|-- typeReference.
-	reference <|-- storedProcedureCall
+	reference <|-- storedProcedureCall.
+	reference <|-- localVariableAccess.

@@ -37,4 +37,5 @@ defineSQLMetaModelEntities
 	leafAccess := builder newClassNamed: #LeafAccess comment: self leafAccessComment.
 	columnReference := builder newClassNamed: #ColumnReference comment: self columnReferenceComment.
 	typeReference := builder newClassNamed: #TypeReference comment: self typeReferenceComment.
-	storedProcedureCall := builder newClassNamed: #StoredProcedureCall comment: self storedProcedureCallComment
+	storedProcedureCall := builder newClassNamed: #StoredProcedureCall comment: self storedProcedureCallComment.
+	localVariableAccess := builder newClassNamed: #LocalVariableAccess comment: self localVariableAccessComment.

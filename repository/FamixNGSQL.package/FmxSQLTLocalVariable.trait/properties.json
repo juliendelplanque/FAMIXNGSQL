@@ -3,8 +3,9 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
+		"#accesses => FMMany type: #FmxSQLTLocalVariableAccess opposite: #localVariable",
 		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #localVariables",
-		"#type => FMOne type: #FmxSQLTType opposite: #localVariables"
+		"#type => FMOne type: #FmxSQLAbstractType opposite: #localVariables"
 	],
 	"name" : "FmxSQLTLocalVariable"
 }

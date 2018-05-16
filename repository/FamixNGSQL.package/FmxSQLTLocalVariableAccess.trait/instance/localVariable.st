@@ -1,0 +1,5 @@
+accessing
+localVariable
+
+	<generated>
+	^ localVariable
