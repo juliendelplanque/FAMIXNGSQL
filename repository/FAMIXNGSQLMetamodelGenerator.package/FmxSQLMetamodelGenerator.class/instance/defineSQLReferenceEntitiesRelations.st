@@ -44,13 +44,13 @@ defineSQLReferenceEntitiesRelations
 	(storedProcedureCall as: #TStoredProcedureCall property: #arguments)
 		<>-*
 	(reference as: #TReference property: #storedProcedureContainer).
-	
-	"A CRUDQuery can contain references."
-	(crudQuery as: #TCRUDQuery property: #references)
-		<>-*
-	(reference as: #TReference property: #crudQueryContainer).
-	
+		
 	"A Local variable access must point a local variable."
 	(localVariableAccess as: #TLocalVariableAccess property: #localVariable)
 		*-
 	(localVariable as: #TLocalVariable property: #accesses).
+	
+	"A CRUDQuery can contain references."
+	(clause as: #TClause property: #references)
+		<>-*
+	(reference as: #TReference property: #clause).

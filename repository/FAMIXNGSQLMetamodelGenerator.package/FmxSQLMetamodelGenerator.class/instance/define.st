@@ -7,6 +7,7 @@ define
 	
 	self
 		defineSQLMetaModelEntities;
+		defineClausesEntities;
 		defineSQLMetaModelInheritanceRelations;
 		defineSQLStructuralEntitiesRelations;
 		defineSQLBehaviouralEntitiesRelations;
