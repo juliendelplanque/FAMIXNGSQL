@@ -4,7 +4,6 @@
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
 		"#appearingInWithClauseOf => FMOne type: #FmxSQLTCRUDQuery opposite: #withClause",
-		"#references => FMMany type: #FmxSQLTReference opposite: #crudQueryContainer",
 		"#withClause => FMMany type: #FmxSQLTCRUDQuery opposite: #appearingInWithClauseOf"
 	],
 	"name" : "FmxSQLTCRUDQuery"

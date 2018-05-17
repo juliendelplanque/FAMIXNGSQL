@@ -4,7 +4,7 @@
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
 		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #parameters",
-		"#type => FMOne type: #FmxSQLTType opposite: #parameters"
+		"#type => FMOne type: #FmxSQLAbstractType opposite: #parameters"
 	],
 	"name" : "FmxSQLTParameter"
 }
