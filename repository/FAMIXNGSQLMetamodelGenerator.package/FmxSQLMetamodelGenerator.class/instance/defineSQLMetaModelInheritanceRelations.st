@@ -15,6 +15,7 @@ defineSQLMetaModelInheritanceRelations
 	structuralEntity <|-- type.
 	tAbstractType <|-- type.
 	tAbstractType <|-- table.
+	tAbstractType <|-- view.
 	constraint <|-- checkConstraint.
 	"behaviouralEntity <|-- checkConstraint."
 	tSourcedEntity <|-- checkConstraint. self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.
