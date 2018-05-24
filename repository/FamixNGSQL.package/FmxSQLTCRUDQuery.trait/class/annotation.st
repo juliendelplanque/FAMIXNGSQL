@@ -3,7 +3,7 @@ annotation
 
 	<generated>
 	<ignoreInTraitUsers>
-	<MSEClass: #TCRUDQuery super: #Trait>
+	<MSEClass: #TCrudQuery super: #Trait>
 	<generated>
 	<package: #FamixNGSQL>
 	^self

@@ -1,5 +1,5 @@
 accessing
-fromClause
+clauses
 
 	<generated>
-	^ fromClause
+	^ clauses

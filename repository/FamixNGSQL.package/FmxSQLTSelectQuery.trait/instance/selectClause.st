@@ -1,5 +1,0 @@
-accessing
-selectClause
-
-	<generated>
-	^ selectClause

@@ -1,5 +1,0 @@
-accessing
-groupByClause
-
-	<generated>
-	^ groupByClause

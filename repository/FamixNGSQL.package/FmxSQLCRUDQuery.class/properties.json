@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTCRUDQuery classTrait",
+	"classtraitcomposition" : "FmxSQLTCrudQuery classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLCRUDQuery",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLTCRUDQuery",
+	"traitcomposition" : "FmxSQLTCrudQuery",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

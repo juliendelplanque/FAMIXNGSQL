@@ -1,4 +1,4 @@
 generator
-generatedTraitNames
+generatedSlotNames
 	<generated>
 	^ #()

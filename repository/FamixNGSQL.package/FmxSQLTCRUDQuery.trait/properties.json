@@ -3,8 +3,10 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#appearingInWithClauseOf => FMOne type: #FmxSQLTCRUDQuery opposite: #withClause",
-		"#withClause => FMMany type: #FmxSQLTCRUDQuery opposite: #appearingInWithClauseOf"
+		"#clauses => FMMany type: #FmxSQLTClause opposite: #query"
+	],
+	"name" : "FmxSQLTCrudQuery"
+}ause => FMMany type: #FmxSQLTCRUDQuery opposite: #appearingInWithClauseOf"
 	],
 	"name" : "FmxSQLTCRUDQuery"
 }

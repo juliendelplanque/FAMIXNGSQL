@@ -1,5 +1,0 @@
-accessing
-unionClause
-
-	<generated>
-	^ unionClause

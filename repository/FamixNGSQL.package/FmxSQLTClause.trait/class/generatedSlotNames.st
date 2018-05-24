@@ -1,4 +1,4 @@
 generator
 generatedSlotNames
 	<generated>
-	^ #(references)
+	^ #(query references)

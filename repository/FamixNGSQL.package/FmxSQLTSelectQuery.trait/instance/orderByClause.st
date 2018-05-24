@@ -1,5 +1,0 @@
-accessing
-orderByClause
-
-	<generated>
-	^ orderByClause
