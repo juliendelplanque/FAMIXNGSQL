@@ -12,5 +12,4 @@ define
 		defineSQLStructuralEntitiesRelations;
 		defineSQLBehaviouralEntitiesRelations;
 		defineSQLBehaviouralEntitiesProperties;
-		defineSQLCRUDQueriesRelations;
 		defineSQLReferenceEntitiesRelations

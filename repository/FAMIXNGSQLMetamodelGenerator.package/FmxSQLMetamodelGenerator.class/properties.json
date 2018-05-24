@@ -62,7 +62,8 @@
 		"joinClause",
 		"unionClause",
 		"intersectClause",
-		"exceptClause"
+		"exceptClause",
+		"valuesClause"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

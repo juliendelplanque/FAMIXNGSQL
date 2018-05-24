@@ -50,7 +50,13 @@ defineSQLReferenceEntitiesRelations
 		*-
 	(localVariable as: #TLocalVariable property: #accesses).
 	
-	"A CRUDQuery can contain references."
+	"A Clause can contain references."
 	(clause as: #TClause property: #references)
 		<>-*
 	(reference as: #TReference property: #clause).
+	
+	"A query contains multiple clauses"
+	(crudQuery as: #TCrudQuery property: #clauses)
+		<>-*
+	(clause as: #TClause property: #query).
+	
