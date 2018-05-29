@@ -14,4 +14,4 @@ baseline: spec
 				baseline: 'DBConnectionsManager'
 				with: [ spec
 						repository: 'github://juliendelplanque/DBConnectionsManager/repository';
-						group: 'pgmetadata' ] ]
+						loads: 'pgmetadata' ] ]
