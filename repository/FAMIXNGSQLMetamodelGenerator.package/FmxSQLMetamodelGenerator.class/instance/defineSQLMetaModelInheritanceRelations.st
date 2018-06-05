@@ -41,9 +41,7 @@ defineSQLMetaModelInheritanceRelations
 	crudQuery <|-- insertQuery.
 	crudQuery <|-- updateQuery.
 	crudQuery <|-- deleteQuery.
-	leafEntity <|-- parameter.
 	tNamedEntity <|-- parameter.
-	leafEntity <|-- localVariable.
 	tNamedEntity <|-- localVariable.
 	"Concrete reference entities inheritance relations."
 	reference <|-- tableReference.

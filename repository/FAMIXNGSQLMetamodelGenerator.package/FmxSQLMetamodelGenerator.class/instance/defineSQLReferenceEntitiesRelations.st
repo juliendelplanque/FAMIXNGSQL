@@ -46,8 +46,13 @@ defineSQLReferenceEntitiesRelations
 		<>-* (reference as: #TReference property: #clause).
 
 	"A query contains multiple clauses"
-	(crudQuery as: #TCrudQuery property: #clauses) <>-* (clause as: #TClause property: #query).
+	(crudQuery as: #TCrudQuery property: #clauses)
+		<>-* (clause as: #TClause property: #query).
 
 	"A StoredProcedure contains multiple queries"
 	(storedProcedure as: #TStoredProcedure property: #queries)
-		<>-* (crudQuery as: #TCrudQuery property: #container)
+		<>-* (crudQuery as: #TCrudQuery property: #container).
+
+	"An update query target a table"
+	(table as: #TTable property: #updateQueries)
+		-* (updateQuery as: #TUpdateQuery property: #table)

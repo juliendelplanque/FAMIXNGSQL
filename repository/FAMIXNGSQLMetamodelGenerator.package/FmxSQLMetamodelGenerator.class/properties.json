@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"leafEntity",
 		"entity",
 		"sourceAnchor",
 		"constraint",
