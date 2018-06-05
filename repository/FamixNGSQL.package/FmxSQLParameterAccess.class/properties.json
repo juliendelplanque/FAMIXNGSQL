@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLTParameterAccess classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLParameterAccess",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLReference",
+	"traitcomposition" : "FmxSQLTParameterAccess",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

@@ -1,5 +1,0 @@
-accessing
-leafEntity
-
-	<generated>
-	^ leafEntity

@@ -2,4 +2,4 @@ meta
 metamodel
 
 	<generated>
-	^ FmxSQLMetamodelGenerator metamodel
+	^ (self class environment at: #FmxSQLMetamodelGenerator) metamodel

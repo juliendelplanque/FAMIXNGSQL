@@ -1,5 +1,0 @@
-accessing
-returningClause
-
-	<generated>
-	^ returningClause

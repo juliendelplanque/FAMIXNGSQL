@@ -1,4 +1,4 @@
 generator
 generatedSlotNames
 	<generated>
-	^ #(returnType localVariables parameters references checkConstraintsCalling calls)
+	^ #(returnType localVariables parameters references queries checkConstraintsCalling calls)

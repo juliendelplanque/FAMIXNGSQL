@@ -1,5 +1,0 @@
-accessing
-whereClause
-
-	<generated>
-	^ whereClause

@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#leafEntity => FMOne type: #FmxSQLTLeafEntity opposite: #accesses"
-	],
-	"name" : "FmxSQLTLeafAccess"
-}

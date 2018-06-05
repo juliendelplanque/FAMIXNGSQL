@@ -1,5 +1,0 @@
-accessing
-setClause
-
-	<generated>
-	^ setClause

@@ -1,5 +1,0 @@
-accessing
-fromClause
-
-	<generated>
-	^ fromClause

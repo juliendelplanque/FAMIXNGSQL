@@ -3,12 +3,13 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#calls => FMMany type: #FmxSQLTStoredProcedureCall opposite: #storedProcedure",
-		"#checkConstraintsCalling => FMMany type: #FmxSQLTCheckConstraint opposite: #storedProceduresCalled",
+		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning",
 		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #storedProcedure",
 		"#parameters => FMMany type: #FmxSQLTParameter opposite: #storedProcedure",
 		"#references => FMMany type: #FmxSQLTReference opposite: #storedProcedure",
-		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning"
+		"#queries => FMMany type: #FmxSQLTCrudQuery opposite: #container",
+		"#checkConstraintsCalling => FMMany type: #FmxSQLTCheckConstraint opposite: #storedProceduresCalled",
+		"#calls => FMMany type: #FmxSQLTStoredProcedureCall opposite: #storedProcedure"
 	],
 	"name" : "FmxSQLTStoredProcedure"
 }
