@@ -6,8 +6,8 @@ defineSQLReferenceEntitiesRelations
 		<>-* (reference as: #TReference property: #storedProcedure).
 
 	"A leaf access references a leaf entity."
-	(leafAccess as: #TLeafAccess property: #leafEntity)
-		*- (leafEntity as: #TLeafEntity property: #accesses).
+	(parameterAccess as: #TParameterAccess property: #parameter)
+		*- (parameter as: #TParameter property: #accesses).
 
 	"A type reference references a type."
 	(typeReference as: #TTypeReference property: #type)

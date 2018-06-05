@@ -32,7 +32,6 @@
 		"localVariable",
 		"reference",
 		"tableReference",
-		"leafAccess",
 		"columnReference",
 		"typeReference",
 		"storedProcedureCall",
@@ -63,7 +62,8 @@
 		"unionClause",
 		"intersectClause",
 		"exceptClause",
-		"valuesClause"
+		"valuesClause",
+		"parameterAccess"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"
