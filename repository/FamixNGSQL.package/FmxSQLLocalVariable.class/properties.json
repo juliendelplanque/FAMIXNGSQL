@@ -4,7 +4,7 @@
 	"instvars" : [ ],
 	"name" : "FmxSQLLocalVariable",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLLeafEntity",
+	"super" : "MooseEntity",
 	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTLocalVariable",
 	"type" : "normal",
 	"classinstvars" : [ ],

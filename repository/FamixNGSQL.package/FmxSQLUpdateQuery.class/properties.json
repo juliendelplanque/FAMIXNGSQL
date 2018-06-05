@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLCRUDQuery",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTUpdateQuery classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLUpdateQuery",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLCRUDQuery",
+	"traitcomposition" : "FmxSQLTUpdateQuery",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

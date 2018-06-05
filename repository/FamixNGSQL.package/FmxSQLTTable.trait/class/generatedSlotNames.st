@@ -1,4 +1,4 @@
 generator
 generatedSlotNames
 	<generated>
-	^ #(references constraints triggers superTable subTables)
+	^ #(references constraints triggers superTable updateQueries subTables)

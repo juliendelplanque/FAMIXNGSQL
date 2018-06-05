@@ -2,7 +2,7 @@ meta
 annotation
 
 	<generated>
-	<MSEClass: #Parameter super: #FmxSQLLeafEntity>
+	<MSEClass: #Parameter super: #MooseEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

@@ -7,7 +7,8 @@
 		"#references => FMMany type: #FmxSQLTTableReference opposite: #table",
 		"#subTables => FMMany type: #FmxSQLTTable opposite: #superTable",
 		"#superTable => FMOne type: #FmxSQLTTable opposite: #subTables",
-		"#triggers => FMMany type: #FmxSQLTTrigger opposite: #table"
+		"#triggers => FMMany type: #FmxSQLTTrigger opposite: #table",
+		"#updateQueries => FMMany type: #FmxSQLTUpdateQuery opposite: #table"
 	],
 	"name" : "FmxSQLTTable"
 }
