@@ -63,7 +63,8 @@
 		"exceptClause",
 		"valuesClause",
 		"parameterAccess",
-		"usingClause"
+		"usingClause",
+		"intoClause"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

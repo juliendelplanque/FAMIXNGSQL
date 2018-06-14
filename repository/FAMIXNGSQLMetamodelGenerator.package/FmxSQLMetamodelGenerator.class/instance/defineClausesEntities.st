@@ -19,6 +19,7 @@ defineClausesEntities
 	exceptClause := builder newClassNamed: #ExceptClause comment: 'I am an except clause'.
 	valuesClause := builder newClassNamed: #ValuesClause comment: 'I am a Values clause'.
 	usingClause := builder newClassNamed: #UsingClause comment: 'I am an using clause'.
+	intoClause := builder newClassNamed: #IntoClause comment: 'I am an into clause'.
 	
 	clause <|-- withClause.
 	clause <|-- whereClause.
@@ -35,5 +36,6 @@ defineClausesEntities
 	clause <|-- intersectClause.
 	clause <|-- exceptClause.
 	clause <|-- valuesClause.
-	clause <|-- usingClause
+	clause <|-- usingClause.
+	clause <|-- intoClause
 	
