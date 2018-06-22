@@ -64,7 +64,8 @@
 		"valuesClause",
 		"parameterAccess",
 		"usingClause",
-		"intoClause"
+		"intoClause",
+		"limitClause"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"
