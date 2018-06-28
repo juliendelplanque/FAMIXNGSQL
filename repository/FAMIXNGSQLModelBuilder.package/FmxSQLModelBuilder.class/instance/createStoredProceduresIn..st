@@ -19,5 +19,5 @@ createStoredProceduresIn: aMooseModel
 								storedProcedure: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function.
-			pgFunction isStub
+			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
 				ifFalse: [ pgFunction ast acceptVisitor: visitor ] ]
