@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxSQLNamedEntity classTrait + FmxSQLTCursorParameter classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLCursorParameter",
+	"commentStamp" : "<historical>",
+	"super" : "MooseEntity",
+	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTCursorParameter",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

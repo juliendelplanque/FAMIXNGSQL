@@ -1,0 +1,5 @@
+accessing
+parameter
+
+	<generated>
+	^ parameter
