@@ -4,7 +4,7 @@
 	"instvars" : [ ],
 	"name" : "FmxSQLCRUDQuery",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLQueryContainer",
+	"super" : "MooseEntity",
 	"traitcomposition" : "FmxSQLTCrudQuery",
 	"type" : "normal",
 	"classinstvars" : [ ],

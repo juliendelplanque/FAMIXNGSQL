@@ -1,4 +1,5 @@
 generator
 generatedSlotNames
 	<generated>
-	^ #(returnType localVariables parameters references queries checkConstraintsCalling calls)
+	'FmxSQLTStoredProcedure class>>#generatedSlotNames'.
+	^ #(returnType localVariables parameters references checkConstraintsCalling calls)

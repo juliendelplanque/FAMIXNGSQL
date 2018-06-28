@@ -3,9 +3,9 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#clause => FMOne type: #FmxSQLTClause opposite: #references",
+		"#storedProcedureContainer => FMOne type: #FmxSQLTStoredProcedureCall opposite: #arguments",
 		"#storedProcedure => FMOne type: #FmxSQLTStoredProcedure opposite: #references",
-		"#storedProcedureContainer => FMOne type: #FmxSQLTStoredProcedureCall opposite: #arguments"
+		"#clause => FMOne type: #FmxSQLTClause opposite: #references"
 	],
 	"name" : "FmxSQLTReference"
 }

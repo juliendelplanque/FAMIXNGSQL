@@ -3,12 +3,12 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#constraints => FMMany type: #FmxSQLTConstraint opposite: #table",
 		"#references => FMMany type: #FmxSQLTTableReference opposite: #table",
-		"#subTables => FMMany type: #FmxSQLTTable opposite: #superTable",
-		"#superTable => FMOne type: #FmxSQLTTable opposite: #subTables",
+		"#constraints => FMMany type: #FmxSQLTConstraint opposite: #table",
 		"#triggers => FMMany type: #FmxSQLTTrigger opposite: #table",
-		"#updateQueries => FMMany type: #FmxSQLTUpdateQuery opposite: #table"
+		"#superTable => FMOne type: #FmxSQLTTable opposite: #subTables",
+		"#updateQueries => FMMany type: #FmxSQLTUpdateQuery opposite: #table",
+		"#subTables => FMMany type: #FmxSQLTTable opposite: #superTable"
 	],
 	"name" : "FmxSQLTTable"
 }

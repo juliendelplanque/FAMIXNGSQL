@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#parentQuery => FMOne type: #FmxSQLTSelectQuery opposite: #derivedTablesDefined",
 		"#query => FMOne type: #FmxSQLTSelectQuery opposite: #derivedTableDefining",
+		"#parentQuery => FMOne type: #FmxSQLTSelectQuery opposite: #derivedTablesDefined",
 		"#references => FMMany type: #FmxSQLTDerivedTableReference opposite: #derivedTable"
 	],
 	"name" : "FmxSQLTDerivedTable"

@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLBehaviouralEntity",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLQueryContainer",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLBehaviouralEntity",
+	"traitcomposition" : "FmxSQLTQueryContainer",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

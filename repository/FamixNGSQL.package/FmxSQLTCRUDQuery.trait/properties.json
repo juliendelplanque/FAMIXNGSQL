@@ -4,7 +4,7 @@
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
 		"#clauses => FMMany type: #FmxSQLTClause opposite: #query",
-		"#container => FMOne type: #FmxSQLTStoredProcedure opposite: #queries"
+		"#container => FMOne type: #FmxSQLTQueryContainer opposite: #queries"
 	],
 	"name" : "FmxSQLTCrudQuery"
 }
