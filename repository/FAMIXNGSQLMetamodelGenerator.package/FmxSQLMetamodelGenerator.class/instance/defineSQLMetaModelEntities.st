@@ -30,11 +30,14 @@ defineSQLMetaModelEntities
 	deleteQuery := builder newClassNamed: #DeleteQuery comment: self deleteQueryComment.
 	parameter := builder newClassNamed: #Parameter comment: self parameterComment.
 	localVariable := builder newClassNamed: #LocalVariable comment: self localVariableComment.
+	cursor := builder newClassNamed: #Cursor comment: 'I am a cursor, a local iterator that can have parameters'.
+	cursorParameter := builder newClassNamed: #CursorParameter comment: 'I am a cursor parameter'.
 	"Concrete reference entities."
 	tableReference := builder newClassNamed: #TableReference comment: self tableReferenceComment.
 	viewReference := builder newClassNamed: #ViewReference comment: self viewReferenceComment.
 	derivedTableReference := builder newClassNamed: #DerivedTableReference comment: self derivedTableReferenceComment.
 	parameterAccess := builder newClassNamed: #ParameterAccess comment: self parameterAccessComment.
+	cursorParameterAccess := builder newClassNamed: #CursorParameterAccess comment: self cursorParameterAccessComment.
 	columnReference := builder newClassNamed: #ColumnReference comment: self columnReferenceComment.
 	typeReference := builder newClassNamed: #TypeReference comment: self typeReferenceComment.
 	storedProcedureCall := builder newClassNamed: #StoredProcedureCall comment: self storedProcedureCallComment.

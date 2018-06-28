@@ -40,6 +40,11 @@ defineSQLBehaviouralEntitiesRelations
 		<>-*
 	(localVariable as: #TLocalVariable property: #storedProcedure).
 	
+	"A Cursor may have cursor parameters."
+	(cursor as: #TCursor property: #parameters)
+		<>-*
+	(cursorParameter as: #TCursorParameter property: #cursor).
+	
 	"A LocalVariable has an AbstractType."
 	(localVariable as: #TLocalVariable property: #type)
 		*-

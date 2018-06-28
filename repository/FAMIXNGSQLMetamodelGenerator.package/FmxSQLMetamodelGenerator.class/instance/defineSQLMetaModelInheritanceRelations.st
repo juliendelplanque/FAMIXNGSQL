@@ -5,7 +5,6 @@ defineSQLMetaModelInheritanceRelations
 	structuralEntity <|-- constraint.
 	tSourcedEntity <|-- behaviouralEntity.
 	behaviouralEntity <|-- queryContainer.
-	queryContainer <|-- crudQuery.
 	tSourcedEntity <|-- reference.
 	"Concrete structural entities inheritance relations."
 	structuralEntity <|-- namespace.
@@ -43,11 +42,14 @@ defineSQLMetaModelInheritanceRelations
 	crudQuery <|-- deleteQuery.
 	tNamedEntity <|-- parameter.
 	tNamedEntity <|-- localVariable.
+	tNamedEntity <|-- cursorParameter.
+	queryContainer <|-- cursor.
 	"Concrete reference entities inheritance relations."
 	reference <|-- tableReference.
 	reference <|-- derivedTableReference.
 	reference <|-- viewReference.
 	reference <|-- parameterAccess.
+	reference <|-- cursorParameterAccess.
 	reference <|-- columnReference.
 	reference <|-- typeReference.
 	reference <|-- storedProcedureCall.

@@ -8,6 +8,10 @@ defineSQLReferenceEntitiesRelations
 	"A leaf access references a leaf entity."
 	(parameterAccess as: #TParameterAccess property: #parameter)
 		*- (parameter as: #TParameter property: #accesses).
+		
+	"A leaf access references a leaf entity."
+	(cursorParameterAccess as: #TCursorParameterAccess property: #parameter)
+		*- (cursorParameter as: #TCursorParameter property: #accesses).
 
 	"A type reference references a type."
 	(typeReference as: #TTypeReference property: #type)
@@ -49,8 +53,8 @@ defineSQLReferenceEntitiesRelations
 	(crudQuery as: #TCrudQuery property: #clauses)
 		<>-* (clause as: #TClause property: #query).
 
-	"A StoredProcedure contains multiple queries"
-	(storedProcedure as: #TStoredProcedure property: #queries)
+	"A QueryContainer contains multiple queries"
+	(queryContainer as: #TQueryContainer property: #queries)
 		<>-* (crudQuery as: #TCrudQuery property: #container).
 
 	"An update query target a table"
