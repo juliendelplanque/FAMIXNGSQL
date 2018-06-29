@@ -55,6 +55,11 @@ defineSQLBehaviouralEntitiesRelations
 		*-
 	(tAbstractType property: #parameters).
 	
+	"A Cursor Parameter has an AbstractType."
+	(cursorParameter as: #TCursorParameter property: #type)
+		*-
+	(tAbstractType property: #cursorParameters).
+	
 	"A stored procedure used by a trigger can reference Columns."
 	(triggerStoredProcedure as: #TTriggerStoredProcedure property: #columnsReferenced)
 		<>-*
