@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLTCursorParameter class>>#generatedSlotNames'.
-	^ #(cursor accesses)
+	^ #(type cursor accesses)

@@ -1,0 +1,5 @@
+accessing
+cursorParameters
+
+	<generated>
+	^ cursorParameters
