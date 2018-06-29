@@ -3,11 +3,11 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#columnEnd",
 		"#behaviouralEntity => FMOne type: #FmxSQLSourcedEntity opposite: #sourceAnchor",
-		"#lineEnd",
 		"#columnBegin",
-		"#lineBegin"
+		"#columnEnd",
+		"#lineBegin",
+		"#lineEnd"
 	],
 	"name" : "FmxSQLTSourceAnchor"
 }

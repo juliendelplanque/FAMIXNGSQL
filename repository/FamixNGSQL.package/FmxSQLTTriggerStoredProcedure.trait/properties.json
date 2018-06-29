@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#triggers => FMMany type: #FmxSQLTTrigger opposite: #storedProcedure",
-		"#columnsReferenced => FMMany type: #FmxSQLTColumnReference opposite: #triggerStoredProceduresReferencing"
+		"#columnsReferenced => FMMany type: #FmxSQLTColumnReference opposite: #triggerStoredProceduresReferencing",
+		"#triggers => FMMany type: #FmxSQLTTrigger opposite: #storedProcedure"
 	],
 	"name" : "FmxSQLTTriggerStoredProcedure"
 }

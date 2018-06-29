@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#references => FMMany type: #FmxSQLTTypeReference opposite: #type",
-		"#columns => FMMany type: #FmxSQLTColumn opposite: #type"
+		"#columns => FMMany type: #FmxSQLTColumn opposite: #type",
+		"#references => FMMany type: #FmxSQLTTypeReference opposite: #type"
 	],
 	"name" : "FmxSQLTType"
 }

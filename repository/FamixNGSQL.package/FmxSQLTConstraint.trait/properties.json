@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#table => FMOne type: #FmxSQLTTable opposite: #constraints",
-		"#columns => FMMany type: #FmxSQLTColumn opposite: #constraints"
+		"#columns => FMMany type: #FmxSQLTColumn opposite: #constraints",
+		"#table => FMOne type: #FmxSQLTTable opposite: #constraints"
 	],
 	"name" : "FmxSQLTConstraint"
 }

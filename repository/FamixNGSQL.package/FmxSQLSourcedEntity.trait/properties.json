@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#sourceCode",
-		"#sourceAnchor => FMOne type: #FmxSQLTSourceAnchor opposite: #behaviouralEntity"
+		"#sourceAnchor => FMOne type: #FmxSQLTSourceAnchor opposite: #behaviouralEntity",
+		"#sourceCode"
 	],
 	"name" : "FmxSQLSourcedEntity"
 }

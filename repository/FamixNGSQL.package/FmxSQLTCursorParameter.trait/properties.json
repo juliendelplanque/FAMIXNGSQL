@@ -3,8 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#cursor => FMOne type: #FmxSQLTCursor opposite: #parameters",
-		"#accesses => FMMany type: #FmxSQLTCursorParameterAccess opposite: #parameter"
+		"#accesses => FMMany type: #FmxSQLTCursorParameterAccess opposite: #parameter",
+		"#cursor => FMOne type: #FmxSQLTCursor opposite: #parameters"
 	],
 	"name" : "FmxSQLTCursorParameter"
 }

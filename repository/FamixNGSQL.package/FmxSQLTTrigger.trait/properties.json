@@ -3,9 +3,9 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#table => FMOne type: #FmxSQLTTable opposite: #triggers",
 		"#firingAction",
 		"#storedProcedure => FMOne type: #FmxSQLTTriggerStoredProcedure opposite: #triggers",
+		"#table => FMOne type: #FmxSQLTTable opposite: #triggers",
 		"#when"
 	],
 	"name" : "FmxSQLTTrigger"
