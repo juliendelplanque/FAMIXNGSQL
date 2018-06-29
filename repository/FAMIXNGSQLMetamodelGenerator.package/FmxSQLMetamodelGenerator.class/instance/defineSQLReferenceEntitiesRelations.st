@@ -59,4 +59,8 @@ defineSQLReferenceEntitiesRelations
 
 	"An update query target a table"
 	(table as: #TTable property: #updateQueries)
-		-* (updateQuery as: #TUpdateQuery property: #table)
+		-* (updateQuery as: #TUpdateQuery property: #table).
+		
+	"A cursor reference references a cursor."
+	(cursorReference as: #TCursorReference property: #cursor)
+		*- (cursor as: #TCursor property: #references).

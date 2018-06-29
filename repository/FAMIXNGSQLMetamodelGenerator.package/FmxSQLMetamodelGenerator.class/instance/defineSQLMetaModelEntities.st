@@ -40,5 +40,6 @@ defineSQLMetaModelEntities
 	cursorParameterAccess := builder newClassNamed: #CursorParameterAccess comment: self cursorParameterAccessComment.
 	columnReference := builder newClassNamed: #ColumnReference comment: self columnReferenceComment.
 	typeReference := builder newClassNamed: #TypeReference comment: self typeReferenceComment.
+	cursorReference := builder newClassNamed: #CursorReference comment: self cursorReferenceComment.
 	storedProcedureCall := builder newClassNamed: #StoredProcedureCall comment: self storedProcedureCallComment.
 	localVariableAccess := builder newClassNamed: #LocalVariableAccess comment: self localVariableAccessComment.

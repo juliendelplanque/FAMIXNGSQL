@@ -68,7 +68,8 @@
 		"limitClause",
 		"cursor",
 		"cursorParameter",
-		"cursorParameterAccess"
+		"cursorParameterAccess",
+		"cursorReference"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

@@ -1,6 +1,7 @@
 definitions - SQL
 defineSQLMetaModelInheritanceRelations
 	"Abstract entities inheritance relations."
+
 	tNamedEntity <|-- structuralEntity.
 	structuralEntity <|-- constraint.
 	tSourcedEntity <|-- behaviouralEntity.
@@ -17,7 +18,8 @@ defineSQLMetaModelInheritanceRelations
 	tAbstractType <|-- view.
 	constraint <|-- checkConstraint.
 	"behaviouralEntity <|-- checkConstraint."
-	tSourcedEntity <|-- checkConstraint. self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.
+	tSourcedEntity <|-- checkConstraint.
+	self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.
 	constraint <|-- primaryKeyConstraint.
 	constraint <|-- foreignKeyConstraint.
 	constraint <|-- notNullConstraint.
@@ -54,3 +56,4 @@ defineSQLMetaModelInheritanceRelations
 	reference <|-- typeReference.
 	reference <|-- storedProcedureCall.
 	reference <|-- localVariableAccess.
+	reference <|-- cursorReference
