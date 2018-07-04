@@ -9,7 +9,8 @@
 		"databaseName",
 		"connection",
 		"metadata",
-		"pgToFamixEntities"
+		"pgToFamixEntities",
+		"errorReport"
 	],
 	"name" : "FmxSQLModelBuilder",
 	"type" : "normal"

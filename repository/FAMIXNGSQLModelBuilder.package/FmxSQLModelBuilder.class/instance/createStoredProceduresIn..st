@@ -8,7 +8,7 @@ createStoredProceduresIn: aMooseModel
 				returnType: (pgToFamixEntities at: pgFunction returnType);
 				mooseModel: aMooseModel;
 				yourself.
-			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function.
+			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function errorReport: self errorReport.
 			pgFunction isSqlTriggerFunction
 				ifFalse: [ "Trigger function do not have arguments"
 					pgFunction arguments
@@ -20,4 +20,8 @@ createStoredProceduresIn: aMooseModel
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function.
 			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
-				ifFalse: [ pgFunction ast acceptVisitor: visitor ] ]
+				ifFalse: [ pgFunction ast
+						in: [ :ast | 
+							ast isPetitFailure
+								ifTrue: [ self errorReport addError: ast ]
+								ifFalse: [ ast acceptVisitor: visitor ] ] ] ]
