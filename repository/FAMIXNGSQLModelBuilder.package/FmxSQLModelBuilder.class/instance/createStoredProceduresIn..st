@@ -20,7 +20,9 @@ createStoredProceduresIn: aMooseModel
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function.
 			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
-				ifFalse: [ pgFunction ast
+				ifFalse: [ ([ pgFunction ast ]
+						on: MessageNotUnderstood
+						do: [ :ex | ex signaler ])
 						in: [ :ast | 
 							ast isPetitFailure
 								ifTrue: [ self errorReport addError: ast ]
