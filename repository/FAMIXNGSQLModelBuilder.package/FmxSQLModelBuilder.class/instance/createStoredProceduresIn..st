@@ -1,5 +1,7 @@
 model building - entities
 createStoredProceduresIn: aMooseModel
+	| functions |
+	functions := Dictionary new.
 	metadata getFunctions
 		do: [ :pgFunction | 
 			| function visitor |
@@ -19,6 +21,11 @@ createStoredProceduresIn: aMooseModel
 								storedProcedure: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function.
+			functions at: pgFunction put: function ].
+	functions
+		keysAndValuesDo: [ :pgFunction :function | 
+			| visitor |
+			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function errorReport: self errorReport.
 			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
 				ifFalse: [ ([ pgFunction ast ]
 						on: MessageNotUnderstood
