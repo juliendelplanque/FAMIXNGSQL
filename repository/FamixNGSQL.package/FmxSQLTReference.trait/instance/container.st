@@ -1,7 +1,7 @@
 accessing
-clause
+container
 
 	<generated>
 	<container>
 
-	^ clause
+	^ container

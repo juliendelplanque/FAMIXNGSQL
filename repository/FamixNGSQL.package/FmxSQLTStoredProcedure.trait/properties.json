@@ -7,7 +7,6 @@
 		"#checkConstraintsCalling => FMMany type: #FmxSQLTCheckConstraint opposite: #storedProceduresCalled",
 		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #storedProcedure",
 		"#parameters => FMMany type: #FmxSQLTParameter opposite: #storedProcedure",
-		"#references => FMMany type: #FmxSQLTReference opposite: #storedProcedure",
 		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning"
 	],
 	"name" : "FmxSQLTStoredProcedure"

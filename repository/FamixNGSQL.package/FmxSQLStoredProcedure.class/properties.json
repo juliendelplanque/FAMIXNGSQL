@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTStoredProcedure classTrait",
+	"classtraitcomposition" : "FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTReferenceContainer classTrait + FmxSQLTStoredProcedure classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLStoredProcedure",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTStoredProcedure",
+	"traitcomposition" : "FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTReferenceContainer + FmxSQLTStoredProcedure",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -3,8 +3,7 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#query => FMOne type: #FmxSQLTCrudQuery opposite: #clauses",
-		"#references => FMMany type: #FmxSQLTReference opposite: #clause"
+		"#query => FMOne type: #FmxSQLTCrudQuery opposite: #clauses"
 	],
 	"name" : "FmxSQLTClause"
 }

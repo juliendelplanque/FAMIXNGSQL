@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTClause classTrait",
+	"classtraitcomposition" : "FmxSQLTClause classTrait + FmxSQLTReferenceContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLClause",
 	"commentStamp" : "<historical>",
 	"super" : "MooseEntity",
-	"traitcomposition" : "FmxSQLTClause",
+	"traitcomposition" : "FmxSQLTClause + FmxSQLTReferenceContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
