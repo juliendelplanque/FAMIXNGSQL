@@ -21,6 +21,11 @@ defineClausesEntities
 	usingClause := builder newClassNamed: #UsingClause comment: 'I am an using clause'.
 	intoClause := builder newClassNamed: #IntoClause comment: 'I am an into clause'.
 	limitClause := builder newClassNamed: #LimitClause comment: 'I am a limit clause'.
+	
+	"A clause is a reference container"
+	tReferenceContainer <|-- clause.
+	
+	"Defining all kinds of clauses"	
 	clause <|-- withClause.
 	clause <|-- whereClause.
 	clause <|-- returningClause.

@@ -69,7 +69,9 @@
 		"cursor",
 		"cursorParameter",
 		"cursorParameterAccess",
-		"cursorReference"
+		"cursorReference",
+		"tReferenceContainer",
+		"alias"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

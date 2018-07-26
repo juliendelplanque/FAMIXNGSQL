@@ -8,6 +8,7 @@ defineSQLMetaModelEntities
 	queryContainer := builder newClassNamed: #QueryContainer comment: self queryContainerComment.
 	crudQuery := builder newClassNamed: #CRUDQuery comment: self crudQueryComment.
 	reference := builder newClassNamed: #Reference comment: self referenceComment.
+	tReferenceContainer := builder newTraitNamed: #TReferenceContainer comment: self tReferenceContainerComment.
 	"Concrete structural entities."
 	namespace := builder newClassNamed: #Namespace comment: self namespaceComment.
 	table := builder newClassNamed: #Table comment: self tableComment.
@@ -32,6 +33,7 @@ defineSQLMetaModelEntities
 	localVariable := builder newClassNamed: #LocalVariable comment: self localVariableComment.
 	cursor := builder newClassNamed: #Cursor comment: 'I am a cursor, a local iterator that can have parameters'.
 	cursorParameter := builder newClassNamed: #CursorParameter comment: 'I am a cursor parameter'.
+	alias := builder newClassNamed: #Alias comment: 'I am an Alias'.
 	"Concrete reference entities."
 	tableReference := builder newClassNamed: #TableReference comment: self tableReferenceComment.
 	viewReference := builder newClassNamed: #ViewReference comment: self viewReferenceComment.
