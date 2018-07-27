@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLTClause class>>#generatedSlotNames'.
-	^ #(query)
+	^ #(query aliases)
