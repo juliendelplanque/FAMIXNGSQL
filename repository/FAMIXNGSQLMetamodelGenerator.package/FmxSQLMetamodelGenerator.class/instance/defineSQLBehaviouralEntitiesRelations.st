@@ -77,4 +77,9 @@ defineSQLBehaviouralEntitiesRelations
 	events of a non-existing table."
 	(table as: #TTable property: #triggers)
 		<>-*
-	(trigger as: #TTrigger property: #table)
+	(trigger as: #TTrigger property: #table).
+	
+	"A clause may define aliases"
+	(clause as: #TClause property: #aliases)
+		<>-*
+	(alias as: #TAlias property: #clause).

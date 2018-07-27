@@ -61,4 +61,5 @@ defineSQLMetaModelInheritanceRelations
 	reference <|-- typeReference.
 	reference <|-- storedProcedureCall.
 	reference <|-- localVariableAccess.
-	reference <|-- cursorReference
+	reference <|-- cursorReference.
+	reference <|-- aliasAccess.
