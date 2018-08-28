@@ -32,7 +32,6 @@ defineSQLMetaModelInheritanceRelations
 	queryContainer <|-- storedProcedure.
 	storedProcedure--|> #TNamespaceEntity.
 	namedEntity <|-- referenceContainer.
-	referenceContainer --|> #TWithReferences.
 	referenceContainer <|-- storedProcedure.
 	storedProcedure <|-- triggerStoredProcedure.
 	behaviouralEntity <|-- trigger.
@@ -55,7 +54,6 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure --|> #TWithLocalVariables.
 	"Concrete reference entities inheritance relations."
 	reference <|-- tableReference.
-	reference --|> #TReference.
 	reference <|-- derivedTableReference.
 	reference <|-- viewReference.
 	reference <|-- parameterAccess.

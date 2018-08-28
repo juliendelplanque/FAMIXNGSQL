@@ -4,7 +4,7 @@ createConstraintsIn: aMooseModel
 		FmxSQLCheckConstraint new
 			columns: (pgCheckConstraint constrainedColumns collect: [ :pgColumn | pgToFamixEntities at: pgColumn ]);
 			table: (pgToFamixEntities at: pgCheckConstraint constrainedColumns anyOne) columnsContainer;
-			source: pgCheckConstraint code;
+			sourceCode: pgCheckConstraint code;
 			mooseModel: aMooseModel;
 			yourself ].
 	

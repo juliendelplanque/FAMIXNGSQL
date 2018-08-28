@@ -5,7 +5,7 @@ createViewsIn: aMooseModel
 		|view|
 		view := FmxSQLView new
 					name: pgView name;
-					source: pgView definition;
+					sourceCode: pgView definition;
 					"query: TODO;"
 					mooseModel: aMooseModel;
 					yourself.

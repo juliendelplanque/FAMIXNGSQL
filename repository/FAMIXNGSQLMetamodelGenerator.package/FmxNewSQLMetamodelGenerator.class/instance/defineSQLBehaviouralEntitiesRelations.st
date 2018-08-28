@@ -1,5 +1,10 @@
 definition
 defineSQLBehaviouralEntitiesRelations
+	"A stored procedure contains abstract references (regrouping variable accesses, references to views, tables...)"
+
+	(referenceContainer property: #references)
+		<>-* (reference property: #container).
+		
 	"A CheckConstraint can call StoredProcedures"
 	(checkConstraint property: #storedProceduresCalled)
 		*-*
