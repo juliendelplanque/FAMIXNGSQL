@@ -1,8 +1,7 @@
 meta
 annotation
 
-	<generated>
-	<MSEClass: #CursorParameter super: #MooseEntity>
+	<MSEClass: #CursorParameter super: #FmxSQLNamedEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

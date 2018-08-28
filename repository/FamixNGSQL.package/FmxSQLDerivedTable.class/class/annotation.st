@@ -1,8 +1,7 @@
 meta
 annotation
 
-	<generated>
-	<MSEClass: #DerivedTable super: #FmxSQLQueryContainer>
+	<MSEClass: #DerivedTable super: #MooseEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

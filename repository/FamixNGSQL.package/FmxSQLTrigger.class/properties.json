@@ -1,11 +1,16 @@
 {
-	"classtraitcomposition" : "FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTTrigger classTrait",
+	"classtraitcomposition" : "FmxNGTNamespaceEntity classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#firingAction",
+		"#storedProcedure => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #triggers",
+		"#table => FMOne type: #FmxSQLTable opposite: #triggers",
+		"#when"
+	],
 	"name" : "FmxSQLTrigger",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLBehaviouralEntity",
-	"traitcomposition" : "FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTTrigger",
+	"traitcomposition" : "FmxNGTNamespaceEntity",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,13 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTViewReference classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLViewReference",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReference",
-	"traitcomposition" : "FmxSQLTViewReference",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#view => FMOne type: #FmxSQLView opposite: #references"
+	],
+	"name" : "FmxSQLViewReference",
+	"type" : "normal"
 }

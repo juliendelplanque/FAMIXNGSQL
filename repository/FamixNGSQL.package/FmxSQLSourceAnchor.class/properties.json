@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTSourceAnchor classTrait",
+	"classtraitcomposition" : "FmxNGTSourceAnchor classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLSourceAnchor",
 	"commentStamp" : "",
 	"super" : "FmxSQLEntity",
-	"traitcomposition" : "FmxSQLTSourceAnchor",
+	"traitcomposition" : "FmxNGTSourceAnchor + TDependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

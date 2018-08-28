@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"name"
-	],
-	"name" : "FmxSQLNamedEntity"
-}

@@ -1,13 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLTStoredProcedureCall classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLStoredProcedureCall",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReference",
-	"traitcomposition" : "FmxSQLTStoredProcedureCall",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#arguments => FMMany type: #FmxSQLReference opposite: #storedProcedureContainer",
+		"#storedProcedure => FMOne type: #FmxSQLStoredProcedure opposite: #calls"
+	],
+	"name" : "FmxSQLStoredProcedureCall",
+	"type" : "normal"
 }

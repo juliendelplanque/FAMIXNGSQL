@@ -1,11 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTCursor classTrait",
+	"classtraitcomposition" : "FmxNGTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#references => FMMany type: #FmxSQLCursorReference opposite: #cursor"
+	],
 	"name" : "FmxSQLCursor",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLTCursor",
+	"super" : "MooseEntity",
+	"traitcomposition" : "FmxNGTWithParameters + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

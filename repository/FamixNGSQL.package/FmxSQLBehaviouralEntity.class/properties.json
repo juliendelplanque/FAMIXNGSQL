@@ -1,13 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLSourcedEntity classTrait",
+	"commentStamp" : "",
+	"super" : "FmxSQLNamedEntity",
+	"category" : "FamixNGSQL-Entities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLBehaviouralEntity",
-	"commentStamp" : "",
-	"super" : "MooseEntity",
-	"traitcomposition" : "FmxSQLSourcedEntity",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"type" : "normal"
 }

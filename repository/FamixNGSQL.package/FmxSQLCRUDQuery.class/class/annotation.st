@@ -1,8 +1,7 @@
 meta
 annotation
 
-	<generated>
-	<MSEClass: #CRUDQuery super: #MooseEntity>
+	<MSEClass: #CRUDQuery super: #FmxSQLEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

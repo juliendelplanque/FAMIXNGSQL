@@ -1,11 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait + FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTView classTrait",
+	"classtraitcomposition" : "FmxNGTNamespaceEntity classTrait + FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#query => FMOne type: #FmxSQLSelectQuery opposite: #viewDefining",
+		"#references => FMMany type: #FmxSQLViewReference opposite: #view"
+	],
 	"name" : "FmxSQLView",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLAbstractType + FmxSQLColumnsContainer + FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTView",
+	"super" : "FmxSQLNamedEntity",
+	"traitcomposition" : "FmxNGTNamespaceEntity + FmxSQLAbstractType + FmxSQLColumnsContainer + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

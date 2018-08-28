@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTNamespace classTrait",
+	"classtraitcomposition" : "FmxNGTNamespace classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLNamespace",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FmxSQLTNamespace",
+	"traitcomposition" : "FmxNGTNamespace",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

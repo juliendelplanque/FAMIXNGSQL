@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#table => FMOne type: #FmxSQLTTable opposite: #updateQueries"
-	],
-	"name" : "FmxSQLTUpdateQuery"
-}

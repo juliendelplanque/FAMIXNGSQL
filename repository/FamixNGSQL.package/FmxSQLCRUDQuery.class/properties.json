@@ -1,13 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLTCrudQuery classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLCRUDQuery",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
-	"traitcomposition" : "FmxSQLTCrudQuery",
-	"type" : "normal",
+	"super" : "FmxSQLEntity",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#clauses => FMMany type: #FmxSQLClause opposite: #query",
+		"#container => FMOne type: #FmxSQLTQueryContainer opposite: #queries"
+	],
+	"name" : "FmxSQLCRUDQuery",
+	"type" : "normal"
 }

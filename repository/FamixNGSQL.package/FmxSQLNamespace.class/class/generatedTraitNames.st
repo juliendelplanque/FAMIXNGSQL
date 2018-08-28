@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FmxSQLTNamespace)
+	^ #(FmxNGTNamespace)

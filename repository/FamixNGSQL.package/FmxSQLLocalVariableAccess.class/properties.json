@@ -1,13 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTLocalVariableAccess classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLLocalVariableAccess",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReference",
-	"traitcomposition" : "FmxSQLTLocalVariableAccess",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#localVariable => FMOne type: #FmxSQLLocalVariable opposite: #accesses"
+	],
+	"name" : "FmxSQLLocalVariableAccess",
+	"type" : "normal"
 }

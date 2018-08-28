@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxNGTComment classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLComment",
+	"commentStamp" : "",
+	"super" : "FmxSQLSourcedEntity",
+	"traitcomposition" : "FmxNGTComment",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

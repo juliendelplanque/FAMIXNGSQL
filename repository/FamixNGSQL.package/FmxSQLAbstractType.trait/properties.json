@@ -3,10 +3,10 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#cursorParameters => FMMany type: #FmxSQLTCursorParameter opposite: #type",
-		"#localVariables => FMMany type: #FmxSQLTLocalVariable opposite: #type",
-		"#parameters => FMMany type: #FmxSQLTParameter opposite: #type",
-		"#storedProceduresReturning => FMMany type: #FmxSQLTStoredProcedure opposite: #returnType"
+		"#cursorParameters => FMMany type: #FmxSQLCursorParameter opposite: #type",
+		"#localVariables => FMMany type: #FmxSQLLocalVariable opposite: #type",
+		"#parameters => FMMany type: #FmxSQLParameter opposite: #type",
+		"#storedProceduresReturning => FMMany type: #FmxSQLStoredProcedure opposite: #returnType"
 	],
 	"name" : "FmxSQLAbstractType"
 }

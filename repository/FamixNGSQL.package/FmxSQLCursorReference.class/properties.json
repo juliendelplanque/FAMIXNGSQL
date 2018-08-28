@@ -1,13 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTCursorReference classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLCursorReference",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReference",
-	"traitcomposition" : "FmxSQLTCursorReference",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#cursor => FMOne type: #FmxSQLCursor opposite: #references"
+	],
+	"name" : "FmxSQLCursorReference",
+	"type" : "normal"
 }

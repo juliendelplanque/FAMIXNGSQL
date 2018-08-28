@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#entities => FMMany type: #FmxSQLEntityInNamespace opposite: #namespace"
-	],
-	"name" : "FmxSQLTNamespace"
-}

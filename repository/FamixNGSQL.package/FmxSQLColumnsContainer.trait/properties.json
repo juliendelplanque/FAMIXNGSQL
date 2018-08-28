@@ -3,7 +3,7 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Traits",
 	"instvars" : [
-		"#columns => FMMany type: #FmxSQLTColumn opposite: #columnsContainer"
+		"#columns => FMMany type: #FmxSQLColumn opposite: #columnsContainer"
 	],
 	"name" : "FmxSQLColumnsContainer"
 }

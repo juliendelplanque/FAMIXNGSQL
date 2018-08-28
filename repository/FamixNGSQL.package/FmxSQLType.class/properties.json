@@ -1,11 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLAbstractType classTrait + FmxSQLTType classTrait",
+	"classtraitcomposition" : "FmxSQLAbstractType classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#columns => FMMany type: #FmxSQLColumn opposite: #type",
+		"#references => FMMany type: #FmxSQLTypeReference opposite: #type"
+	],
 	"name" : "FmxSQLType",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FmxSQLAbstractType + FmxSQLTType",
+	"traitcomposition" : "FmxSQLAbstractType",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

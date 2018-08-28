@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FmxSQLEntityInNamespace FmxSQLNamedEntity FmxSQLTReferenceContainer FmxSQLTStoredProcedure)
+	^ #(FmxNGTNamespaceEntity FmxNGTWithLocalVariables FmxNGTWithParameters FmxSQLTQueryContainer)

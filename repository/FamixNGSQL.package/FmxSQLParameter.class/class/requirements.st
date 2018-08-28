@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLParameter }
+	^ { FmxSQLCursor. FmxSQLStoredProcedure }

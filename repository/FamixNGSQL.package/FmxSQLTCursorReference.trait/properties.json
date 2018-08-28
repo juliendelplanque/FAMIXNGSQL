@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#cursor => FMOne type: #FmxSQLTCursor opposite: #references"
-	],
-	"name" : "FmxSQLTCursorReference"
-}

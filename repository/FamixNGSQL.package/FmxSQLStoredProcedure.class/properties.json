@@ -1,11 +1,15 @@
 {
-	"classtraitcomposition" : "FmxSQLEntityInNamespace classTrait + FmxSQLNamedEntity classTrait + FmxSQLTReferenceContainer classTrait + FmxSQLTStoredProcedure classTrait",
+	"classtraitcomposition" : "FmxNGTNamespaceEntity classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#calls => FMMany type: #FmxSQLStoredProcedureCall opposite: #storedProcedure",
+		"#checkConstraintsCalling => FMMany type: #FmxSQLCheckConstraint opposite: #storedProceduresCalled",
+		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning"
+	],
 	"name" : "FmxSQLStoredProcedure",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLEntityInNamespace + FmxSQLNamedEntity + FmxSQLTReferenceContainer + FmxSQLTStoredProcedure",
+	"super" : "FmxSQLReferencesContainer",
+	"traitcomposition" : "FmxNGTNamespaceEntity + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

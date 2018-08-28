@@ -1,11 +1,15 @@
 {
-	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait + FmxSQLTDerivedTable classTrait",
+	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#parentQuery => FMOne type: #FmxSQLSelectQuery opposite: #derivedTablesDefined",
+		"#query => FMOne type: #FmxSQLSelectQuery opposite: #derivedTableDefining",
+		"#references => FMMany type: #FmxSQLDerivedTableReference opposite: #derivedTable"
+	],
 	"name" : "FmxSQLDerivedTable",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLQueryContainer",
-	"traitcomposition" : "FmxSQLColumnsContainer + FmxSQLTDerivedTable",
+	"super" : "MooseEntity",
+	"traitcomposition" : "FmxSQLColumnsContainer + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

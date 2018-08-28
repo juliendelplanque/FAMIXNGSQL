@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FmxNGTAssociation classTrait + TAssociationMetaLevelDependency classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLAssociation",
+	"commentStamp" : "",
+	"super" : "FmxSQLSourcedEntity",
+	"traitcomposition" : "FmxNGTAssociation + TAssociationMetaLevelDependency",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

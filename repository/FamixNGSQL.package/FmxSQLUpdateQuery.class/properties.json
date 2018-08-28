@@ -1,13 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTUpdateQuery classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLUpdateQuery",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLCRUDQuery",
-	"traitcomposition" : "FmxSQLTUpdateQuery",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#table => FMOne type: #FmxSQLTable opposite: #updateQueries"
+	],
+	"name" : "FmxSQLUpdateQuery",
+	"type" : "normal"
 }

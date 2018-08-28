@@ -1,11 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLSourcedEntity classTrait + FmxSQLTReference classTrait",
+	"classtraitcomposition" : "FmxSQLTArgument classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#container => FMOne type: #FmxSQLReferencesContainer opposite: #references",
+		"#storedProcedureContainer => FMOne type: #FmxSQLStoredProcedureCall opposite: #arguments"
+	],
 	"name" : "FmxSQLReference",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
-	"traitcomposition" : "FmxSQLSourcedEntity + FmxSQLTReference",
+	"super" : "FmxSQLSourcedEntity",
+	"traitcomposition" : "FmxSQLTArgument",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

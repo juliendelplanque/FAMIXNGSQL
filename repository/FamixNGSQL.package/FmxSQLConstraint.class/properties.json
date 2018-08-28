@@ -1,13 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLTConstraint classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLConstraint",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FmxSQLTConstraint",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#columns => FMMany type: #FmxSQLColumn opposite: #constraints",
+		"#table => FMOne type: #FmxSQLTable opposite: #constraints"
+	],
+	"name" : "FmxSQLConstraint",
+	"type" : "normal"
 }

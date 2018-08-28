@@ -1,13 +1,15 @@
 {
-	"classtraitcomposition" : "FmxSQLTSelectQuery classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLSelectQuery",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLCRUDQuery",
-	"traitcomposition" : "FmxSQLTSelectQuery",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#derivedTableDefining => FMOne type: #FmxSQLDerivedTable opposite: #query",
+		"#derivedTablesDefined => FMMany type: #FmxSQLDerivedTable opposite: #parentQuery",
+		"#viewDefining => FMOne type: #FmxSQLView opposite: #query"
+	],
+	"name" : "FmxSQLSelectQuery",
+	"type" : "normal"
 }

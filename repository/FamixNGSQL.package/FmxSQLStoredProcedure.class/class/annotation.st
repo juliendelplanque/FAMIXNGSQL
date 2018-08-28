@@ -1,8 +1,7 @@
 meta
 annotation
 
-	<generated>
-	<MSEClass: #StoredProcedure super: #FmxSQLQueryContainer>
+	<MSEClass: #StoredProcedure super: #FmxSQLReferencesContainer>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

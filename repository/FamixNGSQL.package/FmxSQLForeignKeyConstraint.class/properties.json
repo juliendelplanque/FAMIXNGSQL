@@ -1,13 +1,13 @@
 {
-	"classtraitcomposition" : "FmxSQLTForeignKeyConstraint classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "FmxSQLForeignKeyConstraint",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLConstraint",
-	"traitcomposition" : "FmxSQLTForeignKeyConstraint",
-	"type" : "normal",
+	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "FamixNGSQL-Entities"
+	"classvars" : [ ],
+	"instvars" : [
+		"#referencedColumns => FMMany type: #FmxSQLColumn opposite: #foreignKeyConstraintsReferencing"
+	],
+	"name" : "FmxSQLForeignKeyConstraint",
+	"type" : "normal"
 }

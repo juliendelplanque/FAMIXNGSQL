@@ -1,11 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLNamedEntity classTrait + FmxSQLTLocalVariable classTrait",
+	"classtraitcomposition" : "FmxNGTLocalVariable classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#accesses => FMMany type: #FmxSQLLocalVariableAccess opposite: #localVariable",
+		"#type => FMOne type: #FmxSQLAbstractType opposite: #localVariables"
+	],
 	"name" : "FmxSQLLocalVariable",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
-	"traitcomposition" : "FmxSQLNamedEntity + FmxSQLTLocalVariable",
+	"super" : "FmxSQLNamedEntity",
+	"traitcomposition" : "FmxNGTLocalVariable",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

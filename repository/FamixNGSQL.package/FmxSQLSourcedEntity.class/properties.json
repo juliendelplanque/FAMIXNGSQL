@@ -1,0 +1,18 @@
+{
+	"classtraitcomposition" : "FmxNGTWithComments classTrait + FmxNGTWithSourceAnchor classTrait + FmxNGTWithSourceLanguage classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"#comments => FMMany type: #FmxNGTComment opposite: #container",
+		"#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities",
+		"#sourceAnchor => FMOne type: #FmxNGTSourceAnchor opposite: #element",
+		"#sourceCode"
+	],
+	"name" : "FmxSQLSourcedEntity",
+	"commentStamp" : "",
+	"super" : "FmxSQLEntity",
+	"traitcomposition" : "FmxNGTWithComments + FmxNGTWithSourceAnchor + FmxNGTWithSourceLanguage",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}
