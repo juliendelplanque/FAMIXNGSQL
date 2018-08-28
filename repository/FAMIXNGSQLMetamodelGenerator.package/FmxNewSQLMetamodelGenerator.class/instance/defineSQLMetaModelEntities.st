@@ -6,7 +6,7 @@ defineSQLMetaModelEntities
 	structuralEntity := builder newClassNamed: #StructuralEntity comment: self structuralEntityComment.
 	constraint := builder newClassNamed: #Constraint comment: self constraintComment.
 	tColumnsContainer := builder newTraitNamed: #ColumnsContainer comment: self columnsContainerComment.
-	queryContainer := builder newClassNamed: #QueryContainer comment: self queryContainerComment.
+	queryContainer := builder newTraitNamed: #TQueryContainer comment: self queryContainerComment.
 	crudQuery := builder newClassNamed: #CRUDQuery comment: self crudQueryComment.
 	reference := builder newClassNamed: #Reference comment: self referenceComment.
 	referenceContainer := builder newClassNamed: #ReferencesContainer comment: self referenceContainerComment.

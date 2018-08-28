@@ -3,10 +3,10 @@ defineSQLMetaModelInheritanceRelations
 	"Abstract entities inheritance relations."
 	structuralEntity --|> namedEntity.
 	structuralEntity <|-- constraint.
-	sourcedEntity <|-- behaviouralEntity.
-	behaviouralEntity <|-- queryContainer.
-	behaviouralEntity --|> sourcedEntity.
+	namedEntity <|-- behaviouralEntity. "Should be trait (not all behavioural entities have name)"
+	"behaviouralEntity <|-- queryContainer."
 	sourcedEntity <|-- reference.
+	entity <|-- crudQuery.
 	"Concrete structural entities inheritance relations."
 	structuralEntity <|-- namespace.
 	namespace --|> #TNamespace.
@@ -18,9 +18,6 @@ defineSQLMetaModelInheritanceRelations
 	tAbstractType <|-- table.
 	tAbstractType <|-- view.
 	constraint <|-- checkConstraint.
-	"behaviouralEntity <|-- checkConstraint."
-	sourcedEntity <|-- checkConstraint.
-	self flag: 'Should inherit this from Behavioural entity but apparently it s not.'.
 	constraint <|-- primaryKeyConstraint.
 	constraint <|-- foreignKeyConstraint.
 	constraint <|-- notNullConstraint.
@@ -40,7 +37,7 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure <|-- triggerStoredProcedure.
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.
-	namedEntity <|-- trigger.
+	"namedEntity <|-- trigger."
 	crudQuery <|-- selectQuery.
 	crudQuery <|-- insertQuery.
 	crudQuery <|-- updateQuery.
@@ -54,10 +51,8 @@ defineSQLMetaModelInheritanceRelations
 	queryContainer <|-- cursor.
 	cursor --|> #TWithParameters.
 	referenceContainer <|-- alias.
-	referenceContainer <|-- storedProcedure.
 	storedProcedure --|> #TWithParameters.
 	storedProcedure --|> #TWithLocalVariables.
-	referenceContainer <|-- clause.
 	"Concrete reference entities inheritance relations."
 	reference <|-- tableReference.
 	reference --|> #TReference.

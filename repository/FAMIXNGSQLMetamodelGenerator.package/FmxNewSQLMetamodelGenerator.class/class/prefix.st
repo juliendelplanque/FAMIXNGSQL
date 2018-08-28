@@ -1,3 +1,3 @@
 accessing
 prefix
-	^ 'FmxSQLNew'
+	^ 'FmxSQL'

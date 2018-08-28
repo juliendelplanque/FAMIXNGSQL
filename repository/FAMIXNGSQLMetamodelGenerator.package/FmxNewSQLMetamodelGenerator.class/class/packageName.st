@@ -1,3 +1,3 @@
 accessing
 packageName
-	^ 'FamixNGSQLNew'
+	^ 'FamixNGSQL'
