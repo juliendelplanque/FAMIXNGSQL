@@ -4,8 +4,8 @@ buildVisualizationOnView: view
 	dependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	
 	view shape rectangle
-		width: [ :fmxEntity | (dependencies select: [ :assoc | assoc head = fmxEntity ]) size *10 ];
-		height: [ :fmxEntity | (dependencies select: [ :assoc | assoc tail = fmxEntity ]) size *10 ];
+		width: [ :fmxEntity | (dependencies select: [ :assoc | assoc key = fmxEntity ]) size *10 ];
+		height: [ :fmxEntity | (dependencies select: [ :assoc | assoc value = fmxEntity ]) size *10 ];
 		color: [ :fmxEntity |
 			fmxEntity class = FmxSQLTable
 				ifTrue: [ Color red ]

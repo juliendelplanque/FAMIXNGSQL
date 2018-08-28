@@ -3,7 +3,7 @@ analyze
 	| dependencies |
 	dependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	circuits := MalCyclesCoverage new
-					nodes: (dependencies collect: #head) asSet;
-					edges: dependencies from: #head to: #tail;
+					nodes: (dependencies collect: #key) asSet;
+					edges: dependencies from: #key to: #value;
 					run;
 					circuits.

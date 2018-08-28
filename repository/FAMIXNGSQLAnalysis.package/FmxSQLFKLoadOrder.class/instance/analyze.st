@@ -3,8 +3,8 @@ analyze
 	| fkDependencies |
 	fkDependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	sortedTables := (MalTopologicalSorting new
-							nodes: (fkDependencies collect: #head) asSet;
-							edges: fkDependencies from: #head to: #tail;
+							nodes: (fkDependencies collect: #key) asSet;
+							edges: fkDependencies from: #key to: #value;
 							run) collect: #model.
 							
 	

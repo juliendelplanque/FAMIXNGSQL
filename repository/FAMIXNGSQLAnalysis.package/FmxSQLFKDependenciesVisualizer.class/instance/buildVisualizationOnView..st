@@ -3,8 +3,8 @@ buildVisualizationOnView: view
 	| dependencies lb circuits |
 	dependencies := (FmxSQLFKDependenciesAnalyzer analyze: self mooseGroup) dependencies.
 	circuits := MalCyclesCoverage new
-					nodes: (dependencies collect: #head) asSet;
-					edges: dependencies from: #head to: #tail;
+					nodes: (dependencies collect: #key) asSet;
+					edges: dependencies from: #key to: #value;
 					run;
 					circuits.
 	
@@ -12,14 +12,14 @@ buildVisualizationOnView: view
 	view shape rectangle
 		size: 10;
 		color: [ :e | 
-			(dependencies anySatisfy: [ :any | any head = e and: [ any tail = e ] ])
+			(dependencies anySatisfy: [ :any | any key = e and: [ any value = e ] ])
 				ifTrue:[ Color red ]
 				ifFalse: [ self color ] ].
-	view nodes: (dependencies collect: #head) asSet.
+	view nodes: (dependencies collect: #key) asSet.
 	view shape line
 		color: [ :e | 
 			(circuits anySatisfy: [ :any | 
-				((any includes: e head) and: [ any includes: e tail ]) ])
+				((any includes: e key) and: [ any includes: e value ]) ])
 					ifTrue: [ Color red ]
 					ifFalse: [ Color gray ] ].
 	view edges useAssociations: dependencies.

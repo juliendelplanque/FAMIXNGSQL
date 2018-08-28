@@ -4,10 +4,10 @@ buildInteractions: aView forDependencies: aCollectionOfDependencies
 		noInteractions."
 	aView interaction
 		highlightNeighbors: [ :table | 
-			((Array with: table) , (aCollectionOfDependencies select: [ :dep | dep head = table and: [ dep tail isNotNil ] ] thenCollect: #tail)) ]
+			((Array with: table) , (aCollectionOfDependencies select: [ :dep | dep key = table and: [ dep value isNotNil ] ] thenCollect: #value)) ]
 		color: Color green.
 		
 	aView interaction showEdge
 		shape: (RTArrowedLine new
 					color: Color green);
-               connectToAll: [ :table | aCollectionOfDependencies select: [ :dep | dep head = table and: [ dep tail isNotNil ] ] thenCollect: #tail ].
+               connectToAll: [ :table | aCollectionOfDependencies select: [ :dep | dep key = table and: [ dep value isNotNil ] ] thenCollect: #value ].
