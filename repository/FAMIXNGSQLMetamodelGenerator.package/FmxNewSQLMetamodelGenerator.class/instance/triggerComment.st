@@ -1,0 +1,3 @@
+comments - SQL
+triggerComment
+	^ 'I am a trigger. A trigger allows to define actions to performs when a specific event occurs on a table. Because a trigger can not exist without the table to which it listens to events, a trigger is contained in a table.'
