@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FamixTNamespaceEntity FamixTWithLocalVariables FamixTWithParameters FmxSQLTQueryContainer)
+	^ #(FamixTNamespaceEntity FamixTWithLocalVariables FamixTWithParameters FamixTWithReferences FmxSQLTQueryContainer)

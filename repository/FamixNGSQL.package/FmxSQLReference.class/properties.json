@@ -7,7 +7,7 @@
 	],
 	"name" : "FmxSQLReference",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLSourcedEntity",
+	"super" : "FmxSQLAssociation",
 	"traitcomposition" : "FmxSQLTArgument",
 	"type" : "normal",
 	"classinstvars" : [ ],

@@ -24,6 +24,7 @@ defineClausesEntities
 	
 	"A clause is a reference container"
 	referenceContainer <|-- clause.
+	clause --|> #TWithReferences.
 	
 	"Defining all kinds of clauses"	
 	clause <|-- withClause.

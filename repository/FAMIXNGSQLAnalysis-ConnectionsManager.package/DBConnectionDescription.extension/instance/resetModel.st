@@ -1,3 +1,3 @@
 *FAMIXNGSQLAnalysis-ConnectionsManager
 resetModel
-	self privateState at: #fmxSQLModel put: nil
+	self privateState removeKey: #fmxSQLModel ifAbsent: [ "Do nothing on purpose." ]
