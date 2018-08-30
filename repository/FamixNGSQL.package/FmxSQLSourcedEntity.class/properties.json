@@ -2,9 +2,6 @@
 	"classtraitcomposition" : "FamixTWithComments classTrait + FamixTWithSourceAnchor classTrait + FamixTWithSourceLanguage classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#comments => FMMany type: #FmxNGTComment opposite: #container",
-		"#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities",
-		"#sourceAnchor => FMOne type: #FmxNGTSourceAnchor opposite: #element",
 		"#sourceCode"
 	],
 	"name" : "FmxSQLSourcedEntity",
