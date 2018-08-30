@@ -8,7 +8,7 @@
 	],
 	"name" : "FmxSQLDerivedTable",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
+	"super" : "FmxSQLBehaviouralEntity",
 	"traitcomposition" : "FmxSQLColumnsContainer + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],

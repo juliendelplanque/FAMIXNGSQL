@@ -1,7 +1,7 @@
 meta
 annotation
 
-	<MSEClass: #Cursor super: #MooseEntity>
+	<MSEClass: #Cursor super: #FmxSQLBehaviouralEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

@@ -27,6 +27,7 @@ defineSQLMetaModelInheritanceRelations
 	queryContainer <|-- view.
 	view --|> #TNamespaceEntity.
 	namedEntity <|-- view.
+	behaviouralEntity <|-- derivedTable.
 	tColumnsContainer <|-- derivedTable.
 	queryContainer <|-- derivedTable.
 	queryContainer <|-- storedProcedure.
@@ -48,6 +49,7 @@ defineSQLMetaModelInheritanceRelations
 	localVariable --|> #TLocalVariable.
 	namedEntity <|-- cursorParameter.
 	cursorParameter --|> #TParameter.
+	behaviouralEntity <|-- cursor.
 	queryContainer <|-- cursor.
 	cursor --|> #TWithParameters.
 	referenceContainer <|-- alias.
