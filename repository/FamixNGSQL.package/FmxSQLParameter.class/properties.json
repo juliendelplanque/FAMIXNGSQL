@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxNGTParameter classTrait",
+	"classtraitcomposition" : "FamixTParameter classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#accesses => FMMany type: #FmxSQLParameterAccess opposite: #parameter",
@@ -8,7 +8,7 @@
 	"name" : "FmxSQLParameter",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FmxNGTParameter",
+	"traitcomposition" : "FamixTParameter",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

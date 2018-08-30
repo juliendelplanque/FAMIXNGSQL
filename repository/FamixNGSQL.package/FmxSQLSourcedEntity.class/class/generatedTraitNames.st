@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FmxNGTWithComments FmxNGTWithSourceAnchor FmxNGTWithSourceLanguage)
+	^ #(FamixTWithComments FamixTWithSourceAnchor FamixTWithSourceLanguage)

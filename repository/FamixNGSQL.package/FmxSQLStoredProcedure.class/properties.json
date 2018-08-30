@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxNGTNamespaceEntity classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
+	"classtraitcomposition" : "FamixTNamespaceEntity classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#calls => FMMany type: #FmxSQLStoredProcedureCall opposite: #storedProcedure",
@@ -9,7 +9,7 @@
 	"name" : "FmxSQLStoredProcedure",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReferencesContainer",
-	"traitcomposition" : "FmxNGTNamespaceEntity + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxSQLTQueryContainer",
+	"traitcomposition" : "FamixTNamespaceEntity + FamixTWithLocalVariables + FamixTWithParameters + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

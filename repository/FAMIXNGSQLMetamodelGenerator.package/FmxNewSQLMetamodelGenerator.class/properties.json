@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxNGBasicInfrastructureGenerator",
+	"super" : "FamixBasicInfrastructureGenerator",
 	"category" : "FAMIXNGSQLMetamodelGenerator",
 	"classinstvars" : [ ],
 	"pools" : [ ],

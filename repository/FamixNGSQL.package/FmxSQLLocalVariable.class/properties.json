@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxNGTLocalVariable classTrait",
+	"classtraitcomposition" : "FamixTLocalVariable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#accesses => FMMany type: #FmxSQLLocalVariableAccess opposite: #localVariable",
@@ -8,7 +8,7 @@
 	"name" : "FmxSQLLocalVariable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FmxNGTLocalVariable",
+	"traitcomposition" : "FamixTLocalVariable",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

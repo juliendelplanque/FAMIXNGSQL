@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxNGTNamed classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
+	"classtraitcomposition" : "FamixTNamed classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLNamedEntity",
 	"commentStamp" : "",
 	"super" : "FmxSQLSourcedEntity",
-	"traitcomposition" : "FmxNGTNamed + TDependencyQueries + TEntityMetaLevelDependency",
+	"traitcomposition" : "FamixTNamed + TDependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

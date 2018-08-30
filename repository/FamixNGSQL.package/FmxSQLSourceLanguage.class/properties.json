@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxNGTSourceLanguage classTrait",
+	"classtraitcomposition" : "FamixTSourceLanguage classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLSourceLanguage",
 	"commentStamp" : "",
 	"super" : "FmxSQLEntity",
-	"traitcomposition" : "FmxNGTSourceLanguage",
+	"traitcomposition" : "FamixTSourceLanguage",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
