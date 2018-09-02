@@ -4,6 +4,7 @@ createTablesIn: mooseModel
 		|table|
 		table := FmxSQLTable new
 						name: pgTable name;
+						parentNamespace: (pgToFamixEntities at: pgTable namespace);
 						mooseModel: mooseModel;
 						yourself.
 		pgToFamixEntities at: pgTable put: table.
