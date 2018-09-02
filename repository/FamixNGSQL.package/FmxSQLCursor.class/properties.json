@@ -6,7 +6,7 @@
 	],
 	"name" : "FmxSQLCursor",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
+	"super" : "FmxSQLBehaviouralEntity",
 	"traitcomposition" : "FamixTWithParameters + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],

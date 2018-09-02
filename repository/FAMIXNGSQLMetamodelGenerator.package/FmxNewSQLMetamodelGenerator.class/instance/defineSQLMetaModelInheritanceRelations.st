@@ -2,8 +2,10 @@ definition
 defineSQLMetaModelInheritanceRelations
 	"Abstract entities inheritance relations."
 	structuralEntity --|> namedEntity.
+	structuralEntity --|> #TNamespaceEntity.
 	structuralEntity <|-- constraint.
 	namedEntity <|-- behaviouralEntity. "Should be trait (not all behavioural entities have name)"
+	behaviouralEntity --|> #TNamespaceEntity.
 	"behaviouralEntity <|-- queryContainer."
 	association <|-- reference.
 	entity <|-- crudQuery.
