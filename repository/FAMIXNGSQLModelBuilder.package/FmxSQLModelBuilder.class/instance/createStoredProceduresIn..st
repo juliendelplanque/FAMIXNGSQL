@@ -3,12 +3,14 @@ createStoredProceduresIn: aMooseModel
 	| functions |
 	functions := Dictionary new.
 	metadata getFunctions
-		do: [ :pgFunction | 
+		reject: [ :pgFunction | pgFunction isSqlTriggerFunction ] "Triggers are treated separately."
+		thenDo: [ :pgFunction | 
 			| function visitor |
 			function := FmxSQLStoredProcedure new
 				name: pgFunction name;
 				returnType: (pgToFamixEntities at: pgFunction returnType);
 				mooseModel: aMooseModel;
+				isStub: pgFunction isStub;
 				yourself.
 			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function errorReport: self errorReport.
 			pgFunction isSqlTriggerFunction
