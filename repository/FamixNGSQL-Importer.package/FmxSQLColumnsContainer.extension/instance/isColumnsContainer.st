@@ -1,0 +1,3 @@
+*FamixNGSQL-Importer
+isColumnsContainer
+	^ true

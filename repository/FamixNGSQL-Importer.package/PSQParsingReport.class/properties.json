@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FamixNGSQL-Importer-Solver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"errors"
+	],
+	"name" : "PSQParsingReport",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"classtraitcomposition" : "PSQLSolverUserVisitor classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"function",
+		"report"
+	],
+	"name" : "PSQLASTReflectiveVisitor",
+	"commentStamp" : "",
+	"super" : "PSQLASTVisitor",
+	"traitcomposition" : "PSQLSolverUserVisitor",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Importer-Visitor"
+}

@@ -1,0 +1,4 @@
+visiting
+visitPSQLPlpgSQLASTCursorFetch: aPSQLPlpgSQLASTCursorFetch
+	self visit: aPSQLPlpgSQLASTCursorFetch cursorIdentifier.
+	self visitAll: aPSQLPlpgSQLASTCursorFetch targets

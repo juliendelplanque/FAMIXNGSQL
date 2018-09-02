@@ -1,0 +1,1 @@
+I am a class that can solve referencies and is able to give you the current entity for your visit

@@ -1,0 +1,3 @@
+visiting
+visitPSQLASTValuesCommand: aPSQLASTValuesCommand
+	self visitAll: aPSQLASTValuesCommand values

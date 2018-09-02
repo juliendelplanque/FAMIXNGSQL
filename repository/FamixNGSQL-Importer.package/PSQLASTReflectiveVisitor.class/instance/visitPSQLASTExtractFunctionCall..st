@@ -1,0 +1,3 @@
+visiting
+visitPSQLASTExtractFunctionCall: aPSQLASTExtractFunctionCall
+	^ self visit: aPSQLASTExtractFunctionCall parameter

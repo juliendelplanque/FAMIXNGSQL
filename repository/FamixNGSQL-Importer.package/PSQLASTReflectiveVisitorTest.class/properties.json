@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "FamixNGSQL-Importer-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"function"
+	],
+	"name" : "PSQLASTReflectiveVisitorTest",
+	"type" : "normal"
+}

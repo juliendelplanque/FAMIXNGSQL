@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PSQLScope",
+	"category" : "FamixNGSQL-Importer-Solver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scopes"
+	],
+	"name" : "PSQLCompositeScope",
+	"type" : "normal"
+}

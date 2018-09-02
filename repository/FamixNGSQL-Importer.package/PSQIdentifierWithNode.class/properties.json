@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FamixNGSQL-Importer-Solver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifier",
+		"node",
+		"entity",
+		"next"
+	],
+	"name" : "PSQIdentifierWithNode",
+	"type" : "normal"
+}

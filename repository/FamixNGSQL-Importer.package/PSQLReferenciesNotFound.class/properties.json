@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Error",
+	"category" : "FamixNGSQL-Importer-Solver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifier"
+	],
+	"name" : "PSQLReferenciesNotFound",
+	"type" : "normal"
+}
