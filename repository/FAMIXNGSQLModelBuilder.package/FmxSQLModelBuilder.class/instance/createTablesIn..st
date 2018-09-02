@@ -16,4 +16,10 @@ createTablesIn: mooseModel
 						mooseModel: mooseModel;
 						columnsContainer: table;
 						type: (pgToFamixEntities at: pgColumn datatype);
-						yourself) ] ]
+						yourself).
+			pgColumn isNotNull ifTrue: [ 
+				FmxSQLNotNullConstraint new
+					table: table;
+					columns: { (pgToFamixEntities at: pgColumn) };
+					mooseModel: mooseModel;
+					yourself ] ] ]
