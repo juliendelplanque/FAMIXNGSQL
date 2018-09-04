@@ -8,6 +8,7 @@ visitPSQLPlpgSQLASTCursorDeclaration: aPSQLPlpgSQLASTCursorDeclaration
 	localVariable type: (self findTypeNamed: 'refcursor').
 	localVariable storedProcedure: self currentEntity.
 	cursor := self createEntity: FmxSQLCursor from: aPSQLPlpgSQLASTCursorDeclaration.
+	cursor storedProcedure: self currentEntity.
 	self createReferenceTo: cursor.
 	self
 		useCurrentEntity: cursor

@@ -1,0 +1,5 @@
+accessing
+cursors
+
+	<generated>
+	^ cursors

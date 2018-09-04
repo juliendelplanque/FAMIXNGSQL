@@ -4,6 +4,7 @@
 	"instvars" : [
 		"#calls => FMMany type: #FmxSQLStoredProcedureCall opposite: #storedProcedure",
 		"#checkConstraintsCalling => FMMany type: #FmxSQLCheckConstraint opposite: #storedProceduresCalled",
+		"#cursors => FMMany type: #FmxSQLCursor opposite: #storedProcedure",
 		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning"
 	],
 	"name" : "FmxSQLStoredProcedure",

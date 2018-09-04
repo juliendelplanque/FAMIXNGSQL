@@ -68,3 +68,8 @@ defineSQLBehaviouralEntitiesRelations
 	(clause property: #aliases)
 		<>-*
 	(alias property: #clause).
+	
+	"A cursor is held in a stored procedure."
+	(storedProcedure property: #cursors)
+		<>-*
+	(cursor property: #storedProcedure)
