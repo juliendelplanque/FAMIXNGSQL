@@ -10,7 +10,10 @@ baseline: spec
 				package: #FAMIXNGSQLAnalysis;
 				package: #FamixNGSQL;
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
-			spec baseline: 'PostgreSQLParser' with: [ spec repository: 'github://juliendelplanque/PostgreSQLParser/src' ].
+			spec baseline: 'PostgreSQLParser' with: [
+				spec
+					repository: 'github://juliendelplanque/PostgreSQLParser/src';
+					loads: #('visitors') ].
 			spec baseline: 'PgMetadata' with: [ spec repository: 'github://olivierauverlot/PgMetadata' ].
 			spec
 				baseline: 'DBConnectionsManager'
