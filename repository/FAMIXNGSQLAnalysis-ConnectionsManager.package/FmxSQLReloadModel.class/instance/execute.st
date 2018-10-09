@@ -1,6 +1,10 @@
 execute
 execute
+	"Reload"
 	self connectionsManagerWidget selectedConnectionDescription
 		loadFmxSQLModel.
 		
-	UIManager inform: 'Model reloaded.'
+	"Inspect, for this purpose, use already defined command."
+	FmxSQLInspectModel new
+		connectionsManagerWidget: self connectionsManagerWidget;
+		execute

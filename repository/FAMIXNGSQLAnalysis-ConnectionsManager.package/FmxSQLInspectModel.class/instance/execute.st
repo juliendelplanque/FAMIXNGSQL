@@ -1,3 +1,5 @@
 execute
 execute
-	self connectionsManagerWidget selectedConnectionDescription fmxSQLModel inspect
+	UIManager default showWaitCursorWhile: [ 
+		self connectionsManagerWidget selectedConnectionDescription fmxSQLModel inspect
+	]

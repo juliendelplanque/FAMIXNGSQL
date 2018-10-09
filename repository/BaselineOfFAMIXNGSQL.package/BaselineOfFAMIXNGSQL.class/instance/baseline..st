@@ -13,7 +13,7 @@ baseline: spec
 			spec baseline: 'PostgreSQLParser' with: [
 				spec
 					repository: 'github://juliendelplanque/PostgreSQLParser/src';
-					loads: #('visitors') ].
+					loads: #('core') ].
 			spec baseline: 'PgMetadata' with: [ spec repository: 'github://olivierauverlot/PgMetadata' ].
 			spec
 				baseline: 'DBConnectionsManager'

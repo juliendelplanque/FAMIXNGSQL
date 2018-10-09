@@ -1,3 +1,3 @@
 accessing
 commandName
-	^ 'Reload model'
+	^ 'Reload model and inspect'
