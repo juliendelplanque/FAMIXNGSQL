@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLType class>>#generatedSlotNames'.
-	^ #(references columns)
+	^ #(columns references)

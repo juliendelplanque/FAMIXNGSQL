@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLTable class>>#generatedSlotNames'.
-	^ #(references constraints triggers superTable updateQueries subTables)
+	^ #(constraints superTable subTables triggers references updateQueries)
