@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTSelectWhereClause: aPSQLASTSelectWhereClause
-	self shouldBeImplemented

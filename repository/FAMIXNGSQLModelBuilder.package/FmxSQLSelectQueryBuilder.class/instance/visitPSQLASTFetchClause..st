@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTFetchClause: aPSQLASTFetchClause
-	self shouldBeImplemented

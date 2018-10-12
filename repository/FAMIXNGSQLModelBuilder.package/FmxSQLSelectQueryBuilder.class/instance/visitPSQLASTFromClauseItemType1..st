@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTFromClauseItemType1: aPSQLASTFromClauseItemType1
-	self shouldBeImplemented

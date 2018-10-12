@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTGroupByClause: aPSQLASTGroupByClause
-	self shouldBeImplemented
