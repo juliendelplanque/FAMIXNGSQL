@@ -1,10 +1,6 @@
 definition
 define
-	self
-		defineFamixMetaModelEntities;
-		defineFamixMetaModelEntitiesRelations;
-		defineFamixMetaModelEntitiesProperties.
-	
+	super define.
 	self
 		defineSQLMetaModelEntities;
 		defineClausesEntities;

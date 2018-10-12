@@ -1,6 +1,10 @@
 definition
 define
-	super define.
+	self
+		defineFamixMetaModelEntities;
+		defineFamixMetaModelEntitiesRelations;
+		defineFamixMetaModelEntitiesProperties.
+	
 	self
 		defineSQLMetaModelEntities;
 		defineClausesEntities;

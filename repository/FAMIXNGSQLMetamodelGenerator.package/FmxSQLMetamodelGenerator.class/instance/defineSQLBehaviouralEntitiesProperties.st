@@ -1,5 +1,5 @@
-definitions - SQL
+definition
 defineSQLBehaviouralEntitiesProperties
-	(trigger as: #TTrigger) trait
+	trigger
 		property: #firingAction type: #String;
 		property: #when type: #String

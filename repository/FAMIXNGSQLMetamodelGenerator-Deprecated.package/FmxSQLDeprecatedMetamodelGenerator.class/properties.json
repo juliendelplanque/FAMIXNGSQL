@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FamixBasicInfrastructureGenerator",
-	"category" : "FAMIXNGSQLMetamodelGenerator",
+	"super" : "FamixMetamodelGenerator",
+	"category" : "FAMIXNGSQLMetamodelGenerator-Deprecated",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"entity",
+		"sourceAnchor",
 		"constraint",
 		"queryContainer",
 		"crudQuery",
@@ -36,9 +38,12 @@
 		"derivedTable",
 		"viewReference",
 		"derivedTableReference",
+		"tNamedEntity",
 		"tColumnsContainer",
+		"tSourcedEntity",
 		"behaviouralEntity",
 		"namespace",
+		"tEntityInNamespace",
 		"tAbstractType",
 		"localVariableAccess",
 		"clause",
@@ -65,10 +70,10 @@
 		"cursorParameter",
 		"cursorParameterAccess",
 		"cursorReference",
+		"tReferenceContainer",
 		"alias",
-		"aliasAccess",
-		"referenceContainer"
+		"aliasAccess"
 	],
-	"name" : "FmxNewSQLMetamodelGenerator",
+	"name" : "FmxSQLDeprecatedMetamodelGenerator",
 	"type" : "normal"
 }

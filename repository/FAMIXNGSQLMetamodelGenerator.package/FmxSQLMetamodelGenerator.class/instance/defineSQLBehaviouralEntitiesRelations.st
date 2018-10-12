@@ -1,85 +1,75 @@
-definitions - SQL
+definition
 defineSQLBehaviouralEntitiesRelations
-	"A sourced entity contains a source anchor"
-	(tSourcedEntity as: #TSourcedEntity property: #sourceAnchor)
-		<>-
-	(sourceAnchor as: #TSourceAnchor property: #behaviouralEntity).
-	
+	"A stored procedure contains abstract references (regrouping variable accesses, references to views, tables...)"
+
+	(referenceContainer property: #references)
+		<>-* (reference property: #container).
+		
 	"A CheckConstraint can call StoredProcedures"
-	(checkConstraint as: #TCheckConstraint property: #storedProceduresCalled)
+	(checkConstraint property: #storedProceduresCalled)
 		*-*
-	(storedProcedure as: #TStoredProcedure property: #checkConstraintsCalling).
+	(storedProcedure property: #checkConstraintsCalling).
 	
 	"A View is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
-	(view as: #TView property: #query)
+	(view property: #query)
 		<>-
-	(selectQuery as: #TSelectQuery property: #viewDefining).
+	(selectQuery property: #viewDefining).
 	
 	"A DerivedTable is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
-	(derivedTable as: #TDerivedTable property: #query)
+	(derivedTable property: #query)
 		<>-
-	(selectQuery as: #TSelectQuery property: #derivedTableDefining).
+	(selectQuery property: #derivedTableDefining).
 	
 	"A SelectQuery can define multiple derived tables."
-	(selectQuery as: #TSelectQuery property: #derivedTablesDefined)
+	(selectQuery property: #derivedTablesDefined)
 		<>-*
-	(derivedTable as: #TDerivedTable property: #parentQuery).
+	(derivedTable property: #parentQuery).
 	
 	"A StoredProcedure has a return AbstractType."
-	(storedProcedure as: #TStoredProcedure property: #returnType)
+	(storedProcedure property: #returnType)
 		*-
 	(tAbstractType property: #storedProceduresReturning).
 	
-	"A StoredProcedure may have parameters."
-	(storedProcedure as: #TStoredProcedure property: #parameters)
-		<>-*
-	(parameter as: #TParameter property: #storedProcedure).
-	
-	"A StoredProcedure may have local variables."
-	(storedProcedure as: #TStoredProcedure property: #localVariables)
-		<>-*
-	(localVariable as: #TLocalVariable property: #storedProcedure).
-	
-	"A Cursor may have cursor parameters."
-	(cursor as: #TCursor property: #parameters)
-		<>-*
-	(cursorParameter as: #TCursorParameter property: #cursor).
-	
 	"A LocalVariable has an AbstractType."
-	(localVariable as: #TLocalVariable property: #type)
+	(localVariable property: #type)
 		*-
 	(tAbstractType property: #localVariables).
 	
 	"A Parameter has an AbstractType."
-	(parameter as: #TParameter property: #type)
+	(parameter property: #type)
 		*-
 	(tAbstractType property: #parameters).
 	
 	"A Cursor Parameter has an AbstractType."
-	(cursorParameter as: #TCursorParameter property: #type)
+	(cursorParameter property: #type)
 		*-
 	(tAbstractType property: #cursorParameters).
 	
 	"A stored procedure used by a trigger can reference Columns."
-	(triggerStoredProcedure as: #TTriggerStoredProcedure property: #columnsReferenced)
+	(triggerStoredProcedure property: #columnsReferenced)
 		<>-*
-	(columnReference as: #TColumnReference property: #triggerStoredProceduresReferencing).
+	(columnReference property: #triggerStoredProceduresReferencing).
 	
 	"The generalized trigger is now defined as always referencing a TriggerStoredProcedure.
 	For DBMS where the trigger code is directly defined in the trigger, a virtual TriggerStoredProcedure
 	is created to hold its source code."
-	(trigger as: #TTrigger property: #storedProcedure)
+	(trigger property: #storedProcedure)
 		*-
-	(triggerStoredProcedure as: #TTriggerStoredProcedure property: #triggers).
+	(triggerStoredProcedure property: #triggers).
 	
 	"A Trigger is contained in a Table. This is composition because, if the Table is removed,
 	 the Trigger should be as well because it makes no sense to have a a trigger reacting to
 	events of a non-existing table."
-	(table as: #TTable property: #triggers)
+	(table property: #triggers)
 		<>-*
-	(trigger as: #TTrigger property: #table).
+	(trigger property: #table).
 	
 	"A clause may define aliases"
-	(clause as: #TClause property: #aliases)
+	(clause property: #aliases)
 		<>-*
-	(alias as: #TAlias property: #clause).
+	(alias property: #clause).
+	
+	"A cursor is held in a stored procedure."
+	(storedProcedure property: #cursors)
+		<>-*
+	(cursor property: #storedProcedure)
