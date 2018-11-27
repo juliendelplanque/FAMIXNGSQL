@@ -3,7 +3,8 @@
 	"classinstvars" : [ ],
 	"category" : "FamixNGSQL-Importer-Solver",
 	"instvars" : [
-		"solver"
+		"solver",
+		"errorReport"
 	],
 	"name" : "PSQLSolverUserVisitor"
 }
