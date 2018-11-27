@@ -1,9 +1,8 @@
 definition
 defineSQLBehaviouralEntitiesRelations
 	"A stored procedure contains abstract references (regrouping variable accesses, references to views, tables...)"
-
-	(referenceContainer property: #references)
-		<>-* (reference property: #container).
+	((referenceContainer property: #references)
+		<>-* (reference property: #container)) withoutPrimaryContainer.
 		
 	"A CheckConstraint can call StoredProcedures"
 	(checkConstraint property: #storedProceduresCalled)
@@ -11,14 +10,14 @@ defineSQLBehaviouralEntitiesRelations
 	(storedProcedure property: #checkConstraintsCalling).
 	
 	"A View is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
-	(view property: #query)
+	((view property: #query)
 		<>-
-	(selectQuery property: #viewDefining).
+	(selectQuery property: #viewDefining)) withoutPrimaryContainer.
 	
 	"A DerivedTable is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
-	(derivedTable property: #query)
+	((derivedTable property: #query)
 		<>-
-	(selectQuery property: #derivedTableDefining).
+	(selectQuery property: #derivedTableDefining)) withoutPrimaryContainer.
 	
 	"A SelectQuery can define multiple derived tables."
 	(selectQuery property: #derivedTablesDefined)

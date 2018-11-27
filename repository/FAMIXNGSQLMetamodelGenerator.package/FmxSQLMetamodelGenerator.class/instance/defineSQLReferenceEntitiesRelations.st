@@ -29,8 +29,8 @@ defineSQLReferenceEntitiesRelations
 		*- (column property: #references).
 		
 	"A stored procedure call can contain other references (in its arguments)."
-	(storedProcedureCall property: #arguments)
-		<>-* (reference property: #storedProcedureContainer).
+	((storedProcedureCall property: #arguments)
+		<>-* (reference property: #storedProcedureContainer)) withoutPrimaryContainer.
 
 	"A stored procedure call calls a stored procedure."
 	(storedProcedureCall property: #storedProcedure)
