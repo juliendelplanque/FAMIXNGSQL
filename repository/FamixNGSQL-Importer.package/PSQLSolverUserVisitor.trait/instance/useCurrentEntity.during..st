@@ -6,6 +6,6 @@ useCurrentEntity: anEntity during: aBlock
 	entityScope := self currentEntity: anEntity.
 	aBlock value.
 	"This assert is to check that the good scope is poped"
-	self assert: self solver topScope equals: entityScope.
+	self assert: self solver topScope = entityScope.
 	self popScope.
 	^ anEntity

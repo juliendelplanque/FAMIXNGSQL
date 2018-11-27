@@ -8,6 +8,7 @@ buildModel
 						yourself.
 	pgToFamixEntities := Dictionary new.
 	self
+		addSpecialFunctions: mooseModel;
 		loadMetaData;
 		createNamespacesIn: mooseModel;
 		createTypesIn: mooseModel;
