@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLStoredProcedure class>>#generatedSlotNames'.
-	^ #(checkConstraintsCalling returnType cursors calls)
+	^ #(calls checkConstraintsCalling cursors returnType)

@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLParameter class>>#generatedSlotNames'.
-	^ #(type accesses)
+	^ #(accesses type)

@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLAbstractType class>>#generatedSlotNames'.
-	^ #(storedProceduresReturning localVariables parameters cursorParameters)
+	^ #(cursorParameters localVariables parameters storedProceduresReturning)

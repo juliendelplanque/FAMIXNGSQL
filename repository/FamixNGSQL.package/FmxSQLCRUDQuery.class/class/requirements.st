@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLCRUDQuery }
+	^ { FmxSQLCursor. FmxSQLDerivedTable. FmxSQLStoredProcedure. FmxSQLView }

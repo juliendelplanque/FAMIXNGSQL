@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLColumn class>>#generatedSlotNames'.
-	^ #(columnsContainer type constraints foreignKeyConstraintsReferencing references)
+	^ #(columnsContainer constraints foreignKeyConstraintsReferencing references type)
