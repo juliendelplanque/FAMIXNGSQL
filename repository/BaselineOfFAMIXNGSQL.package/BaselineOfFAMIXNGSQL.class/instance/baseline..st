@@ -4,11 +4,15 @@ baseline: spec
 	spec
 		for: #common
 		do: [ spec
-				package: #FAMIXNGSQLMetamodelGenerator;
+				package: #FAMIXNGSQLMetamodelGenerator with: [ spec requires: #('Famix') ];
 				package: #'FamixNGSQL-Importer' with: [ spec requires: #('PostgreSQLParser' 'PgMetadata') ];
 				package: #FAMIXNGSQLAnalysis;
-				package: #FamixNGSQL;
+				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
+			spec baseline: 'Famix' with: [
+				spec
+    				baseline: 'Famix'
+    				with: [ spec repository: 'github://jecisc/Famix:v1.x.x/src' ] ].
 			spec baseline: 'PostgreSQLParser' with: [
 				spec
 					repository: 'github://juliendelplanque/PostgreSQLParser/src';
