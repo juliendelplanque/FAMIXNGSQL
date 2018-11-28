@@ -1,6 +1,9 @@
 parsing
 testAliasingMethodsResult
 	self createTable: 'table1' withColumns: #('column1' 'column2').
+	self createStoredProcedure: 'function1'.
+	self createStoredProcedure: 'function2'.
+	self createStoredProcedure: 'SUM'.
 	self
 		parseAndVisitFunction:
 			'DECLARE
