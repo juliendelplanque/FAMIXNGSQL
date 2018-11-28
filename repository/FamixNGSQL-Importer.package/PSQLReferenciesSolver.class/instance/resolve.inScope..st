@@ -9,4 +9,4 @@ resolve: aChainOfIdentifiers inScope: aScope
 				ifTrue: [ ^ aChainOfIdentifiers ]
 				ifFalse: [ [ (self resolve: aChainOfIdentifiers next inScope: entity) ]
 						on: NotFound
-						do: [ PSQLReferenciesInconsistencies signal ] ] ]
+						do: [ PSQLReferenciesInconsistencies signalIdentifiers: aChainOfIdentifiers ] ] ]

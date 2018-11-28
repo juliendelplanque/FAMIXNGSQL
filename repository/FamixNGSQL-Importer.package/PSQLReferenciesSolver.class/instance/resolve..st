@@ -6,4 +6,4 @@ resolve: aChainOfIdentifiers
 			[ ^ self resolve: aChainOfIdentifiers inScope: aScope ]
 				on: NotFound
 				do: [ "do nothing to try superior scope" ] ].
-	PSQLReferenciesNotFound signal: aChainOfIdentifiers 
+	PSQLReferenciesNotFound signalIdentifiers: aChainOfIdentifiers 
