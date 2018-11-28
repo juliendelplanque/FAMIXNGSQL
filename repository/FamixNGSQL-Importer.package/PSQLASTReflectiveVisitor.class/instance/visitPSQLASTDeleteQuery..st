@@ -8,8 +8,11 @@ visitPSQLASTDeleteQuery: aPSQLASTDeleteQuery
 			self
 				visit: aPSQLASTDeleteQuery tableName
 				thenDo: [ :tableName | 
+					|fromClause|
+					fromClause := self createEntity: FmxSQLFromClause from: aPSQLASTDeleteQuery tableName.
+					fromClause query: self currentEntity.
 					self
-						useCurrentEntity: (self createEntity: FmxSQLFromClause from: aPSQLASTDeleteQuery tableName)
+						useCurrentEntity: fromClause
 						during: [ self createReferenceTo: (self findTableOrViewNamed: tableName) ] ].
 			self visit: aPSQLASTDeleteQuery withClause.
 			self
