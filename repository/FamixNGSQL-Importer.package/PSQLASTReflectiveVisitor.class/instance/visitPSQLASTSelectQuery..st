@@ -10,7 +10,6 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 				visit: aPSQLASTSelectQuery fromClause
 				thenDo: [ :fromScope | 
 					"I have to precise that the from clause scope is not the current entity anymore"
-					fromScope isCurrentEntity: false.
 					scopeManager pushScope: fromScope ].
 			self visit: aPSQLASTSelectQuery withClause thenDo: [ :visitResult | Halt now ].
 			self visit: aPSQLASTSelectQuery allOrDistinctClause thenDo: [ :visitResult | Halt now ].
@@ -21,7 +20,6 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 						yourself)
 				during: [ selectClauseScope := self solver topScope.
 					self visitAll: aPSQLASTSelectQuery columnsAndAliasesSelected.
-					selectClauseScope isCurrentEntity: false.
 					scopeManager pushScope: selectClauseScope ].
 			self visit: aPSQLASTSelectQuery whereClause.
 			self visit: aPSQLASTSelectQuery groupByClause.

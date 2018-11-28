@@ -1,6 +1,6 @@
 children
 childrenFor: aNode
-	^ aNode class instanceVariables
+	^ aNode class allInstVarNames
 		flatCollect: [ :instanceVar | 
 			(aNode perform: instanceVar)
 				in: [ :varContent | 

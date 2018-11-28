@@ -8,7 +8,6 @@ visitPSQLASTUpdateQuery: aPSQLASTUpdateQuery
 				visit: aPSQLASTUpdateQuery fromClause
 				thenDo: [ :fromScope | 
 					"I have to precise that the from clause scope is not the current entity anymore"
-					fromScope isCurrentEntity: false.
 					scopeManager pushScope: fromScope ].
 			self
 				visit: aPSQLASTUpdateQuery tableName
