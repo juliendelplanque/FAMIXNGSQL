@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTIf: aPSQLPlpgSQLASTIf
-	(self childrenFor: aPSQLPlpgSQLASTIf) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTIf childrenDo: [:aChild | aChild acceptVisitor: self]

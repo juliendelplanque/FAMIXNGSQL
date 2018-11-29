@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTSearchedCase: aPSQLPlpgSQLASTSearchedCase
-	(self childrenFor: aPSQLPlpgSQLASTSearchedCase) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTSearchedCase childrenDo: [:aChild | aChild acceptVisitor: self]

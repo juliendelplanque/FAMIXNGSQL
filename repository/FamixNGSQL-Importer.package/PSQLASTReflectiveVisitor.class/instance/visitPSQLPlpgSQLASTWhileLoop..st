@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTWhileLoop: aPSQLPlpgSQLASTWhileLoop
-	(self childrenFor: aPSQLPlpgSQLASTWhileLoop) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTWhileLoop childrenDo: [:aChild | aChild acceptVisitor: self]

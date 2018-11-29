@@ -1,4 +1,4 @@
 visiting
 visitPSQLASTExceptClause: aPSQLASTExceptClause
 	Halt now.
-	(self childrenFor: aPSQLASTExceptClause) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTExceptClause childrenDo: [:aChild | aChild acceptVisitor: self]

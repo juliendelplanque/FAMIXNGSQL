@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTOffsetClause: aPSQLASTOffsetClause
-	(self childrenFor: aPSQLASTOffsetClause) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTOffsetClause childrenDo: [:aChild | aChild acceptVisitor: self]

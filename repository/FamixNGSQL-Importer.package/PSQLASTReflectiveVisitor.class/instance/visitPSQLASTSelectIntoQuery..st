@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTSelectIntoQuery: aPSQLASTSelectIntoQuery
-	(self childrenFor: aPSQLASTSelectIntoQuery) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTSelectIntoQuery childrenDo: [:aChild | aChild acceptVisitor: self]

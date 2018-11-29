@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTFetchClause: aPSQLASTFetchClause
-	(self childrenFor: aPSQLASTFetchClause) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTFetchClause childrenDo: [:aChild | aChild acceptVisitor: self]

@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTPrefixOperator: aPSQLASTPrefixOperator
-	(self childrenFor: aPSQLASTPrefixOperator) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTPrefixOperator childrenDo: [:aChild | aChild acceptVisitor: self]

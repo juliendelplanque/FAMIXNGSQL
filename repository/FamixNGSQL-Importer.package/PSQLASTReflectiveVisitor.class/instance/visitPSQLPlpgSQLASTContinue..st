@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTContinue: aPSQLPlpgSQLASTContinue
-	(self childrenFor: aPSQLPlpgSQLASTContinue) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTContinue childrenDo: [:aChild | aChild acceptVisitor: self]

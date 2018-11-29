@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTBinaryOperator: aPSQLASTBinaryOperator
-	(self childrenFor: aPSQLASTBinaryOperator) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTBinaryOperator childrenDo: [:aChild | aChild acceptVisitor: self]

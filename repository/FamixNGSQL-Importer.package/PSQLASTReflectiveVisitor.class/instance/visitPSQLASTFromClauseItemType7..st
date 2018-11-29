@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTFromClauseItemType7: aPSQLASTFromClauseItemType7
-	(self childrenFor: aPSQLASTFromClauseItemType7) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTFromClauseItemType7 childrenDo: [:aChild | aChild acceptVisitor: self]

@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTPostfixOperator: aPSQLASTPostfixOperator
-	(self childrenFor: aPSQLASTPostfixOperator) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTPostfixOperator childrenDo: [:aChild | aChild acceptVisitor: self]

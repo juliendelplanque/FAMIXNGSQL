@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTHavingClause: aPSQLASTHavingClause
-	(self childrenFor: aPSQLASTHavingClause) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTHavingClause childrenDo: [:aChild | aChild acceptVisitor: self]

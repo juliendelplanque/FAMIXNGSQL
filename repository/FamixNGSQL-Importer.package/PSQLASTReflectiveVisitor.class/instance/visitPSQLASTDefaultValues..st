@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTDefaultValues: aPSQLASTDefaultValues
-	(self childrenFor: aPSQLASTDefaultValues) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTDefaultValues childrenDo: [:aChild | aChild acceptVisitor: self]

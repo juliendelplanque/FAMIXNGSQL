@@ -1,3 +1,3 @@
 visiting
 visitPSQLASTOnConflictClause: aPSQLASTOnConflictClause
-	(self childrenFor: aPSQLASTOnConflictClause) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTOnConflictClause childrenDo: [:aChild | aChild acceptVisitor: self]

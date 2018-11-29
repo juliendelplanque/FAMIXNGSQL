@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTRecordDeclaration: aPSQLPlpgSQLASTRecordDeclaration
-	(self childrenFor: aPSQLPlpgSQLASTRecordDeclaration) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTRecordDeclaration childrenDo: [:aChild | aChild acceptVisitor: self]

@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTQueryResultsLoop: aPSQLPlpgSQLASTQueryResultsLoop
-	(self childrenFor: aPSQLPlpgSQLASTQueryResultsLoop) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTQueryResultsLoop childrenDo: [:aChild | aChild acceptVisitor: self]

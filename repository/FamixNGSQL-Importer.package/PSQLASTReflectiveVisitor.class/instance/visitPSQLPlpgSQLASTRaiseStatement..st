@@ -1,3 +1,3 @@
 visiting
 visitPSQLPlpgSQLASTRaiseStatement: aPSQLPlpgSQLASTRaiseStatement
-	(self childrenFor: aPSQLPlpgSQLASTRaiseStatement) do: [:aChild | aChild acceptVisitor: self]
+	aPSQLPlpgSQLASTRaiseStatement childrenDo: [:aChild | aChild acceptVisitor: self]
