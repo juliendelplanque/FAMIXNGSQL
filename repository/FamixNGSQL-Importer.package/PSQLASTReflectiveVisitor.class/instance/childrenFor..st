@@ -8,4 +8,4 @@ childrenFor: aNode
 						ifFalse: [ (varContent isString not and: [ varContent isCollection ])
 								ifTrue: [ varContent ]
 								ifFalse: [ {} ] ]
-						ifTrue: [ varContent asCollection ] ] ]
+						ifTrue: [ varContent asOrderedCollection ] ] ]
