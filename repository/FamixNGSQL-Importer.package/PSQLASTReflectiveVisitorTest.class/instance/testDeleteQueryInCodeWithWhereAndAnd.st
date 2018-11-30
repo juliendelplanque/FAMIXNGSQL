@@ -2,6 +2,10 @@ parsing
 testDeleteQueryInCodeWithWhereAndAnd
 	| query fromClause whereClause tableInFrom |
 	tableInFrom := self createTable: 'direct_population_snapshot' withColumns: #('issue_id' 'event').
+	function parameters
+		add: (FmxSQLParameter new
+					name: 'issue_id_p';
+					yourself).
 	self
 		parseAndVisitFunction:
 			' DECLARE
