@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+    #loading : [
+        SCIMetacelloLoadSpec {
+            #baseline : 'FAMIXNGSQL',
+            #directory : 'src',
+            #platforms : [ #pharo ]
+        }
+    ],
+    #testing : {
+        #categories : [ 'FamixNGSQL-Importer-Tests' ],
+        #coverage : {
+            #categories : [ 'FamixNGSQL-Importer-Tests' ]
+    }
+  }
+}
