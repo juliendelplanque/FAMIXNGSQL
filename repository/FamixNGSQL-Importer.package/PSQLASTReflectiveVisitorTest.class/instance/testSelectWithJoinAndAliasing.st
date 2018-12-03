@@ -1,7 +1,7 @@
 parsing
 testSelectWithJoinAndAliasing
 	self createTable: #initiative withColumns: #(id issue_id).
-	self createTable: #battle withColumns: #(losing_iniative_id).
+	self createTable: #battle withColumns: #(losing_initiative_id).
 	self
 		parseAndVisitFunction:
 			'DECLARE
