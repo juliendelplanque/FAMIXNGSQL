@@ -1,4 +1,4 @@
-# FAMIXNGSQL
+# FAMIXNGSQL [![Build Status](https://travis-ci.org/juliendelplanque/FAMIXNGSQL.svg?branch=master)](https://travis-ci.org/juliendelplanque/FAMIXNGSQL)
 A meta-model for SQL databases using FAMIXNG with its generator.
 
 ## Install
