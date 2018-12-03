@@ -2,7 +2,7 @@
 A meta-model for SQL databases using FAMIXNG with its generator.
 
 ## Install
-Download the latest FamixNG image from the [CI](https://ci.inria.fr/moose/view/Moose%206.1/job/FamixNG/), open a playground and execute the following script:
+In a Pharo 7.0 image, open a playground and execute the following script:
 
 ```
 Metacello new
