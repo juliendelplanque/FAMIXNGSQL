@@ -10,7 +10,7 @@ baseline: spec
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
 			spec baseline: 'Famix' with: [
-				spec repository: 'github://jecisc/Famix:v1.x.x/src';
+				spec repository: 'github://jecisc/Famix:v2.x.x/src';
 					loads: #('Core' 'Basic') ].
 			spec baseline: 'PostgreSQLParser' with: [
 				spec
