@@ -1,3 +1,4 @@
 visiting
 visitPSQLASTSelectIntoQuery: aPSQLASTSelectIntoQuery
-	aPSQLASTSelectIntoQuery childrenDo: [:aChild | aChild acceptVisitor: self]
+	self flag: #TODO. "Deal with the INTO identifier."
+	^ self visitPSQLASTSelectQuery: aPSQLASTSelectIntoQuery
