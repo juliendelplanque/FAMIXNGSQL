@@ -4,7 +4,7 @@ createQueryContainedByCurrentEntity: aClass from: anASTNode
 	newQuery := self createEntity: aClass from: anASTNode.
 	currentEntity := self currentEntity.
 	self flag: #TODO.	"change test to isQueryContainer"
-	(currentEntity class = FmxSQLStoredProcedure or: [ currentEntity class = FmxSQLCursor ])
+	({ FmxSQLStoredProcedure. FmxSQLCursor. FmxSQLView } includes: currentEntity class)
 		ifTrue:
 			[ "If current entity is a storedProcedure we can directly set the entity as contained by it" newQuery container: currentEntity ]
 		ifFalse: [ "Otherwise we need to create a reference to a DerivedTable"

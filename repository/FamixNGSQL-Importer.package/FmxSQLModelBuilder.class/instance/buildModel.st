@@ -18,7 +18,7 @@ buildModel
 		createStoredProceduresIn: mooseModel;
 		createTriggerStoredProceduresIn: mooseModel;
 		createTriggersIn: mooseModel.
-	
+	self errorReport ifNotEmpty: #inspect.
 	pgToFamixEntities := nil.
 	
 	^ mooseModel

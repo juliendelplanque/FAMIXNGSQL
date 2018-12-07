@@ -4,7 +4,9 @@
 	"instvars" : [
 		"model",
 		"function",
-		"report"
+		"report",
+		"solver",
+		"errorReport"
 	],
 	"name" : "PSQLASTReflectiveVisitor",
 	"commentStamp" : "",
