@@ -1,22 +1,13 @@
 model building - entities
 createViewsIn: aMooseModel
 	metadata getViews do: [ :pgView |
-		|view visitor|
+		|view|
 		view := FmxSQLView new
 					name: pgView name;
 					sourceCode: pgView definition;
 					mooseModel: aMooseModel;
 					yourself.
 		pgToFamixEntities at: pgView put: view.
-		visitor := PSQLASTReflectiveVisitor model: aMooseModel view: view errorReport: self errorReport.
-		[ 
-			pgView ast in: [ :ast |
-				ast isPetitFailure
-					ifTrue: [ self errorReport addError: ast ]
-					ifFalse: [ 
-						view query: (ast acceptVisitor: visitor) entity query ] ]
-		] on: MessageNotUnderstood do: [ :error |
-			self errorReport addError: error ].
 		pgView columns do: [ :pgColumn |
 			pgToFamixEntities
 				at: pgColumn
@@ -25,4 +16,14 @@ createViewsIn: aMooseModel
 						mooseModel: aMooseModel;
 						columnsContainer: view;
 						type: (pgToFamixEntities at: pgColumn datatype);
-						yourself) ] ]
+						yourself) ] ].
+	
+	"Need to do it in 2 steps because views can reference each others."
+	metadata getViews do: [ :pgView |
+		|visitor|
+		visitor := PSQLASTReflectiveVisitor model: aMooseModel view: (pgToFamixEntities at: pgView) errorReport: self errorReport.
+		pgView ast in: [ :ast |
+			ast isPetitFailure
+				ifTrue: [ "ast inspect; halt."self errorReport addError: ast ]
+				ifFalse: [ 
+					(pgToFamixEntities at: pgView) query: (ast acceptVisitor: visitor) entity query ] ]. ]

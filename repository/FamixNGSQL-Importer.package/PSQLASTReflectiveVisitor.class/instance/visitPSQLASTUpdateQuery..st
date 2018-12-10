@@ -12,7 +12,12 @@ visitPSQLASTUpdateQuery: aPSQLASTUpdateQuery
 			self
 				visit: aPSQLASTUpdateQuery tableName
 				thenDo: [ :tableName | self currentEntity table: (self findTableOrViewNamed: tableName) ].
-			self visit: aPSQLASTUpdateQuery setClause.
+			self flag: #TODO;
+				useCurrentEntity:
+					((self createEntity: FmxSQLSetClause)
+						query: self currentEntity;
+						yourself)
+				during: [ self visit: aPSQLASTUpdateQuery setClause ].
 			self visit: aPSQLASTUpdateQuery whereClause.
 			self visit: aPSQLASTUpdateQuery returningClause.
 			#(#alias #areDescendantTablesIncluded #hasOnly).

@@ -12,7 +12,7 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 					"I have to precise that the from clause scope is not the current entity anymore"
 					scopeManager pushScope: fromScope ].
 			self visit: aPSQLASTSelectQuery withClause thenDo: [ :visitResult | Halt now ].
-			self visit: aPSQLASTSelectQuery allOrDistinctClause thenDo: [ :visitResult | Halt now ].
+			self visit: aPSQLASTSelectQuery allOrDistinctClause thenDo: [ :visitResult | self flag: #TODO ].
 			self
 				useCurrentEntity:
 					((self createEntity: FmxSQLSelectClause)
