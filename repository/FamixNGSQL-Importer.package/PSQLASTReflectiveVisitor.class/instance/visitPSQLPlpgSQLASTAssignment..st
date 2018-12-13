@@ -6,4 +6,4 @@ visitPSQLPlpgSQLASTAssignment: aPSQLPlpgSQLASTAssignment
 		visit: aPSQLPlpgSQLASTAssignment target
 		thenDo: [ :res | 
 			res isString
-				ifTrue: [ self resolveAndLinkSilently: (PSQIdentifierWithNode identifier: res node: aPSQLPlpgSQLASTAssignment target) ] ]
+				ifTrue: [ self resolveAndLinkSilently: (SRIdentifierWithNode identifier: res node: aPSQLPlpgSQLASTAssignment target) ] ]

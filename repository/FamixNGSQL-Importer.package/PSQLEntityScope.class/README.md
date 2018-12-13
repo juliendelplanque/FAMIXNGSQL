@@ -1,1 +1,0 @@
-I am a scope that contains one entity. I will return all the reachable entities from the entity i contain if i am asked to. But i will be ignored concerning current entity

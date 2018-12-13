@@ -1,3 +1,0 @@
-accessing
-pushEntitiesAsScope: aCollectionOfEntities
-	self pushScope: (PSQLCollectionScope reachableEntities: aCollectionOfEntities)

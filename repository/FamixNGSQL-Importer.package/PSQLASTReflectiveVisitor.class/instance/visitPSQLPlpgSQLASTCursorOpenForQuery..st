@@ -6,7 +6,7 @@ visitPSQLPlpgSQLASTCursorOpenForQuery: aPSQLPlpgSQLASTCursorOpenForQuery
 		thenDo: [ :cursVar | 
 			self
 				resolveAndLinkSilently:
-					(PSQIdentifierWithNode
+					(SRIdentifierWithNode
 						identifier: cursVar
 						node: aPSQLPlpgSQLASTCursorOpenForQuery cursorIdentifier) ].
 	cursor := self createEntity: FmxSQLCursor from: aPSQLPlpgSQLASTCursorOpenForQuery.

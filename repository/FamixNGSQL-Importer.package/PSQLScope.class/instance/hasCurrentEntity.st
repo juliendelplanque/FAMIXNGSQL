@@ -1,3 +1,0 @@
-testing
-hasCurrentEntity
-	^ false

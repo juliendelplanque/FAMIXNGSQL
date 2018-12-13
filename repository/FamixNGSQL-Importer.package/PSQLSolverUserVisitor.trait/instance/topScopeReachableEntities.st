@@ -1,3 +1,0 @@
-accessing
-topScopeReachableEntities
-	^ self solver topScopeReachableEntities

@@ -1,1 +1,0 @@
-I am a scope that contains and returns all the reachable entities. I am ignored considering the current entity level.

@@ -1,3 +1,0 @@
-accessing
-hasCurrentEntity
-	^ self isCurrentEntity

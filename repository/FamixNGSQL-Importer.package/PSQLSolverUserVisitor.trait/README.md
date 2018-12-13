@@ -1,1 +1,0 @@
-I am a trait for visitors that are using a solver

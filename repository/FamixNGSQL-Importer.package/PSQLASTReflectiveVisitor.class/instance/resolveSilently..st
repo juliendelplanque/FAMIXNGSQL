@@ -1,5 +1,5 @@
 resolution
 resolveSilently: identifiers
 	[ self resolve: identifiers ]
-		on: PSQLReferenciesInconsistencies , PSQLReferenciesNotFound
+		on: SRReferenciesInconsistencies , SRReferenciesNotFound
 		do: [ :err |  self errorReport addError: err ]

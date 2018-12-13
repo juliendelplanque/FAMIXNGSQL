@@ -1,3 +1,0 @@
-convenient
-mooseModel: aMooseModel 
-	""

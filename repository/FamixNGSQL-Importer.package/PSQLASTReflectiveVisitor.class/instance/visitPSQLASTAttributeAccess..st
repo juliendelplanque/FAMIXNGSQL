@@ -4,16 +4,16 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 	identifiers := nil.
 	self
 		visit: aPSQLASTAttributeAccess attributeIdentifier
-		thenDo: [ :identifier | identifiers := PSQIdentifierWithNode identifier: identifier node: aPSQLASTAttributeAccess attributeIdentifier next: identifiers ].
+		thenDo: [ :identifier | identifiers := SRIdentifierWithNode identifier: identifier node: aPSQLASTAttributeAccess attributeIdentifier next: identifiers ].
 	self
 		visit: aPSQLASTAttributeAccess accessed
-		thenDo: [ :identifier | identifiers := PSQIdentifierWithNode identifier: identifier node: aPSQLASTAttributeAccess accessed next: identifiers ].
+		thenDo: [ :identifier | identifiers := SRIdentifierWithNode identifier: identifier node: aPSQLASTAttributeAccess accessed next: identifiers ].
 
 	"We check that the identifier should be ignored (for example true or false)"
 	(self shouldRejectIdentifiers: identifiers)
 		ifTrue: [ ^ nil ].
 	[ self resolveAndLink: identifiers ]
-		on: PSQLReferenciesInconsistencies , PSQLReferenciesNotFound
+		on: SRReferenciesInconsistencies , SRReferenciesNotFound
 		do: [ :anError | 
 			"new and old are implicit declared variables in stored procedures"
 			(self isImplicitVariable: identifiers identifier)

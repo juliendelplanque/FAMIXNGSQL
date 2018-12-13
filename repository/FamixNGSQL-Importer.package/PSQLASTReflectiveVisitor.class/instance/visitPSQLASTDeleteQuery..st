@@ -11,7 +11,7 @@ visitPSQLASTDeleteQuery: aPSQLASTDeleteQuery
 					| fromClause fromClauseScope |
 					fromClause := self createEntity: FmxSQLFromClause from: aPSQLASTDeleteQuery tableName.
 					fromClause query: self currentEntity.
-					fromClauseScope := PSQLEntityScope currentEntity: fromClause.
+					fromClauseScope := SREntityScope currentEntity: fromClause.
 					scopeManager pushScope: fromClauseScope andDoAsCurrentEntity: [ self createReferenceTo: (self findTableOrViewNamed: tableName) ].
 					 ].
 			self visit: aPSQLASTDeleteQuery withClause thenDo: [ :withClause | scopeManager pushScope: withClause ].

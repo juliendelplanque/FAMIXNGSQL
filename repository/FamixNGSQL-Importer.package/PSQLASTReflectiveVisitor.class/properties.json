@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "PSQLSolverUserVisitor classTrait",
+	"classtraitcomposition" : "SRSolverUserVisitor classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"model",
@@ -11,7 +11,7 @@
 	"name" : "PSQLASTReflectiveVisitor",
 	"commentStamp" : "",
 	"super" : "PSQLASTVisitor",
-	"traitcomposition" : "PSQLSolverUserVisitor",
+	"traitcomposition" : "SRSolverUserVisitor",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
