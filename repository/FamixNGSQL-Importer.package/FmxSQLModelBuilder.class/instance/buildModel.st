@@ -19,6 +19,10 @@ buildModel
 		createStoredProceduresIn: mooseModel;
 		createTriggerStoredProceduresIn: mooseModel;
 		createTriggersIn: mooseModel.
+	"Need to do it in 2 steps because views can reference each others."
+	self
+		visitViewsDefinitionsFor: mooseModel;
+		visitStoredProceduresFor: mooseModel.
 	self errorReport ifNotEmpty: #inspect.
 	pgToFamixEntities := nil.
 	

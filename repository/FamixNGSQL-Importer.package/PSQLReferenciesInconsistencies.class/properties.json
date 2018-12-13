@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "JulienDelplanque 12/13/2018 10:21",
 	"super" : "PSQLReferencesError",
 	"category" : "FamixNGSQL-Importer-Solver",
 	"classinstvars" : [ ],

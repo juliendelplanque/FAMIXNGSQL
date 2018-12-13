@@ -1,9 +1,7 @@
 model building - entities
 createStoredProceduresIn: aMooseModel
-	| functions |
-	functions := Dictionary new.
 	metadata getFunctions
-		reject: [ :pgFunction | pgFunction isSqlTriggerFunction ] "Triggers are treated separately."
+		reject: [ :pgFunction | "Triggers are treated separately." pgFunction isSqlTriggerFunction ]
 		thenDo: [ :pgFunction | 
 			| function visitor |
 			function := FmxSQLStoredProcedure new
@@ -12,7 +10,10 @@ createStoredProceduresIn: aMooseModel
 				mooseModel: aMooseModel;
 				isStub: pgFunction isStub;
 				yourself.
-			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function errorReport: self errorReport.
+			visitor := PSQLASTReflectiveVisitor
+				model: aMooseModel
+				function: function
+				errorReport: self errorReport.
 			pgFunction isSqlTriggerFunction
 				ifFalse: [ "Trigger function do not have arguments"
 					pgFunction arguments
@@ -22,17 +23,4 @@ createStoredProceduresIn: aMooseModel
 								mooseModel: aMooseModel;
 								storedProcedure: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
-			pgToFamixEntities at: pgFunction put: function.
-			functions at: pgFunction put: function ].
-	functions
-		keysAndValuesDo: [ :pgFunction :function | 
-			| visitor |
-			visitor := PSQLASTReflectiveVisitor model: aMooseModel function: function errorReport: self errorReport.
-			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
-				ifFalse: [ ([ pgFunction ast ]
-						on: MessageNotUnderstood
-						do: [ :ex | ex signaler ])
-						in: [ :ast | 
-							ast isPetitFailure
-								ifTrue: [ self errorReport addError: ast ]
-								ifFalse: [ ast acceptVisitor: visitor ] ] ] ]
+			pgToFamixEntities at: pgFunction put: function ]
