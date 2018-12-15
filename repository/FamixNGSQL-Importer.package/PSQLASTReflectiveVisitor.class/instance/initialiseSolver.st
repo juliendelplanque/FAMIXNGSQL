@@ -1,3 +1,3 @@
 initialization
 initialiseSolver
-	solver := SRReferenciesSolver new
+	solver := SRReferencesSolver new

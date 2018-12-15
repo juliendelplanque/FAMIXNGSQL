@@ -13,7 +13,7 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 	(self shouldRejectIdentifiers: identifiers)
 		ifTrue: [ ^ nil ].
 	[ self resolveAndLink: identifiers ]
-		on: SRReferenciesInconsistencies , SRReferenciesNotFound
+		on: SRReferencesInconsistencies , SRReferencesNotFound
 		do: [ :anError | 
 			"new and old are implicit declared variables in stored procedures"
 			(self isImplicitVariable: identifiers identifier)

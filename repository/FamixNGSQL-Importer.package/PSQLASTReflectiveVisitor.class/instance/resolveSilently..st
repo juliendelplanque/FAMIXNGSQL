@@ -1,5 +1,5 @@
 resolution
 resolveSilently: identifiers
 	[ self resolve: identifiers ]
-		on: SRReferenciesInconsistencies , SRReferenciesNotFound
+		on: SRReferencesInconsistencies , SRReferencesNotFound
 		do: [ :err |  self errorReport addError: err ]
