@@ -5,7 +5,7 @@ baseline: spec
 		for: #common
 		do: [ spec
 				package: #FAMIXNGSQLMetamodelGenerator with: [ spec requires: #('Famix') ];
-				package: #'FamixNGSQL-Importer' with: [ spec requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitPreprocessor') ];
+				package: #'FamixNGSQL-Importer' with: [ spec requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
 				package: #FAMIXNGSQLAnalysis;
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
@@ -18,7 +18,7 @@ baseline: spec
 				spec
 					repository: 'github://juliendelplanque/PostgreSQLParser/src';
 					loads: #('core') ].
-			spec baseline: 'PetitPreprocessor' with: [
+			spec baseline: 'PetitParser' with: [
 			spec
 				loads: #('Preprocessor');
 				repository: 'github://moosetechnology/PetitParser/src' ].
