@@ -1,3 +1,5 @@
 *FamixNGSQL-Importer
 ast
-	^ PSQLSelectQueryASTBuilder parse: (PSQLCommentsRemover parse: self code)
+	^ (PSQLSelectQueryASTBuilder parse: (PSQLCommentsRemover parse: self code))
+			setChildrenParent;
+			yourself
