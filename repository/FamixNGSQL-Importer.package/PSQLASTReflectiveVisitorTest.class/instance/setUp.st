@@ -5,4 +5,9 @@ setUp
 					yourself.
 	function := FmxSQLStoredProcedure new.
 	function mooseModel: model.
-	function name: 'currentFunction'
+	function name: 'currentFunction'.
+	
+	view := FmxSQLView new
+				mooseModel: model;
+				name: 'currentView';
+				yourself
