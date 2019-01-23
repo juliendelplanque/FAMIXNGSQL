@@ -21,6 +21,6 @@ createStoredProceduresIn: aMooseModel
 							FmxSQLParameter new
 								name: anArgument name;
 								mooseModel: aMooseModel;
-								storedProcedure: function;
+								parentBehaviouralEntity: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function ]

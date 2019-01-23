@@ -6,5 +6,5 @@ visitPSQLASTFromClauseItemType1: aPSQLASTFromClauseItemType1
 	self visitAll: aPSQLASTFromClauseItemType1 columnAliases thenDoForEach: [ :columnAlias | Halt now	"Alias not managed now" ].
 	^ (self createEntity: FmxSQLTableReference from: aPSQLASTFromClauseItemType1)
 		table: table;
-		container: self currentEntity;
+		source: self currentEntity;
 		yourself

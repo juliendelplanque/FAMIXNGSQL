@@ -4,6 +4,6 @@ asFmxSQLEntityIn: aMooseModel withMappingdict: pgToFamixEntities
 			name: self name;
 			columns: (self constrainedColumns collect: [ :pgColumn | pgToFamixEntities at: pgColumn ]);
 			table: (pgToFamixEntities at: self constrainedColumns anyOne) columnsContainer;
-			sourceCode: self code;
+			source: self code;
 			mooseModel: aMooseModel;
 			yourself
