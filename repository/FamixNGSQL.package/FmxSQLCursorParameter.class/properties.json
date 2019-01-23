@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FamixTParameter classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#type => FMOne type: #FmxSQLAbstractType opposite: #cursorParameters",
-		"#accesses => FMMany type: #FmxSQLCursorParameterAccess opposite: #parameter"
+		"#accesses => FMMany type: #FmxSQLCursorParameterAccess opposite: #parameter",
+		"#type => FMOne type: #FmxSQLAbstractType opposite: #cursorParameters"
 	],
 	"name" : "FmxSQLCursorParameter",
 	"commentStamp" : "<historical>",

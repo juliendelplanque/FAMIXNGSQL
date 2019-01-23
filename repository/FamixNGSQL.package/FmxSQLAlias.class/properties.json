@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#clause => FMOne type: #FmxSQLClause opposite: #aliases",
-		"#accesses => FMMany type: #FmxSQLAliasAccess opposite: #alias"
+		"#accesses => FMMany type: #FmxSQLAliasAccess opposite: #alias",
+		"#clause => FMOne type: #FmxSQLClause opposite: #aliases"
 	],
 	"name" : "FmxSQLAlias",
 	"type" : "normal"

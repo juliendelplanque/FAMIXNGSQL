@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FamixTLocalVariable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#type => FMOne type: #FmxSQLAbstractType opposite: #localVariables",
-		"#accesses => FMMany type: #FmxSQLLocalVariableAccess opposite: #localVariable"
+		"#accesses => FMMany type: #FmxSQLLocalVariableAccess opposite: #localVariable",
+		"#type => FMOne type: #FmxSQLAbstractType opposite: #localVariables"
 	],
 	"name" : "FmxSQLLocalVariable",
 	"commentStamp" : "<historical>",

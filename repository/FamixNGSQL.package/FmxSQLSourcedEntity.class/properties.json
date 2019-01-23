@@ -1,7 +1,9 @@
 {
 	"classtraitcomposition" : "FamixTWithComments classTrait + FamixTWithSourceAnchor classTrait + FamixTWithSourceLanguage classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#sourceCode"
+	],
 	"name" : "FmxSQLSourcedEntity",
 	"commentStamp" : "",
 	"super" : "FmxSQLEntity",
