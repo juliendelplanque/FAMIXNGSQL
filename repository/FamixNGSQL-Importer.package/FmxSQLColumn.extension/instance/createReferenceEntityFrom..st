@@ -3,6 +3,7 @@ createReferenceEntityFrom: aFmxSQLEntity
 	| columnReference |
 	columnReference := FmxSQLColumnReference new
 		column: self;
+		source: aFmxSQLEntity;
 		yourself.
-	aFmxSQLEntity references add: columnReference.
+	
 	^ columnReference

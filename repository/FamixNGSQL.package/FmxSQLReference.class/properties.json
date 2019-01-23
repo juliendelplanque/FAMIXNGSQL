@@ -2,7 +2,6 @@
 	"classtraitcomposition" : "FmxSQLTArgument classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#container => FMOne type: #FmxSQLReferencesContainer opposite: #references",
 		"#storedProcedureContainer => FMOne type: #FmxSQLStoredProcedureCall opposite: #arguments"
 	],
 	"name" : "FmxSQLReference",

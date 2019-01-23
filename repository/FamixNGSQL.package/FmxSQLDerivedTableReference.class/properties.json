@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#derivedTable => FMOne type: #FmxSQLDerivedTable opposite: #references"
+		"#derivedTable => FMOne type: #FmxSQLDerivedTable opposite: #references",
+		"#source => FMOne type: #FmxSQLTWithDerivedTableReference opposite: #outgoingDerivedTableReferences"
 	],
 	"name" : "FmxSQLDerivedTableReference",
 	"type" : "normal"

@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLConstraint",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FamixTWithImmediateSource classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#storedProceduresCalled => FMMany type: #FmxSQLStoredProcedure opposite: #checkConstraintsCalling"
 	],
 	"name" : "FmxSQLCheckConstraint",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLConstraint",
+	"traitcomposition" : "FamixTWithImmediateSource",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

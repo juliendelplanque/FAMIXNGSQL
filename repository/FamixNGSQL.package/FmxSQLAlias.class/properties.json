@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLReferencesContainer",
+	"super" : "FmxSQLNamedEntity",
 	"category" : "FamixNGSQL-Entities",
 	"classinstvars" : [ ],
 	"pools" : [ ],

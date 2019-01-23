@@ -1,0 +1,5 @@
+accessing
+outgoingDerivedTableReferences
+
+	<generated>
+	^ outgoingDerivedTableReferences

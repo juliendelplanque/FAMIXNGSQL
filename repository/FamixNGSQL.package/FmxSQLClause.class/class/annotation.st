@@ -1,7 +1,7 @@
 meta
 annotation
 
-	<MSEClass: #Clause super: #FmxSQLReferencesContainer>
+	<MSEClass: #Clause super: #MooseEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

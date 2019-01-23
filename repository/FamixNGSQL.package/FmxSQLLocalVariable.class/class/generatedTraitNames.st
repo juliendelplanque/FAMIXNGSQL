@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FamixTLocalVariable)
+	^ #(FamixTAccessible FamixTLocalVariable)

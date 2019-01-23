@@ -3,6 +3,6 @@ createReferenceEntityFrom: aFmxSQLEntity
 	| tableReference |
 	tableReference := FmxSQLTableReference new
 		table: self;
+		source: aFmxSQLEntity;
 		yourself.
-	aFmxSQLEntity references add: tableReference.
 	^ tableReference

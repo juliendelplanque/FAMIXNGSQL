@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#outgoingDerivedTableReferences => FMMany type: #FmxSQLDerivedTableReference opposite: #source"
+	],
+	"name" : "FmxSQLTWithDerivedTableReference"
+}
