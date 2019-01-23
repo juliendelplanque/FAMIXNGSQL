@@ -1,0 +1,3 @@
+comments - SQL
+columnReferenceComment
+	^ 'I am reference to a column in a table of the model.'

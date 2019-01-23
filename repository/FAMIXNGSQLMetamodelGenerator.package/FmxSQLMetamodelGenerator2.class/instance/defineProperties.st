@@ -1,0 +1,4 @@
+definition
+defineProperties
+	super defineProperties.
+	self defineSQLBehaviouralEntitiesProperties

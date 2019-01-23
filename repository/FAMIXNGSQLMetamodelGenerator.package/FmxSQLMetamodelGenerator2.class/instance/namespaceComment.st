@@ -1,0 +1,3 @@
+comments - SQL
+namespaceComment
+	^ 'I am a namespace. I hold entities to define a name scope where name duplicates are forbidden.'
