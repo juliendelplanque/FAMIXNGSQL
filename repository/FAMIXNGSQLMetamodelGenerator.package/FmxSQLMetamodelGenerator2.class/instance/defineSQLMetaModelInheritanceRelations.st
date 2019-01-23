@@ -19,6 +19,7 @@ defineSQLMetaModelInheritanceRelations
 	tAbstractType <|-- table.
 	tAbstractType <|-- view.
 	constraint <|-- checkConstraint.
+	checkConstraint --|> #TWithImmediateSource.
 	constraint <|-- primaryKeyConstraint.
 	constraint <|-- foreignKeyConstraint.
 	constraint <|-- notNullConstraint.
@@ -27,16 +28,19 @@ defineSQLMetaModelInheritanceRelations
 	tColumnsContainer <|-- view.
 	queryContainer <|-- view.
 	view --|> #TNamespaceEntity.
+	view --|> #TWithImmediateSource.
 	namedEntity <|-- view.
 	behaviouralEntity <|-- derivedTable.
 	tColumnsContainer <|-- derivedTable.
 	queryContainer <|-- derivedTable.
 	queryContainer <|-- storedProcedure.
+	
+	storedProcedure --|> namedEntity.
 	storedProcedure--|> #TNamespaceEntity.
 	storedProcedure --|> #TWithReferences.
-	namedEntity <|-- referenceContainer.
-	referenceContainer <|-- storedProcedure.
+	storedProcedure --|> #TInvocable.
 	storedProcedure <|-- triggerStoredProcedure.
+	
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.
 	"namedEntity <|-- trigger."
@@ -48,11 +52,13 @@ defineSQLMetaModelInheritanceRelations
 	parameter --|> #TParameter.
 	namedEntity <|-- localVariable.
 	localVariable --|> #TLocalVariable.
+	localVariable --|> #TAccessible.
 	namedEntity <|-- cursorParameter.
 	cursorParameter --|> #TParameter.
 	behaviouralEntity <|-- cursor.
 	queryContainer <|-- cursor.
 	cursor --|> #TWithParameters.
-	referenceContainer <|-- alias.
 	storedProcedure --|> #TWithParameters.
 	storedProcedure --|> #TWithLocalVariables.
+	
+	alias --|> namedEntity

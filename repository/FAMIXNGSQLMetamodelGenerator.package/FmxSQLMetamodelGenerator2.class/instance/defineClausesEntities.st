@@ -56,28 +56,4 @@ defineClausesEntities
 		comment: self intoClauseComment.
 	limitClause := builder
 		newClassNamed: #LimitClause
-		comment: self limitClauseComment.
-
-	"A clause is a reference container"
-	referenceContainer <|-- clause.
-	clause --|> #TWithReferences.
-
-	"Defining all kinds of clauses"
-	clause <|-- withClause.
-	clause <|-- whereClause.
-	clause <|-- returningClause.
-	clause <|-- onConflictClause.
-	clause <|-- setClause.
-	clause <|-- fromClause.
-	clause <|-- selectClause.
-	clause <|-- groupByClause.
-	clause <|-- havingClause.
-	clause <|-- orderByClause.
-	clause <|-- joinClause.
-	clause <|-- unionClause.
-	clause <|-- intersectClause.
-	clause <|-- exceptClause.
-	clause <|-- valuesClause.
-	clause <|-- usingClause.
-	clause <|-- intoClause.
-	clause <|-- limitClause
+		comment: self limitClauseComment

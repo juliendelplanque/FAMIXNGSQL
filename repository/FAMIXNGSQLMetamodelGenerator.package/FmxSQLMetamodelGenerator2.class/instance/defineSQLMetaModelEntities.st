@@ -22,9 +22,6 @@ defineSQLMetaModelEntities
 	reference := builder
 		newClassNamed: #Reference
 		comment: self referenceComment.
-	referenceContainer := builder
-		newClassNamed: #ReferencesContainer
-		comment: self referenceContainerComment.
 	"Concrete structural entities."
 	namespace := builder
 		newClassNamed: #Namespace

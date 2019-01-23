@@ -67,9 +67,7 @@
 		"cursorReference",
 		"alias",
 		"aliasAccess",
-		"referenceContainer",
 		"tWithDerivedTableReference",
-		"tWithStoredProcedureCall",
 		"tWithColumnReference",
 		"tWithTableReference",
 		"tWithViewReference"
