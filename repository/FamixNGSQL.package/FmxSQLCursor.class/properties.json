@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FamixTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#references => FMMany type: #FmxSQLCursorReference opposite: #cursor",
-		"#storedProcedure => FMOne type: #FmxSQLStoredProcedure opposite: #cursors"
+		"#storedProcedure => FMOne type: #FmxSQLStoredProcedure opposite: #cursors",
+		"#references => FMMany type: #FmxSQLCursorReference opposite: #cursor"
 	],
 	"name" : "FmxSQLCursor",
 	"commentStamp" : "<historical>",

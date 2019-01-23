@@ -67,7 +67,8 @@
 		"cursorReference",
 		"alias",
 		"aliasAccess",
-		"referenceContainer"
+		"referenceContainer",
+		"tColumnsReferencer"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

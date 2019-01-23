@@ -2,10 +2,10 @@
 	"classtraitcomposition" : "FamixTNamespaceEntity classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#calls => FMMany type: #FmxSQLStoredProcedureCall opposite: #storedProcedure",
 		"#checkConstraintsCalling => FMMany type: #FmxSQLCheckConstraint opposite: #storedProceduresCalled",
+		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning",
 		"#cursors => FMMany type: #FmxSQLCursor opposite: #storedProcedure",
-		"#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning"
+		"#calls => FMMany type: #FmxSQLStoredProcedureCall opposite: #storedProcedure"
 	],
 	"name" : "FmxSQLStoredProcedure",
 	"commentStamp" : "<historical>",

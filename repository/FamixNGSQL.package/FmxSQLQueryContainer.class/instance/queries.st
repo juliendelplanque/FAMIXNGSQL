@@ -1,5 +1,0 @@
-accessing
-queries
-
-	<generated>
-	^ queries

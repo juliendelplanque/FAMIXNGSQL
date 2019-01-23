@@ -22,6 +22,7 @@ defineSQLMetaModelInheritanceRelations
 	constraint <|-- checkConstraint.
 	constraint <|-- primaryKeyConstraint.
 	constraint <|-- foreignKeyConstraint.
+	foreignKeyConstraint --|> tColumnsReferencer.
 	constraint <|-- notNullConstraint.
 	constraint <|-- uniqueConstraint.
 	"Concrete behavioural entities inheritance relations."
