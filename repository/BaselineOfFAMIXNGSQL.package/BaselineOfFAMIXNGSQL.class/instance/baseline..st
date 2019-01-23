@@ -6,6 +6,7 @@ baseline: spec
 		do: [ spec
 				package: #FAMIXNGSQLMetamodelGenerator with: [ spec requires: #('Famix') ];
 				package: #'FamixNGSQL-Importer' with: [ spec requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
+				package: #'FamixNGSQL-Extensions' with: [ spec requires: #('FamixNGSQL-Importer') ];
 				package: #FAMIXNGSQLAnalysis;
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
