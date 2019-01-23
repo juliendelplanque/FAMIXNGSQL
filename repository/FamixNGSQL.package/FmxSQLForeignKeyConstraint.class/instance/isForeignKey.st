@@ -1,3 +1,0 @@
-testing
-isForeignKey
-	^ true

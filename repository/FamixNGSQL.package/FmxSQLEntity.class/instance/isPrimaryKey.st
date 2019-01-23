@@ -1,3 +1,0 @@
-testing
-isPrimaryKey
-	^ false
