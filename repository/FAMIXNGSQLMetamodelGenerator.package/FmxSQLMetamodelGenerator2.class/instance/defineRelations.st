@@ -4,4 +4,5 @@ defineRelations
 	self
 		defineSQLStructuralEntitiesRelations;
 		defineSQLBehaviouralEntitiesRelations;
-		defineSQLReferenceEntitiesRelations
+		defineSQLReferenceEntitiesRelations;
+		defineTraitsRelations

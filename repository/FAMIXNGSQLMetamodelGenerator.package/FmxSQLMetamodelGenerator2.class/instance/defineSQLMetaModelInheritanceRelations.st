@@ -7,7 +7,6 @@ defineSQLMetaModelInheritanceRelations
 	namedEntity <|-- behaviouralEntity. "Should be trait (not all behavioural entities have name)"
 	behaviouralEntity --|> #TNamespaceEntity.
 	"behaviouralEntity <|-- queryContainer."
-	association <|-- reference.
 	entity <|-- crudQuery.
 	"Concrete structural entities inheritance relations."
 	structuralEntity <|-- namespace.
@@ -57,16 +56,3 @@ defineSQLMetaModelInheritanceRelations
 	referenceContainer <|-- alias.
 	storedProcedure --|> #TWithParameters.
 	storedProcedure --|> #TWithLocalVariables.
-	"Concrete reference entities inheritance relations."
-	reference <|-- tableReference.
-	reference <|-- derivedTableReference.
-	reference <|-- viewReference.
-	reference <|-- parameterAccess.
-	reference <|-- cursorParameterAccess.
-	reference <|-- columnReference.
-	reference <|-- typeReference.
-	reference <|-- storedProcedureCall.
-	reference --|> #TArgument.
-	reference <|-- localVariableAccess.
-	reference <|-- cursorReference.
-	reference <|-- aliasAccess.

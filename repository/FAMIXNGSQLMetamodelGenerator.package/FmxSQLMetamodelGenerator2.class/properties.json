@@ -67,7 +67,12 @@
 		"cursorReference",
 		"alias",
 		"aliasAccess",
-		"referenceContainer"
+		"referenceContainer",
+		"tWithDerivedTableReference",
+		"tWithStoredProcedureCall",
+		"tWithColumnReference",
+		"tWithTableReference",
+		"tWithViewReference"
 	],
 	"name" : "FmxSQLMetamodelGenerator2",
 	"type" : "normal"
