@@ -1,8 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	| derivedTableReference |
-	derivedTableReference := FmxSQLDerivedTableReference new
+	^ FmxSQLDerivedTableReference new
 		derivedTable: self;
+		source: aFmxSQLEntity;
 		yourself.
-	aFmxSQLEntity references add: derivedTableReference.
-	^ derivedTableReference
