@@ -7,7 +7,7 @@
 	],
 	"name" : "FmxSQLClause",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
+	"super" : "FmxSQLEntity",
 	"traitcomposition" : "FamixTContainingWithInvocationsGlue",
 	"type" : "normal",
 	"classinstvars" : [ ],

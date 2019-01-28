@@ -1,6 +1,8 @@
 definition
 defineClausesInheritance
 	"Defining all kinds of clauses"
+	clause --|> entity.
+	
 	fromClause --|> clause.
 	fromClause --|> tWithTableReference.
 	fromClause --|> tWithViewReference. "For view.column ref."
