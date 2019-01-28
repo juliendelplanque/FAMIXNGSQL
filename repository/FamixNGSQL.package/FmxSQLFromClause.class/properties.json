@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait",
+	"classtraitcomposition" : "FamixTWithAccesses classTrait + FamixTWithInvocations classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLFromClause",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLClause",
-	"traitcomposition" : "FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference",
+	"traitcomposition" : "FamixTWithAccesses + FamixTWithInvocations + FmxSQLTWithColumnReference + FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

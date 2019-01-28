@@ -61,4 +61,9 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure --|> #TWithParameters.
 	storedProcedure --|> #TWithLocalVariables.
 	
-	alias --|> namedEntity
+	alias --|> namedEntity.
+	alias --|> tWithTableReference.
+	alias --|> tWithColumnReference.
+	alias --|> tWithDerivedTableReference.
+	alias --|> tWithViewReference.
+	alias --|> #TWithInvocations.

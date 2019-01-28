@@ -1,8 +1,5 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	| viewReference |
-	viewReference := FmxSQLViewReference new
+	FmxSQLViewReference new
 		view: self;
-		yourself.
-	aFmxSQLEntity references add: viewReference.
-	^ viewReference
+		source: aFmxSQLEntity

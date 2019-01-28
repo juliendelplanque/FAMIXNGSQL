@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#aliases => FMMany type: #FmxSQLAlias opposite: #clause",
 		"#query => FMOne type: #FmxSQLCRUDQuery opposite: #clauses"
 	],
 	"name" : "FmxSQLClause",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "MooseEntity",
+	"traitcomposition" : "FamixTContainingWithInvocationsGlue",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

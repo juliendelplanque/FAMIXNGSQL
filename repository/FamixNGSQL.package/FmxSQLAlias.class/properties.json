@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLNamedEntity",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FamixTWithInvocations classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#accesses => FMMany type: #FmxSQLAliasAccess opposite: #alias",
 		"#clause => FMOne type: #FmxSQLClause opposite: #aliases"
 	],
 	"name" : "FmxSQLAlias",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLNamedEntity",
+	"traitcomposition" : "FamixTWithInvocations + FmxSQLTWithColumnReference + FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

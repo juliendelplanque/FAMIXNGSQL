@@ -16,3 +16,4 @@ defineReferenceHierarchy
 	localVariableAccess --|> #TAccess.
 	cursorReference --|> reference.
 	aliasAccess --|> reference.
+	aliasAccess --|> #TAccess.

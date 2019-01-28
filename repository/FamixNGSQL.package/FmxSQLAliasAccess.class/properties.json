@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLReference",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FamixTAccess classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#alias => FMOne type: #FmxSQLAlias opposite: #accesses"
 	],
 	"name" : "FmxSQLAliasAccess",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLReference",
+	"traitcomposition" : "FamixTAccess",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }
