@@ -1,5 +1,5 @@
 definition
-defineClausesInheritance
+defineClausesHierarchy
 	"Defining all kinds of clauses"
 	clause --|> entity.
 	

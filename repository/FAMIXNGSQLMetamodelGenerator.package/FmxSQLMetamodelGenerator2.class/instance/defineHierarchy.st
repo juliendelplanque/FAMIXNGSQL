@@ -3,4 +3,5 @@ defineHierarchy
 	super defineHierarchy.
 	self
 		defineSQLMetaModelInheritanceRelations;
-		defineReferenceHierarchy
+		defineReferenceHierarchy;
+		defineClausesHierarchy

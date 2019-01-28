@@ -4,4 +4,4 @@ defineClasses
 	self
 		defineSQLMetaModelEntities;
 		defineClausesEntities;
-		defineClausesInheritance
+		defineClausesHierarchy
