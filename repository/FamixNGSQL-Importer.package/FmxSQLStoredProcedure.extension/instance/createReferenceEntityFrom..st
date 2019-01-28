@@ -1,6 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLStoredProcedure 
 	^ FmxSQLStoredProcedureCall new
-		storedProcedure: self;
+		candidates: { self };
 		sender: aFmxSQLStoredProcedure
 		yourself
