@@ -1,5 +1,5 @@
 accessing
-references
+source
 
 	<generated>
-	^ references
+	^ source

@@ -39,8 +39,13 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure--|> #TNamespaceEntity.
 	storedProcedure --|> #TWithReferences.
 	storedProcedure --|> #TInvocable.
+	storedProcedure --|> #TWithInvocations.
+	storedProcedure --|> #TWithParameters.
+	storedProcedure --|> #TWithLocalVariables.
 	storedProcedure --|> tWithTableReference.
 	storedProcedure --|> tWithAlias.
+	storedProcedure --|> tWithCursor.
+	storedProcedure --|> tWithCursorReference.
 	
 	triggerStoredProcedure --|> storedProcedure.
 	
@@ -61,8 +66,6 @@ defineSQLMetaModelInheritanceRelations
 	behaviouralEntity <|-- cursor.
 	queryContainer <|-- cursor.
 	cursor --|> #TWithParameters.
-	storedProcedure --|> #TWithParameters.
-	storedProcedure --|> #TWithLocalVariables.
 	
 	alias --|> namedEntity.
 	alias --|> tWithTableReference.

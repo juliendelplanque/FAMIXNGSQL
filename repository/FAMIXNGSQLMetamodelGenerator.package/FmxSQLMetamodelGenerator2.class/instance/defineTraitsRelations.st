@@ -12,5 +12,11 @@ defineTraitsRelations
 	(tWithViewReference property: #outgoingViewReferences)
 		-* (viewReference property: #source).
 		
+	(tWithCursorReference property: #outgoingCursorReferences)
+		-* (cursorReference property: #source).
+		
 	(tWithAlias property: #aliases)
-		<>-* (alias property: #parentBehaviouralEntity)
+		<>-* (alias property: #parentBehaviouralEntity).
+		
+	(tWithCursor property: #cursors)
+		<>-* (cursor property: #parentBehaviouralEntity)

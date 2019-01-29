@@ -2,4 +2,4 @@ accessing
 belongsTo: anObject
 
 	<generated>
-	self storedProcedure: anObject
+	self parentBehaviouralEntity: anObject

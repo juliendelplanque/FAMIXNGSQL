@@ -1,0 +1,5 @@
+accessing
+outgoingCursorReferences
+
+	<generated>
+	^ outgoingCursorReferences

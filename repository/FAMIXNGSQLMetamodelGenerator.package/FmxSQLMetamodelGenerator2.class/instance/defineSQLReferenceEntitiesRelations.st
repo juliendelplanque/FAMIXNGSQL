@@ -32,10 +32,6 @@ defineSQLReferenceEntitiesRelations
 	((storedProcedureCall property: #arguments)
 		<>-* (reference property: #storedProcedureContainer)) withoutPrimaryContainer.
 
-	"A stored procedure call calls a stored procedure."
-	(storedProcedureCall property: #storedProcedure)
-		*- (storedProcedure property: #calls).
-
 	"A Local variable access must point a local variable."
 	(localVariableAccess property: #localVariable)
 		*- (localVariable property: #accesses).

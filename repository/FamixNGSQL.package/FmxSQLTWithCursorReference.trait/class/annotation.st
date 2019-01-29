@@ -1,7 +1,7 @@
 meta
 annotation
 
-	<MSEClass: #TWithStoredProcedureCall super: #Trait>
+	<MSEClass: #TWithCursorReference super: #Trait>
 	<generated>
 	<package: #FamixNGSQL>
 	^self
