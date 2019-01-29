@@ -3,10 +3,6 @@ defineSQLReferenceEntitiesRelations
 	"A leaf access references a leaf entity."
 	(parameterAccess property: #parameter)
 		*- (parameter property: #accesses).
-		
-	"A leaf access references a leaf entity."
-	(cursorParameterAccess property: #parameter)
-		*- (cursorParameter property: #accesses).
 
 	"A type reference references a type."
 	(typeReference property: #type)

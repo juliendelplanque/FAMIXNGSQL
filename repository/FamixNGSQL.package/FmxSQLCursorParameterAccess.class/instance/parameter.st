@@ -1,5 +1,0 @@
-accessing
-parameter
-
-	<generated>
-	^ parameter

@@ -1,14 +1,13 @@
 {
-	"classtraitcomposition" : "FamixTParameter classTrait",
+	"classtraitcomposition" : "FamixTAccessible classTrait + FamixTParameter classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#accesses => FMMany type: #FmxSQLCursorParameterAccess opposite: #parameter",
 		"#type => FMOne type: #FmxSQLAbstractType opposite: #cursorParameters"
 	],
 	"name" : "FmxSQLCursorParameter",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FamixTParameter",
+	"traitcomposition" : "FamixTAccessible + FamixTParameter",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
