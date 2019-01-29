@@ -1,6 +1,7 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
 	^ FmxSQLAliasAccess new
-		alias: self;
-		from: aFmxSQLEntity;
+		variable: self;
+		accessor: aFmxSQLEntity;
+		isWrite: false;
 		yourself.

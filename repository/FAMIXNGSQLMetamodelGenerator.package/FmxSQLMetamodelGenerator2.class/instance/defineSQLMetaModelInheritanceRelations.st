@@ -78,4 +78,6 @@ defineSQLMetaModelInheritanceRelations
 	alias --|> tWithColumnReference.
 	alias --|> tWithDerivedTableReference.
 	alias --|> tWithViewReference.
+	alias --|> #TWithAccesses.
 	alias --|> #TWithInvocations.
+	alias --|> #TAccessible

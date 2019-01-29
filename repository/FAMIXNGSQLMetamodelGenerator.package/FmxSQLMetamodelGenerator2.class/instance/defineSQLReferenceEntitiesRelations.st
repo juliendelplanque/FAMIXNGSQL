@@ -43,7 +43,3 @@ defineSQLReferenceEntitiesRelations
 	"A cursor reference references a cursor."
 	(cursorReference property: #cursor)
 		*- (cursor property: #references).
-		
-	"An alias access reference an Alias."
-	(aliasAccess property: #alias)
-		*- (alias property: #accesses).

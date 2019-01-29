@@ -1,14 +1,13 @@
 {
-	"classtraitcomposition" : "FamixTWithInvocations classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
+	"classtraitcomposition" : "FamixTAccessible classTrait + FamixTWithAccesses classTrait + FamixTWithInvocations classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#accesses => FMMany type: #FmxSQLAliasAccess opposite: #alias",
 		"#parentBehaviouralEntity => FMOne type: #FmxSQLTWithAlias opposite: #aliases"
 	],
 	"name" : "FmxSQLAlias",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FamixTWithInvocations + FmxSQLTWithColumnReference + FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference",
+	"traitcomposition" : "FamixTAccessible + FamixTWithAccesses + FamixTWithInvocations + FmxSQLTWithColumnReference + FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
