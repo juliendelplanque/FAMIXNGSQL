@@ -47,6 +47,7 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure --|> tWithAlias.
 	storedProcedure --|> tWithCursor.
 	storedProcedure --|> tWithCursorReference.
+	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
 	
 	triggerStoredProcedure --|> storedProcedure.
 	
@@ -59,6 +60,7 @@ defineSQLMetaModelInheritanceRelations
 	crudQuery <|-- deleteQuery.
 	namedEntity <|-- parameter.
 	parameter --|> #TParameter.
+	parameter --|> #TAccessible.
 	namedEntity <|-- localVariable.
 	localVariable --|> #TLocalVariable.
 	localVariable --|> #TAccessible.

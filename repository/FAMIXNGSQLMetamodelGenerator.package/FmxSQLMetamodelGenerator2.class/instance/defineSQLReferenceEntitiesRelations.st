@@ -1,9 +1,5 @@
 definition
 defineSQLReferenceEntitiesRelations
-	"A leaf access references a leaf entity."
-	(parameterAccess property: #parameter)
-		*- (parameter property: #accesses).
-
 	"A type reference references a type."
 	(typeReference property: #type)
 		*- (type property: #references).

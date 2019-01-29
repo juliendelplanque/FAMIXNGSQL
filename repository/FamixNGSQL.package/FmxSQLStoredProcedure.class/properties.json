@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTInvocable classTrait + FamixTNamespaceEntity classTrait + FamixTWithAccesses classTrait + FamixTWithInvocations classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FmxSQLTQueryContainer classTrait + FmxSQLTWithAlias classTrait + FmxSQLTWithCursor classTrait + FmxSQLTWithCursorReference classTrait + FmxSQLTWithTableReference classTrait",
+	"classtraitcomposition" : "FamixTInvocable classTrait + FamixTNamespaceEntity classTrait + FamixTWithAccesses classTrait + FamixTWithInvocations classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FmxSQLTQueryContainer classTrait + FmxSQLTWithAlias classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithCursor classTrait + FmxSQLTWithCursorReference classTrait + FmxSQLTWithTableReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#checkConstraintsCalling => FMMany type: #FmxSQLCheckConstraint opposite: #storedProceduresCalled",
@@ -8,7 +8,7 @@
 	"name" : "FmxSQLStoredProcedure",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FamixTInvocable + FamixTNamespaceEntity + FamixTWithAccesses + FamixTWithInvocations + FamixTWithLocalVariables + FamixTWithParameters + FamixTWithReferences + FmxSQLTQueryContainer + FmxSQLTWithAlias + FmxSQLTWithCursor + FmxSQLTWithCursorReference + FmxSQLTWithTableReference",
+	"traitcomposition" : "FamixTInvocable + FamixTNamespaceEntity + FamixTWithAccesses + FamixTWithInvocations + FamixTWithLocalVariables + FamixTWithParameters + FamixTWithReferences + FmxSQLTQueryContainer + FmxSQLTWithAlias + FmxSQLTWithColumnReference + FmxSQLTWithCursor + FmxSQLTWithCursorReference + FmxSQLTWithTableReference",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

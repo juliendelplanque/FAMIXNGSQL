@@ -12,10 +12,11 @@ END;'.
 	self assert: function localVariables size equals: 1.
 	self assert: function localVariables first name equals: 'curs'.
 	self assert: function localVariables first type name equals: 'refcursor'.
-	self assert: function outgoingCursorReferences size equals: 2.
-	self assert: function outgoingCursorReferences second class equals: FmxSQLCursorReference.
-	self assert: function outgoingCursorReferences first class equals: FmxSQLLocalVariableAccess.
-	cursor := function outgoingCursorReferences second cursor.
+	self assert: function outgoingCursorReferences size equals: 1.
+	self assert: function outgoingCursorReferences first class equals: FmxSQLCursorReference.
+	self assert: function accesses size equals: 1.
+	self assert: function accesses first class equals: FmxSQLLocalVariableAccess.
+	cursor := function outgoingCursorReferences first cursor.
 	self assert: cursor query class equals: FmxSQLSelectQuery.
 	self
 		find: FmxSQLFromClause
