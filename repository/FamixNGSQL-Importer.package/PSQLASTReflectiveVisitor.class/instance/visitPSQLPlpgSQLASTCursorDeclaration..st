@@ -6,9 +6,9 @@ visitPSQLPlpgSQLASTCursorDeclaration: aPSQLPlpgSQLASTCursorDeclaration
 		visit: aPSQLPlpgSQLASTCursorDeclaration identifier
 		thenDo: [ :variableName | localVariable name: variableName ].
 	localVariable type: (self findTypeNamed: 'refcursor').
-	localVariable storedProcedure: self currentEntity.
+	localVariable parentBehaviouralEntity: self currentEntity.
 	cursor := self createEntity: FmxSQLCursor from: aPSQLPlpgSQLASTCursorDeclaration.
-	cursor storedProcedure: self currentEntity.
+	cursor parentBehaviouralEntity: self currentEntity.
 	self createReferenceTo: cursor.
 	self
 		useCurrentEntity: cursor
