@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#aliases => FMMany type: #FmxSQLAlias opposite: #parentBehaviouralEntity"
+	],
+	"name" : "FmxSQLTWithAlias"
+}

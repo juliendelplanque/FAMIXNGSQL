@@ -2,4 +2,4 @@ accessing
 belongsTo
 
 	<generated>
-	^ self clause
+	^ self parentBehaviouralEntity

@@ -2,6 +2,7 @@ definition
 defineClausesHierarchy
 	"Defining all kinds of clauses"
 	clause --|> entity.
+	clause --|> tWithAlias.
 	
 	fromClause --|> clause.
 	fromClause --|> tWithTableReference.

@@ -39,7 +39,10 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure--|> #TNamespaceEntity.
 	storedProcedure --|> #TWithReferences.
 	storedProcedure --|> #TInvocable.
-	storedProcedure <|-- triggerStoredProcedure.
+	storedProcedure --|> tWithTableReference.
+	storedProcedure --|> tWithAlias.
+	
+	triggerStoredProcedure --|> storedProcedure.
 	
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.

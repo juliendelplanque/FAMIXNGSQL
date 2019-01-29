@@ -10,4 +10,7 @@ defineTraitsRelations
 		-* (tableReference property: #source).
 	
 	(tWithViewReference property: #outgoingViewReferences)
-		-* (viewReference property: #source)
+		-* (viewReference property: #source).
+		
+	(tWithAlias property: #aliases)
+		<>-* (alias property: #parentBehaviouralEntity)

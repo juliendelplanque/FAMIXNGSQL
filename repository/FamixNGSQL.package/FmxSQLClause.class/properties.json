@@ -1,14 +1,13 @@
 {
-	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait",
+	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FmxSQLTWithAlias classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#aliases => FMMany type: #FmxSQLAlias opposite: #clause",
 		"#query => FMOne type: #FmxSQLCRUDQuery opposite: #clauses"
 	],
 	"name" : "FmxSQLClause",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLEntity",
-	"traitcomposition" : "FamixTContainingWithInvocationsGlue",
+	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FmxSQLTWithAlias",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
