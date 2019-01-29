@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#cursors => FMMany type: #FmxSQLCursor opposite: #parentBehaviouralEntity"
+	],
+	"name" : "FmxSQLTWithCursor"
+}

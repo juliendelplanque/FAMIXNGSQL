@@ -58,13 +58,3 @@ defineSQLBehaviouralEntitiesRelations
 	(table property: #triggers)
 		<>-*
 	(trigger property: #table).
-	
-	"A clause may define aliases"
-	(clause property: #aliases)
-		<>-*
-	(alias property: #clause).
-	
-	"A cursor is held in a stored procedure."
-	(storedProcedure property: #cursors)
-		<>-*
-	(cursor property: #storedProcedure)

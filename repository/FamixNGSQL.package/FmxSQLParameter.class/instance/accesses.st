@@ -1,5 +1,0 @@
-accessing
-accesses
-
-	<generated>
-	^ accesses

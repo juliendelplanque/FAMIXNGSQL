@@ -2,4 +2,4 @@ accessing
 belongsTo
 
 	<generated>
-	^ self storedProcedure
+	^ self parentBehaviouralEntity

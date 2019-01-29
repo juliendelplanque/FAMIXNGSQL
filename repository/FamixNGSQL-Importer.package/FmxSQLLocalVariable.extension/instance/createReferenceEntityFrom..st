@@ -1,8 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	| localVariableAccess |
-	localVariableAccess := FmxSQLLocalVariableAccess new
+	^ FmxSQLLocalVariableAccess new
 		localVariable: self;
-		yourself.
-	aFmxSQLEntity references add: localVariableAccess.
-	^ localVariableAccess
+		accessor: aFmxSQLEntity;
+		yourself

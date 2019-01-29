@@ -1,13 +1,5 @@
 definition
 defineSQLReferenceEntitiesRelations
-	"A leaf access references a leaf entity."
-	(parameterAccess property: #parameter)
-		*- (parameter property: #accesses).
-		
-	"A leaf access references a leaf entity."
-	(cursorParameterAccess property: #parameter)
-		*- (cursorParameter property: #accesses).
-
 	"A type reference references a type."
 	(typeReference property: #type)
 		*- (type property: #references).
@@ -32,10 +24,6 @@ defineSQLReferenceEntitiesRelations
 	((storedProcedureCall property: #arguments)
 		<>-* (reference property: #storedProcedureContainer)) withoutPrimaryContainer.
 
-	"A stored procedure call calls a stored procedure."
-	(storedProcedureCall property: #storedProcedure)
-		*- (storedProcedure property: #calls).
-
 	"A Local variable access must point a local variable."
 	(localVariableAccess property: #localVariable)
 		*- (localVariable property: #accesses).
@@ -55,7 +43,3 @@ defineSQLReferenceEntitiesRelations
 	"A cursor reference references a cursor."
 	(cursorReference property: #cursor)
 		*- (cursor property: #references).
-		
-	"An alias access reference an Alias."
-	(aliasAccess property: #alias)
-		*- (alias property: #accesses).

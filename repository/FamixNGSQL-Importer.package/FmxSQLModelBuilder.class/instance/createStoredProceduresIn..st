@@ -6,6 +6,7 @@ createStoredProceduresIn: aMooseModel
 			| function visitor |
 			function := FmxSQLStoredProcedure new
 				name: pgFunction name;
+				parentNamespace: (pgToFamixEntities at: pgFunction namespace);
 				returnType: (pgToFamixEntities at: pgFunction returnType);
 				mooseModel: aMooseModel;
 				isStub: pgFunction isStub;

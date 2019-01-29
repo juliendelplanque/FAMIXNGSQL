@@ -1,9 +1,7 @@
 {
 	"classtraitcomposition" : "FamixTAccess classTrait",
 	"classvars" : [ ],
-	"instvars" : [
-		"#parameter => FMOne type: #FmxSQLParameter opposite: #accesses"
-	],
+	"instvars" : [ ],
 	"name" : "FmxSQLParameterAccess",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLReference",

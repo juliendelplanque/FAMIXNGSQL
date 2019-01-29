@@ -14,4 +14,4 @@ END;'.
 	self assert: function localVariables first type name equals: 'int4'.
 	self assert: function localVariables second name equals: 'b'.
 	self assert: function localVariables second type name equals: 'int4'.
-	self assert: function references size equals: 3
+	self assert: function accesses size equals: 3

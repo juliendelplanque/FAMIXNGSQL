@@ -1,8 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	| cursorParameterAccess |
-	cursorParameterAccess := FmxSQLCursorParameterAccess new
-		parameter: self;
+	^ FmxSQLCursorParameterAccess new
+		variable: self;
+		accessor: aFmxSQLEntity;
 		yourself.
-	aFmxSQLEntity references add: cursorParameterAccess.
-	^ cursorParameterAccess

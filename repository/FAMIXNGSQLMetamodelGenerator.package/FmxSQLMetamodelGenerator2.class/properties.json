@@ -70,7 +70,10 @@
 		"tWithDerivedTableReference",
 		"tWithColumnReference",
 		"tWithTableReference",
-		"tWithViewReference"
+		"tWithViewReference",
+		"tWithAlias",
+		"tWithCursor",
+		"tWithCursorReference"
 	],
 	"name" : "FmxSQLMetamodelGenerator2",
 	"type" : "normal"

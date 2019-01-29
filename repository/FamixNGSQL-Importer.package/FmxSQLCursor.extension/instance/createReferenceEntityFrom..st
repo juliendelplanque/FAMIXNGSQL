@@ -1,8 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	| cursorReference |
-	cursorReference := FmxSQLCursorReference new
+	^ FmxSQLCursorReference new
 		cursor: self;
-		yourself.
-	aFmxSQLEntity references add: cursorReference.
-	^ cursorReference
+		source: aFmxSQLEntity;
+		yourself

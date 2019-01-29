@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#cursor => FMOne type: #FmxSQLCursor opposite: #references"
+		"#cursor => FMOne type: #FmxSQLCursor opposite: #references",
+		"#source => FMOne type: #FmxSQLTWithCursorReference opposite: #outgoingCursorReferences"
 	],
 	"name" : "FmxSQLCursorReference",
 	"type" : "normal"

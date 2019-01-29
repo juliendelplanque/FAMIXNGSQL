@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#outgoingStoredProcedureCalls => FMMany type: #FmxSQLStoredProcedureCall opposite: #source"
-	],
-	"name" : "FmxSQLTWithStoredProcedureCall"
-}

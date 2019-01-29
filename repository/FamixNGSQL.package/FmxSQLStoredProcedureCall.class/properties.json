@@ -2,8 +2,7 @@
 	"classtraitcomposition" : "FamixTInvocation classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#arguments => FMMany type: #FmxSQLReference opposite: #storedProcedureContainer",
-		"#storedProcedure => FMOne type: #FmxSQLStoredProcedure opposite: #calls"
+		"#arguments => FMMany type: #FmxSQLReference opposite: #storedProcedureContainer"
 	],
 	"name" : "FmxSQLStoredProcedureCall",
 	"commentStamp" : "<historical>",

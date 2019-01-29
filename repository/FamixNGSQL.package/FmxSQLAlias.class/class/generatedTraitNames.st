@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #()
+	^ #(FamixTAccessible FamixTWithAccesses FamixTWithInvocations FmxSQLTWithColumnReference FmxSQLTWithDerivedTableReference FmxSQLTWithTableReference FmxSQLTWithViewReference)

@@ -39,7 +39,17 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure--|> #TNamespaceEntity.
 	storedProcedure --|> #TWithReferences.
 	storedProcedure --|> #TInvocable.
-	storedProcedure <|-- triggerStoredProcedure.
+	storedProcedure --|> #TWithInvocations.
+	storedProcedure --|> #TWithParameters.
+	storedProcedure --|> #TWithLocalVariables.
+	storedProcedure --|> #TWithAccesses.
+	storedProcedure --|> tWithTableReference.
+	storedProcedure --|> tWithAlias.
+	storedProcedure --|> tWithCursor.
+	storedProcedure --|> tWithCursorReference.
+	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
+	
+	triggerStoredProcedure --|> storedProcedure.
 	
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.
@@ -50,15 +60,24 @@ defineSQLMetaModelInheritanceRelations
 	crudQuery <|-- deleteQuery.
 	namedEntity <|-- parameter.
 	parameter --|> #TParameter.
+	parameter --|> #TAccessible.
 	namedEntity <|-- localVariable.
 	localVariable --|> #TLocalVariable.
 	localVariable --|> #TAccessible.
-	namedEntity <|-- cursorParameter.
+	
+	cursorParameter --|> namedEntity.
 	cursorParameter --|> #TParameter.
+	cursorParameter --|> #TAccessible.
+	
 	behaviouralEntity <|-- cursor.
 	queryContainer <|-- cursor.
 	cursor --|> #TWithParameters.
-	storedProcedure --|> #TWithParameters.
-	storedProcedure --|> #TWithLocalVariables.
 	
-	alias --|> namedEntity
+	alias --|> namedEntity.
+	alias --|> tWithTableReference.
+	alias --|> tWithColumnReference.
+	alias --|> tWithDerivedTableReference.
+	alias --|> tWithViewReference.
+	alias --|> #TWithAccesses.
+	alias --|> #TWithInvocations.
+	alias --|> #TAccessible

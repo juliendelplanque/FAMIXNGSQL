@@ -4,6 +4,6 @@ reachableEntities
 
 	^ super reachableEntities
 		,
-			(self references
-				collect: [ :aReference | aReference reference ]
+			((self accesses , self outgoingColumnReferences , self outgoingInvocations , self outgoingTableReferences , self outgoingViewReferences , self accesses )
+				collect: [ :aReference | aReference to ]
 				thenSelect: [ :referenced | referenced class = FmxSQLColumn ])

@@ -2,7 +2,7 @@ alias
 createAliasInCurrentScope: anAlias for: aFmxSQLEntityOrBlock
 	| alias |
 	alias := (self createEntity: FmxSQLAlias)
-		clause: self currentEntity;
+		parentBehaviouralEntity: self currentEntity;
 		name: anAlias;
 		yourself.
 	self

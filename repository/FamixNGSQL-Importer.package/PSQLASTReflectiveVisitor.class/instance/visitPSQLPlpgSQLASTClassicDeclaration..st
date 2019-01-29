@@ -2,7 +2,7 @@ visiting
 visitPSQLPlpgSQLASTClassicDeclaration: aPSQLPlpgSQLASTClassicDeclaration
 	| variable |
 	variable := self createEntity: FmxSQLLocalVariable from: aPSQLPlpgSQLASTClassicDeclaration.
-	variable storedProcedure: self function.
+	variable parentBehaviouralEntity: self function.
 	self visit: aPSQLPlpgSQLASTClassicDeclaration defaultExpression thenDo: [ :e | Halt now ].
 	self
 		visit: aPSQLPlpgSQLASTClassicDeclaration identifier
