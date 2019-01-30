@@ -24,4 +24,4 @@ END;'.
 			self assert: fromClause aliases size equals: 1.
 			alias := fromClause aliases first.
 			self assert: alias name equals: 'new_initiative'.
-			self assert: alias accesses size equals: 1 ]
+			self assert: alias incomingAccesses size equals: 1 ]

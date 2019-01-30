@@ -4,8 +4,8 @@ reachableEntities
 
 	^ super reachableEntities
 		,
-			((self outgoingTableReferences , self outgoingDerivedTableReferences)
+			((self outgoingTableReferences , self outgoingDerivedTableReferences , self outgoingViewReferences)
 				flatCollect: [ :aReference | 
-					aReference reference isColumnsContainer
+					aReference to isColumnsContainer
 						ifTrue: [ aReference reference reachableEntities ]
 						ifFalse: [ #() ] ])

@@ -1,3 +1,4 @@
 *FamixNGSQL-Importer
 reachableEntities
-	^ (self outgoingTableReferences collect: [ :link | link reference ] thenReject: [ :entity | entity class = FmxSQLStoredProcedure ]) flatCollect: #reachableEntities
+	^ (self outgoingTableReferences , self accesses , self outgoingColumnReferences , self outgoingDerivedTableReferences , self outgoingViewReferences)
+			flatCollect: [ :link | link to reachableEntities ]

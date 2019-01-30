@@ -1,3 +1,3 @@
 *FamixNGSQL-Importer
-target
+to
 	^ self derivedTable
