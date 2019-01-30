@@ -29,3 +29,9 @@ defineReferenceHierarchy
 	
 	aliasAccess --|> reference.
 	aliasAccess --|> #TAccess.
+	
+	newReference --|> reference.
+	newReference --|> tUndecidedTableReference.
+	
+	oldReference --|> reference.
+	oldReference --|> tUndecidedTableReference.

@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#trigger => FMMany type: #FmxSQLTrigger opposite: #entitiesReferencing"
+	],
+	"name" : "FmxSQLTReferencingTrigger"
+}

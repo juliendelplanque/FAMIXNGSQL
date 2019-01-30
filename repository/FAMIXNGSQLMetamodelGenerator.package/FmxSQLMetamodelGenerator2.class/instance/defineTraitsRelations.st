@@ -19,4 +19,10 @@ defineTraitsRelations
 		<>-* (alias property: #parentBehaviouralEntity).
 		
 	(tWithCursor property: #cursors)
-		<>-* (cursor property: #parentBehaviouralEntity)
+		<>-* (cursor property: #parentBehaviouralEntity).
+		
+	(tWithUndecidedTableReference property: #outgoingUndecidedTableReferences)
+		-* (tUndecidedTableReference property: #source).
+	
+	(tUndecidedTableReference property: #candidates)
+		*-* (table property: #incomingUndecidedTableReferences).

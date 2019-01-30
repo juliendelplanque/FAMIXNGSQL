@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#candidates => FMMany type: #FmxSQLTable opposite: #incomingUndecidedTableReferences",
+		"#source => FMOne type: #FmxSQLTWithUndecidedTableReference opposite: #outgoingUndecidedTableReferences"
+	],
+	"name" : "FmxSQLTUndecidedTableReference"
+}

@@ -114,4 +114,10 @@ defineSQLMetaModelEntities
 		comment: self localVariableAccessComment.
 	aliasAccess := builder
 		newClassNamed: #AliasAccess
-		comment: self aliasAccessComment
+		comment: self aliasAccessComment.
+	newReference := builder
+		newClassNamed: #NewReference
+		comment: self newReferenceComment.
+	oldReference := builder
+		newClassNamed: #OldReference
+		comment: self oldReferenceComment.

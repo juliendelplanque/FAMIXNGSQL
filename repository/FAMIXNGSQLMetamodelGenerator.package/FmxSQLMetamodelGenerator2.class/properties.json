@@ -73,7 +73,11 @@
 		"tWithViewReference",
 		"tWithAlias",
 		"tWithCursor",
-		"tWithCursorReference"
+		"tWithCursorReference",
+		"tUndecidedTableReference",
+		"tWithUndecidedTableReference",
+		"newReference",
+		"oldReference"
 	],
 	"name" : "FmxSQLMetamodelGenerator2",
 	"type" : "normal"

@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLStoredProcedure",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTWithUndecidedTableReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#columnsReferenced => FMMany type: #FmxSQLColumnReference opposite: #triggerStoredProceduresReferencing",
 		"#triggers => FMMany type: #FmxSQLTrigger opposite: #storedProcedure"
 	],
 	"name" : "FmxSQLTriggerStoredProcedure",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLStoredProcedure",
+	"traitcomposition" : "FmxSQLTWithUndecidedTableReference",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

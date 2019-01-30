@@ -1,5 +1,6 @@
 running
 setUp
+	super setUp.
 	model := MooseModel new
 					metamodel: FmxSQLMetamodelGenerator metamodel;
 					yourself.
@@ -10,4 +11,9 @@ setUp
 	view := FmxSQLView new
 				mooseModel: model;
 				name: 'currentView';
-				yourself
+				yourself.
+				
+	triggerFunction := FmxSQLTriggerStoredProcedure new
+								mooseModel: model;
+								name: 'currentTriggerStoredProcedure';
+								yourself

@@ -11,12 +11,12 @@ defineSQLMetaModelInheritanceRelations
 	"Concrete structural entities inheritance relations."
 	structuralEntity <|-- namespace.
 	namespace --|> #TNamespace.
-	structuralEntity <|-- table.
-	tColumnsContainer <|-- table.
+	table --|> structuralEntity.
+	table --|> tColumnsContainer.
+	table --|> tAbstractType.
 	structuralEntity <|-- column.
 	structuralEntity <|-- type.
 	tAbstractType <|-- type.
-	tAbstractType <|-- table.
 	tAbstractType <|-- view.
 	constraint <|-- checkConstraint.
 	checkConstraint --|> #TWithImmediateSource.
@@ -50,6 +50,7 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
 	
 	triggerStoredProcedure --|> storedProcedure.
+	triggerStoredProcedure --|> tWithUndecidedTableReference.
 	
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.

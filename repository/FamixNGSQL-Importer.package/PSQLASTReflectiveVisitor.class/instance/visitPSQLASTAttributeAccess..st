@@ -12,6 +12,11 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 	"We check that the identifier should be ignored (for example true or false)"
 	(self shouldRejectIdentifiers: identifiers)
 		ifTrue: [ ^ nil ].
+	
+	((self isNewOrOldIdentifier: identifiers) and: [ self function class = FmxSQLTriggerStoredProcedure ])
+		ifTrue: [ 
+			^ self resolveNewOrOldIndentifier: identifiers ].
+	
 	[ self resolveAndLink: identifiers ]
 		on: SRReferencesInconsistencies , SRReferencesNotFound
 		do: [ :anError | 
