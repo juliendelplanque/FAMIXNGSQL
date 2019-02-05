@@ -5,4 +5,4 @@ testAliasedColumnWithSameNameAsTableAndThenTableStillReferencedThroughTheInitial
 	
 	self parseAndVisitView: 'SELECT t.c1 AS t
 FROM t
-WHERE t = 1 AND t.c2 = 2'
+WHERE t.c1 = 1 AND t.c2 = 2' "the 't' here still points on the t in the FROM clause"
