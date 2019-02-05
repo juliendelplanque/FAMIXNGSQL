@@ -9,6 +9,7 @@ defineClausesHierarchy
 	fromClause --|> tWithViewReference. "For view.column ref."
 	fromClause --|> tWithDerivedTableReference.
 	fromClause --|> tWithColumnReference. "Because of join clause"
+	fromClause --|> tWithReferencesGroupReference.
 	fromClause --|> #TWithAccesses. "Because of join clause"
 	fromClause --|> #TWithInvocations. "Because of join clause"
 	
@@ -19,9 +20,11 @@ defineClausesHierarchy
 	whereClause --|> tWithTableReference. "For table.column ref."
 	whereClause --|> tWithViewReference. "For view.column ref."
 	whereClause --|> tWithDerivedTableReference.
+	whereClause --|> tWithReferencesGroupReference.
 	
 	returningClause --|> clause.
 	returningClause --|> tWithColumnReference.
+	returningClause --|> tWithReferencesGroupReference.
 	returningClause --|> #TWithAccesses.
 	returningClause --|> #TWithInvocations.
 	
@@ -41,6 +44,7 @@ defineClausesHierarchy
 	groupByClause --|> tWithColumnReference.
 	groupByClause --|> tWithTableReference. "For table.column ref."
 	groupByClause --|> tWithViewReference. "For view.column ref."
+	groupByClause --|> tWithReferencesGroupReference.
 	groupByClause --|> #TWithAccesses.
 	groupByClause --|> #TWithInvocations.
 	
@@ -48,6 +52,7 @@ defineClausesHierarchy
 	havingClause --|> tWithColumnReference.
 	havingClause --|> tWithTableReference. "For table.column ref."
 	havingClause --|> tWithViewReference. "For view.column ref."
+	havingClause --|> tWithReferencesGroupReference.
 	havingClause --|> #TWithAccesses.
 	havingClause --|> #TWithInvocations.
 	
@@ -55,6 +60,7 @@ defineClausesHierarchy
 	orderByClause --|> tWithColumnReference.
 	orderByClause --|> tWithTableReference. "For table.column ref."
 	orderByClause --|> tWithViewReference. "For view.column ref."
+	orderByClause --|> tWithReferencesGroupReference.
 	orderByClause --|> #TWithAccesses.
 	orderByClause --|> #TWithInvocations.
 	

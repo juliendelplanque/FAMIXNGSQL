@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FamixNGSQL-Importer-Utilities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alias",
+		"entity"
+	],
+	"name" : "PSQLEntityToBeAliased",
+	"type" : "normal"
+}

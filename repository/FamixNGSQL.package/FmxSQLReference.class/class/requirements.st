@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLStoredProcedureCall }
+	^ { FmxSQLReferencesGroup. FmxSQLStoredProcedureCall }

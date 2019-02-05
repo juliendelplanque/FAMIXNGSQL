@@ -1,0 +1,5 @@
+accessing
+outgoingReferencesGroupReferences
+
+	<generated>
+	^ outgoingReferencesGroupReferences

@@ -1,0 +1,5 @@
+accessing
+referencesGroup
+
+	<generated>
+	^ referencesGroup

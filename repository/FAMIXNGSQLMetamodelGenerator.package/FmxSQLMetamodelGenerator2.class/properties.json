@@ -77,7 +77,11 @@
 		"tUndecidedTableReference",
 		"tWithUndecidedTableReference",
 		"newReference",
-		"oldReference"
+		"oldReference",
+		"referencesGroup",
+		"referencesGroupReference",
+		"tWithReferencesGroupReference",
+		"tReferencesGroupReference"
 	],
 	"name" : "FmxSQLMetamodelGenerator2",
 	"type" : "normal"

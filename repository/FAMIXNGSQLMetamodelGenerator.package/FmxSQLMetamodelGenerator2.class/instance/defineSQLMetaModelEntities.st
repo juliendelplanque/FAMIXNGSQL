@@ -121,3 +121,9 @@ defineSQLMetaModelEntities
 	oldReference := builder
 		newClassNamed: #OldReference
 		comment: self oldReferenceComment.
+	referencesGroup := builder
+		newClassNamed: #ReferencesGroup
+		comment: self referencesGroupComment.
+	referencesGroupReference := builder
+		newClassNamed: #ReferencesGroupReference
+		comment: self referencesGroupReferenceComment

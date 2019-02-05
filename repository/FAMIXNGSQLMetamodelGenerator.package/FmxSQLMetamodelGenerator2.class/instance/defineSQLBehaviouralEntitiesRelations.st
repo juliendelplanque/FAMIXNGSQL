@@ -58,3 +58,7 @@ defineSQLBehaviouralEntitiesRelations
 	(table property: #triggers)
 		<>-*
 	(trigger property: #table).
+	
+	"A group of references hold references."
+	(referencesGroup property: #references)
+		<>-* (reference property: #belongsToGroup)

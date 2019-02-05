@@ -26,3 +26,9 @@ defineTraitsRelations
 	
 	(tUndecidedTableReference property: #candidates)
 		*-* (table property: #incomingUndecidedTableReferences).
+		
+	(tWithReferencesGroupReference property: #outgoingReferencesGroupReferences)
+		<>-* (tReferencesGroupReference property: #source).
+		
+	(tReferencesGroupReference property: #referencesGroup)
+		*- (referencesGroup property: #incomingReferencesGroupReference)

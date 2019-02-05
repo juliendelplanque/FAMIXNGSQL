@@ -18,8 +18,16 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 					((self createEntity: FmxSQLSelectClause)
 						query: selectQuery;
 						yourself)
-				during: [ selectClauseScope := self solver topScope.
-					self visitAll: aPSQLASTSelectQuery columnsAndAliasesSelected.
+				during: [ |aliasesToBeDefined|
+					aliasesToBeDefined := OrderedCollection new.
+					selectClauseScope := self solver topScope.
+					self visitAll: aPSQLASTSelectQuery columnsAndAliasesSelected thenDoForEach: [ :toBeAliasedOrOtherObject |
+						toBeAliasedOrOtherObject class = PSQLEntityToBeAliased
+							ifTrue: [ aliasesToBeDefined add: toBeAliasedOrOtherObject ]
+							ifFalse: [ 
+								(toBeAliasedOrOtherObject = self or: [ toBeAliasedOrOtherObject isKindOf: FmxSQLEntity ]) "If this is true, it just mean the visit needed to return nothing."
+									ifFalse: [ Warning signal: ('{1} was encountered in #visitPSQLASTSelectQuery:, in the SELECT treatment' format: { toBeAliasedOrOtherObject className } ) ] ] ].
+					aliasesToBeDefined do: [ :toBeAliasedOrOtherObject | toBeAliasedOrOtherObject beDefinedUsing: self ].
 					scopeManager pushScope: selectClauseScope ].
 			self visit: aPSQLASTSelectQuery whereClause.
 			self visit: aPSQLASTSelectQuery groupByClause.

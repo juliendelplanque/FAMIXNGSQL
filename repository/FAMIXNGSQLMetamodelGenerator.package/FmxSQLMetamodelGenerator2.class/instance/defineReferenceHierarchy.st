@@ -35,3 +35,6 @@ defineReferenceHierarchy
 	
 	oldReference --|> reference.
 	oldReference --|> tUndecidedTableReference.
+	
+	referencesGroupReference --|> reference.
+	referencesGroupReference --|> tReferencesGroupReference

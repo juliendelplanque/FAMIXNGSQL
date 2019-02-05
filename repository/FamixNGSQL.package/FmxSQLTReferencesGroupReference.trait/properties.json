@@ -1,0 +1,10 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#referencesGroup => FMOne type: #FmxSQLReferencesGroup opposite: #incomingReferencesGroupReference",
+		"#source => FMOne type: #FmxSQLTWithReferencesGroupReference opposite: #outgoingReferencesGroupReferences"
+	],
+	"name" : "FmxSQLTReferencesGroupReference"
+}

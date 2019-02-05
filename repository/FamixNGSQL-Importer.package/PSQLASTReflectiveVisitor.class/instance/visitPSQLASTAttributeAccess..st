@@ -27,6 +27,5 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 						storedProcedure: self function;
 						mooseModel: self model.
 					self resolveAndLinkSilently: identifiers ]
-				ifFalse: [ "Halt if: [ anError class = PSQLReferenciesNotFound ]".
-					self errorReport addError: anError ] ].
+				ifFalse: [ self errorReport addError: anError ] ].
 	^ identifiers targetEntity

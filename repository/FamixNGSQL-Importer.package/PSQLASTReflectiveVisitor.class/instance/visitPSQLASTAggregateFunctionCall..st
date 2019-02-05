@@ -1,7 +1,7 @@
 visiting
 visitPSQLASTAggregateFunctionCall: aPSQLASTAggregateFunctionCall
-	[ self createReferenceTo: (self findStoredProcedureNamed: (self visit: aPSQLASTAggregateFunctionCall functionIdentifier)) ]
-		on: NotFound
-		do: [ :error | self errorReport addError: error ].
+	self errorReport
+		catch: NotFound
+		during: [ self createReferenceTo: (self findStoredProcedureNamed: (self visit: aPSQLASTAggregateFunctionCall functionIdentifier)) ].
 	self visitAll: aPSQLASTAggregateFunctionCall expressions.
 	self visit: aPSQLASTAggregateFunctionCall orderByClause

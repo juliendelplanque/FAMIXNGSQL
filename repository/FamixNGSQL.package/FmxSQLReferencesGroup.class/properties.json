@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLEntity",
+	"category" : "FamixNGSQL-Entities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#incomingReferencesGroupReference => FMMany type: #FmxSQLTReferencesGroupReference opposite: #referencesGroup",
+		"#references => FMMany type: #FmxSQLReference opposite: #belongsToGroup"
+	],
+	"name" : "FmxSQLReferencesGroup",
+	"type" : "normal"
+}

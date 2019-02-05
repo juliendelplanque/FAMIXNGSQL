@@ -1,6 +1,18 @@
 visiting
 visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition
-	self
-		createAliasInCurrentScope: (self visit: aPSQLASTAliasDefinition alias)
-		for: [ self visit: aPSQLASTAliasDefinition definition ].
-	^ self solver topScope
+	|references referencesDiff visitResult referencesGroup alias|
+	references := OrderedCollection new.
+	self currentEntity class = FmxSQLSelectClause
+		ifTrue: [ references := (model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ] ].
+	visitResult := (self visit: aPSQLASTAliasDefinition definition).
+	self assert: visitResult isNotNil.
+	alias := self visit: aPSQLASTAliasDefinition alias.
+	visitResult = self
+		ifFalse: [
+			^ PSQLEntityToBeAliased alias: alias entity: visitResult ].
+	
+	referencesDiff := ((model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ]) \ references.
+	referencesGroup := (self createEntity: FmxSQLReferencesGroup)
+									references: referencesDiff;
+									yourself.
+	^ PSQLEntityToBeAliased alias: alias entity: referencesGroup
