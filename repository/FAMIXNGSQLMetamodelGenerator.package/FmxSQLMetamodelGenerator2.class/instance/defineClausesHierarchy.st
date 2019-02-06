@@ -38,6 +38,7 @@ defineClausesHierarchy
 	selectClause --|> #TWithAccesses.
 	selectClause --|> #TWithInvocations.
 	selectClause --|> tWithTableReference. "Through table.column ref."
+	selectClause --|> tWithDerivedTableReference. "For aliased_derived_table.column ref."
 	selectClause --|> tWithViewReference. "For view.column ref."
 	
 	groupByClause --|> clause.
