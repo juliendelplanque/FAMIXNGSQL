@@ -2,7 +2,7 @@ convenient
 ensureNewOrOldLocalVariableWellSetFor: identifiers
 	|localVariable |
 	self assert: (self isNewOrOldIdentifier: identifiers).
-	self assert: identifiers next isLast.
+	self assert: (identifiers isLast or: [ identifiers next isLast ]).
 	localVariable := identifiers identifier = 'new'
 		ifTrue: [
 			self function localVariables 
@@ -20,6 +20,10 @@ ensureNewOrOldLocalVariableWellSetFor: identifiers
 						name: 'old';
 						parentBehaviouralEntity: self function;
 						yourself ] ].
+	
+	identifiers isLast
+		ifTrue: [ ^ self ].
+	
 	localVariable columns
 		detect: [ :c | c name = identifiers next identifier ]
 		ifNone: [

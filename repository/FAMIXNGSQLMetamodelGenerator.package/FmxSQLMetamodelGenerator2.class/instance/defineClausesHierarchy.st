@@ -91,5 +91,7 @@ defineClausesHierarchy
 	usingClause --|> clause.
 	
 	intoClause --|> clause.
+	intoClause --|> tWithTableReference.
+	intoClause --|> tWithColumnReference.
 	
 	limitClause --|> clause
