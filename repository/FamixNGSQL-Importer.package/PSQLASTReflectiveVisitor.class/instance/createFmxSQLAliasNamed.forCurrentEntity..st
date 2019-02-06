@@ -4,6 +4,7 @@ createFmxSQLAliasNamed: anAlias forCurrentEntity: aFmxSQLEntity
 	alias := (self createEntity: FmxSQLAlias)
 		parentBehaviouralEntity: self currentEntity;
 		name: anAlias;
+		mooseModel: model;
 		yourself.
 	self
 		useCurrentEntity: alias

@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"entity"
-	],
-	"name" : "PSQLEntityToBeAliased",
+	"instvars" : [ ],
+	"name" : "PSQLConstantToBeAliased",
 	"type" : "normal"
 }
