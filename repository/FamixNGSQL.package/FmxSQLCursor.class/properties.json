@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FamixTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentBehaviouralEntity => FMOne type: #FmxSQLTWithCursor opposite: #cursors",
-		"#references => FMMany type: #FmxSQLCursorReference opposite: #cursor"
+		"#references => FMMany type: #FmxSQLCursorReference opposite: #cursor",
+		"#parentBehaviouralEntity => FMOne type: #FmxSQLTWithCursor opposite: #cursors"
 	],
 	"name" : "FmxSQLCursor",
 	"commentStamp" : "<historical>",

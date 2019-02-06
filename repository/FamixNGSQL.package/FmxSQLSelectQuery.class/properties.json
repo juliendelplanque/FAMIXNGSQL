@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"#viewDefining => FMOne type: #FmxSQLView opposite: #query",
 		"#derivedTableDefining => FMOne type: #FmxSQLDerivedTable opposite: #query",
-		"#derivedTablesDefined => FMMany type: #FmxSQLDerivedTable opposite: #parentQuery",
-		"#viewDefining => FMOne type: #FmxSQLView opposite: #query"
+		"#derivedTablesDefined => FMMany type: #FmxSQLDerivedTable opposite: #parentQuery"
 	],
 	"name" : "FmxSQLSelectQuery",
 	"type" : "normal"

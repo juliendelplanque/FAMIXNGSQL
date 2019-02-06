@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#source => FMOne type: #FmxSQLTWithViewReference opposite: #outgoingViewReferences",
-		"#view => FMOne type: #FmxSQLView opposite: #references"
+		"#view => FMOne type: #FmxSQLView opposite: #references",
+		"#source => FMOne type: #FmxSQLTWithViewReference opposite: #outgoingViewReferences"
 	],
 	"name" : "FmxSQLViewReference",
 	"type" : "normal"
