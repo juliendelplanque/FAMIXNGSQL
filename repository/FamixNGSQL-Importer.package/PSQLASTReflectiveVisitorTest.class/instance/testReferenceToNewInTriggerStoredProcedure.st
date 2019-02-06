@@ -1,6 +1,6 @@
 parsing
 testReferenceToNewInTriggerStoredProcedure
-	| table trigger newReference oldReference |
+	| table trigger newLocalVariable oldLocalVariable |
 	table := self createTable: #t withColumns: #(id).
 	trigger := self createTrigger: 't_trigger' calling: triggerFunction onTable: table.
 	triggerFunction triggers: { trigger }.
@@ -12,13 +12,20 @@ BEGIN
 	END IF;
 END;'.
 
-	self assert: triggerFunction outgoingUndecidedTableReferences size equals: 2.
-	newReference := triggerFunction outgoingUndecidedTableReferences detect: [ :ref | ref class = FmxSQLNewReference ].
-	self assert: newReference source equals: triggerFunction.
-	self assert: newReference candidates size equals: 1.
-	self assert: newReference candidates first equals: table.
+	self assert: triggerFunction localVariables size equals: 2.
+	newLocalVariable := triggerFunction localVariables detect: [ :v | v class = FmxSQLNewLocalVariable and: [ v name = 'new' ] ].
+	self assert: newLocalVariable columns size equals: 1.
+	self assert: newLocalVariable columns first name equals: 'id'.
+	oldLocalVariable := triggerFunction localVariables detect: [ :v | v class = FmxSQLOldLocalVariable and: [ v name = 'old' ] ].
+	self assert: oldLocalVariable columns size equals: 1.
+	self assert: oldLocalVariable columns first name equals: 'id'.
 	
-	oldReference := triggerFunction outgoingUndecidedTableReferences detect: [ :ref | ref class = FmxSQLOldReference ].
-	self assert: oldReference source equals: triggerFunction.
-	self assert: oldReference candidates size equals: 1.
-	self assert: oldReference candidates first equals: table.
+	self assert: newLocalVariable accesses size equals: 1.
+	self assert: newLocalVariable accesses first from equals: triggerFunction.
+	self assert: newLocalVariable columns first references size equals: 1.
+	self assert: newLocalVariable columns first references first from equals: triggerFunction.
+	
+	self assert: oldLocalVariable accesses size equals: 1.
+	self assert: oldLocalVariable accesses first from equals: triggerFunction.
+	self assert: oldLocalVariable columns first references size equals: 1.
+	self assert: oldLocalVariable columns first references first from equals: triggerFunction
