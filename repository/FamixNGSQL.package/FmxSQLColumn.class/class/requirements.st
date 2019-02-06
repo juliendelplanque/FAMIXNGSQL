@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLDerivedTable. FmxSQLTable. FmxSQLView }
+	^ { FmxSQLDerivedTable. FmxSQLNewLocalVariable. FmxSQLOldLocalVariable. FmxSQLTable. FmxSQLView }

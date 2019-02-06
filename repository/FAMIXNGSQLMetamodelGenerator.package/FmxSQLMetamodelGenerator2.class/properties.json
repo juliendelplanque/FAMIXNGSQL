@@ -74,14 +74,12 @@
 		"tWithAlias",
 		"tWithCursor",
 		"tWithCursorReference",
-		"tUndecidedTableReference",
-		"tWithUndecidedTableReference",
-		"newReference",
-		"oldReference",
 		"referencesGroup",
 		"referencesGroupReference",
 		"tWithReferencesGroupReference",
-		"tReferencesGroupReference"
+		"tReferencesGroupReference",
+		"newLocalVariable",
+		"oldLocalVariable"
 	],
 	"name" : "FmxSQLMetamodelGenerator2",
 	"type" : "normal"

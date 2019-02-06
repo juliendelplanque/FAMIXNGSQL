@@ -76,6 +76,12 @@ defineSQLMetaModelEntities
 	localVariable := builder
 		newClassNamed: #LocalVariable
 		comment: self localVariableComment.
+	newLocalVariable := builder
+		newClassNamed: #NewLocalVariable
+		comment: self newLocalVariableComment.
+	oldLocalVariable := builder
+		newClassNamed: #OldLocalVariable
+		comment: self oldLocalVariableComment.
 	cursor := builder newClassNamed: #Cursor comment: self cursorComment.
 	cursorParameter := builder
 		newClassNamed: #CursorParameter
@@ -115,12 +121,6 @@ defineSQLMetaModelEntities
 	aliasAccess := builder
 		newClassNamed: #AliasAccess
 		comment: self aliasAccessComment.
-	newReference := builder
-		newClassNamed: #NewReference
-		comment: self newReferenceComment.
-	oldReference := builder
-		newClassNamed: #OldReference
-		comment: self oldReferenceComment.
 	referencesGroup := builder
 		newClassNamed: #ReferencesGroup
 		comment: self referencesGroupComment.

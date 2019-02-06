@@ -1,3 +1,3 @@
 parsing
 parseAndVisitTriggerFunction: aFunctionCode
-	^ self parseAndVisitFunction: aFunctionCode
+	^ self parseAndVisitFunction: triggerFunction withSourceCode: aFunctionCode

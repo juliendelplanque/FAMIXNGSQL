@@ -21,12 +21,6 @@ defineTraitsRelations
 	(tWithCursor property: #cursors)
 		<>-* (cursor property: #parentBehaviouralEntity).
 		
-	(tWithUndecidedTableReference property: #outgoingUndecidedTableReferences)
-		-* (tUndecidedTableReference property: #source).
-	
-	(tUndecidedTableReference property: #candidates)
-		*-* (table property: #incomingUndecidedTableReferences).
-		
 	(tWithReferencesGroupReference property: #outgoingReferencesGroupReferences)
 		<>-* (tReferencesGroupReference property: #source).
 		

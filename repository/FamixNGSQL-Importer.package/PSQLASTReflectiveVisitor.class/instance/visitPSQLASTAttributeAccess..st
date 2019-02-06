@@ -11,18 +11,18 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 
 	"We check that the identifier should be ignored (for example true or false)"
 	(self shouldRejectIdentifiers: identifiers)
-		ifTrue: [ ^ nil ].
+		ifTrue: [ ^ nil ]. self flag: #TODO. "Nil should never be returned..."
 	
 	((self isNewOrOldIdentifier: identifiers) and: [ self function class = FmxSQLTriggerStoredProcedure ])
-		ifTrue: [ 
-			^ self resolveNewOrOldIndentifier: identifiers ].
+		ifTrue: [ self ensureNewOrOldLocalVariableWellSetFor: identifiers ].
 	
 	[ self resolveAndLink: identifiers ]
 		on: SRReferencesInconsistencies , SRReferencesNotFound
 		do: [ :anError | 
 			"new and old are implicit declared variables in stored procedures"
 			(self isImplicitVariable: identifiers identifier)
-				ifTrue: [ FmxSQLLocalVariable new
+				ifTrue: [ 
+					FmxSQLLocalVariable new
 						name: identifiers identifier;
 						storedProcedure: self function;
 						mooseModel: self model.

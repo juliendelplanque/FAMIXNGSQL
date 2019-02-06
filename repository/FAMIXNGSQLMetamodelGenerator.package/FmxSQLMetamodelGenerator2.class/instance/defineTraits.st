@@ -7,7 +7,5 @@ defineTraits
 	tWithAlias := builder newTraitNamed: #TWithAlias.
 	tWithCursor := builder newTraitNamed: #TWithCursor.
 	tWithCursorReference := builder newTraitNamed: #TWithCursorReference.
-	tUndecidedTableReference := builder newTraitNamed: #TUndecidedTableReference.
-	tWithUndecidedTableReference := builder newTraitNamed: #TWithUndecidedTableReference.
 	tReferencesGroupReference := builder newTraitNamed: #TReferencesGroupReference.
 	tWithReferencesGroupReference := builder newTraitNamed: #TWithReferencesGroupReference

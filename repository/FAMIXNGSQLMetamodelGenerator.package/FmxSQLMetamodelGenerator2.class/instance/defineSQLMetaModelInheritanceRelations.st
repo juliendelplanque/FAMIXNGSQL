@@ -50,7 +50,6 @@ defineSQLMetaModelInheritanceRelations
 	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
 	
 	triggerStoredProcedure --|> storedProcedure.
-	triggerStoredProcedure --|> tWithUndecidedTableReference.
 	
 	behaviouralEntity <|-- trigger.
 	trigger --|> #TNamespaceEntity.
@@ -65,6 +64,12 @@ defineSQLMetaModelInheritanceRelations
 	namedEntity <|-- localVariable.
 	localVariable --|> #TLocalVariable.
 	localVariable --|> #TAccessible.
+	
+	newLocalVariable --|> localVariable.
+	newLocalVariable --|> tColumnsContainer.
+	
+	oldLocalVariable --|> localVariable.
+	oldLocalVariable --|> tColumnsContainer.
 	
 	cursorParameter --|> namedEntity.
 	cursorParameter --|> #TParameter.
