@@ -7,6 +7,9 @@ defineBehaviouralEntities
 	derivedTable := builder
 		newClassNamed: #DerivedTable
 		comment: self derivedTableComment.
+	crudQuery := builder
+		newClassNamed: #CRUDQuery
+		comment: self crudQueryComment.
 	storedProcedure := builder
 		newClassNamed: #StoredProcedure
 		comment: self storedProcedureComment.

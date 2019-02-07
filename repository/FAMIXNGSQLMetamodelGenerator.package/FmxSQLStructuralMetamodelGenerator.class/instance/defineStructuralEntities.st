@@ -6,9 +6,6 @@ defineStructuralEntities
 	constraint := builder
 		newClassNamed: #Constraint
 		comment: self constraintComment.
-	crudQuery := builder
-		newClassNamed: #CRUDQuery
-		comment: self crudQueryComment.
 	reference := builder
 		newClassNamed: #Reference
 		comment: self referenceComment.
