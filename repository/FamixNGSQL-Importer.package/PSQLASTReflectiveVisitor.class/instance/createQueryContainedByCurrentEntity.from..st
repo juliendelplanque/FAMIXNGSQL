@@ -11,5 +11,10 @@ createQueryContainedByCurrentEntity: aClass from: anASTNode
 			(self createEntity: FmxSQLDerivedTable)
 				createReferenceEntityFrom: currentEntity;
 				query: newQuery;
+				columns: (newQuery clauses
+								detect: [ :c | c class = FmxSQLSelectClause ]
+								ifFound: [ :selectClause |
+									selectClause aliases ]
+								ifNone: [ #() ]);
 				yourself ].
 	^ newQuery

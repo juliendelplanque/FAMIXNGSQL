@@ -87,6 +87,8 @@ defineClausesHierarchy
 	exceptClause --|> tWithViewReference.
 	
 	valuesClause --|> clause.
+	valuesClause --|> tWithColumnReference.
+	valuesClause--|> #TWithAccesses.
 	
 	usingClause --|> clause.
 	
