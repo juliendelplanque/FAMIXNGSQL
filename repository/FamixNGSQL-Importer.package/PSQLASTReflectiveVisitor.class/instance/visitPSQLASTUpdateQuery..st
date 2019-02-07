@@ -11,7 +11,11 @@ visitPSQLASTUpdateQuery: aPSQLASTUpdateQuery
 					scopeManager pushScope: fromScope ].
 			self
 				visit: aPSQLASTUpdateQuery tableName
-				thenDo: [ :tableName | self currentEntity table: (self findTableOrViewNamed: tableName) ].
+				thenDo: [ :tableName | 
+					|table|
+					table := self findTableOrViewNamed: tableName.
+					self currentEntity table: table.
+					scopeManager pushScope: (SREntityScope currentEntity: table) ].
 			self flag: #TODO;
 				useCurrentEntity:
 					((self createEntity: FmxSQLSetClause)

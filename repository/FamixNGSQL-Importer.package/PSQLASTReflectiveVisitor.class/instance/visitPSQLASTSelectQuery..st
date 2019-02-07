@@ -22,7 +22,7 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 					aliasesToBeDefined := OrderedCollection new.
 					selectClauseScope := self solver topScope.
 					self visitAll: aPSQLASTSelectQuery columnsAndAliasesSelected thenDoForEach: [ :toBeAliasedOrOtherObject |
-						toBeAliasedOrOtherObject class = PSQLEntityToBeAliased
+						(toBeAliasedOrOtherObject isKindOf: PSQLAliasToBeCreated)
 							ifTrue: [ aliasesToBeDefined add: toBeAliasedOrOtherObject ]
 							ifFalse: [ 
 								(toBeAliasedOrOtherObject = self or: [ toBeAliasedOrOtherObject isKindOf: FmxSQLEntity ]) "If this is true, it just mean the visit needed to return nothing."
