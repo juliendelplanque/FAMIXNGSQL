@@ -1,6 +1,7 @@
 definition - behavioural
 defineBehaviouralEntities
 	"Abstract entities."
+
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
 	"Concrete behavioural entities."
 	view := builder newClassNamed: #View comment: self viewComment.
@@ -48,6 +49,12 @@ defineBehaviouralEntities
 		newClassNamed: #CursorParameter
 		comment: 'I am a cursor parameter'.
 	alias := builder newClassNamed: #Alias comment: self aliasComment.
+	columnsContainerAlias := builder
+		newClassNamed: #ColumnsContainerAlias
+		comment: self columnsContainerAliasComment.
+	columnAlias := builder
+		newClassNamed: #ColumnAlias
+		comment: self columnAliasComment.
 	"Concrete reference entities."
 	viewReference := builder
 		newClassNamed: #ViewReference
@@ -73,6 +80,10 @@ defineBehaviouralEntities
 	aliasAccess := builder
 		newClassNamed: #AliasAccess
 		comment: self aliasAccessComment.
+	columnAliasAccess := builder
+		newClassNamed: #ColumnAliasAccess.
+	columnsContainerAliasAccess := builder
+		newClassNamed: #ColumnsContainerAliasAccess.
 	referencesGroup := builder
 		newClassNamed: #ReferencesGroup
 		comment: self referencesGroupComment.

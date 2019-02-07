@@ -61,4 +61,7 @@ defineBehaviouralEntitiesRelations
 	
 	"A group of references hold references."
 	(referencesGroup property: #references)
-		<>-* (reference property: #belongsToGroup)
+		<>-* (reference property: #belongsToGroup).
+		
+	(columnsContainerAlias property: #columnAliases)
+		<>-* (columnAlias property: #columnsContainerAlias)

@@ -13,5 +13,9 @@ defineBehaviouralReferencesHierarchy
 	cursorReference --|> reference.
 	aliasAccess --|> reference.
 	aliasAccess --|> #TAccess.
+	columnsContainerAliasAccess --|> reference.
+	columnsContainerAliasAccess --|> #TAccess.
+	columnAliasAccess --|> reference.
+	columnAliasAccess --|> #TAccess.
 	referencesGroupReference --|> reference.
 	referencesGroupReference --|> tReferencesGroupReference

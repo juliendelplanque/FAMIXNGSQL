@@ -67,14 +67,17 @@ defineBehaviouralHierarchy
 	cursor --|> #TWithParameters.
 	
 	alias --|> namedEntity.
-	alias --|> tWithTableReference.
-	alias --|> tWithColumnReference.
-	alias --|> tWithDerivedTableReference.
-	alias --|> tWithViewReference.
-	alias --|> tWithReferencesGroupReference.
-	alias --|> tColumn.
-	alias --|> #TWithAccesses.
-	alias --|> #TWithInvocations.
+	"alias --|> #TWithAccesses.
+	alias --|> #TWithInvocations."
 	alias --|> #TAccessible.
+	
+	columnsContainerAlias --|> alias.
+	columnsContainerAlias --|> tWithTableReference.
+	columnsContainerAlias --|> tWithDerivedTableReference.
+	columnsContainerAlias --|> tWithViewReference.
+	
+	columnAlias --|> alias.
+	columnAlias --|> tWithColumnReference.
+	columnAlias --|> tWithReferencesGroupReference.
 	
 	referencesGroup --|> entity

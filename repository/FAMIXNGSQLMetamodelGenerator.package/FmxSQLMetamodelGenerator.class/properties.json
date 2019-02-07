@@ -59,7 +59,11 @@
 		"tWithReferencesGroupReference",
 		"tReferencesGroupReference",
 		"newLocalVariable",
-		"oldLocalVariable"
+		"oldLocalVariable",
+		"columnAlias",
+		"columnAliasAccess",
+		"columnsContainerAlias",
+		"columnsContainerAliasAccess"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"
