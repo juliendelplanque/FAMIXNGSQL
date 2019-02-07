@@ -1,8 +1,11 @@
 definition
 defineClasses
 	super defineClasses.
+	"Structural part."
 	self
-		defineStructuralEntities;
+		defineStructuralEntities.
+	"Behavioural part."
+	self
 		defineBehaviouralEntities;
 		defineClausesEntities;
 		defineClausesHierarchy

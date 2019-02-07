@@ -1,10 +1,13 @@
 definition
 defineRelations
 	super defineRelations.
+	"Structural part."
 	self
 		defineStructuralEntitiesRelations;
-		defineBehaviouralEntitiesRelations;
-		defineStructuralReferenceEntities;
-		defineBehaviouralReferenceEntities;
 		defineStructuralTraitsRelations;
-		defineBehaviouralTraitsRelations
+		defineStructuralReferenceEntities.
+	"Behavioural part."
+	self
+		defineBehaviouralEntitiesRelations;
+		defineBehaviouralTraitsRelations;
+		defineBehaviouralReferenceEntities

@@ -1,9 +1,12 @@
 definition
 defineHierarchy
 	super defineHierarchy.
+	"Structural part."
 	self
 		defineStructuralHierarchy;
+		defineStructuralReferencesHierarchy.
+	"Behavioural part."
+	self
 		defineBehaviouralHierarchy;
-		defineStructuralReferencesHierarchy;
-		defineBehaviouralReferencesHierarchy;
-		defineClausesHierarchy
+		defineClausesHierarchy;
+		defineBehaviouralReferencesHierarchy
