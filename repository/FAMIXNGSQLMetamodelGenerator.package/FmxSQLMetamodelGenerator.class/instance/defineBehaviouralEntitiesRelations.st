@@ -1,5 +1,5 @@
-definition
-defineSQLBehaviouralEntitiesRelations
+definition - behavioural
+defineBehaviouralEntitiesRelations
 	"A CheckConstraint can call StoredProcedures"
 	(checkConstraint property: #storedProceduresCalled)
 		*-*

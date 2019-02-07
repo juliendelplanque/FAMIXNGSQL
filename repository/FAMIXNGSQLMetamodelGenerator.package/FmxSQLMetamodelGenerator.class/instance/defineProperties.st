@@ -1,4 +1,4 @@
 definition
 defineProperties
 	super defineProperties.
-	self defineSQLBehaviouralEntitiesProperties
+	self defineBehaviouralEntitiesProperties

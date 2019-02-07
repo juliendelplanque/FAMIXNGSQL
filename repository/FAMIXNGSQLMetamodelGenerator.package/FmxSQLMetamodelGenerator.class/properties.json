@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"constraint",
-		"queryContainer",
 		"crudQuery",
 		"table",
 		"type",
@@ -80,7 +79,8 @@
 		"tReferencesGroupReference",
 		"newLocalVariable",
 		"oldLocalVariable",
-		"tColumn"
+		"tColumn",
+		"tQueryContainer"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

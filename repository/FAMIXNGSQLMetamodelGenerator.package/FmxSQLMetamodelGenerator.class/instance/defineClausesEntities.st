@@ -1,4 +1,4 @@
-definition
+definition - behavioural
 defineClausesEntities
 	"Clause entities."
 

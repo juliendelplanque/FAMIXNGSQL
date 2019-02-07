@@ -2,6 +2,8 @@ definition
 defineHierarchy
 	super defineHierarchy.
 	self
-		defineSQLMetaModelInheritanceRelations;
-		defineReferenceHierarchy;
+		defineStructuralHierarchy;
+		defineBehaviouralHierarchy;
+		defineStructuralReferencesHierarchy;
+		defineBehaviouralReferencesHierarchy;
 		defineClausesHierarchy

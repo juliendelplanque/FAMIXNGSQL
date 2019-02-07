@@ -1,13 +1,5 @@
-definition
-defineSQLReferenceEntitiesRelations
-	"A type reference references a type."
-	(typeReference property: #type)
-		*- (type property: #references).
-
-	"A table reference references a table."
-	(tableReference property: #table)
-		*- (table property: #references).
-
+definition - behavioural
+defineBehaviouralReferenceEntities
 	"A view reference references a view."
 	(viewReference property: #view)
 		*- (view property: #references).
@@ -15,10 +7,6 @@ defineSQLReferenceEntitiesRelations
 	"A derived table reference references a derived table."
 	(derivedTableReference property: #derivedTable)
 		*- (derivedTable property: #references).
-
-	"A column reference references a column."
-	(columnReference property: #column)
-		*- (column property: #references).
 		
 	"A stored procedure call can contain other references (in its arguments)."
 	((storedProcedureCall property: #arguments)
@@ -33,7 +21,7 @@ defineSQLReferenceEntitiesRelations
 		<>-* (clause property: #query).
 
 	"A QueryContainer contains multiple queries"
-	(queryContainer property: #queries)
+	(tQueryContainer property: #queries)
 		<>-* (crudQuery property: #container).
 
 	"An update query target a table"

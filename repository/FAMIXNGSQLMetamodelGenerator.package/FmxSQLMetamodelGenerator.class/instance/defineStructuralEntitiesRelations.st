@@ -1,10 +1,5 @@
-definition
-defineSQLStructuralEntitiesRelations
-	"A columns container contains columns."
-
-	(tColumnsContainer property: #columns)
-		<>-* (tColumn property: #columnsContainer).
-
+definition - structural
+defineStructuralEntitiesRelations
 	"A column references a type."
 	(column property: #type) *- (type property: #columns).
 
@@ -21,5 +16,6 @@ defineSQLStructuralEntitiesRelations
 		*-* (column property: #foreignKeyConstraintsReferencing).
 
 	"A table eventually has inheritance sub tables and zero or one inheritance super table."
+	self flag: #TODO. "Reify inheritance relation."
 	(table property: #superTable)
 		*- (table property: #subTables)

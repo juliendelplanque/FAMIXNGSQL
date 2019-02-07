@@ -1,49 +1,7 @@
-definition
-defineSQLMetaModelEntities
+definition - behavioural
+defineBehaviouralEntities
 	"Abstract entities."
-
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
-	tAbstractType := builder newTraitNamed: #AbstractType.
-	structuralEntity := builder
-		newClassNamed: #StructuralEntity
-		comment: self structuralEntityComment.
-	constraint := builder
-		newClassNamed: #Constraint
-		comment: self constraintComment.
-	tColumnsContainer := builder
-		newTraitNamed: #ColumnsContainer
-		comment: self columnsContainerComment.
-	queryContainer := builder
-		newTraitNamed: #TQueryContainer
-		comment: self queryContainerComment.
-	crudQuery := builder
-		newClassNamed: #CRUDQuery
-		comment: self crudQueryComment.
-	reference := builder
-		newClassNamed: #Reference
-		comment: self referenceComment.
-	"Concrete structural entities."
-	namespace := builder
-		newClassNamed: #Namespace
-		comment: self namespaceComment.
-	table := builder newClassNamed: #Table comment: self tableComment.
-	column := builder newClassNamed: #Column comment: self columnComment.
-	type := builder newClassNamed: #Type comment: self typeComment.
-	checkConstraint := builder
-		newClassNamed: #CheckConstraint
-		comment: self checkConstraintComment.
-	primaryKeyConstraint := builder
-		newClassNamed: #PrimaryKeyConstraint
-		comment: self primaryKeyConstraintComment.
-	foreignKeyConstraint := builder
-		newClassNamed: #ForeignKeyConstraint
-		comment: self foreignKeyConstraintComment.
-	notNullConstraint := builder
-		newClassNamed: #NotNullConstraint
-		comment: self nullConstraintComment.
-	uniqueConstraint := builder
-		newClassNamed: #UniqueConstraint
-		comment: self uniqueConstraintComment.
 	"Concrete behavioural entities."
 	view := builder newClassNamed: #View comment: self viewComment.
 	derivedTable := builder
@@ -88,9 +46,6 @@ defineSQLMetaModelEntities
 		comment: 'I am a cursor parameter'.
 	alias := builder newClassNamed: #Alias comment: self aliasComment.
 	"Concrete reference entities."
-	tableReference := builder
-		newClassNamed: #TableReference
-		comment: self tableReferenceComment.
 	viewReference := builder
 		newClassNamed: #ViewReference
 		comment: self viewReferenceComment.
@@ -103,12 +58,6 @@ defineSQLMetaModelEntities
 	cursorParameterAccess := builder
 		newClassNamed: #CursorParameterAccess
 		comment: self cursorParameterAccessComment.
-	columnReference := builder
-		newClassNamed: #ColumnReference
-		comment: self columnReferenceComment.
-	typeReference := builder
-		newClassNamed: #TypeReference
-		comment: self typeReferenceComment.
 	cursorReference := builder
 		newClassNamed: #CursorReference
 		comment: self cursorReferenceComment.

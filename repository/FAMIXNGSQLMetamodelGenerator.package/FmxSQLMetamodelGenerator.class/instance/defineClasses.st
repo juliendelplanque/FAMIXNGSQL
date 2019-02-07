@@ -2,6 +2,7 @@ definition
 defineClasses
 	super defineClasses.
 	self
-		defineSQLMetaModelEntities;
+		defineStructuralEntities;
+		defineBehaviouralEntities;
 		defineClausesEntities;
 		defineClausesHierarchy

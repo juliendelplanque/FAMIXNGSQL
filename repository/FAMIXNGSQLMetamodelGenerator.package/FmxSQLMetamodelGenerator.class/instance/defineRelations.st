@@ -2,7 +2,9 @@ definition
 defineRelations
 	super defineRelations.
 	self
-		defineSQLStructuralEntitiesRelations;
-		defineSQLBehaviouralEntitiesRelations;
-		defineSQLReferenceEntitiesRelations;
-		defineTraitsRelations
+		defineStructuralEntitiesRelations;
+		defineBehaviouralEntitiesRelations;
+		defineStructuralReferenceEntities;
+		defineBehaviouralReferenceEntities;
+		defineStructuralTraitsRelations;
+		defineBehaviouralTraitsRelations

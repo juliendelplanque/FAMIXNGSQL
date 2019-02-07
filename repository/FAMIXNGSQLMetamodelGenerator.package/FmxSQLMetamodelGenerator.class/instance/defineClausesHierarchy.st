@@ -1,4 +1,4 @@
-definition
+definition - behavioural
 defineClausesHierarchy
 	"Defining all kinds of clauses"
 	clause --|> entity.

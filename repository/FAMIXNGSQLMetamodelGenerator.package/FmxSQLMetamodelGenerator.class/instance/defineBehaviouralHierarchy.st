@@ -1,41 +1,25 @@
-definition
-defineSQLMetaModelInheritanceRelations
+definition - behavioural
+defineBehaviouralHierarchy
 	"Abstract entities inheritance relations."
-	structuralEntity --|> namedEntity.
-	structuralEntity --|> #TNamespaceEntity.
-	structuralEntity <|-- constraint.
-	namedEntity <|-- behaviouralEntity. "Should be trait (not all behavioural entities have name)"
+	behaviouralEntity --|> namedEntity. "Should be trait (not all behavioural entities have name)"
 	behaviouralEntity --|> #TNamespaceEntity.
-	"behaviouralEntity <|-- queryContainer."
-	entity <|-- crudQuery.
+	crudQuery --|> entity.
 	"Concrete structural entities inheritance relations."
-	structuralEntity <|-- namespace.
-	namespace --|> #TNamespace.
-	table --|> structuralEntity.
-	table --|> tColumnsContainer.
-	table --|> tAbstractType.
-	structuralEntity <|-- column.
-	column --|> tColumn.
-	structuralEntity <|-- type.
-	tAbstractType <|-- type.
-	tAbstractType <|-- view.
-	constraint <|-- checkConstraint.
+	checkConstraint --|> constraint.
 	checkConstraint --|> #TWithImmediateSource.
-	constraint <|-- primaryKeyConstraint.
-	constraint <|-- foreignKeyConstraint.
-	constraint <|-- notNullConstraint.
-	constraint <|-- uniqueConstraint.
 	"Concrete behavioural entities inheritance relations."
-	tColumnsContainer <|-- view.
-	queryContainer <|-- view.
+	view --|> tAbstractType.
+	view --|> tColumnsContainer.
+	view --|> tQueryContainer.
 	view --|> #TNamespaceEntity.
 	view --|> #TWithImmediateSource.
-	namedEntity <|-- view.
-	behaviouralEntity <|-- derivedTable.
-	tColumnsContainer <|-- derivedTable.
-	queryContainer <|-- derivedTable.
-	queryContainer <|-- storedProcedure.
+	view --|> namedEntity.
 	
+	derivedTable --|> behaviouralEntity.
+	derivedTable --|> tColumnsContainer.
+	derivedTable --|> tQueryContainer.
+	
+	storedProcedure --|> tQueryContainer.
 	storedProcedure --|> namedEntity.
 	storedProcedure--|> #TNamespaceEntity.
 	storedProcedure --|> #TWithReferences.
@@ -52,17 +36,19 @@ defineSQLMetaModelInheritanceRelations
 	
 	triggerStoredProcedure --|> storedProcedure.
 	
-	behaviouralEntity <|-- trigger.
+	trigger --|> behaviouralEntity.
 	trigger --|> #TNamespaceEntity.
-	"namedEntity <|-- trigger."
-	crudQuery <|-- selectQuery.
-	crudQuery <|-- insertQuery.
-	crudQuery <|-- updateQuery.
-	crudQuery <|-- deleteQuery.
-	namedEntity <|-- parameter.
+	
+	selectQuery --|> crudQuery.
+	insertQuery --|> crudQuery.
+	updateQuery --|> crudQuery.
+	deleteQuery --|> crudQuery.
+	
+	parameter --|> namedEntity.
 	parameter --|> #TParameter.
 	parameter --|> #TAccessible.
-	namedEntity <|-- localVariable.
+	
+	localVariable --|> namedEntity.
 	localVariable --|> #TLocalVariable.
 	localVariable --|> #TAccessible.
 	
@@ -76,8 +62,8 @@ defineSQLMetaModelInheritanceRelations
 	cursorParameter --|> #TParameter.
 	cursorParameter --|> #TAccessible.
 	
-	behaviouralEntity <|-- cursor.
-	queryContainer <|-- cursor.
+	cursor --|> behaviouralEntity.
+	cursor --|> tQueryContainer.
 	cursor --|> #TWithParameters.
 	
 	alias --|> namedEntity.
