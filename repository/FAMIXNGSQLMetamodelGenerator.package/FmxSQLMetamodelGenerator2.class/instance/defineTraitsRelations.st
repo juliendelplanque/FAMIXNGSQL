@@ -14,9 +14,10 @@ defineTraitsRelations
 		
 	(tWithCursorReference property: #outgoingCursorReferences)
 		-* (cursorReference property: #source).
-		
-	(tWithAlias property: #aliases)
-		<>-* (alias property: #parentBehaviouralEntity).
+	
+	self flag: #TODO. "Probably need TableAlias, ColumnAlias, etc..."	
+	((tWithAlias property: #aliases)
+		<>-* (alias property: #parentBehaviouralEntity)) withoutPrimaryContainer.
 		
 	(tWithCursor property: #cursors)
 		<>-* (cursor property: #parentBehaviouralEntity).

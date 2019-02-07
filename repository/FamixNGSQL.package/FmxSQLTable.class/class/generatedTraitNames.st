@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FmxSQLAbstractType FmxSQLColumnsContainer)
+	^ #(FamixTContainingWithInvocationsGlue FmxSQLAbstractType FmxSQLColumnsContainer)

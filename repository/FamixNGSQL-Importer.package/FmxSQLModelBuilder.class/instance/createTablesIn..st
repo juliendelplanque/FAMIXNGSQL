@@ -23,4 +23,8 @@ createTablesIn: mooseModel
 					table: table;
 					columns: { (pgToFamixEntities at: pgColumn) };
 					mooseModel: mooseModel;
-					yourself ] ] ]
+					yourself ] ].
+		"Add special columns."
+		FmxSQLColumn new
+			name: 'tableoid';
+			columnsContainer: table ]

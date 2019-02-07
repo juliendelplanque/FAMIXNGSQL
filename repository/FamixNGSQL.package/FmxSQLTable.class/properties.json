@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait",
+	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#constraints => FMMany type: #FmxSQLConstraint opposite: #table",
@@ -12,7 +12,7 @@
 	"name" : "FmxSQLTable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FmxSQLAbstractType + FmxSQLColumnsContainer",
+	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FmxSQLAbstractType + FmxSQLColumnsContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

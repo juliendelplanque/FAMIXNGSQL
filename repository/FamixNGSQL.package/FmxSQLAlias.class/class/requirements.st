@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLClause. FmxSQLStoredProcedure }
+	^ { FmxSQLClause. FmxSQLDerivedTable. FmxSQLNewLocalVariable. FmxSQLOldLocalVariable. FmxSQLStoredProcedure. FmxSQLTable. FmxSQLView }

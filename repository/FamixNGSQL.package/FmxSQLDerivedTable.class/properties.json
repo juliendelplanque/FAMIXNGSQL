@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
+	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#parentQuery => FMOne type: #FmxSQLSelectQuery opposite: #derivedTablesDefined",
@@ -9,7 +9,7 @@
 	"name" : "FmxSQLDerivedTable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLBehaviouralEntity",
-	"traitcomposition" : "FmxSQLColumnsContainer + FmxSQLTQueryContainer",
+	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FmxSQLColumnsContainer + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

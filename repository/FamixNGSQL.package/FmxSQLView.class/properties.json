@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTNamespaceEntity classTrait + FamixTWithImmediateSource classTrait + FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
+	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FamixTNamespaceEntity classTrait + FamixTWithImmediateSource classTrait + FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#query => FMOne type: #FmxSQLSelectQuery opposite: #viewDefining",
@@ -8,7 +8,7 @@
 	"name" : "FmxSQLView",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FamixTNamespaceEntity + FamixTWithImmediateSource + FmxSQLAbstractType + FmxSQLColumnsContainer + FmxSQLTQueryContainer",
+	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FamixTNamespaceEntity + FamixTWithImmediateSource + FmxSQLAbstractType + FmxSQLColumnsContainer + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

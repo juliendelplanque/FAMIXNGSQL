@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLStructuralEntity",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTColumn classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#columnsContainer => FMOne type: #FmxSQLColumnsContainer opposite: #columns",
 		"#constraints => FMMany type: #FmxSQLConstraint opposite: #columns",
 		"#foreignKeyConstraintsReferencing => FMMany type: #FmxSQLForeignKeyConstraint opposite: #referencedColumns",
 		"#references => FMMany type: #FmxSQLColumnReference opposite: #column",
 		"#type => FMOne type: #FmxSQLType opposite: #columns"
 	],
 	"name" : "FmxSQLColumn",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLStructuralEntity",
+	"traitcomposition" : "FmxSQLTColumn",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

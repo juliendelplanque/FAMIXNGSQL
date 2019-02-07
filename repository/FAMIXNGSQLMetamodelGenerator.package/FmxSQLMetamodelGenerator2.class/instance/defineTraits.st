@@ -8,4 +8,5 @@ defineTraits
 	tWithCursor := builder newTraitNamed: #TWithCursor.
 	tWithCursorReference := builder newTraitNamed: #TWithCursorReference.
 	tReferencesGroupReference := builder newTraitNamed: #TReferencesGroupReference.
-	tWithReferencesGroupReference := builder newTraitNamed: #TWithReferencesGroupReference
+	tWithReferencesGroupReference := builder newTraitNamed: #TWithReferencesGroupReference.
+	tColumn := builder newTraitNamed: #TColumn.

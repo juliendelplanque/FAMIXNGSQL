@@ -15,6 +15,7 @@ defineSQLMetaModelInheritanceRelations
 	table --|> tColumnsContainer.
 	table --|> tAbstractType.
 	structuralEntity <|-- column.
+	column --|> tColumn.
 	structuralEntity <|-- type.
 	tAbstractType <|-- type.
 	tAbstractType <|-- view.
@@ -85,6 +86,7 @@ defineSQLMetaModelInheritanceRelations
 	alias --|> tWithDerivedTableReference.
 	alias --|> tWithViewReference.
 	alias --|> tWithReferencesGroupReference.
+	alias --|> tColumn.
 	alias --|> #TWithAccesses.
 	alias --|> #TWithInvocations.
 	alias --|> #TAccessible.

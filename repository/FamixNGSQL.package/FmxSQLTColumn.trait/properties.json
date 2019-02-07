@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "FamixNGSQL-Traits",
+	"instvars" : [
+		"#columnsContainer => FMOne type: #FmxSQLColumnsContainer opposite: #columns"
+	],
+	"name" : "FmxSQLTColumn"
+}

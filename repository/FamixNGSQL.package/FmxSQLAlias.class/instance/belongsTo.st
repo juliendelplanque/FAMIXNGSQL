@@ -2,4 +2,4 @@ accessing
 belongsTo
 
 	<generated>
-	^ self parentBehaviouralEntity
+	^ self columnsContainer
