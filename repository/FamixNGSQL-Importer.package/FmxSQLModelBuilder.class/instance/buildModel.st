@@ -4,7 +4,7 @@ buildModel
 	| mooseModel |
 	mooseModel := MooseModel new
 						name: self databaseName;
-						metamodel: FmxSQLMetamodelGenerator metamodel;
+						metamodel: FmxSQLMetamodelGenerator2 metamodel;
 						yourself.
 	pgToFamixEntities := Dictionary new.
 	self

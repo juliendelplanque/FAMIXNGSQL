@@ -2,7 +2,7 @@ running
 setUp
 	super setUp.
 	model := MooseModel new
-					metamodel: FmxSQLMetamodelGenerator metamodel;
+					metamodel: FmxSQLMetamodelGenerator2 metamodel;
 					yourself.
 	function := FmxSQLStoredProcedure new.
 	function mooseModel: model.
