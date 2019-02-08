@@ -5,15 +5,15 @@ defineBehaviouralEntitiesRelations
 		*-*
 	(storedProcedure property: #checkConstraintsCalling).
 	
-	"A View is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
+	"A View is defined as a SelectQuery."
 	((view property: #query)
 		<>-
 	(selectQuery property: #viewDefining)) withoutPrimaryContainer.
 	
-	"A DerivedTable is defined as a SelectQuery, thus, in the meta-model, a view contains a SelectQuery."
+	"A DerivedTable is defined as a CRUD query."
 	((derivedTable property: #query)
 		<>-
-	(selectQuery property: #derivedTableDefining)) withoutPrimaryContainer.
+	(crudQuery property: #derivedTableDefining)) withoutPrimaryContainer.
 	
 	"A SelectQuery can define multiple derived tables."
 	(selectQuery property: #derivedTablesDefined)
@@ -63,5 +63,5 @@ defineBehaviouralEntitiesRelations
 	(referencesGroup property: #references)
 		<>-* (reference property: #belongsToGroup).
 		
-	(columnsContainerAlias property: #columnAliases)
-		<>-* (columnAlias property: #columnsContainerAlias)
+	((columnsContainerAlias property: #columnAliases)
+		<>-* (columnAlias property: #columnsContainerAlias)) withoutPrimaryContainer

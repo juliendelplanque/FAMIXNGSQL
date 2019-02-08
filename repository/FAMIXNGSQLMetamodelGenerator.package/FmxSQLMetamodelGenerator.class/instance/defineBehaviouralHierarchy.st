@@ -43,6 +43,7 @@ defineBehaviouralHierarchy
 	insertQuery --|> crudQuery.
 	updateQuery --|> crudQuery.
 	deleteQuery --|> crudQuery.
+	valuesQuery --|> crudQuery.
 	
 	parameter --|> namedEntity.
 	parameter --|> #TParameter.
@@ -79,5 +80,6 @@ defineBehaviouralHierarchy
 	columnAlias --|> alias.
 	columnAlias --|> tWithColumnReference.
 	columnAlias --|> tWithReferencesGroupReference.
+	columnAlias --|> tColumn.
 	
 	referencesGroup --|> entity

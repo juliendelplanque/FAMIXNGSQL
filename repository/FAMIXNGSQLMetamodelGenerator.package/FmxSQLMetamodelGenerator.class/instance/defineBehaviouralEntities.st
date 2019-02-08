@@ -32,6 +32,9 @@ defineBehaviouralEntities
 	deleteQuery := builder
 		newClassNamed: #DeleteQuery
 		comment: self deleteQueryComment.
+	valuesQuery := builder
+		newClassNamed: #ValuesQuery
+		comment: self valuesQueryComment.
 	parameter := builder
 		newClassNamed: #Parameter
 		comment: self parameterComment.

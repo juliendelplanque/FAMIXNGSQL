@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"mooseModel"
+	],
 	"name" : "PSQLASTValuesNullObject",
 	"type" : "normal"
 }

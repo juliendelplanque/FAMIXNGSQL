@@ -1,7 +1,7 @@
 visiting
 visitPSQLASTFromClauseItemType2: aPSQLASTFromClauseItemType2
 	| alias fmxAlias valueOrSelect derivedTable |
-	alias := self visit: aPSQLASTFromClauseItemType2 alias.
+	alias := self visit: aPSQLASTFromClauseItemType2 alias.1halt.
 	valueOrSelect := (self visit: aPSQLASTFromClauseItemType2 valuesOrSelect) entity query.
 	derivedTable := (self createEntity: FmxSQLDerivedTable)
 							query: valueOrSelect;

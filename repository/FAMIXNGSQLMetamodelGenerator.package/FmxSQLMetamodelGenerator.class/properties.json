@@ -63,7 +63,8 @@
 		"columnAlias",
 		"columnAliasAccess",
 		"columnsContainerAlias",
-		"columnsContainerAliasAccess"
+		"columnsContainerAliasAccess",
+		"valuesQuery"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

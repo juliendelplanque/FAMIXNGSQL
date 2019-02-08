@@ -6,7 +6,6 @@ defineBehaviouralTraitsRelations
 		-* (viewReference property: #source).
 	(tWithCursorReference property: #outgoingCursorReferences)
 		-* (cursorReference property: #source).
-	self flag: #TODO."Needs more alias types."
 	((tWithAlias property: #aliases)
 		<>-* (alias property: #parentBehaviouralEntity))
 		withoutPrimaryContainer.
