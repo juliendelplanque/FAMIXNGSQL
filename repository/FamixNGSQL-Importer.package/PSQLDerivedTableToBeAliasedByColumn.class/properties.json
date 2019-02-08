@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PSQLEntityToBeAliased",
+	"category" : "FamixNGSQL-Importer-Utilities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PSQLDerivedTableToBeAliasedByColumn",
+	"type" : "normal"
+}

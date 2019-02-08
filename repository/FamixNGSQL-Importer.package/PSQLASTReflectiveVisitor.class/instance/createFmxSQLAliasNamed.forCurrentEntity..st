@@ -1,9 +1,9 @@
 as yet unclassified
-createFmxSQLAliasNamed: anAlias forCurrentEntity: aFmxSQLEntity
+createFmxSQLAliasNamed: aString forCurrentEntity: aFmxSQLEntity
 	| alias |
 	alias := (self createEntity: aFmxSQLEntity aliasClass)
 		parentBehaviouralEntity: self currentEntity;
-		name: anAlias;
+		name: aString;
 		mooseModel: model;
 		yourself.
 	self

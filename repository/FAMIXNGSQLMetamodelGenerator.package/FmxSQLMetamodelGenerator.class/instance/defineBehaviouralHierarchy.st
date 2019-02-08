@@ -68,13 +68,13 @@ defineBehaviouralHierarchy
 	cursor --|> #TWithParameters.
 	
 	alias --|> namedEntity.
-	"alias --|> #TWithAccesses.
-	alias --|> #TWithInvocations."
 	alias --|> #TAccessible.
+	"Needed for both column and columns container alias because it is possible
+	 to define the value of a column from the result of a query."
+	alias --|> tWithDerivedTableReference.
 	
 	columnsContainerAlias --|> alias.
 	columnsContainerAlias --|> tWithTableReference.
-	columnsContainerAlias --|> tWithDerivedTableReference.
 	columnsContainerAlias --|> tWithViewReference.
 	
 	columnAlias --|> alias.
