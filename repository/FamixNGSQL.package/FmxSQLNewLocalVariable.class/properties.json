@@ -1,11 +1,11 @@
 {
-	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FmxSQLColumnsContainer classTrait",
+	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLNewLocalVariable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLLocalVariable",
-	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FmxSQLColumnsContainer",
+	"traitcomposition" : "FmxSQLColumnsContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "FmxSQLTColumn classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithReferencesGroupReference classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"#columnsContainerAlias => FMOne type: #FmxSQLColumnsContainerAlias opposite: #columnAliases"
+	],
+	"name" : "FmxSQLColumnAlias",
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLAlias",
+	"traitcomposition" : "FmxSQLTColumn + FmxSQLTWithColumnReference + FmxSQLTWithReferencesGroupReference",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

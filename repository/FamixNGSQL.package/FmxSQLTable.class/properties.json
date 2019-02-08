@@ -1,18 +1,18 @@
 {
-	"classtraitcomposition" : "FamixTContainingWithInvocationsGlue classTrait + FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait",
+	"classtraitcomposition" : "FmxSQLAbstractType classTrait + FmxSQLColumnsContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#constraints => FMMany type: #FmxSQLConstraint opposite: #table",
-		"#references => FMMany type: #FmxSQLTableReference opposite: #table",
-		"#subTables => FMMany type: #FmxSQLTable opposite: #superTable",
 		"#superTable => FMOne type: #FmxSQLTable opposite: #subTables",
+		"#subTables => FMMany type: #FmxSQLTable opposite: #superTable",
+		"#references => FMMany type: #FmxSQLTableReference opposite: #table",
 		"#triggers => FMMany type: #FmxSQLTrigger opposite: #table",
 		"#updateQueries => FMMany type: #FmxSQLUpdateQuery opposite: #table"
 	],
 	"name" : "FmxSQLTable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLStructuralEntity",
-	"traitcomposition" : "FamixTContainingWithInvocationsGlue + FmxSQLAbstractType + FmxSQLColumnsContainer",
+	"traitcomposition" : "FmxSQLAbstractType + FmxSQLColumnsContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

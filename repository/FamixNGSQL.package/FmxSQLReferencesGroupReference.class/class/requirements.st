@@ -2,4 +2,4 @@ meta
 requirements
 
 	<generated>
-	^ { FmxSQLAlias. FmxSQLFromClause. FmxSQLGroupByClause. FmxSQLHavingClause. FmxSQLOrderByClause. FmxSQLReturningClause. FmxSQLWhereClause }
+	^ { FmxSQLColumnAlias. FmxSQLFromClause. FmxSQLGroupByClause. FmxSQLHavingClause. FmxSQLOrderByClause. FmxSQLReturningClause. FmxSQLWhereClause }

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLCRUDQuery",
+	"category" : "FamixNGSQL-Entities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLValuesQuery",
+	"type" : "normal"
+}
