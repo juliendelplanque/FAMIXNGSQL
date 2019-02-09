@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "JulienDelplanque 1/29/2019 13:55",
 	"super" : "Object",
-	"category" : "FamixNGSQL-Importer-Visitor",
+	"category" : "FamixNGSQL-Importer-Utilities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
