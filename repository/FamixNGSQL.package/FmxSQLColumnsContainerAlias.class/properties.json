@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
+	"classtraitcomposition" : "FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#columnAliases => FMMany type: #FmxSQLColumnAlias opposite: #columnsContainerAlias"
@@ -7,7 +7,7 @@
 	"name" : "FmxSQLColumnsContainerAlias",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLAlias",
-	"traitcomposition" : "FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference",
+	"traitcomposition" : "FmxSQLTWithTableReference + FmxSQLTWithViewReference",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

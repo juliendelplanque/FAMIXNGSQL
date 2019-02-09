@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTAccessible classTrait",
+	"classtraitcomposition" : "FamixTAccessible classTrait + FmxSQLTWithDerivedTableReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#parentBehaviouralEntity => FMOne type: #FmxSQLTWithAlias opposite: #aliases"
@@ -7,7 +7,7 @@
 	"name" : "FmxSQLAlias",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLNamedEntity",
-	"traitcomposition" : "FamixTAccessible",
+	"traitcomposition" : "FamixTAccessible + FmxSQLTWithDerivedTableReference",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

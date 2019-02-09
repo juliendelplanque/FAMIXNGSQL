@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences",
 		"#column => FMOne type: #FmxSQLColumn opposite: #references",
+		"#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences",
 		"#triggerStoredProceduresReferencing => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #columnsReferenced"
 	],
 	"name" : "FmxSQLColumnReference",
