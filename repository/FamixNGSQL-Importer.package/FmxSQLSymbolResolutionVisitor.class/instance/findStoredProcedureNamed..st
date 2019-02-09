@@ -1,4 +1,4 @@
-convenient
+finding
 findStoredProcedureNamed: anIdentifier
 	"The next conditional branching is needed because of PostgreSQL treatement of identifiers.
 	 If you define an identifier between "", it is case-sensitive, else it is not."

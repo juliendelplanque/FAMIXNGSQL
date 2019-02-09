@@ -1,4 +1,4 @@
-as yet unclassified
+entity creation
 createFmxSQLAliasNamed: aString forCurrentEntity: aFmxSQLEntity
 	| alias |
 	alias := (self createEntity: aFmxSQLEntity aliasClass)

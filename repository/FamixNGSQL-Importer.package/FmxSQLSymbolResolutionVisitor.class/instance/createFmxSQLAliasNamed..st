@@ -1,4 +1,4 @@
-as yet unclassified
+entity creation
 createFmxSQLAliasNamed: anAlias
 	^ (self createEntity: FmxSQLColumnAlias)
 		parentBehaviouralEntity: self currentEntity;

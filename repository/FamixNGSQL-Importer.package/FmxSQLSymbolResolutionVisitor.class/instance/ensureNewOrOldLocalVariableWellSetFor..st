@@ -1,4 +1,4 @@
-convenient
+entity creation
 ensureNewOrOldLocalVariableWellSetFor: identifiers
 	|localVariable |
 	self assert: (self isNewOrOldIdentifier: identifiers).

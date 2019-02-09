@@ -1,4 +1,4 @@
-convenient
+entity creation
 createQueryContainedByCurrentEntity: aClass from: anASTNode
 	| newQuery currentEntity |
 	newQuery := self createEntity: aClass from: anASTNode.
