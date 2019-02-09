@@ -1,3 +1,3 @@
-accessing
+null pattern
 mooseModel
 	^ mooseModel
