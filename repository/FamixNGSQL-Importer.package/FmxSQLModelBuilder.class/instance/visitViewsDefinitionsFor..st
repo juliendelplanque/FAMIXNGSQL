@@ -9,7 +9,13 @@ visitViewsDefinitionsFor: aMooseModel
 				errorReport: self errorReport.
 			
 			self errorReport
-				catch: SRReferencesNotFound, SRReferencesInconsistencies , PSQLParseError , Warning
+				catch: SRReferencesNotFound, SRReferencesInconsistencies , FmxEntityParsingError , Warning
 				during: [ 
-					(pgToFamixEntities at: pgView)
-						query: (pgView ast acceptVisitor: visitor) entity query ] ]
+					[ (pgToFamixEntities at: pgView)
+						query: (pgView ast acceptVisitor: visitor) entity query
+					] on: PSQLParseError
+									do: [ :e | 
+										FmxEntityParsingError new
+											entity: (pgToFamixEntities at: pgView);
+											parseError: e;
+											signal ] ] ]

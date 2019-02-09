@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Error",
+	"category" : "FamixNGSQL-Importer-Errors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entity",
+		"parseError"
+	],
+	"name" : "FmxEntityParsingError",
+	"type" : "normal"
+}
