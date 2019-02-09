@@ -8,7 +8,7 @@ visitStoredProceduresFor: aMooseModel
 				model: aMooseModel
 				function: function
 				errorReport: self errorReport.
-			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction ])
+			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction or: [ function isStub ] ])
 					ifFalse: [ 
 						self errorReport
 							catch: SRReferencesNotFound, SRReferencesInconsistencies , FmxEntityParsingError , MessageNotUnderstood , Warning

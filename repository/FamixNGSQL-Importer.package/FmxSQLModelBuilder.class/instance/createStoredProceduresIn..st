@@ -9,7 +9,7 @@ createStoredProceduresIn: aMooseModel
 				parentNamespace: (pgToFamixEntities at: pgFunction namespace);
 				returnType: (pgToFamixEntities at: pgFunction returnType);
 				mooseModel: aMooseModel;
-				isStub: pgFunction isStub;
+				isStub: (pgFunction isStub or: [ (#('plpgsql' 'sql') includes: pgFunction language name) not ]);
 				yourself.
 			visitor := FmxSQLSymbolResolutionVisitor
 				model: aMooseModel
