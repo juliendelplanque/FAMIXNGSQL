@@ -1,7 +1,7 @@
 parsing
 parseAndVisitView: aViewCode
 	| visitor |
-	visitor := (PSQLASTReflectiveVisitor model: model view: view).
+	visitor := (FmxSQLSymbolResolutionVisitor model: model view: view).
 	
 	visitor errorReport 
 		catchWarningsDuring: [ 

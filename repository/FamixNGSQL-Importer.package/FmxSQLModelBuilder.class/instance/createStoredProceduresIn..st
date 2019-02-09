@@ -11,7 +11,7 @@ createStoredProceduresIn: aMooseModel
 				mooseModel: aMooseModel;
 				isStub: pgFunction isStub;
 				yourself.
-			visitor := PSQLASTReflectiveVisitor
+			visitor := FmxSQLSymbolResolutionVisitor
 				model: aMooseModel
 				function: function
 				errorReport: self errorReport.

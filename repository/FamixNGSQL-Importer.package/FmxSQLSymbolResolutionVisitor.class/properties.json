@@ -8,7 +8,7 @@
 		"solver",
 		"errorReport"
 	],
-	"name" : "PSQLASTReflectiveVisitor",
+	"name" : "FmxSQLSymbolResolutionVisitor",
 	"commentStamp" : "",
 	"super" : "PSQLASTVisitor",
 	"traitcomposition" : "SRSolverUserVisitor",

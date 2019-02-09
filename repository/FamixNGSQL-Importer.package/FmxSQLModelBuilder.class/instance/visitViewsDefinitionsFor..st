@@ -3,7 +3,7 @@ visitViewsDefinitionsFor: aMooseModel
 	metadata getViews
 		do: [ :pgView | 
 			| visitor |
-			visitor := PSQLASTReflectiveVisitor
+			visitor := FmxSQLSymbolResolutionVisitor
 				model: aMooseModel
 				view: (pgToFamixEntities at: pgView)
 				errorReport: self errorReport.

@@ -1,7 +1,7 @@
 parsing
 parseAndVisitFunction: functionForWhichASTNeedsVisit withSourceCode: aFunctionCode
 	| visitor |
-	visitor := (PSQLASTReflectiveVisitor model: model function: functionForWhichASTNeedsVisit).
+	visitor := (FmxSQLSymbolResolutionVisitor model: model function: functionForWhichASTNeedsVisit).
 	visitor errorReport 
 		catchWarningsDuring: [ 
 			(PostgreSQLParser parseStoredProcedureBody: aFunctionCode)

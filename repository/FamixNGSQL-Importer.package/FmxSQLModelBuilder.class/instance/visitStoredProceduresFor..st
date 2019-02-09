@@ -4,7 +4,7 @@ visitStoredProceduresFor: aMooseModel
 		do: [ :pgFunction | 
 			| function visitor |
 			function := pgToFamixEntities at: pgFunction.
-			visitor := PSQLASTReflectiveVisitor
+			visitor := FmxSQLSymbolResolutionVisitor
 				model: aMooseModel
 				function: function
 				errorReport: self errorReport.
