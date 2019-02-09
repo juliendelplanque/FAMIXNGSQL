@@ -1,4 +1,4 @@
-as yet unclassified
+helpers
 createTrigger: aString calling: aFmxSQLTriggerStoredProcedure onTable: aFmxSQLTable 
 	^ FmxSQLTrigger new
 		name: aString;
