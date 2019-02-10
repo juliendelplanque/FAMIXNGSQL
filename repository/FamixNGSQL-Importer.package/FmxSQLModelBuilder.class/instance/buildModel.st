@@ -14,6 +14,7 @@ buildModel
 		createNamespacesIn: mooseModel;
 		createTypesIn: mooseModel;
 		createTablesIn: mooseModel;
+		createForeignTablesIn: mooseModel;
 		createConstraintsIn: mooseModel;
 		createViewsIn: mooseModel;
 		createStoredProceduresIn: mooseModel;

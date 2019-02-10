@@ -64,7 +64,8 @@
 		"columnAliasAccess",
 		"columnsContainerAlias",
 		"columnsContainerAliasAccess",
-		"valuesQuery"
+		"valuesQuery",
+		"foreignTable"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

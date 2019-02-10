@@ -82,4 +82,6 @@ defineBehaviouralHierarchy
 	columnAlias --|> tWithReferencesGroupReference.
 	columnAlias --|> tColumn.
 	
-	referencesGroup --|> entity
+	referencesGroup --|> entity.
+	
+	foreignTable --|> table.

@@ -1,6 +1,6 @@
 model building - entities
 createNamespacesIn: aMooseModel
-	metadata objects select: [ :o | o class = SqlNamespace ] thenDo: [ :pgNamespace |
+	metadata getNamespaces do: [ :pgNamespace |
 		pgToFamixEntities
 			at: pgNamespace
 			put: (FmxSQLNamespace new

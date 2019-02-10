@@ -88,7 +88,8 @@ defineClausesHierarchy
 	
 	valuesClause --|> clause.
 	valuesClause --|> tWithColumnReference.
-	valuesClause--|> #TWithAccesses.
+	valuesClause --|> #TWithAccesses.
+	valuesClause --|> #TWithInvocations.
 	
 	usingClause --|> clause.
 	

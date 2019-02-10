@@ -11,7 +11,7 @@ visitStoredProceduresFor: aMooseModel
 			(pgFunction isStub or: [ pgFunction isSqlAggregateFunction or: [ function isStub ] ])
 					ifFalse: [ 
 						self errorReport
-							catch: SRReferencesNotFound, SRReferencesInconsistencies , FmxEntityParsingError , MessageNotUnderstood , Warning
+							catch: SRReferencesNotFound, SRReferencesInconsistencies , FmxEntityParsingError , MessageNotUnderstood , Warning , NotFound
 							during: [ 
 								[ pgFunction ast acceptVisitor: visitor ]
 									on: PSQLParseError
