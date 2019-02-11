@@ -6,4 +6,4 @@ createNamespacesIn: aMooseModel
 			put: (FmxSQLNamespace new
 						name: pgNamespace name;
 						mooseModel: aMooseModel;
-						yourself) ]
+						yourself) ] displayingProgress: 'Creating namespaces'

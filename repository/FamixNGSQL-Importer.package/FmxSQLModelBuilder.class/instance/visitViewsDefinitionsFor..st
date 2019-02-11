@@ -18,4 +18,4 @@ visitViewsDefinitionsFor: aMooseModel
 										FmxEntityParsingError new
 											entity: (pgToFamixEntities at: pgView);
 											parseError: e;
-											signal ] ] ]
+											signal ] ] ] displayingProgress: 'Symbol resolution for views'

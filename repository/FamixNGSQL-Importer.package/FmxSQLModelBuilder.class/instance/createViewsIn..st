@@ -20,4 +20,4 @@ createViewsIn: aMooseModel
 								mooseModel: aMooseModel;
 								columnsContainer: view;
 								type: (pgToFamixEntities at: pgColumn datatype);
-								yourself) ] ]
+								yourself) ] ] displayingProgress: 'Creating views'

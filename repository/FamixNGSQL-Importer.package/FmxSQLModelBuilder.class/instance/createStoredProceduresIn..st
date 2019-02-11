@@ -1,8 +1,8 @@
 model building - entities
 createStoredProceduresIn: aMooseModel
-	metadata getFunctions
-		reject: [ :pgFunction | "Triggers are treated separately." pgFunction isSqlTriggerFunction ]
-		thenDo: [ :pgFunction | 
+	(metadata getFunctions
+		reject: [ :pgFunction | "Triggers are treated separately." pgFunction isSqlTriggerFunction ])
+		do: [ :pgFunction | 
 			| function visitor |
 			function := FmxSQLStoredProcedure new
 				name: pgFunction name;
@@ -24,4 +24,4 @@ createStoredProceduresIn: aMooseModel
 								mooseModel: aMooseModel;
 								parentBehaviouralEntity: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
-			pgToFamixEntities at: pgFunction put: function ]
+			pgToFamixEntities at: pgFunction put: function ] displayingProgress: 'Creating stored procedures'

@@ -19,4 +19,4 @@ visitStoredProceduresFor: aMooseModel
 										FmxEntityParsingError new
 											entity: function;
 											parseError: e;
-											signal ] ] ] ]
+											signal ] ] ] ] displayingProgress: 'Symbol resolution for stored procedures'

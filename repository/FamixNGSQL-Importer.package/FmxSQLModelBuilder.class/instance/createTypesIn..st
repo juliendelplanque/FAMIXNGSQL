@@ -6,4 +6,4 @@ createTypesIn: aMooseModel
 			put: (FmxSQLType new
 					name: pgDataType name;
 					mooseModel: aMooseModel;
-					yourself) ]
+					yourself) ] displayingProgress: 'Creating types'

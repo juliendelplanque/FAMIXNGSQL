@@ -1,6 +1,5 @@
 model building - entities
 createTriggerStoredProceduresIn: aMooseModel
-	self flag: #TODO.	"Parse the body."
 	metadata getTriggerFunctions
 		do: [ :pgFunction | 
 			| function |
@@ -11,4 +10,4 @@ createTriggerStoredProceduresIn: aMooseModel
 				mooseModel: aMooseModel;
 				yourself.
 			pgToFamixEntities at: pgFunction put: function.
-			"TODO: local variables" ]
+			"TODO: local variables" ] displayingProgress: 'Creating trigger stored procedures'

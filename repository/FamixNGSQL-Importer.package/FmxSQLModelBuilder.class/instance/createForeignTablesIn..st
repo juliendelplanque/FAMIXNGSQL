@@ -27,4 +27,4 @@ createForeignTablesIn: mooseModel
 		"Add special columns."
 		FmxSQLColumn new
 			name: 'tableoid';
-			columnsContainer: table ]
+			columnsContainer: table ] displayingProgress: 'Creating foreign tables'

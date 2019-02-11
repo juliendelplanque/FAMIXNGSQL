@@ -5,11 +5,11 @@ createTriggersIn: aMooseModel
 		|trigger|
 		trigger := FmxSQLTrigger new
 							name: pgTrigger name;
-							"parentNamespace: (pgToFamixEntities at: pgTrigger namespace);" flag: #TODO;
+							parentNamespace: (pgToFamixEntities at: pgTrigger table namespace);
 							table: (pgToFamixEntities at: pgTrigger table);
 							storedProcedure: (pgToFamixEntities at: pgTrigger function);
 							mooseModel: aMooseModel;
 							yourself.
 		pgToFamixEntities
 			at: pgTrigger
-			put: trigger. ]
+			put: trigger. ] displayingProgress: 'Creating triggers'
