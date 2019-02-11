@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLSelectQuery class>>#generatedSlotNames'.
-	^ #(derivedTablesDefined viewDefining)
+	^ #(derivedTablesDefined recordLocalVariables viewDefining)

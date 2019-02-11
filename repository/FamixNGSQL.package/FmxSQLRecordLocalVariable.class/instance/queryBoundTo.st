@@ -1,0 +1,5 @@
+accessing
+queryBoundTo
+
+	<generated>
+	^ queryBoundTo

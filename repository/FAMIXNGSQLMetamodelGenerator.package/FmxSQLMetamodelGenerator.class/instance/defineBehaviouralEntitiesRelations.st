@@ -65,3 +65,6 @@ defineBehaviouralEntitiesRelations
 	
 	(recordLocalVariable property: #queryBoundTo)
 		*- (selectQuery property: #recordLocalVariables).
+		
+	(columnsContainerAlias property: #columnAliases)
+		-* (columnAlias property: #columnsContainerAlias)

@@ -1,7 +1,9 @@
 {
 	"classtraitcomposition" : "FmxSQLColumnsContainer classTrait",
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#queryBoundTo => FMOne type: #FmxSQLSelectQuery opposite: #recordLocalVariables"
+	],
 	"name" : "FmxSQLRecordLocalVariable",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLLocalVariable",

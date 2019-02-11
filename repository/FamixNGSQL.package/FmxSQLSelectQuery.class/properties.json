@@ -7,6 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#derivedTablesDefined => FMMany type: #FmxSQLDerivedTable opposite: #parentQuery",
+		"#recordLocalVariables => FMMany type: #FmxSQLRecordLocalVariable opposite: #queryBoundTo",
 		"#viewDefining => FMOne type: #FmxSQLView opposite: #query"
 	],
 	"name" : "FmxSQLSelectQuery",

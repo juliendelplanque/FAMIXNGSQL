@@ -1,0 +1,5 @@
+accessing
+recordLocalVariables
+
+	<generated>
+	^ recordLocalVariables
