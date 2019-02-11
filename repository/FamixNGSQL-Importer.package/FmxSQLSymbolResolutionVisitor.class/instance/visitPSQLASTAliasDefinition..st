@@ -15,10 +15,6 @@ visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition
 			query := visitResult entity query.
 			derivedTable := (self createEntity: FmxSQLDerivedTable)
 									query: query;
-									columns: (query clauses
-									detect: [ :c | c class = FmxSQLSelectClause ]
-									ifFound: [ :selectClause | selectClause aliases ]
-									ifNone: [ #() ]);
 									yourself.
 			^ PSQLDerivedTableToBeAliasedByColumn alias: alias entity: derivedTable ].
 		

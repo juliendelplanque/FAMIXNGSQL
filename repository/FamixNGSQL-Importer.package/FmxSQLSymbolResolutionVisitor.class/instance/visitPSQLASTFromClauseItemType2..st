@@ -5,11 +5,6 @@ visitPSQLASTFromClauseItemType2: aPSQLASTFromClauseItemType2
 	valueOrSelect := (self visit: aPSQLASTFromClauseItemType2 valuesOrSelect) entity query.
 	derivedTable := (self createEntity: FmxSQLDerivedTable)
 							query: valueOrSelect;
-							columns: (valueOrSelect clauses
-								detect: [ :c | c class = FmxSQLSelectClause ]
-								ifFound: [ :selectClause |
-									selectClause aliases ]
-								ifNone: [ #() ]);
 							yourself.
 	fmxAlias := self
 		createFmxSQLAliasNamed: alias
