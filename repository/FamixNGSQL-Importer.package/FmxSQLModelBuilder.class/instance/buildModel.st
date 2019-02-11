@@ -24,7 +24,8 @@ buildModel
 	self
 		visitViewsDefinitionsFor: mooseModel;
 		visitStoredProceduresFor: mooseModel.
-	self errorReport ifNotEmpty: #inspect.
+	mooseModel
+		errorReport: self errorReport.
 	pgToFamixEntities := nil.
 	
 	^ mooseModel
