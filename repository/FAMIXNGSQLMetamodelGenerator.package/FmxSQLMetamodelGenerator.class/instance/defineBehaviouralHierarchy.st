@@ -53,6 +53,9 @@ defineBehaviouralHierarchy
 	localVariable --|> #TLocalVariable.
 	localVariable --|> #TAccessible.
 	
+	recordLocalVariable --|> localVariable.
+	recordLocalVariable --|> tColumnsContainer.
+	
 	newLocalVariable --|> localVariable.
 	newLocalVariable --|> tColumnsContainer.
 	

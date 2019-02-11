@@ -1,3 +1,4 @@
 visiting
 visitPSQLASTIntoClause: aPSQLASTIntoClause
-	aPSQLASTIntoClause childrenDo: [:aChild | aChild acceptVisitor: self]
+	aPSQLASTIntoClause type ifNotNil: [ Halt now ].
+	^ self visit: aPSQLASTIntoClause newTable

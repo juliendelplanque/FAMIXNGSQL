@@ -9,8 +9,5 @@ reachableEntities
 			q clauses
 				detect: [ :c | c class = FmxSQLSelectClause ]
 				ifFound: [ :selectClause |
-					selectClause outgoingColumnReferences
-						collect: #to
-						thenSelect: [ :column |
-							self columns noneSatisfy: [ :c | c name = column name ] ] ]
+					selectClause columnsReferencedExceptNames: (self columns collect: #name)  ]
 				ifNone: [ #() ] ])

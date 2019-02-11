@@ -40,6 +40,9 @@ defineBehaviouralEntities
 	localVariable := builder
 		newClassNamed: #LocalVariable
 		comment: self localVariableComment.
+	recordLocalVariable := builder
+		newClassNamed: #RecordLocalVariable
+		comment: self recordLocalVariableComment.
 	newLocalVariable := builder
 		newClassNamed: #NewLocalVariable
 		comment: self newLocalVariableComment.
