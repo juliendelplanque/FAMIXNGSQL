@@ -1,0 +1,1 @@
+I model an alias to an entity to be created in a SELECT clause.

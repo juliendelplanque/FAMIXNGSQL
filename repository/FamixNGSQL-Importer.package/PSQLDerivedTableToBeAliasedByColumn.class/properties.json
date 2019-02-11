@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "JulienDelplanque 2/11/2019 21:37",
 	"super" : "PSQLEntityToBeAliased",
 	"category" : "FamixNGSQL-Importer-Utilities",
 	"classinstvars" : [ ],
