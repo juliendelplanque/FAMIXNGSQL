@@ -11,6 +11,6 @@
 		"view",
 		"triggerFunction"
 	],
-	"name" : "PSQLASTReflectiveVisitorTest",
+	"name" : "FmxSQLSymbolResolutionVisitorTest",
 	"type" : "normal"
 }
