@@ -8,7 +8,7 @@ baseline: spec
 				package: #'FamixNGSQL-Importer' with: [ spec requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
 				package: #'FamixNGSQL-Extensions' with: [ spec requires: #('FamixNGSQL-Importer') ];
 				package: #FAMIXNGSQLAnalysis;
-				"package: #FamixNGSQL with: [ spec requires: #('Famix') ];"
+				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager' with: [ spec requires: #('DBConnectionsManager') ].
 			spec baseline: 'Famix' with: [
 				spec repository: 'github://jecisc/Famix:v2.x.x/src';
