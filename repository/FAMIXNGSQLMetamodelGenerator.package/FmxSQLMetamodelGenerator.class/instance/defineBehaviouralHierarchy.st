@@ -33,6 +33,7 @@ defineBehaviouralHierarchy
 	storedProcedure --|> tWithCursor.
 	storedProcedure --|> tWithCursorReference.
 	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
+	storedProcedure --|> #TWithImmediateSource.
 	
 	triggerStoredProcedure --|> storedProcedure.
 	

@@ -8,6 +8,7 @@ createStoredProceduresIn: aMooseModel
 				name: pgFunction name;
 				parentNamespace: (pgToFamixEntities at: pgFunction namespace);
 				returnType: (pgToFamixEntities at: pgFunction returnType);
+				source: pgFunction code;
 				mooseModel: aMooseModel;
 				isStub: (pgFunction isStub or: [ (#('plpgsql' 'sql') includes: pgFunction language name) not ]);
 				yourself.

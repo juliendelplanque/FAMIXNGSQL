@@ -6,7 +6,7 @@ createViewsIn: aMooseModel
 			view := FmxSQLView new
 				name: pgView name;
 				parentNamespace: (pgToFamixEntities at: pgView namespace);
-				source: pgView definition;
+				source: pgView code;
 				mooseModel: aMooseModel;
 				yourself.
 			pgToFamixEntities at: pgView put: view.

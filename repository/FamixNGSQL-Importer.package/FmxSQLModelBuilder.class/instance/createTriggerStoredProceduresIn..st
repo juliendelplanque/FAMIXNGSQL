@@ -7,6 +7,7 @@ createTriggerStoredProceduresIn: aMooseModel
 				name: pgFunction name;
 				parentNamespace: (pgToFamixEntities at: pgFunction namespace);
 				returnType: (pgToFamixEntities at: pgFunction returnType);
+				source: pgFunction code;
 				mooseModel: aMooseModel;
 				yourself.
 			pgToFamixEntities at: pgFunction put: function.
