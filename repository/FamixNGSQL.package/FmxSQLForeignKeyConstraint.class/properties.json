@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#referencedColumns => FMMany type: #FmxSQLColumn opposite: #foreignKeyConstraintsReferencing"
+		"#outgoingForeignKeyColumnReferences => FMMany type: #FmxSQLColumnReference opposite: #foreignKeyConstraintSource"
 	],
 	"name" : "FmxSQLForeignKeyConstraint",
 	"type" : "normal"

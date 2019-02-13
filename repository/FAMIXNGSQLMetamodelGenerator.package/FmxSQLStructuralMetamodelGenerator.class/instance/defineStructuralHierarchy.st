@@ -3,7 +3,10 @@ defineStructuralHierarchy
 	"Abstract entities inheritance relations."
 	structuralEntity --|> namedEntity.
 	structuralEntity --|> #TNamespaceEntity.
-	structuralEntity <|-- constraint.
+	
+	constraint --|> structuralEntity.
+	constraint --|> tWithColumnReference.
+	
 	"Concrete structural entities inheritance relations."
 	namespace --|> structuralEntity.
 	namespace --|> #TNamespace.

@@ -19,9 +19,14 @@ createForeignTablesIn: mooseModel
 						type: (pgToFamixEntities at: pgColumn datatype);
 						yourself).
 			pgColumn isNotNull ifTrue: [ 
-				FmxSQLNotNullConstraint new
+				|constraint|
+				constraint := FmxSQLNotNullConstraint new
 					table: table;
-					columns: { (pgToFamixEntities at: pgColumn) };
+					mooseModel: mooseModel;
+					yourself.
+				FmxSQLColumnReference new
+					source: constraint;
+					column: (pgToFamixEntities at: pgColumn);
 					mooseModel: mooseModel;
 					yourself ] ].
 		"Add special columns."

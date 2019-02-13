@@ -2,4 +2,4 @@ generator
 generatedSlotNames
 	<generated>
 	'FmxSQLColumnReference class>>#generatedSlotNames'.
-	^ #(column source triggerStoredProceduresReferencing)
+	^ #(column foreignKeyConstraintSource source triggerStoredProceduresReferencing)

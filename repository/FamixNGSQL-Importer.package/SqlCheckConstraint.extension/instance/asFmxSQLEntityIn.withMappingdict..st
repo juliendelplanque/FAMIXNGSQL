@@ -1,9 +1,17 @@
 *FamixNGSQL-Importer
 asFmxSQLEntityIn: aMooseModel withMappingdict: pgToFamixEntities
-	^ FmxSQLCheckConstraint new
+	| constraint |
+	constraint :=  FmxSQLCheckConstraint new
 			name: self name;
-			columns: (self constrainedColumns collect: [ :pgColumn | pgToFamixEntities at: pgColumn ]);
 			table: (pgToFamixEntities at: self constrainedColumns anyOne) columnsContainer;
 			source: self code;
 			mooseModel: aMooseModel;
-			yourself
+			yourself.
+	self constrainedColumns
+		collect: [ :pgColumn | pgToFamixEntities at: pgColumn ]
+		thenDo: [ :fmxColumn |
+			FmxSQLColumnReference new
+				source: constraint;
+				column: fmxColumn;
+				mooseModel: aMooseModel ].
+	^ constraint

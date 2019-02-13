@@ -7,6 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#column => FMOne type: #FmxSQLColumn opposite: #references",
+		"#foreignKeyConstraintSource => FMOne type: #FmxSQLForeignKeyConstraint opposite: #outgoingForeignKeyColumnReferences",
 		"#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences",
 		"#triggerStoredProceduresReferencing => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #columnsReferenced"
 	],

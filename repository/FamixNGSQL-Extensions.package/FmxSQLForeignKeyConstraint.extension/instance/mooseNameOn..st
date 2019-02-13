@@ -4,13 +4,13 @@ mooseNameOn: aStream
 		<< $".
 	super mooseNameOn: aStream.
 	aStream << '" FK ('.
-	self columns do: [ :c |
+	(self outgoingColumnReferences collect: #column) do: [ :c |
 		aStream << c name ] separatedBy: [ aStream << ', ' ].
 	aStream
 		<< ') REFERENCES ';
-		<< self referencedColumns anyOne columnsContainer name;
+		<< self outgoingForeignKeyColumnReferences anyOne column columnsContainer name;
 		<< $(.
-	self referencedColumns do: [ :c |
+	(self outgoingForeignKeyColumnReferences collect: #column) do: [ :c |
 		aStream << c name ] separatedBy: [ aStream << ', ' ].
 	aStream
 		<< ') #';

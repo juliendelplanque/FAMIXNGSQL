@@ -1,5 +1,0 @@
-accessing
-constraints
-
-	<generated>
-	^ constraints

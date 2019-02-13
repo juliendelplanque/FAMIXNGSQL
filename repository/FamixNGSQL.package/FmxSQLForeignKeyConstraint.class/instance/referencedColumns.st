@@ -1,5 +1,0 @@
-accessing
-referencedColumns
-
-	<generated>
-	^ referencedColumns
