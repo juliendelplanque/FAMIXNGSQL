@@ -1,7 +1,6 @@
 definition - behavioural
 defineBehaviouralHierarchy
 	"Abstract entities inheritance relations."
-	behaviouralEntity --|> namedEntity. "Should be trait (not all behavioural entities have name)"
 	behaviouralEntity --|> #TNamespaceEntity.
 	crudQuery --|> entity.
 	"Concrete structural entities inheritance relations."
@@ -15,6 +14,7 @@ defineBehaviouralHierarchy
 	view --|> #TWithImmediateSource.
 	view --|> namedEntity.
 	
+	derivedTable --|> namedEntity.
 	derivedTable --|> behaviouralEntity.
 	derivedTable --|> tColumnsContainer.
 	derivedTable --|> tQueryContainer.
@@ -37,6 +37,7 @@ defineBehaviouralHierarchy
 	
 	triggerStoredProcedure --|> storedProcedure.
 	
+	trigger --|> namedEntity.
 	trigger --|> behaviouralEntity.
 	trigger --|> #TNamespaceEntity.
 	
@@ -67,6 +68,7 @@ defineBehaviouralHierarchy
 	cursorParameter --|> #TParameter.
 	cursorParameter --|> #TAccessible.
 	
+	cursor --|> namedEntity.
 	cursor --|> behaviouralEntity.
 	cursor --|> tQueryContainer.
 	cursor --|> #TWithParameters.
@@ -89,3 +91,5 @@ defineBehaviouralHierarchy
 	referencesGroup --|> entity.
 	
 	foreignTable --|> table.
+	
+	entitySourceAnchor --|> #TSourceAnchor

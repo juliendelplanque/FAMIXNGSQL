@@ -1,7 +1,7 @@
 definition - behavioural
 defineBehaviouralEntities
 	"Abstract entities."
-	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
+	behaviouralEntity := builder newTraitNamed: #BehaviouralEntity.
 	"Concrete behavioural entities."
 	view := builder newClassNamed: #View comment: self viewComment.
 	derivedTable := builder
@@ -97,4 +97,7 @@ defineBehaviouralEntities
 		comment: self referencesGroupReferenceComment.
 	foreignTable := builder
 		newClassNamed: #ForeignTable
-		comment: self foreignTableComment
+		comment: self foreignTableComment.
+	entitySourceAnchor := builder
+		newClassNamed: #EntitySourceAnchor
+		comment: self entitySourceAnchorComment

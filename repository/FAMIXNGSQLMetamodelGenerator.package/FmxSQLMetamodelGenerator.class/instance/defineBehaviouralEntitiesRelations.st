@@ -67,4 +67,7 @@ defineBehaviouralEntitiesRelations
 		*- (selectQuery property: #recordLocalVariables).
 		
 	(columnsContainerAlias property: #columnAliases)
-		-* (columnAlias property: #columnsContainerAlias)
+		-* (columnAlias property: #columnsContainerAlias).
+		
+	(entitySourceAnchor property: #entity)
+		*- (behaviouralEntity property: #anchorsOnIntervalsOfCode)
