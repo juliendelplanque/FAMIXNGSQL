@@ -1,7 +1,7 @@
 meta
 annotation
 
-	<MSEClass: #Trigger super: #FmxSQLBehaviouralEntity>
+	<MSEClass: #Trigger super: #FmxSQLNamedEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self

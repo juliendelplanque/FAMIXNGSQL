@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTWithParameters classTrait + FmxSQLTQueryContainer classTrait",
+	"classtraitcomposition" : "FamixTWithParameters classTrait + FmxSQLBehaviouralEntity classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#parentBehaviouralEntity => FMOne type: #FmxSQLTWithCursor opposite: #cursors",
@@ -7,8 +7,8 @@
 	],
 	"name" : "FmxSQLCursor",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLBehaviouralEntity",
-	"traitcomposition" : "FamixTWithParameters + FmxSQLTQueryContainer",
+	"super" : "FmxSQLNamedEntity",
+	"traitcomposition" : "FamixTWithParameters + FmxSQLBehaviouralEntity + FmxSQLTQueryContainer",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

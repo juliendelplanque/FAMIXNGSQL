@@ -1,12 +1,13 @@
 definition - behavioural
 defineBehaviouralHierarchy
 	"Abstract entities inheritance relations."
-	behaviouralEntity --|> #TNamespaceEntity.
 	crudQuery --|> entity.
+	crudQuery --|> #TWithSourceAnchor.
 	"Concrete structural entities inheritance relations."
 	checkConstraint --|> constraint.
 	checkConstraint --|> #TWithImmediateSource.
 	"Concrete behavioural entities inheritance relations."
+	view --|> behaviouralEntity.
 	view --|> tAbstractType.
 	view --|> tColumnsContainer.
 	view --|> tQueryContainer.
@@ -19,6 +20,7 @@ defineBehaviouralHierarchy
 	derivedTable --|> tColumnsContainer.
 	derivedTable --|> tQueryContainer.
 	
+	storedProcedure --|> behaviouralEntity.
 	storedProcedure --|> tQueryContainer.
 	storedProcedure --|> namedEntity.
 	storedProcedure--|> #TNamespaceEntity.

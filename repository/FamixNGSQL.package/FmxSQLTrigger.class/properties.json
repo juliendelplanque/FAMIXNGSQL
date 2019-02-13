@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTNamespaceEntity classTrait",
+	"classtraitcomposition" : "FamixTNamespaceEntity classTrait + FmxSQLBehaviouralEntity classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#firingAction",
@@ -9,8 +9,8 @@
 	],
 	"name" : "FmxSQLTrigger",
 	"commentStamp" : "<historical>",
-	"super" : "FmxSQLBehaviouralEntity",
-	"traitcomposition" : "FamixTNamespaceEntity",
+	"super" : "FmxSQLNamedEntity",
+	"traitcomposition" : "FamixTNamespaceEntity + FmxSQLBehaviouralEntity",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

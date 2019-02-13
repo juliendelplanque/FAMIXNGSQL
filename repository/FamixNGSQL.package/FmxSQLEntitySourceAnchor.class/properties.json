@@ -1,0 +1,17 @@
+{
+	"classtraitcomposition" : "FamixTSourceAnchor classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"#end",
+		"#entity => FMOne type: #FmxSQLBehaviouralEntity opposite: #anchorsOnIntervalsOfCode",
+		"#start"
+	],
+	"name" : "FmxSQLEntitySourceAnchor",
+	"commentStamp" : "<historical>",
+	"super" : "MooseEntity",
+	"traitcomposition" : "FamixTSourceAnchor",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
+}

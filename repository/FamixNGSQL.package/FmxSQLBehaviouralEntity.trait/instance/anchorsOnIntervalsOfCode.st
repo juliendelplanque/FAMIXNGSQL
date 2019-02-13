@@ -1,0 +1,5 @@
+accessing
+anchorsOnIntervalsOfCode
+
+	<generated>
+	^ anchorsOnIntervalsOfCode

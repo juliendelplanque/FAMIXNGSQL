@@ -1,7 +1,7 @@
 meta
 annotation
 
-	<MSEClass: #BehaviouralEntity super: #FmxSQLNamedEntity>
+	<MSEClass: #EntitySourceAnchor super: #MooseEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self
