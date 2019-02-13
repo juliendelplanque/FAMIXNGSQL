@@ -3,6 +3,10 @@ defineStructuralEntitiesRelations
 	"A column references a type."
 	(column property: #type) *- (type property: #columns).
 
+	"A constraint references at least one column concerned by the constraint."
+	(constraint property: #columns)
+		*-* (column property: #constraints).
+
 	"A Constraint is contained in a Table."
 	(table property: #constraints)
 		<>-* (constraint property: #table).
