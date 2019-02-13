@@ -9,7 +9,7 @@ visitPSQLPlpgSQLASTCursorDeclaration: aPSQLPlpgSQLASTCursorDeclaration
 	localVariable parentBehaviouralEntity: self currentEntity.
 	cursor := self createEntity: FmxSQLCursor from: aPSQLPlpgSQLASTCursorDeclaration.
 	cursor parentBehaviouralEntity: self currentEntity.
-	self createReferenceTo: cursor.
+	self createReferenceTo: cursor from: aPSQLPlpgSQLASTCursorDeclaration.
 	self
 		useCurrentEntity: cursor
 		during: [ self

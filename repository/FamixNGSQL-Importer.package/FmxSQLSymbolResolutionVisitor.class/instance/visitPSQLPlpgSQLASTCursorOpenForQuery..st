@@ -10,7 +10,7 @@ visitPSQLPlpgSQLASTCursorOpenForQuery: aPSQLPlpgSQLASTCursorOpenForQuery
 						identifier: cursVar
 						node: aPSQLPlpgSQLASTCursorOpenForQuery cursorIdentifier) ].
 	cursor := self createEntity: FmxSQLCursor from: aPSQLPlpgSQLASTCursorOpenForQuery.
-	self createReferenceTo: cursor.
+	self createReferenceTo: cursor from: aPSQLPlpgSQLASTCursorOpenForQuery.
 	self
 		useCurrentEntity: cursor
 		during: [ self visit: aPSQLPlpgSQLASTCursorOpenForQuery selectQuery ]

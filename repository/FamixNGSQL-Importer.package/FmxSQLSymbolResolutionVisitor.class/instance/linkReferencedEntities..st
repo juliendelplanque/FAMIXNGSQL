@@ -1,7 +1,7 @@
 convenient linking
-linkReferencedEntities: aPSQIdentifierWithNode
+linkReferencedEntities: aSRIdentifierWithNode
 	self flag: #TODO.	"add position in source"
-	aPSQIdentifierWithNode entity
-		ifNotNil: [ self createReferenceTo: aPSQIdentifierWithNode entity ].
-	aPSQIdentifierWithNode isLast
-		ifFalse: [ self linkReferencedEntities: aPSQIdentifierWithNode next ]
+	aSRIdentifierWithNode entity
+		ifNotNil: [ self createReferenceTo: aSRIdentifierWithNode entity from: aSRIdentifierWithNode node ].
+	aSRIdentifierWithNode isLast
+		ifFalse: [ self linkReferencedEntities: aSRIdentifierWithNode next ]

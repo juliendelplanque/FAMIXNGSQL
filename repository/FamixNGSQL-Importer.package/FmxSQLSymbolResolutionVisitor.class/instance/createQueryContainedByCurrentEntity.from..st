@@ -10,6 +10,5 @@ createQueryContainedByCurrentEntity: aClass from: anASTNode
 		ifFalse: [ "Otherwise we need to create a reference to a DerivedTable"
 			(self createEntity: FmxSQLDerivedTable)
 				createReferenceEntityFrom: currentEntity;
-				query: newQuery;
-				yourself ].
+				query: newQuery ].
 	^ newQuery

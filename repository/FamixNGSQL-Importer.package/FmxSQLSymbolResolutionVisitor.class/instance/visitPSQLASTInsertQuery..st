@@ -8,7 +8,7 @@ visitPSQLASTInsertQuery: aPSQLASTInsertQuery
 				useCurrentEntity: (self createClause: FmxSQLIntoClause from: aPSQLASTInsertQuery tableName)
 				during: [ self
 						visit: aPSQLASTInsertQuery tableName
-						thenDo: [ :visitResult | self createReferenceTo: (self findTableOrViewNamed: visitResult) ].
+						thenDo: [ :visitResult | self createReferenceTo: (self findTableOrViewNamed: visitResult) from: aPSQLASTInsertQuery tableName ].
 					"The into clause add the table scope but only for the columns visit"
 					self visitAll: aPSQLASTInsertQuery columns ].
 			self visit: aPSQLASTInsertQuery withClause thenDo: [ :visitResult | Halt now ].
