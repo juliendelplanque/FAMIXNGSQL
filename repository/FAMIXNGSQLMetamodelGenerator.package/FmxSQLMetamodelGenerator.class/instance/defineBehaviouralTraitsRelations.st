@@ -1,11 +1,11 @@
 definition - behavioural
 defineBehaviouralTraitsRelations
 	(tWithDerivedTableReference property: #outgoingDerivedTableReferences)
-		-* (derivedTableReference property: #source).
+		-* (derivedTableReference property: #source) source.
 	(tWithViewReference property: #outgoingViewReferences)
-		-* (viewReference property: #source).
+		-* (viewReference property: #source) source.
 	(tWithCursorReference property: #outgoingCursorReferences)
-		-* (cursorReference property: #source).
+		-* (cursorReference property: #source) source.
 	((tWithAlias property: #aliases)
 		<>-* (alias property: #parentBehaviouralEntity))
 		withoutPrimaryContainer.

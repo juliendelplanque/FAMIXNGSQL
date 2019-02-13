@@ -4,6 +4,6 @@ defineStructuralTraitsRelations
 	(tColumnsContainer property: #columns)
 		<>-* (tColumn property: #columnsContainer).
 	(tWithColumnReference property: #outgoingColumnReferences)
-		-* (columnReference property: #source).
+		-* (columnReference property: #source) source.
 	(tWithTableReference property: #outgoingTableReferences)
-		-* (tableReference property: #source)
+		-* (tableReference property: #source) source

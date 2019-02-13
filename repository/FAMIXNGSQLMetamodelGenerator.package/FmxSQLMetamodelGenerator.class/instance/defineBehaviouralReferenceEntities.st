@@ -1,11 +1,11 @@
 definition - behavioural
 defineBehaviouralReferenceEntities
 	"A view reference references a view."
-	(viewReference property: #view)
+	(viewReference property: #view) target
 		*- (view property: #references).
 
 	"A derived table reference references a derived table."
-	(derivedTableReference property: #derivedTable)
+	(derivedTableReference property: #derivedTable) target
 		*- (derivedTable property: #references).
 		
 	"A stored procedure call can contain other references (in its arguments)."
@@ -13,7 +13,7 @@ defineBehaviouralReferenceEntities
 		<>-* (reference property: #storedProcedureContainer)) withoutPrimaryContainer.
 
 	"A Local variable access must point a local variable."
-	(localVariableAccess property: #localVariable)
+	(localVariableAccess property: #localVariable) target
 		*- (localVariable property: #accesses).
 
 	"A query contains multiple clauses"
@@ -29,5 +29,5 @@ defineBehaviouralReferenceEntities
 		-* (updateQuery property: #table).
 		
 	"A cursor reference references a cursor."
-	(cursorReference property: #cursor)
+	(cursorReference property: #cursor) target
 		*- (cursor property: #references).
