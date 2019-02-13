@@ -6,7 +6,8 @@
 		"function",
 		"report",
 		"solver",
-		"errorReport"
+		"errorReport",
+		"view"
 	],
 	"name" : "FmxSQLSymbolResolutionVisitor",
 	"commentStamp" : "",
