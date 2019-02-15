@@ -1,3 +1,3 @@
 *FamixNGSQL-Importer
 from
-	^ self source
+	^ self source ifNil: [ self foreignKeyConstraintSource ]
