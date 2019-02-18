@@ -3,8 +3,6 @@ defineBehaviouralHierarchy
 	"Abstract entities inheritance relations."
 	crudQuery --|> entity.
 	crudQuery --|> #TWithSourceAnchor.
-	crudQuery --|> #TDependencyQueries.
-	crudQuery --|> #TEntityMetaLevelDependency.
 	"Concrete structural entities inheritance relations."
 	checkConstraint --|> constraint.
 	checkConstraint --|> #TWithImmediateSource.

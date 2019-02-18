@@ -4,8 +4,6 @@ defineClausesHierarchy
 	clause --|> entity.
 	clause --|> tWithAlias.
 	clause --|> #TWithSourceAnchor.
-	clause --|> #TDependencyQueries.
-	clause --|> #TEntityMetaLevelDependency.
 	
 	fromClause --|> clause.
 	fromClause --|> tWithTableReference.
