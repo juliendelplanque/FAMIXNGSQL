@@ -1,4 +1,4 @@
 generator
 generatedTraitNames
 	<generated>
-	^ #(FamixTWithSourceAnchor)
+	^ #(FamixTWithSourceAnchor TDependencyQueries TEntityMetaLevelDependency)

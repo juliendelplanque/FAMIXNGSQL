@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FmxSQLTArgument classTrait",
+	"classtraitcomposition" : "FmxSQLTArgument classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#belongsToGroup => FMOne type: #FmxSQLReferencesGroup opposite: #references",
@@ -8,7 +8,7 @@
 	"name" : "FmxSQLReference",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLAssociation",
-	"traitcomposition" : "FmxSQLTArgument",
+	"traitcomposition" : "FmxSQLTArgument + TDependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

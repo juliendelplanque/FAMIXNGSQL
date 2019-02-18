@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "FamixTWithSourceAnchor classTrait",
+	"classtraitcomposition" : "FamixTWithSourceAnchor classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#clauses => FMMany type: #FmxSQLClause opposite: #query",
@@ -9,7 +9,7 @@
 	"name" : "FmxSQLCRUDQuery",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLEntity",
-	"traitcomposition" : "FamixTWithSourceAnchor",
+	"traitcomposition" : "FamixTWithSourceAnchor + TDependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
