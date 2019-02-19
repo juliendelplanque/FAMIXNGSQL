@@ -4,12 +4,22 @@ gtSourceCodeIn: composite
 	^ composite text
 		title: 'Source code';
 		display: [ self  ];
-		format: [ :t | (self sourceAnchor
-				ifNil: [ 'No source anchor' ]
-				ifNotNil: [ :anchor | anchor entity sourceCodeAsText ]) ];
+		format: [ :t | self sourceAnchor
+				ifNil: [ 
+					self belongsToGroup
+						ifNil: [ 'No source anchor' ]
+						ifNotNil: [ 
+							self belongsToGroup sourceAnchor
+								ifNil: [ 'No source anchor' ]
+								ifNotNil: [ :anchor | anchor entity sourceCodeAsText ] ] ]
+				ifNotNil: [ :anchor | anchor entity sourceCodeAsText ] ];
 		withLineNumbers: true;
 		initialize: [ :presentation | 
 			self sourceAnchor
-				ifNotNil: [ :anchor |
-					presentation selectionInterval: (anchor start to: anchor end) ] ];
+				ifNil: [ 
+					self belongsToGroup
+						ifNotNil: [ 
+							self belongsToGroup sourceAnchor
+								ifNotNil: [ :anchor | presentation selectionInterval: (anchor start to: anchor end) ] ] ]
+				ifNotNil: [ :anchor | presentation selectionInterval: (anchor start to: anchor end) ] ];
 		yourself

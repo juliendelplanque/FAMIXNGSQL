@@ -92,7 +92,7 @@ defineBehaviouralHierarchy
 	columnAlias --|> tColumn.
 	
 	referencesGroup --|> entity.
-	referencesGroup --|> #FamixTWithSourceAnchor.
+	referencesGroup --|> #TWithSourceAnchor.
 	
 	foreignTable --|> table.
 	

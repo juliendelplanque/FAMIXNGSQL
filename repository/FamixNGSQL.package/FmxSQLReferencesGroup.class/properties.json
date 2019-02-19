@@ -1,14 +1,14 @@
 {
-	"classtraitcomposition" : "FmxSQLTWithEntitySourceAnchor classTrait",
+	"classtraitcomposition" : "FamixTWithSourceAnchor classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#incomingReferencesGroupReference => FMMany type: #FmxSQLTReferencesGroupReference opposite: #referencesGroup",
-		"#references => FMMany type: #FmxSQLReference opposite: #belongsToGroup"
+		"#references => FMMany type: #FmxSQLReference opposite: #belongsToGroup",
+		"#incomingReferencesGroupReference => FMMany type: #FmxSQLTReferencesGroupReference opposite: #referencesGroup"
 	],
 	"name" : "FmxSQLReferencesGroup",
 	"commentStamp" : "<historical>",
 	"super" : "FmxSQLEntity",
-	"traitcomposition" : "FmxSQLTWithEntitySourceAnchor",
+	"traitcomposition" : "FamixTWithSourceAnchor",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

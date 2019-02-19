@@ -3,9 +3,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#constraints => FMMany type: #FmxSQLConstraint opposite: #table",
-		"#references => FMMany type: #FmxSQLTableReference opposite: #table",
-		"#subTables => FMMany type: #FmxSQLTable opposite: #superTable",
 		"#superTable => FMOne type: #FmxSQLTable opposite: #subTables",
+		"#subTables => FMMany type: #FmxSQLTable opposite: #superTable",
+		"#references => FMMany type: #FmxSQLTableReference opposite: #table",
 		"#triggers => FMMany type: #FmxSQLTrigger opposite: #table",
 		"#updateQueries => FMMany type: #FmxSQLUpdateQuery opposite: #table"
 	],

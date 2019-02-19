@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"#viewDefining => FMOne type: #FmxSQLView opposite: #query",
 		"#derivedTablesDefined => FMMany type: #FmxSQLDerivedTable opposite: #parentQuery",
-		"#recordLocalVariables => FMMany type: #FmxSQLRecordLocalVariable opposite: #queryBoundTo",
-		"#viewDefining => FMOne type: #FmxSQLView opposite: #query"
+		"#recordLocalVariables => FMMany type: #FmxSQLRecordLocalVariable opposite: #queryBoundTo"
 	],
 	"name" : "FmxSQLSelectQuery",
 	"type" : "normal"
