@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#end",
-		"#entity => FMOne type: #FmxSQLBehaviouralEntity opposite: #anchorsOnIntervalsOfCode",
+		"#entity => FMOne type: #FmxSQLTWithEntitySourceAnchor opposite: #anchorsOnIntervalsOfCode",
 		"#start"
 	],
 	"name" : "FmxSQLEntitySourceAnchor",

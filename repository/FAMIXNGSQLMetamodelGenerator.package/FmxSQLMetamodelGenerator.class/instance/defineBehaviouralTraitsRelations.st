@@ -15,4 +15,6 @@ defineBehaviouralTraitsRelations
 		property: #outgoingReferencesGroupReferences)
 		<>-* (tReferencesGroupReference property: #source).
 	(tReferencesGroupReference property: #referencesGroup)
-		*- (referencesGroup property: #incomingReferencesGroupReference)
+		*- (referencesGroup property: #incomingReferencesGroupReference).
+	(entitySourceAnchor property: #entity)
+		*- (tWithEntitySourceAnchor property: #anchorsOnIntervalsOfCode)

@@ -24,6 +24,7 @@ visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition
 	
 	referencesDiff := ((model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ]) \ references.
 	referencesGroup := (self createEntity: FmxSQLReferencesGroup)
+									sourceAnchor: (self createSourceAnchorFrom: aPSQLASTAliasDefinition definition);
 									references: referencesDiff;
 									yourself.
 	^ PSQLEntityToBeAliased alias: alias entity: referencesGroup

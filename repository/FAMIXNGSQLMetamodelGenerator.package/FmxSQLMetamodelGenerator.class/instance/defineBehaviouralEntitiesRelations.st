@@ -68,6 +68,3 @@ defineBehaviouralEntitiesRelations
 		
 	(columnsContainerAlias property: #columnAliases)
 		-* (columnAlias property: #columnsContainerAlias).
-		
-	(entitySourceAnchor property: #entity)
-		*- (behaviouralEntity property: #anchorsOnIntervalsOfCode)

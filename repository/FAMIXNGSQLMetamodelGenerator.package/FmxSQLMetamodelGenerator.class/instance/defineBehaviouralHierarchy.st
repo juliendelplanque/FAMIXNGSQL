@@ -1,6 +1,7 @@
 definition - behavioural
 defineBehaviouralHierarchy
 	"Abstract entities inheritance relations."
+	behaviouralEntity --|> tWithEntitySourceAnchor.
 	crudQuery --|> entity.
 	crudQuery --|> #TWithSourceAnchor.
 	"Concrete structural entities inheritance relations."
@@ -91,6 +92,7 @@ defineBehaviouralHierarchy
 	columnAlias --|> tColumn.
 	
 	referencesGroup --|> entity.
+	referencesGroup --|> #FamixTWithSourceAnchor.
 	
 	foreignTable --|> table.
 	

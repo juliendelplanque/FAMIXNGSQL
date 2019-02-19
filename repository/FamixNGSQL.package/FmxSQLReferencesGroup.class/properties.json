@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLEntity",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTWithEntitySourceAnchor classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#incomingReferencesGroupReference => FMMany type: #FmxSQLTReferencesGroupReference opposite: #referencesGroup",
 		"#references => FMMany type: #FmxSQLReference opposite: #belongsToGroup"
 	],
 	"name" : "FmxSQLReferencesGroup",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLEntity",
+	"traitcomposition" : "FmxSQLTWithEntitySourceAnchor",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }
