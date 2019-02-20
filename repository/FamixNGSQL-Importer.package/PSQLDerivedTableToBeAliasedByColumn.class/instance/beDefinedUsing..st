@@ -3,7 +3,7 @@ beDefinedUsing: aPSQLASTReflectiveVisitor
 	|fromClause|
 	fromClause := (aPSQLASTReflectiveVisitor solver peekScopeAtIndex: 2) entity.
 	self assert: fromClause class = FmxSQLFromClause.
-	aPSQLASTReflectiveVisitor createFmxSQLColumnAliasNamed: self alias forDerivedTable: self entity.
+	aPSQLASTReflectiveVisitor createFmxSQLColumnAliasNamed: self alias forDerivedTable: self entity nodeForReference: self astNode.
 	(self aliasHasTheSameNameAsOneOfTheColumnsContainerIn: fromClause)
 			ifTrue: [ ^ self ].
 	
