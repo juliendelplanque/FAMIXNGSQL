@@ -1,6 +1,6 @@
 *FamixNGSQL-Importer
 createReferenceEntityFrom: aFmxSQLEntity
-	FmxSQLViewReference new
+	^ FmxSQLViewReference new
 		view: self;
 		source: aFmxSQLEntity;
 		mooseModel: aFmxSQLEntity mooseModel;
