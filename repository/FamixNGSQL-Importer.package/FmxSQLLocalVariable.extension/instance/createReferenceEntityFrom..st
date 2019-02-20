@@ -6,4 +6,5 @@ createReferenceEntityFrom: aFmxSQLEntity
 	^ FmxSQLLocalVariableAccess new
 		localVariable: self;
 		accessor: aFmxSQLEntity;
+		mooseModel: aFmxSQLEntity mooseModel;
 		yourself

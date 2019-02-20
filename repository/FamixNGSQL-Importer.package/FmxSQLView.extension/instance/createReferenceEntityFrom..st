@@ -2,4 +2,6 @@
 createReferenceEntityFrom: aFmxSQLEntity
 	FmxSQLViewReference new
 		view: self;
-		source: aFmxSQLEntity
+		source: aFmxSQLEntity;
+		mooseModel: aFmxSQLEntity mooseModel;
+		yourself

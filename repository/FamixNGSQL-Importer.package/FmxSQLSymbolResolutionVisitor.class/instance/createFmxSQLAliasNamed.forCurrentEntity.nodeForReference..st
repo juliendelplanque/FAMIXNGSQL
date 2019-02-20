@@ -1,5 +1,5 @@
 entity creation
-createFmxSQLAliasNamed: aString forCurrentEntity: aFmxSQLEntity
+createFmxSQLAliasNamed: aString forCurrentEntity: aFmxSQLEntity nodeForReference: aPSQLASTNode
 	| alias |
 	alias := (self createEntity: aFmxSQLEntity aliasClass)
 		parentBehaviouralEntity: self currentEntity;
@@ -8,5 +8,5 @@ createFmxSQLAliasNamed: aString forCurrentEntity: aFmxSQLEntity
 		yourself.
 	self
 		useCurrentEntity: alias
-		during: [ self createReferenceTo: aFmxSQLEntity ].
+		during: [ self createReferenceTo: aFmxSQLEntity from: aPSQLASTNode ].
 	^ alias

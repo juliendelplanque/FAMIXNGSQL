@@ -16,15 +16,15 @@ visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition
 			derivedTable := (self createEntity: FmxSQLDerivedTable)
 									query: query;
 									yourself.
-			^ PSQLDerivedTableToBeAliasedByColumn alias: alias entity: derivedTable ].
+			^ PSQLDerivedTableToBeAliasedByColumn alias: alias entity: derivedTable astNode: aPSQLASTAliasDefinition definition ].
 		
 	visitResult = self
 		ifFalse: [
-			^ PSQLEntityToBeAliased alias: alias entity: visitResult ].
+			^ PSQLEntityToBeAliased alias: alias entity: visitResult astNode: aPSQLASTAliasDefinition definition ].
 	
 	referencesDiff := ((model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ]) \ references.
 	referencesGroup := (self createEntity: FmxSQLReferencesGroup)
 									sourceAnchor: (self createSourceAnchorFrom: aPSQLASTAliasDefinition definition);
 									references: referencesDiff;
 									yourself.
-	^ PSQLEntityToBeAliased alias: alias entity: referencesGroup
+	^ PSQLEntityToBeAliased alias: alias entity: referencesGroup astNode: aPSQLASTAliasDefinition definition

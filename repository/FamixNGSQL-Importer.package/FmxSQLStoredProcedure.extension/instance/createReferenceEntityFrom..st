@@ -4,5 +4,6 @@ createReferenceEntityFrom: aFmxSQLEntity
 		ifTrue: [ ^ self ].
 	^ FmxSQLStoredProcedureCall new
 		candidates: { self };
-		sender: aFmxSQLEntity
+		sender: aFmxSQLEntity;
+		mooseModel: aFmxSQLEntity mooseModel;
 		yourself

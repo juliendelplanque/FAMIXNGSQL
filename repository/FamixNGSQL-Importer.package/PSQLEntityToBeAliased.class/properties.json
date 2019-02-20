@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"entity"
+		"entity",
+		"astNode"
 	],
 	"name" : "PSQLEntityToBeAliased",
 	"type" : "normal"

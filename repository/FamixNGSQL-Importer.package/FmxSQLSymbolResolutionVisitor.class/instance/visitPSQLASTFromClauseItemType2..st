@@ -8,7 +8,8 @@ visitPSQLASTFromClauseItemType2: aPSQLASTFromClauseItemType2
 							yourself.
 	fmxAlias := self
 		createFmxSQLAliasNamed: alias
-		forCurrentEntity: derivedTable.
+		forCurrentEntity: derivedTable
+		nodeForReference: aPSQLASTFromClauseItemType2 valuesOrSelect.
 	self visitAll: aPSQLASTFromClauseItemType2 columnAliases thenDoForEach: [ :columnAliasName | 
 		(self createEntity: FmxSQLColumnAlias)
 			name: columnAliasName;
