@@ -18,4 +18,6 @@ defineBehaviouralReferencesHierarchy
 	columnAliasAccess --|> reference.
 	columnAliasAccess --|> #TAccess.
 	referencesGroupReference --|> reference.
-	referencesGroupReference --|> tReferencesGroupReference
+	referencesGroupReference --|> tReferencesGroupReference.
+	referencesGroupReference  --|> #TEntityMetaLevelDependency.
+	referencesGroupReference --|> #TDependencyQueries.

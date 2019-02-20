@@ -4,6 +4,8 @@ defineBehaviouralHierarchy
 	behaviouralEntity --|> tWithEntitySourceAnchor.
 	crudQuery --|> entity.
 	crudQuery --|> #TWithSourceAnchor.
+	crudQuery --|> #TEntityMetaLevelDependency.
+	crudQuery --|> #TDependencyQueries.
 	"Concrete structural entities inheritance relations."
 	checkConstraint --|> constraint.
 	checkConstraint --|> #TWithImmediateSource.
@@ -93,6 +95,8 @@ defineBehaviouralHierarchy
 	
 	referencesGroup --|> entity.
 	referencesGroup --|> #TWithSourceAnchor.
+	referencesGroup --|> #TEntityMetaLevelDependency.
+	referencesGroup --|> #TDependencyQueries.
 	
 	foreignTable --|> table.
 	
