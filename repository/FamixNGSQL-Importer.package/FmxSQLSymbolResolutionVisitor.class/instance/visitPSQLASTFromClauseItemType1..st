@@ -5,7 +5,4 @@ visitPSQLASTFromClauseItemType1: aPSQLASTFromClauseItemType1
 	self visit: aPSQLASTFromClauseItemType1 alias thenDo: [ :alias |
 		self solver defineAliasInCurrentScope: (self createFmxSQLAliasNamed: alias forCurrentEntity: table nodeForReference: aPSQLASTFromClauseItemType1 tableName) for: table ].
 	self visitAll: aPSQLASTFromClauseItemType1 columnAliases thenDoForEach: [ :columnAlias | Halt now	"Alias not managed now" ].
-	^ (self createEntity: FmxSQLTableReference from: aPSQLASTFromClauseItemType1)
-		table: table;
-		source: self currentEntity;
-		yourself
+	^ self createReferenceTo: table from: aPSQLASTFromClauseItemType1 tableName
