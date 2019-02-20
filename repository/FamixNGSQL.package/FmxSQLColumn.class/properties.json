@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FmxSQLTColumn classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#type => FMOne type: #FmxSQLType opposite: #columns",
-		"#references => FMMany type: #FmxSQLColumnReference opposite: #column"
+		"#references => FMMany type: #FmxSQLColumnReference opposite: #column",
+		"#type => FMOne type: #FmxSQLType opposite: #columns"
 	],
 	"name" : "FmxSQLColumn",
 	"commentStamp" : "<historical>",

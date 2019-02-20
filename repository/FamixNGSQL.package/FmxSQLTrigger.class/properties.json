@@ -3,9 +3,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#firingAction",
-		"#when",
 		"#storedProcedure => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #triggers",
-		"#table => FMOne type: #FmxSQLTable opposite: #triggers"
+		"#table => FMOne type: #FmxSQLTable opposite: #triggers",
+		"#when"
 	],
 	"name" : "FmxSQLTrigger",
 	"commentStamp" : "<historical>",
