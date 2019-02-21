@@ -100,4 +100,5 @@ defineBehaviouralHierarchy
 	
 	foreignTable --|> table.
 	
+	entitySourceAnchor --|> entity.
 	entitySourceAnchor --|> #TSourceAnchor
