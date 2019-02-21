@@ -8,7 +8,7 @@
 	],
 	"name" : "FmxSQLEntitySourceAnchor",
 	"commentStamp" : "<historical>",
-	"super" : "MooseEntity",
+	"super" : "FmxSQLEntity",
 	"traitcomposition" : "FamixTSourceAnchor",
 	"type" : "normal",
 	"classinstvars" : [ ],
