@@ -1,8 +1,11 @@
 convenient linking
 createReferenceTo: anEntity from: aPSQLASTNode
-	| anchor |
+	| anchor reference |
 	anchor := self createSourceAnchorFrom: aPSQLASTNode.
-	(anEntity value createReferenceEntityFrom: self currentEntity)
+	reference := (anEntity value createReferenceEntityFrom: self currentEntity)
 		sourceAnchor: anchor;
 		mooseModel: self model;
-		yourself
+		yourself.
+		
+	reference class = FmxSQLColumnReference
+		ifTrue: [ reference isWildCardReference: aPSQLASTNode isWildCard ]
