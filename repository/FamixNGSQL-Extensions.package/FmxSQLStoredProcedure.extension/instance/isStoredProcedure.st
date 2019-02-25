@@ -1,0 +1,3 @@
+*FamixNGSQL-Extensions
+isStoredProcedure
+	^ true

@@ -10,6 +10,7 @@ createQueryContainedByCurrentEntity: aClass from: anASTNode
 			|derivedTable|
 			derivedTable := (self createEntity: FmxSQLDerivedTable)
 									query: newQuery;
+									parentQuery: (self solver detect: [ :scope | scope entity isKindOf: FmxSQLCRUDQuery ]) entity;
 									yourself.
 			self createReferenceTo: derivedTable from: anASTNode
 		 ].

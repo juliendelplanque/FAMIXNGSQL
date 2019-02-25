@@ -5,6 +5,7 @@ visitPSQLASTFromClauseItemType2: aPSQLASTFromClauseItemType2
 	valueOrSelect := (self visit: aPSQLASTFromClauseItemType2 valuesOrSelect) entity query.
 	derivedTable := (self createEntity: FmxSQLDerivedTable)
 							query: valueOrSelect;
+							parentQuery: (self solver peekScopeAtIndex: 2) entity;
 							yourself.
 	fmxAlias := self
 		createFmxSQLAliasNamed: alias

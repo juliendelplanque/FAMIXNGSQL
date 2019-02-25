@@ -15,6 +15,7 @@ visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition
 			query := visitResult entity query.
 			derivedTable := (self createEntity: FmxSQLDerivedTable)
 									query: query;
+									parentQuery: (self solver peekScopeAtIndex: 3) entity;
 									yourself.
 			^ PSQLDerivedTableToBeAliasedByColumn alias: alias entity: derivedTable astNode: aPSQLASTAliasDefinition definition ].
 		

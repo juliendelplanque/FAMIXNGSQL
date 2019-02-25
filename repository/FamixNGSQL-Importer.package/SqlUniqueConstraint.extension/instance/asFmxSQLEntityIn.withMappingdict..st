@@ -12,5 +12,6 @@ asFmxSQLEntityIn: aMooseModel withMappingdict: pgToFamixEntities
 			FmxSQLColumnReference new
 				source: constraint;
 				column: fmxColumn;
+				isWildCardReference: false;
 				mooseModel: aMooseModel ].
 	^ constraint

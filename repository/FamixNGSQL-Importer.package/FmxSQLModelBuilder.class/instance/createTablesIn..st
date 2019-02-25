@@ -27,6 +27,7 @@ createTablesIn: mooseModel
 				FmxSQLColumnReference new
 					source: constraint;
 					column: (pgToFamixEntities at: pgColumn);
+					isWildCardReference: false;
 					mooseModel: mooseModel;
 					yourself ] ].
 		"Add special columns."
