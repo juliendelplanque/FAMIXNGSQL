@@ -2,13 +2,15 @@
 columnsToColumnReferences
 	| mapping |
 	mapping := Dictionary new.
-	self query selectClause outgoingColumnReferences reject: #isInReferencesGroup thenDo: [ :outgoingRef |
+	(self query selectClause outgoingColumnReferences groupedBy: [ :ref | ref belongsToGroup ifNil: [ ref ] ]) keys do: [ :outgoingRef |
 		mapping
-			at: ((outgoingRef to references
-				select: [ :incomingRef | self query selectClause aliases includes: incomingRef from ]
-				thenCollect: [ :incomingRef | incomingRef from name ])
-					ifNotEmpty: [ :anOrderedCollection | self columnNamed: anOrderedCollection first ]
-					ifEmpty: [ self columnNamed: outgoingRef to name ])
+			at: (self query selectClause aliases
+					detect: [ :alias | (outgoingRef class = FmxSQLColumnReference and: [ alias outgoingColumnReferences anySatisfy: [ :ref | (ref sourceAnchor interval includesAll: outgoingRef sourceAnchor interval) or: [ outgoingRef sourceAnchor interval includesAll: ref sourceAnchor interval ] ] ]) or: [ alias outgoingReferencesGroupReferences includes: outgoingRef ] ]
+					ifFound: [ :alias | self columnNamed: alias name ]
+					ifNone: [ 
+						outgoingRef class = FmxSQLReferencesGroup
+							ifTrue: [ self columnNamed: outgoingRef incomingReferencesGroupReference first source name ]
+							ifFalse: [ self columnNamed: outgoingRef column name ] ])
 			ifPresent: [ self halt ]
 			ifAbsentPut: outgoingRef ].
 	^ mapping
