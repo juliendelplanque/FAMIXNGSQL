@@ -1,3 +1,5 @@
 *FamixNGSQL-Extensions
 dependsOn: aFmxSQLView
-	^ aFmxSQLView viewsDepending includes: self
+	^ TreeQuery breadthFirst matchAnywhere
+		predicate: self asTQPredicate;
+		runOn: aFmxSQLView childrenBlock: #viewsDepending
