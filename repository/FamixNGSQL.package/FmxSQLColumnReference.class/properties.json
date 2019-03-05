@@ -8,6 +8,7 @@
 	"instvars" : [
 		"#column => FMOne type: #FmxSQLColumn opposite: #references",
 		"#foreignKeyConstraintSource => FMOne type: #FmxSQLForeignKeyConstraint opposite: #outgoingForeignKeyColumnReferences",
+		"#isCertain",
 		"#isWildCardReference",
 		"#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences",
 		"#triggerStoredProceduresReferencing => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #columnsReferenced"

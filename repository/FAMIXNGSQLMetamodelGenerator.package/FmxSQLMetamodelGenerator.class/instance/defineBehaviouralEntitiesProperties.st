@@ -6,4 +6,7 @@ defineBehaviouralEntitiesProperties
 		
 	entitySourceAnchor
 		property: #start type: #Number;
-		property: #end type: #Number
+		property: #end type: #Number.
+		
+	columnReference
+		property: #isCertain type: #Boolean
