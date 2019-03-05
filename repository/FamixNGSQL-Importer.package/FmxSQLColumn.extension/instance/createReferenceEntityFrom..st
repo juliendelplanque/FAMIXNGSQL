@@ -4,5 +4,6 @@ createReferenceEntityFrom: aFmxSQLEntity
 		column: self;
 		source: aFmxSQLEntity;
 		isWildCardReference: false;
+		isCertain: true;
 		mooseModel: aFmxSQLEntity mooseModel;
 		yourself

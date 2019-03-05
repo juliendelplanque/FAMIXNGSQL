@@ -28,6 +28,7 @@ createForeignTablesIn: mooseModel
 					source: constraint;
 					column: (pgToFamixEntities at: pgColumn);
 					isWildCardReference: false;
+					isCertain: true;
 					mooseModel: mooseModel;
 					yourself ] ].
 		"Add special columns."

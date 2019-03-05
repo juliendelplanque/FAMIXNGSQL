@@ -12,6 +12,7 @@ asFmxSQLEntityIn: aMooseModel withMappingdict: pgToFamixEntities
 				source: constraint;
 				column: fmxColumn;
 				isWildCardReference: false;
+				isCertain: true;
 				mooseModel: aMooseModel ].
 	self referencedObjects
 		collect: [ :pgColumn | pgToFamixEntities at: pgColumn ]
@@ -20,6 +21,7 @@ asFmxSQLEntityIn: aMooseModel withMappingdict: pgToFamixEntities
 				foreignKeyConstraintSource: constraint;
 				column: fmxColumn;
 				isWildCardReference: false;
+				isCertain: true;
 				mooseModel: aMooseModel ].
 	constraint mooseModel: aMooseModel.
 	^ constraint
