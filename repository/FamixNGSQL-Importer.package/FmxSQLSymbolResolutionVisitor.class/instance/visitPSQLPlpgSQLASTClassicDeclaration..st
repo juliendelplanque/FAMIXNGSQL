@@ -5,7 +5,7 @@ visitPSQLPlpgSQLASTClassicDeclaration: aPSQLPlpgSQLASTClassicDeclaration
 	variableClass := type name = 'record'
 							ifTrue: [ FmxSQLRecordLocalVariable ]
 							ifFalse: [ FmxSQLLocalVariable ].
-	variable := self createEntity: variableClass from: aPSQLPlpgSQLASTClassicDeclaration.
+	variable := self createEntity: variableClass from: aPSQLPlpgSQLASTClassicDeclaration identifier.
 	variable type: type.
 	variable parentBehaviouralEntity: self function.
 	self visit: aPSQLPlpgSQLASTClassicDeclaration defaultExpression thenDo: [ :e | Halt now ].

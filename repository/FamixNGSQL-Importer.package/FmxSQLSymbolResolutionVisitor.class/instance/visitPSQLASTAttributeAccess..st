@@ -22,10 +22,9 @@ visitPSQLASTAttributeAccess: aPSQLASTAttributeAccess
 			"new and old are implicit declared variables in stored procedures"
 			(self isImplicitVariable: identifiers identifier)
 				ifTrue: [ 
-					FmxSQLLocalVariable new
+					(self createEntity: FmxSQLLocalVariable)
 						name: identifiers identifier;
-						storedProcedure: self function;
-						mooseModel: self model.
+						storedProcedure: self function.
 					self resolveAndLinkSilently: identifiers ]
 				ifFalse: [ self errorReport addError: anError ] ].
 	^ identifiers targetEntity

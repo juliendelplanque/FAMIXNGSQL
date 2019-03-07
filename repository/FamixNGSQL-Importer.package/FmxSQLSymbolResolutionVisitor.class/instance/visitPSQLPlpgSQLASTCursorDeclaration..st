@@ -1,7 +1,7 @@
 visiting
 visitPSQLPlpgSQLASTCursorDeclaration: aPSQLPlpgSQLASTCursorDeclaration
 	| localVariable cursor |
-	localVariable := self createEntity: FmxSQLLocalVariable.
+	localVariable := self createEntity: FmxSQLLocalVariable from: aPSQLPlpgSQLASTCursorDeclaration identifier.
 	self
 		visit: aPSQLPlpgSQLASTCursorDeclaration identifier
 		thenDo: [ :variableName | localVariable name: variableName ].
