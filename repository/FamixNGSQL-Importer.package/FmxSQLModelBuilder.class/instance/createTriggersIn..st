@@ -8,6 +8,8 @@ createTriggersIn: aMooseModel
 							parentNamespace: (pgToFamixEntities at: pgTrigger table namespace);
 							table: (pgToFamixEntities at: pgTrigger table);
 							storedProcedure: (pgToFamixEntities at: pgTrigger function);
+							when: pgTrigger whenString;
+							firingAction: pgTrigger firingActionString;
 							mooseModel: aMooseModel;
 							yourself.
 		pgToFamixEntities
