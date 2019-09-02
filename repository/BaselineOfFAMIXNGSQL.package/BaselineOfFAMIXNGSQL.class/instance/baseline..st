@@ -22,7 +22,7 @@ baseline: spec
 						loads: #('Core' 'Basic') ].
 			spec
 				baseline: 'SymbolResolver'
-				with: [ spec repository: 'github://Larcheveque/SymbolResolver/src' ].
+				with: [ spec repository: 'github://Larcheveque/SymbolResolver:c6eb29c46cd36cabb8dff5d19329085ee8fa38c7/src' ].
 			spec
 				baseline: 'PostgreSQLParser'
 				with: [ spec
