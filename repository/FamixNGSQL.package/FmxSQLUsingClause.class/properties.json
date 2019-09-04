@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLClause",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTWithTableReference classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLUsingClause",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLClause",
+	"traitcomposition" : "FmxSQLTWithTableReference",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

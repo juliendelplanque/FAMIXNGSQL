@@ -95,6 +95,7 @@ defineClausesHierarchy
 	valuesClause --|> #TWithInvocations.
 	
 	usingClause --|> clause.
+	usingClause --|> tWithTableReference.
 	
 	intoClause --|> clause.
 	intoClause --|> tWithTableReference.
