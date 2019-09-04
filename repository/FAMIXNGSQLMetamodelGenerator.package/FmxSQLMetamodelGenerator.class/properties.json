@@ -68,7 +68,8 @@
 		"foreignTable",
 		"recordLocalVariable",
 		"entitySourceAnchor",
-		"tWithEntitySourceAnchor"
+		"tWithEntitySourceAnchor",
+		"tDefiningDerivedTables"
 	],
 	"name" : "FmxSQLMetamodelGenerator",
 	"type" : "normal"

@@ -11,4 +11,6 @@ defineBehaviouralTraits
 	tWithReferencesGroupReference := builder
 		newTraitNamed: #TWithReferencesGroupReference.
 	tWithEntitySourceAnchor := builder
-		newTraitNamed: #TWithEntitySourceAnchor
+		newTraitNamed: #TWithEntitySourceAnchor.
+	tDefiningDerivedTables := builder
+		newTraitNamed: #TDefiningDerivedTables

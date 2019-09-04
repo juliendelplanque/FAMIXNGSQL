@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLCRUDQuery",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTDefiningDerivedTables classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FmxSQLInsertQuery",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLCRUDQuery",
+	"traitcomposition" : "FmxSQLTDefiningDerivedTables",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

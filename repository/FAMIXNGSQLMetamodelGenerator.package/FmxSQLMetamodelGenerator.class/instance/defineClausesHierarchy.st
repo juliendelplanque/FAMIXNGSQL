@@ -32,6 +32,7 @@ defineClausesHierarchy
 	returningClause --|> #TWithInvocations.
 	
 	setClause --|> clause.
+	setClause --|> tWithDerivedTableReference.
 	setClause --|> tWithColumnReference.
 	setClause --|> #TWithAccesses.
 	setClause --|> #TWithInvocations.
@@ -90,6 +91,7 @@ defineClausesHierarchy
 	exceptClause --|> tWithViewReference.
 	
 	valuesClause --|> clause.
+	valuesClause --|> tWithDerivedTableReference.
 	valuesClause --|> tWithColumnReference.
 	valuesClause --|> #TWithAccesses.
 	valuesClause --|> #TWithInvocations.

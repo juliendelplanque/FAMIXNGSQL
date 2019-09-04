@@ -16,7 +16,7 @@ defineBehaviouralEntitiesRelations
 	(crudQuery property: #derivedTableDefining)) withoutPrimaryContainer.
 	
 	"A SelectQuery can define multiple derived tables."
-	(selectQuery property: #derivedTablesDefined)
+	(tDefiningDerivedTables property: #derivedTablesDefined)
 		<>-*
 	(derivedTable property: #parentQuery).
 	

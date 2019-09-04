@@ -47,9 +47,13 @@ defineBehaviouralHierarchy
 	trigger --|> #TNamespaceEntity.
 	
 	selectQuery --|> crudQuery.
+	selectQuery --|> tDefiningDerivedTables.
 	insertQuery --|> crudQuery.
+	insertQuery --|> tDefiningDerivedTables.
 	updateQuery --|> crudQuery.
+	updateQuery --|> tDefiningDerivedTables.
 	deleteQuery --|> crudQuery.
+	deleteQuery --|> tDefiningDerivedTables.
 	valuesQuery --|> crudQuery.
 	
 	parameter --|> namedEntity.

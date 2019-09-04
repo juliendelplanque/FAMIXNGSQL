@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "FmxSQLCRUDQuery",
-	"category" : "FamixNGSQL-Entities",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "FmxSQLTDefiningDerivedTables classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#table => FMOne type: #FmxSQLTable opposite: #updateQueries"
 	],
 	"name" : "FmxSQLUpdateQuery",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "FmxSQLCRUDQuery",
+	"traitcomposition" : "FmxSQLTDefiningDerivedTables",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "FamixNGSQL-Entities"
 }

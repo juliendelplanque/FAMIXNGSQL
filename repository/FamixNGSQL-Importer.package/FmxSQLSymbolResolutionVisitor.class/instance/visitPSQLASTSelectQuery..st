@@ -38,7 +38,7 @@ visitPSQLASTSelectQuery: aPSQLASTSelectQuery
 			self visit: aPSQLASTSelectQuery limitClause.
 			self visit: aPSQLASTSelectQuery offsetClause thenDo: [ :visitResult | Halt now ].
 			self visit: aPSQLASTSelectQuery fetchClause thenDo: [ :visitResult | Halt now ].
-			self visit: aPSQLASTSelectQuery forClause thenDo: [ :visitResult | Halt now ].
+			self visit: aPSQLASTSelectQuery forClause.
 			scopeManager clear ].
 	"Here we return the select clause scope to be used if it is in a using clause"
 	^ selectClauseScope
