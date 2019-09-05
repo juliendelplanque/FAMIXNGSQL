@@ -2,9 +2,8 @@ model building
 buildModel
 	"Build an instance of MooseModel from the connection to the database and returns it."
 	| mooseModel |
-	mooseModel := MooseModel new
+	mooseModel := FmxSQLMooseModel new
 						name: self databaseName;
-						metamodel: FmxSQLMetamodelGenerator metamodel;
 						yourself.
 	pgToFamixEntities := Dictionary new.
 	self
