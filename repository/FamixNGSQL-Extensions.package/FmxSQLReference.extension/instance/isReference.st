@@ -1,3 +1,0 @@
-*FamixNGSQL-Extensions
-isReference
-	^ true

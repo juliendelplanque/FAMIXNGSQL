@@ -1,0 +1,3 @@
+testing
+isAnyBelongerSourced
+	^ self parentBehaviouralEntity isAnyBelongerSourced

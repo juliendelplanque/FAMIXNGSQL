@@ -1,0 +1,3 @@
+accessing
+allDependencies
+	^ { self storedProcedure }
