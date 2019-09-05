@@ -9,7 +9,7 @@ baseline: spec
 				package: #'FamixNGSQL-Importer'
 					with: [ spec
 						requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
-				package: #'FamixNGSQL-Extensions'
+				package: #'FamixNGSQL-GTInspectorExtension'
 					with: [ spec requires: #('FamixNGSQL-Importer' 'TreeQuery') ];
 				package: #FAMIXNGSQLAnalysis;
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
