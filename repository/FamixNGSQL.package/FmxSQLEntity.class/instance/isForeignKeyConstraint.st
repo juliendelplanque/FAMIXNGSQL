@@ -1,0 +1,5 @@
+testing
+isForeignKeyConstraint
+
+	<generated>
+	^ false

@@ -29,6 +29,7 @@ defineStructuralEntities
 	foreignKeyConstraint := builder
 		newClassNamed: #ForeignKeyConstraint
 		comment: self foreignKeyConstraintComment.
+	foreignKeyConstraint withTesting.
 	notNullConstraint := builder
 		newClassNamed: #NotNullConstraint
 		comment: self nullConstraintComment.
