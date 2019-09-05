@@ -1,3 +1,0 @@
-*FamixNGSQL-Extensions
-isAliasAccess
-	^ true

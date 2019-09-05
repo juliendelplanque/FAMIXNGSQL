@@ -1,0 +1,5 @@
+testing
+isLocalVariableAccess
+
+	<generated>
+	^ false

@@ -1,0 +1,5 @@
+testing
+isSelectClause
+
+	<generated>
+	^ true

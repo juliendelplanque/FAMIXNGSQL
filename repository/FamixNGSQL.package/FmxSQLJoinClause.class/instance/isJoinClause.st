@@ -1,0 +1,5 @@
+testing
+isJoinClause
+
+	<generated>
+	^ true

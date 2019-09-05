@@ -9,6 +9,7 @@ defineClausesEntities
 	whereClause := builder
 		newClassNamed: #WhereClause
 		comment: self whereClauseComment.
+	whereClause withTesting.
 	returningClause := builder
 		newClassNamed: #ReturningClause
 		comment: self returningClauseComment.
@@ -24,6 +25,7 @@ defineClausesEntities
 	selectClause := builder
 		newClassNamed: #SelectClause
 		comment: self selectClauseComment.
+	selectClause withTesting.
 	groupByClause := builder
 		newClassNamed: #GroupByClause
 		comment: self groupByClauseComment.
@@ -36,6 +38,7 @@ defineClausesEntities
 	joinClause := builder
 		newClassNamed: #JoinClause
 		comment: self joinClauseComment.
+	joinClause withTesting.
 	unionClause := builder
 		newClassNamed: #UnionClause
 		comment: self unionClauseComment.

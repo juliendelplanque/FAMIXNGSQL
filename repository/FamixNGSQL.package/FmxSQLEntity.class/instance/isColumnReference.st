@@ -1,0 +1,5 @@
+testing
+isColumnReference
+
+	<generated>
+	^ false

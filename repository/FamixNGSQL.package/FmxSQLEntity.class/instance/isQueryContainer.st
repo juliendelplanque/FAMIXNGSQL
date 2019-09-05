@@ -1,0 +1,5 @@
+testing
+isQueryContainer
+
+	<generated>
+	^ false

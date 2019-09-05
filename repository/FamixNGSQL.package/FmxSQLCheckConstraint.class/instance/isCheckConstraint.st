@@ -1,0 +1,5 @@
+testing
+isCheckConstraint
+
+	<generated>
+	^ true

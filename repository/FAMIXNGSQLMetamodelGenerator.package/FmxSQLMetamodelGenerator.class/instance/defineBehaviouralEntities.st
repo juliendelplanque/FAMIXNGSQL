@@ -4,6 +4,7 @@ defineBehaviouralEntities
 	behaviouralEntity := builder newTraitNamed: #BehaviouralEntity.
 	"Concrete behavioural entities."
 	view := builder newClassNamed: #View comment: self viewComment.
+	view withTesting.
 	derivedTable := builder
 		newClassNamed: #DerivedTable
 		comment: self derivedTableComment.
@@ -13,6 +14,7 @@ defineBehaviouralEntities
 	storedProcedure := builder
 		newClassNamed: #StoredProcedure
 		comment: self storedProcedureComment.
+	storedProcedure withTesting.
 	triggerStoredProcedure := builder
 		newClassNamed: #TriggerStoredProcedure
 		comment: self triggerStoredProcedureComment.
@@ -54,6 +56,7 @@ defineBehaviouralEntities
 		newClassNamed: #CursorParameter
 		comment: 'I am a cursor parameter'.
 	alias := builder newClassNamed: #Alias comment: self aliasComment.
+	alias withTesting.
 	columnsContainerAlias := builder
 		newClassNamed: #ColumnsContainerAlias
 		comment: self columnsContainerAliasComment.
@@ -70,6 +73,7 @@ defineBehaviouralEntities
 	parameterAccess := builder
 		newClassNamed: #ParameterAccess
 		comment: self parameterAccessComment.
+	parameterAccess withTesting.
 	cursorParameterAccess := builder
 		newClassNamed: #CursorParameterAccess
 		comment: self cursorParameterAccessComment.
@@ -79,12 +83,15 @@ defineBehaviouralEntities
 	storedProcedureCall := builder
 		newClassNamed: #StoredProcedureCall
 		comment: self storedProcedureCallComment.
+	storedProcedureCall withTesting.
 	localVariableAccess := builder
 		newClassNamed: #LocalVariableAccess
 		comment: self localVariableAccessComment.
+	localVariableAccess withTesting.
 	aliasAccess := builder
 		newClassNamed: #AliasAccess
 		comment: self aliasAccessComment.
+	aliasAccess withTesting.
 	columnAliasAccess := builder
 		newClassNamed: #ColumnAliasAccess.
 	columnsContainerAliasAccess := builder
@@ -100,4 +107,5 @@ defineBehaviouralEntities
 		comment: self foreignTableComment.
 	entitySourceAnchor := builder
 		newClassNamed: #EntitySourceAnchor
-		comment: self entitySourceAnchorComment
+		comment: self entitySourceAnchorComment.
+	entitySourceAnchor withTesting.

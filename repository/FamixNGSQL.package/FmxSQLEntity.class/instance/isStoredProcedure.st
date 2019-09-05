@@ -1,0 +1,5 @@
+testing
+isStoredProcedure
+
+	<generated>
+	^ false

@@ -1,0 +1,5 @@
+testing
+isPrimaryKeyConstraint
+
+	<generated>
+	^ false

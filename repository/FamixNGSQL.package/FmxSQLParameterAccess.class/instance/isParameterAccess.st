@@ -1,0 +1,5 @@
+testing
+isParameterAccess
+
+	<generated>
+	^ true

@@ -8,5 +8,6 @@ defineStructuralTraits
 	tQueryContainer := builder
 		newTraitNamed: #TQueryContainer
 		comment: self queryContainerComment.
+	tQueryContainer withTesting.
 	tWithColumnReference := builder newTraitNamed: #TWithColumnReference.
 	tWithTableReference := builder newTraitNamed: #TWithTableReference.

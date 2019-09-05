@@ -1,0 +1,5 @@
+testing
+isView
+
+	<generated>
+	^ true

@@ -1,0 +1,5 @@
+testing
+isUniqueConstraint
+
+	<generated>
+	^ false

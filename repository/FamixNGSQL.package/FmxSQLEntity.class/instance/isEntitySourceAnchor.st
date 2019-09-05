@@ -1,0 +1,5 @@
+testing
+isEntitySourceAnchor
+
+	<generated>
+	^ false

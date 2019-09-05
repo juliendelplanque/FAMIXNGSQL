@@ -1,0 +1,5 @@
+testing
+isWhereClause
+
+	<generated>
+	^ true
