@@ -18,7 +18,7 @@ baseline: spec
 			spec
 				baseline: 'Famix'
 				with: [ spec
-						repository: 'github://jecisc/Famix:v3.x.x/src';
+						repository: 'github://jecisc/Famix:v4.x.x/src';
 						loads: #('Core' 'Basic') ].
 			spec
 				baseline: 'SymbolResolver'
