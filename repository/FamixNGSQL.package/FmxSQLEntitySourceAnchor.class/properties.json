@@ -2,9 +2,9 @@
 	"classtraitcomposition" : "FamixTSourceAnchor classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#end",
-		"#entity => FMOne type: #FmxSQLTWithEntitySourceAnchor opposite: #anchorsOnIntervalsOfCode",
-		"#start"
+		"#start => FMProperty",
+		"#end => FMProperty",
+		"#entity => FMOne type: #FmxSQLTWithEntitySourceAnchor opposite: #anchorsOnIntervalsOfCode"
 	],
 	"name" : "FmxSQLEntitySourceAnchor",
 	"commentStamp" : "<historical>",

@@ -1,7 +1,5 @@
 navigation
 belongsToGroupGroup
-
 	<generated>
 	<navigation: 'BelongsToGroup'>
-	^ MooseGroup
-			with: (self belongsToGroup)
+	^ MooseGroup with: self belongsToGroup

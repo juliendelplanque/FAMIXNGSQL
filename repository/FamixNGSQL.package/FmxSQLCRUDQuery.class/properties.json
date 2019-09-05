@@ -2,9 +2,9 @@
 	"classtraitcomposition" : "FamixTWithSourceAnchor classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
+		"#derivedTableDefining => FMOne type: #FmxSQLDerivedTable opposite: #query",
 		"#clauses => FMMany type: #FmxSQLClause opposite: #query",
-		"#container => FMOne type: #FmxSQLTQueryContainer opposite: #queries",
-		"#derivedTableDefining => FMOne type: #FmxSQLDerivedTable opposite: #query"
+		"#container => FMOne type: #FmxSQLTQueryContainer opposite: #queries"
 	],
 	"name" : "FmxSQLCRUDQuery",
 	"commentStamp" : "<historical>",

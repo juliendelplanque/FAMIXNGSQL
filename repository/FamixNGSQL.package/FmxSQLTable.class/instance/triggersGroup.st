@@ -1,7 +1,5 @@
 navigation
 triggersGroup
-
 	<generated>
 	<navigation: 'Triggers'>
-	^ MooseGroup
-			withAll: (self triggers asSet)
+	^ MooseGroup withAll: self triggers asSet

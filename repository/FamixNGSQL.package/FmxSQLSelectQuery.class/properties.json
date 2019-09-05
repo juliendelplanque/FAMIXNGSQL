@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FmxSQLTDefiningDerivedTables classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#recordLocalVariables => FMMany type: #FmxSQLRecordLocalVariable opposite: #queryBoundTo",
-		"#viewDefining => FMOne type: #FmxSQLView opposite: #query"
+		"#viewDefining => FMOne type: #FmxSQLView opposite: #query",
+		"#recordLocalVariables => FMMany type: #FmxSQLRecordLocalVariable opposite: #queryBoundTo"
 	],
 	"name" : "FmxSQLSelectQuery",
 	"commentStamp" : "<historical>",

@@ -1,7 +1,5 @@
 navigation
 viewDefiningGroup
-
 	<generated>
 	<navigation: 'ViewDefining'>
-	^ MooseGroup
-			with: (self viewDefining)
+	^ MooseGroup with: self viewDefining

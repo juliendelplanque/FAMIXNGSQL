@@ -2,10 +2,10 @@
 	"classtraitcomposition" : "FamixTNamespaceEntity classTrait + FmxSQLBehaviouralEntity classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#firingAction",
+		"#firingAction => FMProperty",
+		"#when => FMProperty",
 		"#storedProcedure => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #triggers",
-		"#table => FMOne type: #FmxSQLTable opposite: #triggers",
-		"#when"
+		"#table => FMOne type: #FmxSQLTable opposite: #triggers"
 	],
 	"name" : "FmxSQLTrigger",
 	"commentStamp" : "<historical>",

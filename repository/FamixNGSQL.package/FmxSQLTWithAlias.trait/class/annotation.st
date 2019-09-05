@@ -2,6 +2,6 @@ meta
 annotation
 
 	<MSEClass: #TWithAlias super: #Trait>
-	<generated>
 	<package: #FamixNGSQL>
+	<generated>
 	^self

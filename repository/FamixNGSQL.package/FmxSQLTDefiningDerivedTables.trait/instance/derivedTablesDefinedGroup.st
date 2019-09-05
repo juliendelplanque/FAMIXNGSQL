@@ -1,7 +1,5 @@
 navigation
 derivedTablesDefinedGroup
-
 	<generated>
 	<navigation: 'DerivedTablesDefined'>
-	^ MooseGroup
-			withAll: (self derivedTablesDefined asSet)
+	^ MooseGroup withAll: self derivedTablesDefined asSet

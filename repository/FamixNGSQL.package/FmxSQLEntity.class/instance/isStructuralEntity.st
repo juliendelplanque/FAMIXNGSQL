@@ -1,0 +1,5 @@
+testing
+isStructuralEntity
+
+	<generated>
+	^ false

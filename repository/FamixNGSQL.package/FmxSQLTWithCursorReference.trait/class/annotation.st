@@ -2,6 +2,6 @@ meta
 annotation
 
 	<MSEClass: #TWithCursorReference super: #Trait>
-	<generated>
 	<package: #FamixNGSQL>
+	<generated>
 	^self

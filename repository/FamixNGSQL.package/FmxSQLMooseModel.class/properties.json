@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseModel",
+	"category" : "FamixNGSQL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLMooseModel",
+	"type" : "normal"
+}

@@ -1,7 +1,5 @@
 navigation
 parentQueryGroup
-
 	<generated>
 	<navigation: 'ParentQuery'>
-	^ MooseGroup
-			with: (self parentQuery)
+	^ MooseGroup with: self parentQuery

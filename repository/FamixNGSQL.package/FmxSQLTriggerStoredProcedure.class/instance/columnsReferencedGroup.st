@@ -1,7 +1,5 @@
 navigation
 columnsReferencedGroup
-
 	<generated>
 	<navigation: 'ColumnsReferenced'>
-	^ MooseGroup
-			withAll: (self columnsReferenced asSet)
+	^ MooseGroup withAll: self columnsReferenced asSet

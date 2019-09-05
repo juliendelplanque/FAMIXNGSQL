@@ -1,7 +1,5 @@
 navigation
 columnsGroup
-
 	<generated>
 	<navigation: 'Columns'>
-	^ MooseGroup
-			withAll: (self columns asSet)
+	^ MooseGroup withAll: self columns asSet

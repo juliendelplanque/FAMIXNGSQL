@@ -1,7 +1,5 @@
 navigation
 tableGroup
-
 	<generated>
 	<navigation: 'Table'>
-	^ MooseGroup
-			with: (self table)
+	^ MooseGroup with: self table

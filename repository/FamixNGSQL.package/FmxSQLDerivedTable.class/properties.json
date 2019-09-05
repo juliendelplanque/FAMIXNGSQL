@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "FmxSQLBehaviouralEntity classTrait + FmxSQLColumnsContainer classTrait + FmxSQLTQueryContainer classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentQuery => FMOne type: #FmxSQLTDefiningDerivedTables opposite: #derivedTablesDefined",
 		"#query => FMOne type: #FmxSQLCRUDQuery opposite: #derivedTableDefining",
+		"#parentQuery => FMOne type: #FmxSQLTDefiningDerivedTables opposite: #derivedTablesDefined",
 		"#references => FMMany type: #FmxSQLDerivedTableReference opposite: #derivedTable"
 	],
 	"name" : "FmxSQLDerivedTable",
