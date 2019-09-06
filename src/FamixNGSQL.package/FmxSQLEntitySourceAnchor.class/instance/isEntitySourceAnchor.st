@@ -1,5 +1,0 @@
-testing
-isEntitySourceAnchor
-
-	<generated>
-	^ true

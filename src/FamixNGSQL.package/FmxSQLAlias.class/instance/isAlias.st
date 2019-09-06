@@ -1,5 +1,0 @@
-testing
-isAlias
-
-	<generated>
-	^ true

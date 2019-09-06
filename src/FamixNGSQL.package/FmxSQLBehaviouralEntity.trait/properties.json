@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "",
-	"traitcomposition" : "FmxSQLTWithEntitySourceAnchor",
-	"classtraitcomposition" : "FmxSQLTWithEntitySourceAnchor classTrait",
-	"category" : "FamixNGSQL-Traits",
-	"classinstvars" : [ ],
-	"name" : "FmxSQLBehaviouralEntity",
-	"instvars" : [ ]
-}

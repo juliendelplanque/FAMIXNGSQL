@@ -1,3 +1,0 @@
-accessing
-commandName
-	^ 'Reset model'

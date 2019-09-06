@@ -1,1 +1,0 @@
-I model an alias to a constant to be created in a SELECT clause.

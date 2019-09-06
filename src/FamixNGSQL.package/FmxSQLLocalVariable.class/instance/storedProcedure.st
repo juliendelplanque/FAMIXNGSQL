@@ -1,3 +1,0 @@
-accessing
-storedProcedure
-	^ self parentBehaviouralEntity

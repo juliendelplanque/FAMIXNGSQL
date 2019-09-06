@@ -1,4 +1,0 @@
-definition
-defineProperties
-	super defineProperties.
-	self defineStructuralReferenceProperties

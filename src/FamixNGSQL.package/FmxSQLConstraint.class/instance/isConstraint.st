@@ -1,5 +1,0 @@
-testing
-isConstraint
-
-	<generated>
-	^ true

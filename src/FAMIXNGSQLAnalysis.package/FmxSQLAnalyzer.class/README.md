@@ -1,1 +1,0 @@
-Abstract analyzer class to compute something on a FamixNGSQL model.

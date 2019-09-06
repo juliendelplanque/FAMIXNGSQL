@@ -1,3 +1,0 @@
-*FamixNGSQL-Importer
-aliasClass
-	^ FmxSQLColumnsContainerAlias

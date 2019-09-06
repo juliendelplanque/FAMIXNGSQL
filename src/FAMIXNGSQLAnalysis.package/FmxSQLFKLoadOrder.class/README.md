@@ -1,1 +1,0 @@
-Determinate the order in which the tables of the Moose model should be created in a new database in order to satisfy foreign key constraints.

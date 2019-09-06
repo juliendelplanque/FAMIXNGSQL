@@ -1,1 +1,0 @@
-Inspect the model associated with the selected connection description in  the connections manager.

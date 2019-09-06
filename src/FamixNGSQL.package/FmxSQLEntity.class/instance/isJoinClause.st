@@ -1,5 +1,0 @@
-testing
-isJoinClause
-
-	<generated>
-	^ false

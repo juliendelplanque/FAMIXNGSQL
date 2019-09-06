@@ -1,5 +1,0 @@
-testing
-isColumn
-
-	<generated>
-	^ false

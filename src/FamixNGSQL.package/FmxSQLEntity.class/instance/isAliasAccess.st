@@ -1,5 +1,0 @@
-testing
-isAliasAccess
-
-	<generated>
-	^ false

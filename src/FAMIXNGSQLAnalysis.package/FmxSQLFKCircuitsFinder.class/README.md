@@ -1,1 +1,0 @@
-I find all the circuits formed by FK references between tables.

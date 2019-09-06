@@ -1,5 +1,0 @@
-testing
-isUniqueConstraint
-
-	<generated>
-	^ true

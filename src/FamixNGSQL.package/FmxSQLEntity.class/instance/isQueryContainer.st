@@ -1,5 +1,0 @@
-testing
-isQueryContainer
-
-	<generated>
-	^ false

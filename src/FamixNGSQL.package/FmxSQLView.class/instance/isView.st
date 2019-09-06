@@ -1,5 +1,0 @@
-testing
-isView
-
-	<generated>
-	^ true

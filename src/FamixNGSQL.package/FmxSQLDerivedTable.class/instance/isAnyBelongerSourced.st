@@ -1,3 +1,0 @@
-testing
-isAnyBelongerSourced
-	^ self parentQuery isAnyBelongerSourced

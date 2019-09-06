@@ -1,1 +1,0 @@
-I represent a Table in the relational model.

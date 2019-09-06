@@ -1,4 +1,0 @@
-visiting
-visitPSQLPlpgSQLASTCursorOpen: aPSQLPlpgSQLASTCursorOpen
-	self visit: aPSQLPlpgSQLASTCursorOpen cursorIdentifier.
-	self visitAll: aPSQLPlpgSQLASTCursorOpen arguments

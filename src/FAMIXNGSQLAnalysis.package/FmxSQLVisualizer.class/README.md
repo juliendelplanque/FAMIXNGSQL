@@ -1,1 +1,0 @@
-Abstract visualizer class that creates a visualization from a FmxSQLAnalyzer's results.

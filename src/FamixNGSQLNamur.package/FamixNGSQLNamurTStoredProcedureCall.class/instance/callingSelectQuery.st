@@ -1,6 +1,0 @@
-accessing
-callingSelectQuery
-
-	<container>
-
-	^ callingSelectQuery

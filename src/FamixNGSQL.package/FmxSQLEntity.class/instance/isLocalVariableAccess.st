@@ -1,5 +1,0 @@
-testing
-isLocalVariableAccess
-
-	<generated>
-	^ false

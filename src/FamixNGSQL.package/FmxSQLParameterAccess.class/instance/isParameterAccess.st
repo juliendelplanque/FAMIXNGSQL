@@ -1,5 +1,0 @@
-testing
-isParameterAccess
-
-	<generated>
-	^ true

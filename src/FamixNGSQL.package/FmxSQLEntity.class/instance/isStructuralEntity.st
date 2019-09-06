@@ -1,5 +1,0 @@
-testing
-isStructuralEntity
-
-	<generated>
-	^ false

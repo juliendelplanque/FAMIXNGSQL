@@ -1,5 +1,0 @@
-testing
-isStoredProcedureCall
-
-	<generated>
-	^ true

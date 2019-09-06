@@ -1,5 +1,0 @@
-testing
-isNotNullConstraint
-
-	<generated>
-	^ false

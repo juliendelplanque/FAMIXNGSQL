@@ -1,3 +1,0 @@
-null pattern
-mooseModel
-	^ mooseModel

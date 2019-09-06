@@ -1,4 +1,0 @@
-accessing
-columnsAccessed
-
-	^ columnsAccessed

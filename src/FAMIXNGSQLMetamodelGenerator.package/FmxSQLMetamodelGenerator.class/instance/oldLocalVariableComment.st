@@ -1,3 +1,0 @@
-comments - SQL
-oldLocalVariableComment
-	^ 'I model the special OLD local variable accessible from inside trigger stored procedure.'

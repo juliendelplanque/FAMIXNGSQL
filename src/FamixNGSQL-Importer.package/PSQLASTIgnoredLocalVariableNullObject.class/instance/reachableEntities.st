@@ -1,3 +1,0 @@
-null pattern
-reachableEntities
-	^ { self }

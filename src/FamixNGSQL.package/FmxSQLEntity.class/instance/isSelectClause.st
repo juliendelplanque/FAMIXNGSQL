@@ -1,5 +1,0 @@
-testing
-isSelectClause
-
-	<generated>
-	^ false

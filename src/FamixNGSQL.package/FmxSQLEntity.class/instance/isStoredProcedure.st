@@ -1,5 +1,0 @@
-testing
-isStoredProcedure
-
-	<generated>
-	^ false

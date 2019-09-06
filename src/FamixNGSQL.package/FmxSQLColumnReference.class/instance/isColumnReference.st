@@ -1,5 +1,0 @@
-testing
-isColumnReference
-
-	<generated>
-	^ true

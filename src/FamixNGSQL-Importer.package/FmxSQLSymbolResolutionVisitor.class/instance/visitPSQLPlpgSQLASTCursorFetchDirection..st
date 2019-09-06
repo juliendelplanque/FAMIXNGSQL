@@ -1,3 +1,0 @@
-visiting
-visitPSQLPlpgSQLASTCursorFetchDirection: aPSQLPlpgSQLASTCursorFetchDirection
-	aPSQLPlpgSQLASTCursorFetchDirection childrenDo: [:aChild | aChild acceptVisitor: self]

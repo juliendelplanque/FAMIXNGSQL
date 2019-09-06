@@ -1,5 +1,0 @@
-testing
-isPrimaryKeyConstraint
-
-	<generated>
-	^ true

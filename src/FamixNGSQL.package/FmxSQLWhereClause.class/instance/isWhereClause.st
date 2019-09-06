@@ -1,5 +1,0 @@
-testing
-isWhereClause
-
-	<generated>
-	^ true
