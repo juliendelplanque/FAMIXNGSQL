@@ -1,17 +1,17 @@
-Extension { #name : #MooseModel }
+Extension { #name : #FmxSQLMooseModel }
 
 { #category : #'*FamixNGSQL-Importer' }
-MooseModel >> errorReport [
+FmxSQLMooseModel >> errorReport [
 	^ self propertyNamed: #errorReport
 ]
 
 { #category : #'*FamixNGSQL-Importer' }
-MooseModel >> errorReport: anErrorReport [
+FmxSQLMooseModel >> errorReport: anErrorReport [
 	^ self propertyNamed: #errorReport put: anErrorReport
 ]
 
 { #category : #'*FamixNGSQL-Importer' }
-MooseModel >> gtInspectorErrorReportIn: composite [
+FmxSQLMooseModel >> gtInspectorErrorReportIn: composite [
 	<gtInspectorPresentationOrder: 20>
 	^ composite fastTable
 		title: 'Importation errors';
