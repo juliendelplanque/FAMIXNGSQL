@@ -336,7 +336,7 @@ FmxSQLSymbolResolutionVisitor >> visitAll: aCollection thenDoForEach: aBlockClos
 
 { #category : #'visiting - convenience' }
 FmxSQLSymbolResolutionVisitor >> visitExpression: anExpressionNode [
-	self flag: #TODO. "Temporary. Quite sure to put that in the top of the context pile"
+	self flag: #TODO. "Temporary. Quite sure to put that in the top of the context stack"
 	^ self visit: anExpressionNode thenDo: [ :res | res ]
 ]
 
