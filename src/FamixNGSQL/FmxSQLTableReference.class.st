@@ -4,11 +4,13 @@ I am a reference to a table.
 Class {
 	#name : #FmxSQLTableReference,
 	#superclass : #FmxSQLReference,
+	#traits : 'FmxSQLTWithQualifiedReference',
+	#classTraits : 'FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
 		'#source => FMOne type: #FmxSQLTWithTableReference opposite: #outgoingTableReferences',
 		'#table => FMOne type: #FmxSQLTable opposite: #references'
 	],
-	#category : 'FamixNGSQL-Entities'
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

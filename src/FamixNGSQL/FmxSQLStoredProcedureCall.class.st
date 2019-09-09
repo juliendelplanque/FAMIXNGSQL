@@ -4,12 +4,12 @@ I am a call to a stored procedure of the model.
 Class {
 	#name : #FmxSQLStoredProcedureCall,
 	#superclass : #FmxSQLReference,
-	#traits : 'FamixTInvocation',
-	#classTraits : 'FamixTInvocation classTrait',
+	#traits : 'FamixTInvocation + FmxSQLTWithQualifiedReference',
+	#classTraits : 'FamixTInvocation classTrait + FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
 		'#arguments => FMMany type: #FmxSQLReference opposite: #storedProcedureContainer'
 	],
-	#category : 'FamixNGSQL-Entities'
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

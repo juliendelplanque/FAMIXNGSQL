@@ -403,7 +403,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralHierarchy [
 ]
 
 { #category : #'definition - behavioural' }
-FmxSQLMetamodelGenerator >> defineBehaviouralReferenceEntities [
+FmxSQLMetamodelGenerator >> defineBehaviouralReferenceRelations [
 	"A view reference references a view."
 	(viewReference property: #view) target
 		*- (view property: #references).
@@ -439,28 +439,38 @@ FmxSQLMetamodelGenerator >> defineBehaviouralReferenceEntities [
 
 { #category : #'definition - behavioural' }
 FmxSQLMetamodelGenerator >> defineBehaviouralReferencesHierarchy [
+	tableReference --|> tWithQualifiedReference.
+	columnReference --|> tWithQualifiedReference.
+	
 	derivedTableReference --|> reference.
 	viewReference --|> reference.
+	viewReference --|> tWithQualifiedReference.
 	parameterAccess --|> reference.
 	parameterAccess --|> #TAccess.
 	cursorParameterAccess --|> reference.
 	cursorParameterAccess --|> #TAccess.
+	cursorParameterAccess --|> tWithQualifiedReference.
 	storedProcedureCall --|> reference.
 	storedProcedureCall --|> #TInvocation.
+	storedProcedureCall --|> tWithQualifiedReference.
 	localVariableAccess --|> reference.
 	localVariableAccess --|> #TAccess.
 	cursorReference --|> reference.
+	cursorReference --|> tWithQualifiedReference.
 	aliasAccess --|> reference.
 	aliasAccess --|> #TAccess.
+	aliasAccess --|> tWithQualifiedReference.
 	columnsContainerAliasAccess --|> reference.
 	columnsContainerAliasAccess --|> #TAccess.
+	columnsContainerAliasAccess --|> tWithQualifiedReference.
 	columnAliasAccess --|> reference.
 	columnAliasAccess --|> #TAccess.
+	columnAliasAccess --|> tWithQualifiedReference.
 	referencesGroupReference --|> reference.
 	referencesGroupReference --|> tReferencesGroupReference.
 	referencesGroupReference  --|> #TEntityMetaLevelDependency.
 	referencesGroupReference --|> #TDependencyQueries.
-	qualifiedReference --|> reference
+	qualifiedReference --|> entity
 ]
 
 { #category : #'definition - behavioural' }
@@ -505,7 +515,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralTraitsRelations [
 		*- (tWithEntitySourceAnchor property: #anchorsOnIntervalsOfCode).
 		
 	(tWithQualifiedReference property: #qualifiedReference)
-		*- (reference property: #references)
+		*- (qualifiedReference property: #references)
 ]
 
 { #category : #definition }
@@ -777,7 +787,7 @@ FmxSQLMetamodelGenerator >> defineRelations [
 	self
 		defineBehaviouralEntitiesRelations;
 		defineBehaviouralTraitsRelations;
-		defineBehaviouralReferenceEntities
+		defineBehaviouralReferenceRelations
 ]
 
 { #category : #definition }

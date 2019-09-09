@@ -4,11 +4,13 @@ I am a reference to a view.
 Class {
 	#name : #FmxSQLViewReference,
 	#superclass : #FmxSQLReference,
+	#traits : 'FmxSQLTWithQualifiedReference',
+	#classTraits : 'FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
 		'#source => FMOne type: #FmxSQLTWithViewReference opposite: #outgoingViewReferences',
 		'#view => FMOne type: #FmxSQLView opposite: #references'
 	],
-	#category : 'FamixNGSQL-Entities'
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

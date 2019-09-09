@@ -12,15 +12,34 @@ One can ask the #qualifiedReference to any reference in the system, it will be s
 "
 Class {
 	#name : #FmxSQLQualifiedReference,
-	#superclass : #FmxSQLReference,
+	#superclass : #FmxSQLEntity,
+	#instVars : [
+		'#references => FMMany type: #FmxSQLTWithQualifiedReference opposite: #qualifiedReference'
+	],
 	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }
 FmxSQLQualifiedReference class >> annotation [
 
-	<MSEClass: #QualifiedReference super: #FmxSQLReference>
+	<MSEClass: #QualifiedReference super: #FmxSQLEntity>
 	<package: #FamixNGSQL>
 	<generated>
 	^self
+]
+
+{ #category : #accessing }
+FmxSQLQualifiedReference >> references [
+	"Relation named: #references type: #FmxSQLTWithQualifiedReference opposite: #qualifiedReference"
+
+	<generated>
+	^ references
+]
+
+{ #category : #accessing }
+FmxSQLQualifiedReference >> references: anObject [
+
+	<generated>
+	references value: anObject
+
 ]

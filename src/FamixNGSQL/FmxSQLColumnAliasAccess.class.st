@@ -1,9 +1,9 @@
 Class {
 	#name : #FmxSQLColumnAliasAccess,
 	#superclass : #FmxSQLReference,
-	#traits : 'FamixTAccess',
-	#classTraits : 'FamixTAccess classTrait',
-	#category : 'FamixNGSQL-Entities'
+	#traits : 'FamixTAccess + FmxSQLTWithQualifiedReference',
+	#classTraits : 'FamixTAccess classTrait + FmxSQLTWithQualifiedReference classTrait',
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

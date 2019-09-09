@@ -8,10 +8,9 @@ Class {
 	#classTraits : 'FmxSQLTArgument classTrait',
 	#instVars : [
 		'#belongsToGroup => FMOne type: #FmxSQLReferencesGroup opposite: #references',
-		'#references => FMMany type: #FmxSQLTWithQualifiedReference opposite: #qualifiedReference',
 		'#storedProcedureContainer => FMOne type: #FmxSQLStoredProcedureCall opposite: #arguments'
 	],
-	#category : #'FamixNGSQL-Entities'
+	#category : 'FamixNGSQL-Entities'
 }
 
 { #category : #meta }
@@ -83,22 +82,6 @@ FmxSQLReference >> isReference [
 { #category : #testing }
 FmxSQLReference >> isWildCardReference [
 	^ false
-]
-
-{ #category : #accessing }
-FmxSQLReference >> references [
-	"Relation named: #references type: #FmxSQLTWithQualifiedReference opposite: #qualifiedReference"
-
-	<generated>
-	^ references
-]
-
-{ #category : #accessing }
-FmxSQLReference >> references: anObject [
-
-	<generated>
-	references value: anObject
-
 ]
 
 { #category : #accessing }

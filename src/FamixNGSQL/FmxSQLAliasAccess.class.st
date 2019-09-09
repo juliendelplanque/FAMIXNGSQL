@@ -4,9 +4,9 @@ I am an access to an alias.
 Class {
 	#name : #FmxSQLAliasAccess,
 	#superclass : #FmxSQLReference,
-	#traits : 'FamixTAccess',
-	#classTraits : 'FamixTAccess classTrait',
-	#category : 'FamixNGSQL-Entities'
+	#traits : 'FamixTAccess + FmxSQLTWithQualifiedReference',
+	#classTraits : 'FamixTAccess classTrait + FmxSQLTWithQualifiedReference classTrait',
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

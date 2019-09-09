@@ -4,12 +4,14 @@ I am reference to a column in a table of the model.
 Class {
 	#name : #FmxSQLColumnReference,
 	#superclass : #FmxSQLReference,
+	#traits : 'FmxSQLTWithQualifiedReference',
+	#classTraits : 'FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
-		'#isWildCardReference => FMProperty',
-		'#isCertain => FMProperty',
-		'#foreignKeyConstraintSource => FMOne type: #FmxSQLForeignKeyConstraint opposite: #outgoingForeignKeyColumnReferences',
-		'#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences',
 		'#column => FMOne type: #FmxSQLColumn opposite: #references',
+		'#foreignKeyConstraintSource => FMOne type: #FmxSQLForeignKeyConstraint opposite: #outgoingForeignKeyColumnReferences',
+		'#isCertain => FMProperty',
+		'#isWildCardReference => FMProperty',
+		'#source => FMOne type: #FmxSQLTWithColumnReference opposite: #outgoingColumnReferences',
 		'#triggerStoredProceduresReferencing => FMOne type: #FmxSQLTriggerStoredProcedure opposite: #columnsReferenced'
 	],
 	#category : #'FamixNGSQL-Entities'

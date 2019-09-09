@@ -17,7 +17,7 @@ FmxSQLTWithQualifiedReference classSide >> annotation [
 
 { #category : #accessing }
 FmxSQLTWithQualifiedReference >> qualifiedReference [
-	"Relation named: #qualifiedReference type: #FmxSQLReference opposite: #references"
+	"Relation named: #qualifiedReference type: #FmxSQLQualifiedReference opposite: #references"
 
 	<generated>
 	^ qualifiedReference

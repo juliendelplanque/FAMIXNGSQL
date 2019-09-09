@@ -133,7 +133,8 @@ FmxSQLSymbolResolutionVisitor >> createReferenceTo: anEntity from: aPSQLASTNode 
 		yourself.
 		
 	reference class = FmxSQLColumnReference
-		ifTrue: [ reference isWildCardReference: aPSQLASTNode isWildCard ]
+		ifTrue: [ reference isWildCardReference: aPSQLASTNode isWildCard ].
+	^ reference
 ]
 
 { #category : #'entity creation' }
@@ -257,11 +258,18 @@ FmxSQLSymbolResolutionVisitor >> isNewOrOldIdentifier: aPSQIdentifierWithNode [
 
 { #category : #'convenient linking' }
 FmxSQLSymbolResolutionVisitor >> linkReferencedEntities: aSRIdentifierWithNode [
-	self flag: #TODO.	"add position in source"
+	^ self linkReferencedEntities: aSRIdentifierWithNode withQualifiedReference: (self createEntity: FmxSQLNullQualifiedReference)
+]
+
+{ #category : #'convenient linking' }
+FmxSQLSymbolResolutionVisitor >> linkReferencedEntities: aSRIdentifierWithNode withQualifiedReference: aQualifiedReference [
+	|reference|
+	reference := aQualifiedReference.
 	aSRIdentifierWithNode entity
-		ifNotNil: [ self createReferenceTo: aSRIdentifierWithNode entity from: aSRIdentifierWithNode node ].
+		ifNotNil: [ 
+			reference := reference addReference: (self createReferenceTo: aSRIdentifierWithNode entity from: aSRIdentifierWithNode node) ].
 	aSRIdentifierWithNode isLast
-		ifFalse: [ self linkReferencedEntities: aSRIdentifierWithNode next ]
+		ifFalse: [ self linkReferencedEntities: aSRIdentifierWithNode next withQualifiedReference: reference ]
 ]
 
 { #category : #accessing }
@@ -423,7 +431,7 @@ FmxSQLSymbolResolutionVisitor >> visitPSQLASTAttributeAccess: aPSQLASTAttributeA
 	(self shouldRejectIdentifiers: identifiers)
 		ifTrue: [ ^ nil ]. self flag: #TODO. "Nil should never be returned..."
 	
-	((self isNewOrOldIdentifier: identifiers) and: [ self function class = FmxSQLTriggerStoredProcedure ])
+	((self isNewOrOldIdentifier: identifiers) and: [ self function isTriggerStoredProcedure ])
 		ifTrue: [ self ensureNewOrOldLocalVariableWellSetFor: identifiers ].
 	
 	[ self resolveAndLink: identifiers ]
@@ -437,6 +445,7 @@ FmxSQLSymbolResolutionVisitor >> visitPSQLASTAttributeAccess: aPSQLASTAttributeA
 						storedProcedure: self function.
 					self resolveAndLinkSilently: identifiers ]
 				ifFalse: [ self errorReport addError: anError ] ].
+	
 	^ identifiers targetEntity
 ]
 

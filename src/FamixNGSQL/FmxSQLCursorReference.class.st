@@ -4,9 +4,11 @@ I am a reference to a cursor
 Class {
 	#name : #FmxSQLCursorReference,
 	#superclass : #FmxSQLReference,
+	#traits : 'FmxSQLTWithQualifiedReference',
+	#classTraits : 'FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
-		'#source => FMOne type: #FmxSQLTWithCursorReference opposite: #outgoingCursorReferences',
-		'#cursor => FMOne type: #FmxSQLCursor opposite: #references'
+		'#cursor => FMOne type: #FmxSQLCursor opposite: #references',
+		'#source => FMOne type: #FmxSQLTWithCursorReference opposite: #outgoingCursorReferences'
 	],
 	#category : #'FamixNGSQL-Entities'
 }
