@@ -56,6 +56,13 @@ FmxSQLTriggerStoredProcedure >> columnsReferencedGroup [
 	^ MooseGroup withAll: self columnsReferenced asSet
 ]
 
+{ #category : #testing }
+FmxSQLTriggerStoredProcedure >> isTriggerStoredProcedure [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxSQLTriggerStoredProcedure >> triggers [
 	"Relation named: #triggers type: #FmxSQLTrigger opposite: #storedProcedure"

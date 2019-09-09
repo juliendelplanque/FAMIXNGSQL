@@ -192,6 +192,13 @@ FmxSQLEntity >> isStructuralEntity [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isTriggerStoredProcedure [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isUniqueConstraint [
 
 	<generated>

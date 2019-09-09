@@ -166,6 +166,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 	triggerStoredProcedure := builder
 		newClassNamed: #TriggerStoredProcedure
 		comment: self triggerStoredProcedureComment.
+	triggerStoredProcedure withTesting.
 	trigger := builder
 		newClassNamed: #Trigger
 		comment: self triggerComment.
