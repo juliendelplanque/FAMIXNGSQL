@@ -152,8 +152,10 @@ FmxSQLMetamodelGenerator >> cursorReferenceComment [
 { #category : #'definition - behavioural' }
 FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 	"Abstract entities."
-	behaviouralEntity := builder newTraitNamed: #BehaviouralEntity.
+
 	"Concrete behavioural entities."
+	"Concrete reference entities."
+	behaviouralEntity := builder newTraitNamed: #BehaviouralEntity.
 	view := builder newClassNamed: #View comment: self viewComment.
 	view withTesting.
 	derivedTable := builder
@@ -214,52 +216,14 @@ FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 	columnAlias := builder
 		newClassNamed: #ColumnAlias
 		comment: self columnAliasComment.
-	"Concrete reference entities."
-	viewReference := builder
-		newClassNamed: #ViewReference
-		comment: self viewReferenceComment.
-	derivedTableReference := builder
-		newClassNamed: #DerivedTableReference
-		comment: self derivedTableReferenceComment.
-	parameterAccess := builder
-		newClassNamed: #ParameterAccess
-		comment: self parameterAccessComment.
-	parameterAccess withTesting.
-	cursorParameterAccess := builder
-		newClassNamed: #CursorParameterAccess
-		comment: self cursorParameterAccessComment.
-	cursorReference := builder
-		newClassNamed: #CursorReference
-		comment: self cursorReferenceComment.
-	storedProcedureCall := builder
-		newClassNamed: #StoredProcedureCall
-		comment: self storedProcedureCallComment.
-	storedProcedureCall withTesting.
-	localVariableAccess := builder
-		newClassNamed: #LocalVariableAccess
-		comment: self localVariableAccessComment.
-	localVariableAccess withTesting.
-	aliasAccess := builder
-		newClassNamed: #AliasAccess
-		comment: self aliasAccessComment.
-	aliasAccess withTesting.
-	columnAliasAccess := builder
-		newClassNamed: #ColumnAliasAccess.
-	columnsContainerAliasAccess := builder
-		newClassNamed: #ColumnsContainerAliasAccess.
-	referencesGroup := builder
-		newClassNamed: #ReferencesGroup
-		comment: self referencesGroupComment.
-	referencesGroupReference := builder
-		newClassNamed: #ReferencesGroupReference
-		comment: self referencesGroupReferenceComment.
+	self defineReferences.
 	foreignTable := builder
 		newClassNamed: #ForeignTable
 		comment: self foreignTableComment.
 	entitySourceAnchor := builder
 		newClassNamed: #EntitySourceAnchor
 		comment: self entitySourceAnchorComment.
-	entitySourceAnchor withTesting.
+	entitySourceAnchor withTesting
 ]
 
 { #category : #'definition - behavioural' }
@@ -752,6 +716,47 @@ FmxSQLMetamodelGenerator >> defineHierarchy [
 FmxSQLMetamodelGenerator >> defineProperties [
 	super defineProperties.
 	self defineBehaviouralEntitiesProperties
+]
+
+{ #category : #'definition - behavioural' }
+FmxSQLMetamodelGenerator >> defineReferences [
+	viewReference := builder
+		newClassNamed: #ViewReference
+		comment: self viewReferenceComment.	"Concrete reference entities."
+	derivedTableReference := builder
+		newClassNamed: #DerivedTableReference
+		comment: self derivedTableReferenceComment.
+	parameterAccess := builder
+		newClassNamed: #ParameterAccess
+		comment: self parameterAccessComment.
+	parameterAccess withTesting.
+	cursorParameterAccess := builder
+		newClassNamed: #CursorParameterAccess
+		comment: self cursorParameterAccessComment.
+	cursorReference := builder
+		newClassNamed: #CursorReference
+		comment: self cursorReferenceComment.
+	storedProcedureCall := builder
+		newClassNamed: #StoredProcedureCall
+		comment: self storedProcedureCallComment.
+	storedProcedureCall withTesting.
+	localVariableAccess := builder
+		newClassNamed: #LocalVariableAccess
+		comment: self localVariableAccessComment.
+	localVariableAccess withTesting.
+	aliasAccess := builder
+		newClassNamed: #AliasAccess
+		comment: self aliasAccessComment.
+	aliasAccess withTesting.
+	columnAliasAccess := builder newClassNamed: #ColumnAliasAccess.
+	columnsContainerAliasAccess := builder
+		newClassNamed: #ColumnsContainerAliasAccess.
+	referencesGroup := builder
+		newClassNamed: #ReferencesGroup
+		comment: self referencesGroupComment.
+	referencesGroupReference := builder
+		newClassNamed: #ReferencesGroupReference
+		comment: self referencesGroupReferenceComment
 ]
 
 { #category : #definition }
