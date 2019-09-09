@@ -65,9 +65,11 @@ Class {
 		'recordLocalVariable',
 		'entitySourceAnchor',
 		'tWithEntitySourceAnchor',
-		'tDefiningDerivedTables'
+		'tDefiningDerivedTables',
+		'qualifiedReference',
+		'tWithQualifiedReference'
 	],
-	#category : 'FAMIXNGSQLMetamodelGenerator'
+	#category : #FAMIXNGSQLMetamodelGenerator
 }
 
 { #category : #'meta-model regeneration' }
@@ -457,6 +459,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralReferencesHierarchy [
 	referencesGroupReference --|> tReferencesGroupReference.
 	referencesGroupReference  --|> #TEntityMetaLevelDependency.
 	referencesGroupReference --|> #TDependencyQueries.
+	qualifiedReference --|> reference
 ]
 
 { #category : #'definition - behavioural' }
@@ -474,7 +477,9 @@ FmxSQLMetamodelGenerator >> defineBehaviouralTraits [
 	tWithEntitySourceAnchor := builder
 		newTraitNamed: #TWithEntitySourceAnchor.
 	tDefiningDerivedTables := builder
-		newTraitNamed: #TDefiningDerivedTables
+		newTraitNamed: #TDefiningDerivedTables.
+	tWithQualifiedReference := builder
+		newTraitNamed: #TWithQualifiedReference
 ]
 
 { #category : #'definition - behavioural' }
@@ -496,7 +501,10 @@ FmxSQLMetamodelGenerator >> defineBehaviouralTraitsRelations [
 	(tReferencesGroupReference property: #referencesGroup)
 		*- (referencesGroup property: #incomingReferencesGroupReference).
 	(entitySourceAnchor property: #entity)
-		*- (tWithEntitySourceAnchor property: #anchorsOnIntervalsOfCode)
+		*- (tWithEntitySourceAnchor property: #anchorsOnIntervalsOfCode).
+		
+	(tWithQualifiedReference property: #qualifiedReference)
+		*- (reference property: #references)
 ]
 
 { #category : #definition }
@@ -756,7 +764,10 @@ FmxSQLMetamodelGenerator >> defineReferences [
 		comment: self referencesGroupComment.
 	referencesGroupReference := builder
 		newClassNamed: #ReferencesGroupReference
-		comment: self referencesGroupReferenceComment
+		comment: self referencesGroupReferenceComment.
+	qualifiedReference := builder
+		newClassNamed: #QualifiedReference
+		comment: self qualifiedReferenceComment
 ]
 
 { #category : #definition }
@@ -877,6 +888,20 @@ FmxSQLMetamodelGenerator >> parameterAccessComment [
 { #category : #'comments - SQL' }
 FmxSQLMetamodelGenerator >> parameterComment [
 	^ 'I am a parameter of a stored procedure. I have a type.'
+]
+
+{ #category : #'comments - SQL' }
+FmxSQLMetamodelGenerator >> qualifiedReferenceComment [
+	^ 'I model a qualified reference.
+
+For example, namespace.table.column is modeled as 3 references:
+- NamespaceReference
+- TableReference
+- ColumnReference
+
+together grouped in a QualifiedReference.
+
+One can ask the #qualifiedReference to any reference in the system, it will be set if it has one.'
 ]
 
 { #category : #'comments - SQL' }
