@@ -151,19 +151,12 @@ FmxSQLMetamodelGenerator >> cursorReferenceComment [
 
 { #category : #'definition - behavioural' }
 FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
-	"Abstract entities."
-
-	"Concrete behavioural entities."
-	"Concrete reference entities."
 	behaviouralEntity := builder newTraitNamed: #BehaviouralEntity.
 	view := builder newClassNamed: #View comment: self viewComment.
 	view withTesting.
 	derivedTable := builder
 		newClassNamed: #DerivedTable
 		comment: self derivedTableComment.
-	crudQuery := builder
-		newClassNamed: #CRUDQuery
-		comment: self crudQueryComment.
 	storedProcedure := builder
 		newClassNamed: #StoredProcedure
 		comment: self storedProcedureComment.
@@ -174,21 +167,6 @@ FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 	trigger := builder
 		newClassNamed: #Trigger
 		comment: self triggerComment.
-	selectQuery := builder
-		newClassNamed: #SelectQuery
-		comment: self selectQueryComment.
-	insertQuery := builder
-		newClassNamed: #InsertQuery
-		comment: self insertQueryComment.
-	updateQuery := builder
-		newClassNamed: #UpdateQuery
-		comment: self updateQueryComment.
-	deleteQuery := builder
-		newClassNamed: #DeleteQuery
-		comment: self deleteQueryComment.
-	valuesQuery := builder
-		newClassNamed: #ValuesQuery
-		comment: self valuesQueryComment.
 	parameter := builder
 		newClassNamed: #Parameter
 		comment: self parameterComment.
@@ -216,7 +194,6 @@ FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 	columnAlias := builder
 		newClassNamed: #ColumnAlias
 		comment: self columnAliasComment.
-	self defineReferences.
 	foreignTable := builder
 		newClassNamed: #ForeignTable
 		comment: self foreignTableComment.
@@ -527,8 +504,9 @@ FmxSQLMetamodelGenerator >> defineClasses [
 	super defineClasses.
 	self
 		defineBehaviouralEntities;
+		defineQueries;
 		defineClausesEntities;
-		defineClausesHierarchy
+		defineReferences
 ]
 
 { #category : #'definition - behavioural' }
@@ -716,6 +694,28 @@ FmxSQLMetamodelGenerator >> defineHierarchy [
 FmxSQLMetamodelGenerator >> defineProperties [
 	super defineProperties.
 	self defineBehaviouralEntitiesProperties
+]
+
+{ #category : #'definition - behavioural' }
+FmxSQLMetamodelGenerator >> defineQueries [
+	crudQuery := builder
+		newClassNamed: #CRUDQuery
+		comment: self crudQueryComment.
+	selectQuery := builder
+		newClassNamed: #SelectQuery
+		comment: self selectQueryComment.
+	insertQuery := builder
+		newClassNamed: #InsertQuery
+		comment: self insertQueryComment.
+	updateQuery := builder
+		newClassNamed: #UpdateQuery
+		comment: self updateQueryComment.
+	deleteQuery := builder
+		newClassNamed: #DeleteQuery
+		comment: self deleteQueryComment.
+	valuesQuery := builder
+		newClassNamed: #ValuesQuery
+		comment: self valuesQueryComment.
 ]
 
 { #category : #'definition - behavioural' }
