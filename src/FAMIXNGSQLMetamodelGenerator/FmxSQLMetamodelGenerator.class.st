@@ -455,6 +455,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralReferencesHierarchy [
 	storedProcedureCall --|> tWithQualifiedReference.
 	localVariableAccess --|> reference.
 	localVariableAccess --|> #TAccess.
+	localVariableAccess --|> tWithQualifiedReference.
 	cursorReference --|> reference.
 	cursorReference --|> tWithQualifiedReference.
 	aliasAccess --|> reference.

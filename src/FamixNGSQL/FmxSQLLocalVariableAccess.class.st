@@ -4,12 +4,12 @@ I am an access to a local variable in a procedure.
 Class {
 	#name : #FmxSQLLocalVariableAccess,
 	#superclass : #FmxSQLReference,
-	#traits : 'FamixTAccess',
-	#classTraits : 'FamixTAccess classTrait',
+	#traits : 'FamixTAccess + FmxSQLTWithQualifiedReference',
+	#classTraits : 'FamixTAccess classTrait + FmxSQLTWithQualifiedReference classTrait',
 	#instVars : [
 		'#localVariable => FMOne type: #FmxSQLLocalVariable opposite: #accesses'
 	],
-	#category : 'FamixNGSQL-Entities'
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }
