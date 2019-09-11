@@ -288,15 +288,25 @@ FmxSQLSymbolResolutionVisitor >> model: anObject [
 { #category : #resolution }
 FmxSQLSymbolResolutionVisitor >> resolveAndLink: identifiers [ 
 	self resolve: identifiers.
-	self linkReferencedEntities: identifiers.
+	self flag: #TODO. "Needs refactoring to remove duplication with #resolveAndLinkSilently:"
+	identifiers isLast
+		ifFalse: [ self linkReferencedEntities: identifiers. ^ self ].
 	
+	identifiers entity
+		ifNotNil: [ 
+			self createReferenceTo: identifiers entity from: identifiers node ].
 ]
 
 { #category : #resolution }
 FmxSQLSymbolResolutionVisitor >> resolveAndLinkSilently: identifiers [ 
 	self resolveSilently: identifiers.
-	self linkReferencedEntities: identifiers.
+	self flag: #TODO. "Needs refactoring to remove duplication with #resolveAndLink:"
+	identifiers isLast
+		ifFalse: [ self linkReferencedEntities: identifiers. ^ self ].
 	
+	identifiers entity
+		ifNotNil: [ 
+			self createReferenceTo: identifiers entity from: identifiers node ].
 ]
 
 { #category : #resolution }
