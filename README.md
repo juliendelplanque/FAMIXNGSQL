@@ -6,7 +6,7 @@ In a Pharo 7.0 image, open a playground and execute the following script:
 
 ```
 Metacello new
-  repository: 'github://juliendelplanque/FAMIXNGSQL/repository';
+  repository: 'github://juliendelplanque/FAMIXNGSQL/src';
   baseline: 'FAMIXNGSQL';
   load
 ```
