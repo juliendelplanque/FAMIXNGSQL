@@ -16,7 +16,7 @@ BaselineOfFAMIXNGSQL >> baseline: spec [
 					with: [ spec
 						requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
 				package: #'FamixNGSQL-GTInspectorExtension'
-					with: [ spec requires: #('FamixNGSQL-Importer' 'TreeQuery') ];
+					with: [ spec requires: #('FamixNGSQL-Importer') ];
 				package: #FAMIXNGSQLAnalysis;
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager'
@@ -46,8 +46,5 @@ BaselineOfFAMIXNGSQL >> baseline: spec [
 				baseline: 'DBConnectionsManager'
 				with: [ spec
 						repository: 'github://juliendelplanque/DBConnectionsManager/repository';
-						loads: 'pgmetadata' ].
-			spec
-				baseline: 'TreeQuery'
-				with: [ spec repository: 'github://juliendelplanque/TreeQuery/src' ] ]
+						loads: 'pgmetadata' ] ]
 ]
