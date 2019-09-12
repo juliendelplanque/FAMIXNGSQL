@@ -4,6 +4,11 @@ Class {
 	#category : #FamixNGSQL
 }
 
+{ #category : #'as yet unclassified' }
+FmxSQLMooseModel >> gtEntitiesIn: composite [
+	"To not show all entities in model inspector"
+]
+
 { #category : #initialization }
 FmxSQLMooseModel >> initialize [
 		<generated>

@@ -62,3 +62,23 @@ MooseAbstractGroup >> allViews [
 	<navigation: 'All views'>
 	^self allWithType: FmxSQLView
 ]
+
+{ #category : #'*FamixNGSQL-GTInspectorExtension' }
+MooseAbstractGroup >> gtEntitiesIn: composite [
+	<gtInspectorPresentationOrder: 0>
+	^ composite fastTable
+		title: 'Entities';
+		display: [ self entities ];
+		beMultiple;
+		enableElementIndex;
+		wantsAutomaticRefresh: true;
+		column: 'Index' evaluated: [ :value :ibdex | ibdex asString ] width: 50;
+		column: 'Entity' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value ];
+		column: 'Type' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value class ];
+		send: [ :result | 
+			result isNil
+				ifTrue: [ nil ]
+				ifFalse: [ result size = 1 
+					ifTrue: [result anyOne ]  
+					ifFalse: [self species withAll: result]]]
+]
