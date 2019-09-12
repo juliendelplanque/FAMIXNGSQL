@@ -85,6 +85,15 @@ FmxSQLReference >> isWildCardReference [
 ]
 
 { #category : #accessing }
+FmxSQLReference >> sourceAnchor [
+	^ super sourceAnchor
+		ifNil: [ 
+			self belongsToGroup
+				ifNil: [ FmxSQLNoSourceAnchor signalForEntityWithoutSourceAnchor: self ]
+				ifNotNil: #sourceAnchor ]
+]
+
+{ #category : #accessing }
 FmxSQLReference >> sourceAnchorOrReferenceGroupSourceAnchor [
 	^ self sourceAnchor
 		ifNil: [ 
