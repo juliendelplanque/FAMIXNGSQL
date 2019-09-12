@@ -412,7 +412,7 @@ FmxSQLSymbolResolutionVisitor >> visitPSQLASTAllClause: aPSQLASTAllClause [
 
 { #category : #visiting }
 FmxSQLSymbolResolutionVisitor >> visitPSQLASTAlternativeSelectIntoQuery: aPSQLASTAlternativeSelectIntoQuery [
-	aPSQLASTAlternativeSelectIntoQuery childrenDo: [:aChild | aChild acceptVisitor: self]
+	^ self visitPSQLASTSelectQuery: aPSQLASTAlternativeSelectIntoQuery
 ]
 
 { #category : #visiting }

@@ -332,6 +332,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralHierarchy [
 	storedProcedure --|> tWithCursor.
 	storedProcedure --|> tWithCursorReference.
 	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
+	storedProcedure --|> tWithViewReference.
 	storedProcedure --|> #TWithImmediateSource.
 	
 	triggerStoredProcedure --|> storedProcedure.
@@ -693,6 +694,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	
 	usingClause --|> clause.
 	usingClause --|> tWithTableReference.
+	usingClause --|> tWithDerivedTableReference.
 	
 	intoClause --|> clause.
 	intoClause --|> tWithTableReference.

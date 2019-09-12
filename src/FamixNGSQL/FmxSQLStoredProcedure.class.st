@@ -4,13 +4,13 @@ I am a stored procedure. That is to say, a function that is defined inside the d
 Class {
 	#name : #FmxSQLStoredProcedure,
 	#superclass : #FmxSQLNamedEntity,
-	#traits : 'FamixTInvocable + FamixTNamespaceEntity + FamixTWithAccesses + FamixTWithImmediateSource + FamixTWithInvocations + FamixTWithLocalVariables + FamixTWithParameters + FamixTWithReferences + FmxSQLBehaviouralEntity + FmxSQLTQueryContainer + FmxSQLTWithAlias + FmxSQLTWithColumnReference + FmxSQLTWithCursor + FmxSQLTWithCursorReference + FmxSQLTWithTableReference',
-	#classTraits : 'FamixTInvocable classTrait + FamixTNamespaceEntity classTrait + FamixTWithAccesses classTrait + FamixTWithImmediateSource classTrait + FamixTWithInvocations classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FmxSQLBehaviouralEntity classTrait + FmxSQLTQueryContainer classTrait + FmxSQLTWithAlias classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithCursor classTrait + FmxSQLTWithCursorReference classTrait + FmxSQLTWithTableReference classTrait',
+	#traits : 'FamixTInvocable + FamixTNamespaceEntity + FamixTWithAccesses + FamixTWithImmediateSource + FamixTWithInvocations + FamixTWithLocalVariables + FamixTWithParameters + FamixTWithReferences + FmxSQLBehaviouralEntity + FmxSQLTQueryContainer + FmxSQLTWithAlias + FmxSQLTWithColumnReference + FmxSQLTWithCursor + FmxSQLTWithCursorReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference',
+	#classTraits : 'FamixTInvocable classTrait + FamixTNamespaceEntity classTrait + FamixTWithAccesses classTrait + FamixTWithImmediateSource classTrait + FamixTWithInvocations classTrait + FamixTWithLocalVariables classTrait + FamixTWithParameters classTrait + FamixTWithReferences classTrait + FmxSQLBehaviouralEntity classTrait + FmxSQLTQueryContainer classTrait + FmxSQLTWithAlias classTrait + FmxSQLTWithColumnReference classTrait + FmxSQLTWithCursor classTrait + FmxSQLTWithCursorReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait',
 	#instVars : [
 		'#checkConstraintsCalling => FMMany type: #FmxSQLCheckConstraint opposite: #storedProceduresCalled',
 		'#returnType => FMOne type: #FmxSQLAbstractType opposite: #storedProceduresReturning'
 	],
-	#category : 'FamixNGSQL-Entities'
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }
