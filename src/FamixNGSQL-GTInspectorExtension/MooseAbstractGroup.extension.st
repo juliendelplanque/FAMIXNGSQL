@@ -67,8 +67,8 @@ MooseAbstractGroup >> allViews [
 MooseAbstractGroup >> gtEntitiesIn: composite [
 	<gtInspectorPresentationOrder: 0>
 	^ composite fastTable
-		title: 'Entities';
-		display: [ self entities ];
+		title: 'Entities (no stub)';
+		display: [ self entities reject: #isStub ];
 		beMultiple;
 		enableElementIndex;
 		wantsAutomaticRefresh: true;
