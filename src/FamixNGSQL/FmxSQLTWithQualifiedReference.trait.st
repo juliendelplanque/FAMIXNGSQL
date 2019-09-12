@@ -1,7 +1,7 @@
 Trait {
 	#name : #FmxSQLTWithQualifiedReference,
 	#instVars : [
-		'#qualifiedReference => FMOne type: #FmxSQLReference opposite: #references'
+		'#qualifiedReference => FMOne type: #FmxSQLQualifiedReference opposite: #references'
 	],
 	#category : #'FamixNGSQL-Traits'
 }
