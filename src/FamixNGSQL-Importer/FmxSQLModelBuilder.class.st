@@ -321,7 +321,7 @@ FmxSQLModelBuilder >> linkColumnReferencesToNewAndOldLocalVariableFor: model [
 					varCol references do: [ :varColRef |
 						(tableCol createReferenceEntityFrom: varColRef source)
 							isWildCardReference: varColRef isWildCardReference;
-							sourceAnchor: varColRef sourceAnchor copy;
+							sourceAnchor: ([ varColRef sourceAnchor copy ] on: FmxSQLNoSourceAnchor do: [ nil ]);
 							isCertain: false;
 							mooseModel: newLocalVariable mooseModel ] ]
 				ifNone: [ self error: 'Reference to non-existing column.' ] ] ] ]
