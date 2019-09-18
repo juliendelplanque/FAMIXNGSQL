@@ -74,6 +74,7 @@ MooseAbstractGroup >> gtEntitiesIn: composite [
 		wantsAutomaticRefresh: true;
 		column: 'Index' evaluated: [ :value :ibdex | ibdex asString ] width: 50;
 		column: 'Entity' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value ];
+		column: 'Composition parent' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value belongsTo ];
 		column: 'Type' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value class ];
 		send: [ :result | 
 			result isNil
