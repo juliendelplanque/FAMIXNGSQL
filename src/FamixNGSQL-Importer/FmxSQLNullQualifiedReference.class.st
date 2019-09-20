@@ -14,14 +14,12 @@ FmxSQLNullQualifiedReference >> addReference: aFmxSQLReference [
 									mooseModel: self mooseModel;
 									yourself.
 	aFmxSQLReference qualifiedReference: qualifiedReference.
-	FmxSQLEntitySourceAnchor new
-		mooseModel: self mooseModel;
-		entity: qualifiedReference references anyOne sourceAnchor entity;
-		start: qualifiedReference references first sourceAnchor start;
-		end: qualifiedReference references last sourceAnchor end;
-		element: qualifiedReference;
-		yourself.
 	^ qualifiedReference
+]
+
+{ #category : #computing }
+FmxSQLNullQualifiedReference >> computeSourceAnchor [
+	"Does nothing on purpose."
 ]
 
 { #category : #accessing }

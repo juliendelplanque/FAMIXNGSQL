@@ -79,7 +79,8 @@ FmxSQLModelBuilder >> buildModel [
 	self
 		visitViewsDefinitionsFor: mooseModel;
 		visitStoredProceduresFor: mooseModel;
-		linkColumnReferencesToNewAndOldLocalVariableFor: mooseModel.
+		linkColumnReferencesToNewAndOldLocalVariableFor: mooseModel;
+		createSourceAnchorsOfQualifiedNamesFor: mooseModel.
 	mooseModel
 		errorReport: self errorReport.
 	pgToFamixEntities := nil.
@@ -152,6 +153,11 @@ FmxSQLModelBuilder >> createNamespacesIn: aMooseModel [
 						name: pgNamespace name;
 						mooseModel: aMooseModel;
 						yourself) ] displayingProgress: 'Creating namespaces'
+]
+
+{ #category : #'model building - linking entities' }
+FmxSQLModelBuilder >> createSourceAnchorsOfQualifiedNamesFor: model [
+	(model allWithType: FmxSQLQualifiedReference) do: #computeSourceAnchor
 ]
 
 { #category : #'model building - entities' }
@@ -321,7 +327,7 @@ FmxSQLModelBuilder >> linkColumnReferencesToNewAndOldLocalVariableFor: model [
 					varCol references do: [ :varColRef |
 						(tableCol createReferenceEntityFrom: varColRef source)
 							isWildCardReference: varColRef isWildCardReference;
-							sourceAnchor: ([ varColRef sourceAnchor copy ] on: FmxSQLNoSourceAnchor do: [ nil ]);
+							sourceAnchor: varColRef sourceAnchor copy;
 							isCertain: false;
 							mooseModel: newLocalVariable mooseModel ] ]
 				ifNone: [ self error: 'Reference to non-existing column.' ] ] ] ]

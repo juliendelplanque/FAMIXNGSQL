@@ -63,7 +63,7 @@ FmxSQLView >> columnsToColumnReferences [
 	(self query selectClause outgoingColumnReferences groupedBy: [ :ref | ref belongsToGroup ifNil: [ ref ] ]) keys do: [ :outgoingRef |
 		mapping
 			at: (self query selectClause aliases
-					detect: [ :alias | (outgoingRef class = FmxSQLColumnReference and: [ alias outgoingColumnReferences anySatisfy: [ :ref | (ref sourceAnchor interval includesAll: outgoingRef sourceAnchor interval) or: [ outgoingRef sourceAnchor interval includesAll: ref sourceAnchor interval ] ] ]) or: [ alias outgoingReferencesGroupReferences includes: outgoingRef ] ]
+					detect: [ :alias | (outgoingRef isColumnReference and: [ alias outgoingColumnReferences anySatisfy: [ :ref | (ref sourceAnchor interval includesAll: outgoingRef sourceAnchor interval) or: [ outgoingRef sourceAnchor interval includesAll: ref sourceAnchor interval ] ] ]) or: [ alias outgoingReferencesGroupReferences includes: outgoingRef ] ]
 					ifFound: [ :alias | self columnNamed: alias name ]
 					ifNone: [ 
 						outgoingRef class = FmxSQLReferencesGroup

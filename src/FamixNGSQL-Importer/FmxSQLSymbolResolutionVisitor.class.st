@@ -132,7 +132,7 @@ FmxSQLSymbolResolutionVisitor >> createReferenceTo: anEntity from: aPSQLASTNode 
 		mooseModel: self model;
 		yourself.
 		
-	reference class = FmxSQLColumnReference
+	reference isColumnReference
 		ifTrue: [ reference isWildCardReference: aPSQLASTNode isWildCard ].
 	^ reference
 ]
