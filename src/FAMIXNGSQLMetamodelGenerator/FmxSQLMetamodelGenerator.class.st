@@ -472,7 +472,8 @@ FmxSQLMetamodelGenerator >> defineBehaviouralReferencesHierarchy [
 	referencesGroupReference --|> tReferencesGroupReference.
 	referencesGroupReference  --|> #TEntityMetaLevelDependency.
 	referencesGroupReference --|> #TDependencyQueries.
-	qualifiedReference --|> entity
+	qualifiedReference --|> entity.
+	qualifiedReference --|> #TSourceEntity
 ]
 
 { #category : #'definition - behavioural' }

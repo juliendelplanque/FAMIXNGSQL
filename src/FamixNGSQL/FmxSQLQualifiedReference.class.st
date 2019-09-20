@@ -13,6 +13,8 @@ One can ask the #qualifiedReference to any reference in the system, it will be s
 Class {
 	#name : #FmxSQLQualifiedReference,
 	#superclass : #FmxSQLEntity,
+	#traits : 'FamixTSourceEntity',
+	#classTraits : 'FamixTSourceEntity classTrait',
 	#instVars : [
 		'#references => FMMany type: #FmxSQLTWithQualifiedReference opposite: #qualifiedReference'
 	],
