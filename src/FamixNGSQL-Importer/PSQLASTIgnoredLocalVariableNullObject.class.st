@@ -20,6 +20,11 @@ PSQLASTIgnoredLocalVariableNullObject >> createReferenceEntityFrom: aFmxSQLEntit
 	
 ]
 
+{ #category : #testing }
+PSQLASTIgnoredLocalVariableNullObject >> isColumnReference [
+	^ false
+]
+
 { #category : #'null pattern' }
 PSQLASTIgnoredLocalVariableNullObject >> mooseModel: aMooseModel [ 
 ]
