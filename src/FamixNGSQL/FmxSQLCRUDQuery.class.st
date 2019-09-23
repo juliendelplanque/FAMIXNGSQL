@@ -137,12 +137,12 @@ FmxSQLCRUDQuery >> derivedTableDefiningGroup [
 FmxSQLCRUDQuery >> isAnyBelongerSourced [
 	^ ({ FmxSQLView . FmxSQLStoredProcedure } anySatisfy: [ :any | self container isKindOf: any ])
 			or: [ (self derivedTableDefining ifNotNil: #isAnyBelongerSourced ifNil: [ false ])
-				or: [ self container class = FmxSQLCursor and: [ { FmxSQLView . FmxSQLStoredProcedure } anySatisfy: [ :any | self container parentBehaviouralEntity isKindOf: any ] ] ] ]
+				or: [ self container isCursor and: [ { FmxSQLView . FmxSQLStoredProcedure } anySatisfy: [ :any | self container parentBehaviouralEntity isKindOf: any ] ] ] ]
 ]
 
 { #category : #accessing }
 FmxSQLCRUDQuery >> sourcedBelonger [
-	self container class = FmxSQLCursor
+	self container isCursor
 		ifTrue: [ ^ self container parentBehaviouralEntity ].
 	^ self container ifNil: [ self derivedTableDefining sourcedBelonger ]
 ]
