@@ -72,7 +72,6 @@ FmxSQLSymbolResolutionVisitor >> createFmxSQLAliasNamed: anAlias [
 	^ (self createEntity: FmxSQLColumnAlias)
 		parentBehaviouralEntity: self currentEntity;
 		name: anAlias;
-		mooseModel: model;
 		yourself.
 ]
 
@@ -82,7 +81,6 @@ FmxSQLSymbolResolutionVisitor >> createFmxSQLAliasNamed: aString forCurrentEntit
 	alias := (self createEntity: aFmxSQLEntity aliasClass)
 		parentBehaviouralEntity: self currentEntity;
 		name: aString;
-		mooseModel: model;
 		yourself.
 	self
 		useCurrentEntity: alias
@@ -96,7 +94,6 @@ FmxSQLSymbolResolutionVisitor >> createFmxSQLColumnAliasNamed: aString forDerive
 	alias := (self createEntity: FmxSQLColumnAlias)
 		parentBehaviouralEntity: self currentEntity;
 		name: aString;
-		mooseModel: model;
 		yourself.
 	self
 		useCurrentEntity: alias
