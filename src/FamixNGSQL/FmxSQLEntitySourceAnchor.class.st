@@ -56,6 +56,11 @@ FmxSQLEntitySourceAnchor >> entity: anObject [
 ]
 
 { #category : #accessing }
+FmxSQLEntitySourceAnchor >> extractString [
+	^ self entity source copyFrom: self start to: self end
+]
+
+{ #category : #accessing }
 FmxSQLEntitySourceAnchor >> interval [
 	^ self start to: self end
 ]
