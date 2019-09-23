@@ -45,6 +45,13 @@ FmxSQLCursor >> belongsTo: anObject [
 
 ]
 
+{ #category : #testing }
+FmxSQLCursor >> isCursor [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxSQLCursor >> parentBehaviouralEntity [
 	"Relation named: #parentBehaviouralEntity type: #FmxSQLTWithCursor opposite: #cursors"

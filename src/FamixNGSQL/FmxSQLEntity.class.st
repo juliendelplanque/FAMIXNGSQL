@@ -82,6 +82,13 @@ FmxSQLEntity >> isConstraint [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isCursor [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isEntitySourceAnchor [
 
 	<generated>

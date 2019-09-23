@@ -186,6 +186,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralEntities [
 		newClassNamed: #OldLocalVariable
 		comment: self oldLocalVariableComment.
 	cursor := builder newClassNamed: #Cursor comment: self cursorComment.
+	cursor withTesting.
 	cursorParameter := builder
 		newClassNamed: #CursorParameter
 		comment: 'I am a cursor parameter'.
