@@ -17,3 +17,10 @@ FmxSQLIntersectClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLIntersectClause >> isIntersectClause [
+
+	<generated>
+	^ true
+]

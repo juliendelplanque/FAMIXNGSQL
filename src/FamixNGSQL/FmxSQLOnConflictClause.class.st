@@ -15,3 +15,10 @@ FmxSQLOnConflictClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLOnConflictClause >> isOnConflictClause [
+
+	<generated>
+	^ true
+]

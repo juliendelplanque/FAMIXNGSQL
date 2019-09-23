@@ -22,3 +22,10 @@ FmxSQLGroupByClause class >> annotation [
 FmxSQLGroupByClause >> isClauseAbleToReferenceColumn [
 	^ true
 ]
+
+{ #category : #testing }
+FmxSQLGroupByClause >> isGroupByClause [
+
+	<generated>
+	^ true
+]

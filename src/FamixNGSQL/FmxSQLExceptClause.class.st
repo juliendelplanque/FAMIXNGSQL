@@ -17,3 +17,10 @@ FmxSQLExceptClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLExceptClause >> isExceptClause [
+
+	<generated>
+	^ true
+]

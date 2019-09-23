@@ -15,3 +15,10 @@ FmxSQLLimitClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLLimitClause >> isLimitClause [
+
+	<generated>
+	^ true
+]

@@ -17,3 +17,10 @@ FmxSQLUnionClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLUnionClause >> isUnionClause [
+
+	<generated>
+	^ true
+]

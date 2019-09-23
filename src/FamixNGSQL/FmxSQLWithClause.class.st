@@ -15,3 +15,10 @@ FmxSQLWithClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLWithClause >> isWithClause [
+
+	<generated>
+	^ true
+]

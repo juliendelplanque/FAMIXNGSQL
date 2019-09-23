@@ -17,3 +17,10 @@ FmxSQLUsingClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLUsingClause >> isUsingClause [
+
+	<generated>
+	^ true
+]

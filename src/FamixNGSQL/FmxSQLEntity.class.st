@@ -89,6 +89,13 @@ FmxSQLEntity >> isEntitySourceAnchor [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isExceptClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isForeignKey [
 	self deprecated: 'Use #isForeignKeyConstraint instead.' transformWith: '`@receiver isForeignKey' -> '`@receiver isForeignKeyConstraint'.
 	^ self isForeignKeyConstraint
@@ -96,6 +103,34 @@ FmxSQLEntity >> isForeignKey [
 
 { #category : #testing }
 FmxSQLEntity >> isForeignKeyConstraint [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isFromClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isGroupByClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isHavingClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isIntersectClause [
 
 	<generated>
 	^ false
@@ -110,6 +145,13 @@ FmxSQLEntity >> isInvocation [
 
 { #category : #testing }
 FmxSQLEntity >> isJoinClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isLimitClause [
 
 	<generated>
 	^ false
@@ -131,6 +173,20 @@ FmxSQLEntity >> isNamespace [
 
 { #category : #testing }
 FmxSQLEntity >> isNotNullConstraint [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isOnConflictClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isOrderByClause [
 
 	<generated>
 	^ false
@@ -164,7 +220,21 @@ FmxSQLEntity >> isQueryContainer [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isReturningClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isSelectClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isSetClause [
 
 	<generated>
 	^ false
@@ -199,7 +269,28 @@ FmxSQLEntity >> isTriggerStoredProcedure [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isUnionClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isUniqueConstraint [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isUsingClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isValuesClause [
 
 	<generated>
 	^ false
@@ -214,6 +305,13 @@ FmxSQLEntity >> isView [
 
 { #category : #testing }
 FmxSQLEntity >> isWhereClause [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
+FmxSQLEntity >> isWithClause [
 
 	<generated>
 	^ false

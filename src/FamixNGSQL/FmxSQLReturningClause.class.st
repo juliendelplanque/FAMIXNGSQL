@@ -22,3 +22,10 @@ FmxSQLReturningClause class >> annotation [
 FmxSQLReturningClause >> isClauseAbleToReferenceColumn [
 	^ true
 ]
+
+{ #category : #testing }
+FmxSQLReturningClause >> isReturningClause [
+
+	<generated>
+	^ true
+]

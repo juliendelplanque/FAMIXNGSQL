@@ -17,3 +17,10 @@ FmxSQLFromClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLFromClause >> isFromClause [
+
+	<generated>
+	^ true
+]

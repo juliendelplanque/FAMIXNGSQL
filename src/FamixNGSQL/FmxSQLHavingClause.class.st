@@ -17,3 +17,10 @@ FmxSQLHavingClause class >> annotation [
 	<generated>
 	^self
 ]
+
+{ #category : #testing }
+FmxSQLHavingClause >> isHavingClause [
+
+	<generated>
+	^ true
+]

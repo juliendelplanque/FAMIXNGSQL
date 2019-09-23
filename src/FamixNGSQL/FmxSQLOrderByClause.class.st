@@ -22,3 +22,10 @@ FmxSQLOrderByClause class >> annotation [
 FmxSQLOrderByClause >> isClauseAbleToReferenceColumn [
 	^ true
 ]
+
+{ #category : #testing }
+FmxSQLOrderByClause >> isOrderByClause [
+
+	<generated>
+	^ true
+]

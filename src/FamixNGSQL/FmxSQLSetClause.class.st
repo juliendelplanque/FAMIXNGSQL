@@ -22,3 +22,10 @@ FmxSQLSetClause class >> annotation [
 FmxSQLSetClause >> isClauseAbleToReferenceColumn [
 	^ true
 ]
+
+{ #category : #testing }
+FmxSQLSetClause >> isSetClause [
+
+	<generated>
+	^ true
+]

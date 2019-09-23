@@ -539,6 +539,7 @@ FmxSQLMetamodelGenerator >> defineClausesEntities [
 	withClause := builder
 		newClassNamed: #WithClause
 		comment: self withClauseComment.
+	withClause withTesting.
 	whereClause := builder
 		newClassNamed: #WhereClause
 		comment: self whereClauseComment.
@@ -546,15 +547,19 @@ FmxSQLMetamodelGenerator >> defineClausesEntities [
 	returningClause := builder
 		newClassNamed: #ReturningClause
 		comment: self returningClauseComment.
+	returningClause withTesting.
 	onConflictClause := builder
 		newClassNamed: #OnConflictClause
 		comment: self conflictClauseComment.
+	onConflictClause withTesting.
 	setClause := builder
 		newClassNamed: #SetClause
 		comment: self setClauseComment.
+	setClause withTesting.
 	fromClause := builder
 		newClassNamed: #FromClause
 		comment: self fromClauseComment.
+	fromClause withTesting.
 	selectClause := builder
 		newClassNamed: #SelectClause
 		comment: self selectClauseComment.
@@ -562,12 +567,15 @@ FmxSQLMetamodelGenerator >> defineClausesEntities [
 	groupByClause := builder
 		newClassNamed: #GroupByClause
 		comment: self groupByClauseComment.
+	groupByClause withTesting.
 	havingClause := builder
 		newClassNamed: #HavingClause
 		comment: self havingClauseComment.
+	havingClause withTesting.
 	orderByClause := builder
 		newClassNamed: #OrderByClause
 		comment: self orderByClauseComment.
+	orderByClause withTesting.
 	joinClause := builder
 		newClassNamed: #JoinClause
 		comment: self joinClauseComment.
@@ -575,24 +583,30 @@ FmxSQLMetamodelGenerator >> defineClausesEntities [
 	unionClause := builder
 		newClassNamed: #UnionClause
 		comment: self unionClauseComment.
+	unionClause withTesting.
 	intersectClause := builder
 		newClassNamed: #IntersectClause
 		comment: self intersectClauseComment.
+	intersectClause withTesting.
 	exceptClause := builder
 		newClassNamed: #ExceptClause
 		comment: self exceptClauseComment.
+	exceptClause withTesting.
 	valuesClause := builder
 		newClassNamed: #ValuesClause
 		comment: self valuesClauseComment.
+	valuesClause withTesting.
 	usingClause := builder
 		newClassNamed: #UsingClause
 		comment: self usingClauseComment.
+	usingClause withTesting.
 	intoClause := builder
 		newClassNamed: #IntoClause
 		comment: self intoClauseComment.
 	limitClause := builder
 		newClassNamed: #LimitClause
-		comment: self limitClauseComment
+		comment: self limitClauseComment.
+	limitClause withTesting.
 ]
 
 { #category : #'definition - behavioural' }
