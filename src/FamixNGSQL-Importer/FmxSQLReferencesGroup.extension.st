@@ -13,3 +13,8 @@ FmxSQLReferencesGroup >> createReferenceEntityFrom: aFmxSQLEntity [
 		mooseModel: aFmxSQLEntity mooseModel;
 		yourself.
 ]
+
+{ #category : #'*FamixNGSQL-Importer' }
+FmxSQLReferencesGroup >> reachableEntities [
+	^ self references collect: #to
+]

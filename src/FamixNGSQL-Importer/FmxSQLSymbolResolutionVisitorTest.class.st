@@ -206,6 +206,31 @@ END;'.
 ]
 
 { #category : #parsing }
+FmxSQLSymbolResolutionVisitorTest >> testColumnAliased [
+	| table alias referencesGroup |
+	table := self createTable: #t withColumns: #(c1 c2).
+	
+	self parseAndVisitView: 'SELECT t.c1 AS a
+FROM t'.
+
+	self assert: table references size equals: 2.
+	self assert: (table references count: [ :ref | ref source isSelectClause ]) equals: 1.
+	self assert: (table references count: [ :ref | ref source isFromClause ]) equals: 1.
+	
+	self assert: (table columnNamed: #c1) references size equals: 1.
+	self assert: (table columnNamed: #c2) references size equals: 0.
+	
+	self assert: (table references select: [ :ref | ref source isSelectClause ] thenCollect: [ :ref | ref source ]) asSet size equals: 1.
+	self assert: (table references select: [ :ref | ref source isSelectClause ] thenCollect: [ :ref | ref belongsToGroup ]) asSet size equals: 1.
+	
+	self assert: (model allWithType: FmxSQLColumnAlias) size equals: 1.
+	alias := (model allWithType: FmxSQLColumnAlias) first.
+	self assert: alias outgoingReferencesGroupReferences size equals: 1.
+	referencesGroup := alias outgoingReferencesGroupReferences first to.
+	self assertCollection: referencesGroup references hasSameElements: (table references select: [ :ref | ref source isSelectClause ]) , (table columnNamed: #c1) references
+]
+
+{ #category : #parsing }
 FmxSQLSymbolResolutionVisitorTest >> testCopyTypeDeclaration [
 	| table columnType column |
 	table := FmxSQLTable new

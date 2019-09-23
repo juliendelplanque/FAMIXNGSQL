@@ -373,9 +373,9 @@ FmxSQLSymbolResolutionVisitor >> visitPSQLASTAggregateFunctionCall: aPSQLASTAggr
 FmxSQLSymbolResolutionVisitor >> visitPSQLASTAliasDefinition: aPSQLASTAliasDefinition [
 	|references referencesDiff visitResult referencesGroup alias|
 	references := OrderedCollection new.
-	self currentEntity class = FmxSQLSelectClause
+	self currentEntity isSelectClause
 		ifTrue: [ references := (model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ] ].
-	visitResult := (self visit: aPSQLASTAliasDefinition definition).
+	visitResult := self visit: aPSQLASTAliasDefinition definition.
 	alias := self visit: aPSQLASTAliasDefinition alias.
 	
 	visitResult "The definition is just a constant..."
@@ -389,10 +389,6 @@ FmxSQLSymbolResolutionVisitor >> visitPSQLASTAliasDefinition: aPSQLASTAliasDefin
 									parentQuery: (self solver peekScopeAtIndex: 3) entity;
 									yourself.
 			^ PSQLDerivedTableToBeAliasedByColumn alias: alias entity: derivedTable astNode: aPSQLASTAliasDefinition definition ].
-		
-	visitResult = self
-		ifFalse: [
-			^ PSQLEntityToBeAliased alias: alias entity: visitResult astNode: aPSQLASTAliasDefinition definition ].
 	
 	referencesDiff := ((model allWithSubTypesOf: FmxSQLReference) select: [ :r | r from = self currentEntity ]) \ references.
 	referencesGroup := (self createEntity: FmxSQLReferencesGroup)
