@@ -142,7 +142,7 @@ FmxSQLCRUDQuery >> isAnyBelongerSourced [
 
 { #category : #accessing }
 FmxSQLCRUDQuery >> sourcedBelonger [
-	self container isCursor
+	(self container isNotNil and: [ self container isCursor ])
 		ifTrue: [ ^ self container parentBehaviouralEntity ].
 	^ self container ifNil: [ self derivedTableDefining sourcedBelonger ]
 ]
