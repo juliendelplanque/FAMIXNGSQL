@@ -70,9 +70,7 @@ MooseAbstractGroup >> gtEntitiesIn: composite [
 		title: 'Entities (no stub)';
 		display: [ self entities reject: #isStub ];
 		beMultiple;
-		enableElementIndex;
 		wantsAutomaticRefresh: true;
-		column: 'Index' evaluated: [ :value :ibdex | ibdex asString ] width: 50;
 		column: 'Entity' evaluated: [ :value | GTObjectPrinter asTruncatedTextFrom: value ];
 		column: 'Composition parents' evaluated: [ :value | 
 			(value parents collect: [ :parent | GTObjectPrinter asTruncatedTextFrom: parent ]) asOrderedCollection joinUsing: ', ' ];
