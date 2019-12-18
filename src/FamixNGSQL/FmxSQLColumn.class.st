@@ -46,10 +46,25 @@ FmxSQLColumn >> belongsTo: anObject [
 ]
 
 { #category : #testing }
+FmxSQLColumn >> hasPrimaryKey [
+	"Returns true if a Primary Key constraint is applied on the column.
+	 Note that the column might not be the only one concerned by the the PK.
+	"
+	^ (self queryIncoming: FmxSQLColumnReference) anySatisfy: [ :ref | ref from class = FmxSQLPrimaryKeyConstraint ]
+]
+
+{ #category : #testing }
 FmxSQLColumn >> isColumn [
 
 	<generated>
 	^ true
+]
+
+{ #category : #accessing }
+FmxSQLColumn >> primaryKey [
+	^ (self queryIncoming: FmxSQLColumnReference)
+		detect: [ :ref | ref from class = FmxSQLPrimaryKeyConstraint ]
+		ifNone: [ self error: 'No primary key applied on this column.' ]
 ]
 
 { #category : #accessing }
