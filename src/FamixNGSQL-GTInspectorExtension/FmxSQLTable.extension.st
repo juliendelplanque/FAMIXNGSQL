@@ -8,8 +8,8 @@ FmxSQLTable >> gtColumnsIn: composite [
 		display: [ (self columns reject: [ :c | c name = 'tableoid' ]) asArray ];
 		beMultiple;
 		wantsAutomaticRefresh: true;
-		column: 'Column name' evaluated: [ :column | column "ifNotNil: #"name ];
-		column: 'Type' evaluated: [ :column | column type "ifNotNil: #"name ];
+		column: 'Column name' evaluated: [ :column | column name ];
+		column: 'Type' evaluated: [ :column | column type name ];
 		column: 'Has PK?' evaluated: [ :column | column hasPrimaryKey ];
 		send: [ :result |
 			result isNil
