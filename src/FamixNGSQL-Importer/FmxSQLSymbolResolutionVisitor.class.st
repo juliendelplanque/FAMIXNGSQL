@@ -279,7 +279,7 @@ FmxSQLSymbolResolutionVisitor >> model: anObject [
 	model := anObject.
 	self initialiseSolver.
 	self
-		pushEntitiesAsScope: (model allWithType: FmxSQLTable) , (model allWithType: FmxSQLView)
+		pushEntitiesAsScope: (model allWithType: FmxSQLNamespace) , (model allWithType: FmxSQLTable) , (model allWithType: FmxSQLView)
 ]
 
 { #category : #resolution }

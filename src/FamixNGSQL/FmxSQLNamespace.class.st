@@ -6,7 +6,10 @@ Class {
 	#superclass : #FmxSQLStructuralEntity,
 	#traits : 'FamixTNamespace',
 	#classTraits : 'FamixTNamespace classTrait',
-	#category : 'FamixNGSQL-Entities'
+	#instVars : [
+		'#references => FMMany type: #FmxSQLNamespaceReference opposite: #namespace'
+	],
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }
@@ -16,4 +19,20 @@ FmxSQLNamespace class >> annotation [
 	<package: #FamixNGSQL>
 	<generated>
 	^self
+]
+
+{ #category : #accessing }
+FmxSQLNamespace >> references [
+	"Relation named: #references type: #FmxSQLNamespaceReference opposite: #namespace"
+
+	<generated>
+	^ references
+]
+
+{ #category : #accessing }
+FmxSQLNamespace >> references: anObject [
+
+	<generated>
+	references value: anObject
+
 ]

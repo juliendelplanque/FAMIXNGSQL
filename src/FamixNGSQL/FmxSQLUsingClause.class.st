@@ -4,8 +4,8 @@ I am an using clause
 Class {
 	#name : #FmxSQLUsingClause,
 	#superclass : #FmxSQLClause,
-	#traits : 'FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference',
-	#classTraits : 'FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait',
+	#traits : 'FmxSQLTWithDerivedTableReference + FmxSQLTWithNamespaceReference + FmxSQLTWithTableReference',
+	#classTraits : 'FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithNamespaceReference classTrait + FmxSQLTWithTableReference classTrait',
 	#category : #'FamixNGSQL-Entities'
 }
 

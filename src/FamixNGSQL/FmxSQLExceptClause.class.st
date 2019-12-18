@@ -4,9 +4,9 @@ I am an except clause
 Class {
 	#name : #FmxSQLExceptClause,
 	#superclass : #FmxSQLClause,
-	#traits : 'FmxSQLTWithDerivedTableReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference',
-	#classTraits : 'FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait',
-	#category : 'FamixNGSQL-Entities'
+	#traits : 'FmxSQLTWithDerivedTableReference + FmxSQLTWithNamespaceReference + FmxSQLTWithTableReference + FmxSQLTWithViewReference',
+	#classTraits : 'FmxSQLTWithDerivedTableReference classTrait + FmxSQLTWithNamespaceReference classTrait + FmxSQLTWithTableReference classTrait + FmxSQLTWithViewReference classTrait',
+	#category : #'FamixNGSQL-Entities'
 }
 
 { #category : #meta }

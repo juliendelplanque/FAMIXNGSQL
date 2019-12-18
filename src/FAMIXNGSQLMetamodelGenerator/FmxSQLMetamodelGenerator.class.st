@@ -335,6 +335,7 @@ FmxSQLMetamodelGenerator >> defineBehaviouralHierarchy [
 	storedProcedure --|> tWithColumnReference. "For COPY TYPE feature of Postgres."
 	storedProcedure --|> tWithViewReference.
 	storedProcedure --|> #TWithImmediateSource.
+	storedProcedure --|> tWithNamespaceReference.
 	
 	triggerStoredProcedure --|> storedProcedure.
 	
@@ -474,7 +475,8 @@ FmxSQLMetamodelGenerator >> defineBehaviouralReferencesHierarchy [
 	referencesGroupReference  --|> #TEntityMetaLevelDependency.
 	referencesGroupReference --|> #TDependencyQueries.
 	qualifiedReference --|> entity.
-	qualifiedReference --|> #TSourceEntity
+	qualifiedReference --|> #TSourceEntity.
+	namespaceReference --|> tWithQualifiedReference
 ]
 
 { #category : #'definition - behavioural' }
@@ -627,6 +629,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	fromClause --|> tWithReferencesGroupReference.
 	fromClause --|> #TWithAccesses. "Because of join clause"
 	fromClause --|> #TWithInvocations. "Because of join clause"
+	fromClause --|> tWithNamespaceReference.
 	
 	whereClause --|> clause.
 	whereClause --|> tWithColumnReference.
@@ -636,6 +639,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	whereClause --|> tWithViewReference. "For view.column ref."
 	whereClause --|> tWithDerivedTableReference.
 	whereClause --|> tWithReferencesGroupReference.
+	whereClause --|> tWithNamespaceReference.
 	
 	returningClause --|> clause.
 	returningClause --|> tWithColumnReference.
@@ -656,6 +660,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	selectClause --|> tWithTableReference. "Through table.column ref."
 	selectClause --|> tWithDerivedTableReference. "For aliased_derived_table.column ref."
 	selectClause --|> tWithViewReference. "For view.column ref."
+	selectClause --|> tWithNamespaceReference.
 	
 	groupByClause --|> clause.
 	groupByClause --|> tWithColumnReference.
@@ -664,6 +669,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	groupByClause --|> tWithReferencesGroupReference.
 	groupByClause --|> #TWithAccesses.
 	groupByClause --|> #TWithInvocations.
+	groupByClause --|> tWithNamespaceReference.
 	
 	havingClause --|> clause.
 	havingClause --|> tWithColumnReference.
@@ -672,6 +678,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	havingClause --|> tWithReferencesGroupReference.
 	havingClause --|> #TWithAccesses.
 	havingClause --|> #TWithInvocations.
+	havingClause --|> tWithNamespaceReference.
 	
 	orderByClause --|> clause.
 	orderByClause --|> tWithColumnReference.
@@ -680,6 +687,7 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	orderByClause --|> tWithReferencesGroupReference.
 	orderByClause --|> #TWithAccesses.
 	orderByClause --|> #TWithInvocations.
+	orderByClause --|> tWithNamespaceReference.
 	
 	onConflictClause --|> clause.
 	
@@ -691,16 +699,19 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	unionClause --|> tWithDerivedTableReference.
 	unionClause --|> tWithTableReference.
 	unionClause --|> tWithViewReference.
+	unionClause --|> tWithNamespaceReference.
 	
 	intersectClause --|> clause.
 	intersectClause --|> tWithDerivedTableReference.
 	intersectClause --|> tWithTableReference.
 	intersectClause --|> tWithViewReference.
+	intersectClause --|> tWithNamespaceReference.
 	
 	exceptClause --|> clause.
 	exceptClause --|> tWithDerivedTableReference.
 	exceptClause --|> tWithTableReference.
 	exceptClause --|> tWithViewReference.
+	exceptClause --|> tWithNamespaceReference.
 	
 	valuesClause --|> clause.
 	valuesClause --|> tWithDerivedTableReference.
@@ -711,10 +722,12 @@ FmxSQLMetamodelGenerator >> defineClausesHierarchy [
 	usingClause --|> clause.
 	usingClause --|> tWithTableReference.
 	usingClause --|> tWithDerivedTableReference.
+	usingClause --|> tWithNamespaceReference.
 	
 	intoClause --|> clause.
 	intoClause --|> tWithTableReference.
 	intoClause --|> tWithColumnReference.
+	intoClause --|> tWithNamespaceReference.
 	
 	limitClause --|> clause
 ]

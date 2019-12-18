@@ -22,9 +22,11 @@ Class {
 		'tAbstractType',
 		'tColumn',
 		'tWithColumnReference',
-		'tWithTableReference'
+		'tWithTableReference',
+		'namespaceReference',
+		'tWithNamespaceReference'
 	],
-	#category : 'FAMIXNGSQLMetamodelGenerator'
+	#category : #FAMIXNGSQLMetamodelGenerator
 }
 
 { #category : #'comments - SQL' }
@@ -131,7 +133,10 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralEntities [
 	columnReference withTesting.
 	typeReference := builder
 		newClassNamed: #TypeReference
-		comment: self typeReferenceComment
+		comment: self typeReferenceComment.
+	namespaceReference := builder 
+		newClassNamed: #NamespaceReference
+		comment: self namespaceReferenceComment.
 ]
 
 { #category : #'definition - structural' }
@@ -195,6 +200,9 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralReferenceEntities [
 	"A column reference references a column."
 	(columnReference property: #column) target
 		*- (column property: #references).
+		
+	(namespaceReference property: #namespace) target
+		*- (namespace property: #references)
 ]
 
 { #category : #'definition - structural' }
@@ -209,7 +217,8 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralReferencesHierarchy [
 	reference --|> #TArgument.
 	tableReference --|> reference.
 	columnReference --|> reference.
-	typeReference --|> reference
+	typeReference --|> reference.
+	namespaceReference --|> reference
 ]
 
 { #category : #'definition - structural' }
@@ -225,6 +234,7 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralTraits [
 	tQueryContainer withTesting.
 	tWithColumnReference := builder newTraitNamed: #TWithColumnReference.
 	tWithTableReference := builder newTraitNamed: #TWithTableReference.
+	tWithNamespaceReference := builder newTraitNamed: #TWithNamespaceReference
 ]
 
 { #category : #'definition - structural' }
@@ -235,7 +245,9 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralTraitsRelations [
 	(tWithColumnReference property: #outgoingColumnReferences)
 		-* (columnReference property: #source) source.
 	(tWithTableReference property: #outgoingTableReferences)
-		-* (tableReference property: #source) source
+		-* (tableReference property: #source) source.
+	(tWithNamespaceReference property: #outgoingNamespaceReference)
+		-* (namespaceReference property: #source)
 ]
 
 { #category : #definition }
@@ -257,6 +269,11 @@ FmxSQLStructuralMetamodelGenerator >> foreignKeyConstraintComment [
 { #category : #'comments - SQL' }
 FmxSQLStructuralMetamodelGenerator >> namespaceComment [
 	^ 'I am a namespace. I hold entities to define a name scope where name duplicates are forbidden.'
+]
+
+{ #category : #'comments - SQL' }
+FmxSQLStructuralMetamodelGenerator >> namespaceReferenceComment [
+	^ 'I model a reference made to a namespace from source code.'
 ]
 
 { #category : #'comments - SQL' }
