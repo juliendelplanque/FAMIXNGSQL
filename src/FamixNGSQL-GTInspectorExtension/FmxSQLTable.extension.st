@@ -18,3 +18,22 @@ FmxSQLTable >> gtColumnsIn: composite [
 					ifTrue: [result anyOne ]  
 					ifFalse: [self species withAll: result]]]
 ]
+
+{ #category : #'*FamixNGSQL-GTInspectorExtension' }
+FmxSQLTable >> gtForeignKeysIn: composite [
+	<gtInspectorPresentationOrder: 1>
+	^ composite fastTable
+		title: 'Foreign keys';
+		display: [ self foreignKeyConstraints ];
+		beMultiple;
+		wantsAutomaticRefresh: true;
+		column: 'Foreign key columns' evaluated: [ :foreignKey | (foreignKey foreignKeyColumns collect: #name) joinUsing: ', '  ];
+		column: 'Referenced table' evaluated: [ :foreignKey | foreignKey referencedColumnsTable name ];
+		column: 'Referenced columns' evaluated: [ :foreignKey | (foreignKey referencedColumns collect: #name) joinUsing: ', ' ];
+		send: [ :result |
+			result isNil
+				ifTrue: [ nil ]
+				ifFalse: [ result size = 1 
+					ifTrue: [result anyOne ]  
+					ifFalse: [self species withAll: result]]]
+]
