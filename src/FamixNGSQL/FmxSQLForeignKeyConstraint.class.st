@@ -19,6 +19,11 @@ FmxSQLForeignKeyConstraint class >> annotation [
 	^self
 ]
 
+{ #category : #accessing }
+FmxSQLForeignKeyConstraint >> foreignKeyColumns [
+	^ self outgoingColumnReferences collect: #column
+]
+
 { #category : #testing }
 FmxSQLForeignKeyConstraint >> isForeignKeyConstraint [
 
@@ -32,13 +37,12 @@ FmxSQLForeignKeyConstraint >> mooseNameOn: aStream [
 		<< $".
 	super mooseNameOn: aStream.
 	aStream << '" FK ('.
-	(self outgoingColumnReferences collect: #column) do: [ :c |
-		aStream << c name ] separatedBy: [ aStream << ', ' ].
+	self foreignKeyColumns do: [ :c | aStream << c name ] separatedBy: [ aStream << ', ' ].
 	aStream
 		<< ') REFERENCES ';
-		<< self outgoingForeignKeyColumnReferences anyOne column columnsContainer name;
+		<< self referencedColumnsTable name;
 		<< $(.
-	(self outgoingForeignKeyColumnReferences collect: #column) do: [ :c |
+	self referencedColumns do: [ :c |
 		aStream << c name ] separatedBy: [ aStream << ', ' ].
 	aStream
 		<< ') #';
@@ -59,4 +63,14 @@ FmxSQLForeignKeyConstraint >> outgoingForeignKeyColumnReferences: anObject [
 	<generated>
 	outgoingForeignKeyColumnReferences value: anObject
 
+]
+
+{ #category : #accessing }
+FmxSQLForeignKeyConstraint >> referencedColumns [
+	^ self outgoingForeignKeyColumnReferences collect: #column
+]
+
+{ #category : #accessing }
+FmxSQLForeignKeyConstraint >> referencedColumnsTable [
+	^ self outgoingForeignKeyColumnReferences anyOne column columnsContainer
 ]
