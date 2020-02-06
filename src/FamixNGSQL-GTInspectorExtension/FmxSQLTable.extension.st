@@ -11,6 +11,7 @@ FmxSQLTable >> gtColumnsIn: composite [
 		column: 'Column name' evaluated: [ :column | column name ];
 		column: 'Type' evaluated: [ :column | column type name ];
 		column: 'Has PK?' evaluated: [ :column | column hasPrimaryKey ];
+		column: 'Has Unique?' evaluated: [ :column | column hasUniqueConstraint ];
 		send: [ :result |
 			result isNil
 				ifTrue: [ nil ]

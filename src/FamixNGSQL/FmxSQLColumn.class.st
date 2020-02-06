@@ -54,6 +54,14 @@ FmxSQLColumn >> hasPrimaryKey [
 ]
 
 { #category : #testing }
+FmxSQLColumn >> hasUniqueConstraint [
+	"Returns true if a Unique constraint is applied on the column.
+	 Note that the column might not be the only one concerned by the the PK.
+	"
+	^ (self queryIncoming: FmxSQLColumnReference) anySatisfy: [ :ref | ref from class = FmxSQLUniqueConstraint ]
+]
+
+{ #category : #testing }
 FmxSQLColumn >> isColumn [
 
 	<generated>

@@ -44,6 +44,12 @@ FmxSQLTable >> checkConstraints [
 ]
 
 { #category : #accessing }
+FmxSQLTable >> columnsWithUniqueConstraint [
+	^ ((self constraintsSatisfying: [ :c | c isUniqueConstraint ])
+			flatCollect: [ :c | (c queryOutgoing: FmxSQLColumnReference) collect: #column ]) asSet asArray
+]
+
+{ #category : #accessing }
 FmxSQLTable >> constraints [
 	"Relation named: #constraints type: #FmxSQLConstraint opposite: #table"
 
