@@ -34,7 +34,15 @@ FmxSQLConceptsIdentificationVisualisation >> buildLegend [
 	super buildLegend.
 	self legend
 		backgroundDescription: [ :entity | (entity conceptIdIfAbsent: [ 'No tag' ]) asString ]
-		forNodes: [ self tablesGroup allNodesRecursively ].
+			forNodes: [ self tablesGroup allNodesRecursively ];
+		nodeShapeDescription: [ :entity | entity class printString ]
+			forNodes: [ self allNodesRecursively ];
+		description: 'FK'
+			forConnectionStyle:
+			(TLStyleSheet new
+				color: MDLColor black;
+				fontSize: '2em')
+			icon: '→'.
 	self
 		addLegendEntryForOutgoingHighlight;
 		addLegendEntryForIncomingHighlight
@@ -42,15 +50,16 @@ FmxSQLConceptsIdentificationVisualisation >> buildLegend [
 
 { #category : #building }
 FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
-	| colors |
+	| colors tablesGroupedByConcept |
 	colors := Color wheel: 11.
 	super buildVisualization.
-	self tablesGroup
-		addNodesFromEntities: (self tables sorted: [ :e | e conceptIdIfAbsent: [ 10 ] ] ascending).
-	self tablesGroup
-		addInteraction:
-			(TLPopUpAction text: [ :table | table name ] position: TLPosition top)
-				onMouseOver.
+	tablesGroupedByConcept := self tables groupedBy: [ :t | t conceptIdIfAbsent: [ 10 ] ].
+	tablesGroupedByConcept keysAndValuesDo: [ :groupId :tablesWithSameConcept |
+		(self tablesGroup > groupId asString asSymbol)
+			addNodesFromEntities: tablesWithSameConcept;
+			layout: (TLLinearLayout gap: 25 ratio: 16/9) ].
+	"self tablesGroup
+		addNodesFromEntities: (self tables sorted: [ :e | e conceptIdIfAbsent: [ 10 ] ] ascending)."
 	self tablesGroup styleSheet
 		backgroundColor: [ :table | colors at: (table conceptIdIfAbsent: [ 10 ]) + 1 ].
 	self tablesGroup allNodes
@@ -60,7 +69,7 @@ FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
 					(self tablesGroup nodeForEntity: constraint referencingColumnsTable)
 						connectTo: tableNode ] ]. "connectIfNotTo: to avoid duplication"
 	self tablesGroup addInteractions: self defaultInteractionsList.
-	self tablesGroup layout: TLCircularLayout
+	self tablesGroup layout: (TLCircularLayout gap: 100)
 ]
 
 { #category : #adding }
@@ -88,7 +97,7 @@ FmxSQLConceptsIdentificationVisualisation >> setIncomingConnectionsHighlightStyl
 				labelSize: 20;
 				textColor: MDLColor orange ].
 	aDrawable isNode
-		ifTrue: [ aStylesheet nodeLabel: #name ]
+		ifTrue: [ aStylesheet nodeLabel: #name position: #top ]
 ]
 
 { #category : #adding }
@@ -106,7 +115,7 @@ FmxSQLConceptsIdentificationVisualisation >> setOutgoingConnectionsHighlightStyl
 				labelSize: 20;
 				textColor: MDLColor blue ].
 	aDrawable isNode
-		ifTrue: [ aStylesheet nodeLabel: #name ]
+		ifTrue: [ aStylesheet nodeLabel: #name position: #top ]
 ]
 
 { #category : #accessing }
