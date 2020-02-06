@@ -45,6 +45,11 @@ FmxSQLColumn >> belongsTo: anObject [
 
 ]
 
+{ #category : #accessing }
+FmxSQLColumn >> foreignKeyConstraintsReferencing [
+	^ (self queryIncoming: FmxSQLColumnReference) select: [ :ref | ref from class = FmxSQLForeignKeyConstraint ]
+]
+
 { #category : #testing }
 FmxSQLColumn >> hasPrimaryKey [
 	"Returns true if a Primary Key constraint is applied on the column.

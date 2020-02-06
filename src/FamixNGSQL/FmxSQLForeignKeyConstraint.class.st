@@ -74,3 +74,8 @@ FmxSQLForeignKeyConstraint >> referencedColumns [
 FmxSQLForeignKeyConstraint >> referencedColumnsTable [
 	^ self outgoingForeignKeyColumnReferences anyOne column columnsContainer
 ]
+
+{ #category : #accessing }
+FmxSQLForeignKeyConstraint >> referencingColumnsTable [
+	^ self foreignKeyColumns anyOne columnsContainer
+]

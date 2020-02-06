@@ -83,6 +83,13 @@ FmxSQLTable >> foreignKeyConstraints [
 ]
 
 { #category : #accessing }
+FmxSQLTable >> incomingForeignKeyConstraints [
+	^ ((self columns
+		select: [ :c | c hasUniqueConstraint or: [ c hasPrimaryKey ] ])
+		flatCollect: [ :c | c foreignKeyConstraintsReferencing collect: #from ]) asSet asArray
+]
+
+{ #category : #accessing }
 FmxSQLTable >> notNullConstraints [
 	^ self constraintsSatisfying: [ :c | c class = FmxSQLNotNullConstraint ]
 ]
