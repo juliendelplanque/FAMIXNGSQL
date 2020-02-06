@@ -47,7 +47,7 @@ FmxSQLColumn >> belongsTo: anObject [
 
 { #category : #accessing }
 FmxSQLColumn >> foreignKeyConstraintsReferencing [
-	^ (self queryIncoming: FmxSQLColumnReference) select: [ :ref | ref from class = FmxSQLForeignKeyConstraint ]
+	^ (self queryIncoming: FmxSQLColumnReference) select: [ :ref | ref from class = FmxSQLForeignKeyConstraint and: [ ref from referencedColumns includes: self ] ]
 ]
 
 { #category : #testing }
