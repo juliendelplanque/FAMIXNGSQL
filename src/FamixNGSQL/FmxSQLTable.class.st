@@ -50,6 +50,11 @@ FmxSQLTable >> columnsWithUniqueConstraint [
 ]
 
 { #category : #accessing }
+FmxSQLTable >> conceptIdIfAbsent: aBlock [
+	^ self privateState attributeAt: #concept ifAbsent: aBlock
+]
+
+{ #category : #accessing }
 FmxSQLTable >> constraints [
 	"Relation named: #constraints type: #FmxSQLConstraint opposite: #table"
 
