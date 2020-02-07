@@ -160,6 +160,12 @@ FmxSQLView >> storedProceduresDepending [
 ]
 
 { #category : #accessing }
+FmxSQLView >> tablesReferenced [
+	^ (self queryOutgoing: FmxSQLTableReference)
+			collect: #table
+]
+
+{ #category : #accessing }
 FmxSQLView >> viewsDependencies [
 	"Returns the views that I depend on directly (I reference them directly)."
 	^ ((self queryOutgoing: FmxSQLViewReference) collect: [ :ref | ref to ]) asSet
@@ -169,4 +175,10 @@ FmxSQLView >> viewsDependencies [
 FmxSQLView >> viewsDepending [
 	"Returns the views that depends on myself directly (reference myself directly)."
 	^ ((self queryLocalIncoming: FmxSQLViewReference) collect: [ :ref | ref source sourcedBelonger ] thenSelect: [ :sourcedBelonger | sourcedBelonger isNotNil and: [ sourcedBelonger isView ] ]) asSet
+]
+
+{ #category : #accessing }
+FmxSQLView >> viewsReferenced [
+	^ (self queryOutgoing: FmxSQLViewReference)
+			collect: #view
 ]
