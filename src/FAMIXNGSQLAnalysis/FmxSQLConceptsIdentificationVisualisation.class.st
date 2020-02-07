@@ -2,9 +2,10 @@ Class {
 	#name : #FmxSQLConceptsIdentificationVisualisation,
 	#superclass : #TLVisualization,
 	#instVars : [
-		'tables'
+		'tables',
+		'views'
 	],
-	#category : #FAMIXNGSQLAnalysis
+	#category : #'FAMIXNGSQLAnalysis-ConceptsIdentification'
 }
 
 { #category : #adding }
@@ -58,8 +59,6 @@ FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
 		(self tablesGroup > groupId asString asSymbol)
 			addNodesFromEntities: tablesWithSameConcept;
 			layout: (TLLinearLayout gap: 25 ratio: 16/9) ].
-	"self tablesGroup
-		addNodesFromEntities: (self tables sorted: [ :e | e conceptIdIfAbsent: [ 10 ] ] ascending)."
 	self tablesGroup styleSheet
 		backgroundColor: [ :table | colors at: (table conceptIdIfAbsent: [ 10 ]) + 1 ].
 	self tablesGroup allNodes
@@ -69,7 +68,18 @@ FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
 					(self tablesGroup nodeForEntity: constraint referencingColumnsTable)
 						connectTo: tableNode ] ]. "connectIfNotTo: to avoid duplication"
 	self tablesGroup addInteractions: self defaultInteractionsList.
-	self tablesGroup layout: (TLCircularLayout gap: 100)
+	self tablesGroup layout: (TLCircularLayout gap: 100).
+	
+	self viewsGroup
+		addNodesFromEntities: self views;
+		shape: TLHexagon.
+	
+	self viewsGroup allNodes
+		do: [ :viewNode |
+			(viewNode entity queryOutgoing: FmxSQLTableReference) reject: [ :tableRef | tableRef table name = 'pg_class' ] thenDo: [ :tableReference |
+				viewNode connectIfNotTo: (self tablesGroup nodeForEntity: tableReference table) ] ].
+		
+	self viewsGroup addInteractions: self defaultInteractionsList.
 ]
 
 { #category : #adding }
@@ -80,6 +90,13 @@ FmxSQLConceptsIdentificationVisualisation >> defaultInteractionsList [
     (TLStyleCustomizationAction
         custom: [ :style :drawable | self setIncomingConnectionsHighlightStyleTo: style for: drawable ]
         target: [ :aDrawable | aDrawable outgoingConnections flatCollectAsSet: #withConnectedNodes ]) onMouseOver}
+]
+
+{ #category : #initialization }
+FmxSQLConceptsIdentificationVisualisation >> initialize [
+	super initialize.
+	self tables: #().
+	self views: #()
 ]
 
 { #category : #adding }
@@ -131,4 +148,19 @@ FmxSQLConceptsIdentificationVisualisation >> tables: anObject [
 { #category : #building }
 FmxSQLConceptsIdentificationVisualisation >> tablesGroup [
 	^ self > #tables
+]
+
+{ #category : #accessing }
+FmxSQLConceptsIdentificationVisualisation >> views [
+	^ views
+]
+
+{ #category : #accessing }
+FmxSQLConceptsIdentificationVisualisation >> views: anObject [
+	views := anObject
+]
+
+{ #category : #building }
+FmxSQLConceptsIdentificationVisualisation >> viewsGroup [
+	^ self > #views
 ]
