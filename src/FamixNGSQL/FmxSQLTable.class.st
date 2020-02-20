@@ -50,6 +50,11 @@ FmxSQLTable >> columnsWithUniqueConstraint [
 ]
 
 { #category : #accessing }
+FmxSQLTable >> conceptId [
+	^ self conceptIdIfAbsent: [ self error: 'Table has no concept.' ]
+]
+
+{ #category : #accessing }
 FmxSQLTable >> conceptIdIfAbsent: aBlock [
 	^ self privateState attributeAt: #concept ifAbsent: aBlock
 ]

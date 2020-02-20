@@ -66,7 +66,14 @@ FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
 			tableNode entity incomingForeignKeyConstraints
 				do: [ :constraint | 
 					(self tablesGroup nodeForEntity: constraint referencingColumnsTable)
-						connectTo: tableNode ] ]. "connectIfNotTo: to avoid duplication"
+						connectTo: tableNode ].
+			tableNode entity hasSuperTable
+				ifTrue: [
+					|superTableConnection|
+					Transcript show: tableNode entity name; show: ' -|> '.
+					Transcript show: tableNode entity superTable name; cr.
+					superTableConnection := tableNode connectTo: (self tablesGroup nodeForEntity: tableNode entity superTable).
+					superTableConnection styleSheet color: Color red ] ].
 	self tablesGroup addInteractions: self defaultInteractionsList.
 	self tablesGroup layout: (TLCircularLayout gap: 100).
 	

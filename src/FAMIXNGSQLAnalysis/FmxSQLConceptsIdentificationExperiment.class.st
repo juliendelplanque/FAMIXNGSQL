@@ -31,6 +31,23 @@ FmxSQLConceptsIdentificationExperiment >> importConceptsFromCSVFile: aFileRefere
 ]
 
 { #category : #accessing }
+FmxSQLConceptsIdentificationExperiment >> kernelConceptId [
+	^ 0
+]
+
+{ #category : #accessing }
+FmxSQLConceptsIdentificationExperiment >> kernelTables [
+	^ self modelTables select: [ :t | t conceptId = self kernelConceptId ]
+]
+
+{ #category : #accessing }
+FmxSQLConceptsIdentificationExperiment >> kernelTablesDependingOnNonKernelTable [
+	^ self kernelTables
+		select: [ :kernelTable |
+			kernelTable foreignKeyConstraints anySatisfy: [ :any | any referencedColumnsTable conceptId ~= kernelTable conceptId ] ]
+]
+
+{ #category : #accessing }
 FmxSQLConceptsIdentificationExperiment >> model [
 	^ model
 ]
@@ -50,14 +67,14 @@ FmxSQLConceptsIdentificationExperiment >> modelViews [
 	^ self model allViews reject: #isStub
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visualizing }
 FmxSQLConceptsIdentificationExperiment >> visualizeTables [
 	FmxSQLConceptsIdentificationVisualisation new
 		tables: self modelTables;
 		open.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #visualizing }
 FmxSQLConceptsIdentificationExperiment >> visualizeTablesAndViews [
 	FmxSQLConceptsIdentificationVisualisation new
 		tables: self modelTables;
