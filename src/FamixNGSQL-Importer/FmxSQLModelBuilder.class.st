@@ -77,6 +77,7 @@ FmxSQLModelBuilder >> buildModel [
 		createTriggersIn: mooseModel.
 	"Need to do it in 2 steps because views can reference each others."
 	self
+		createTableInheritanceRelationsFor: mooseModel;
 		visitViewsDefinitionsFor: mooseModel;
 		visitStoredProceduresFor: mooseModel;
 		linkColumnReferencesToNewAndOldLocalVariableFor: mooseModel;
@@ -188,6 +189,18 @@ FmxSQLModelBuilder >> createStoredProceduresIn: aMooseModel [
 								parentBehaviouralEntity: function;
 								type: (visitor findTypeNamed: anArgument datatype name) ] ].
 			pgToFamixEntities at: pgFunction put: function ] displayingProgress: 'Creating stored procedures'
+]
+
+{ #category : #'model building - linking entities' }
+FmxSQLModelBuilder >> createTableInheritanceRelationsFor: mooseModel [
+	metadata getTables
+		select: [ :pgTable | pgTable parents isNotEmpty ]
+		thenDo: [ :pgTable |
+			|table parentTables|
+			table := pgToFamixEntities at: pgTable.
+			parentTables := pgTable parents collect: [ :pgParent | pgToFamixEntities at: pgParent ].
+			self assert: parentTables size = 1.
+			table superTable: parentTables first ]
 ]
 
 { #category : #'model building - entities' }

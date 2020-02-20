@@ -87,6 +87,11 @@ FmxSQLTable >> foreignKeyConstraints [
 	^ self constraintsSatisfying: [ :c | c class = FmxSQLForeignKeyConstraint ]
 ]
 
+{ #category : #testing }
+FmxSQLTable >> hasSuperTable [
+	^ self superTable isNotNil
+]
+
 { #category : #accessing }
 FmxSQLTable >> incomingForeignKeyConstraints [
 	^ ((self columns
