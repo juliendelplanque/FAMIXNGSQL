@@ -43,6 +43,12 @@ FmxSQLConceptsIdentificationVisualisation >> buildLegend [
 			(TLStyleSheet new
 				color: MDLColor black;
 				fontSize: '2em')
+			icon: '→';
+		description: 'Table inheritance'
+			forConnectionStyle:
+			(TLStyleSheet new
+				color: MDLColor red;
+				fontSize: '2em')
 			icon: '→'.
 	self
 		addLegendEntryForOutgoingHighlight;
@@ -70,8 +76,6 @@ FmxSQLConceptsIdentificationVisualisation >> buildVisualization [
 			tableNode entity hasSuperTable
 				ifTrue: [
 					|superTableConnection|
-					Transcript show: tableNode entity name; show: ' -|> '.
-					Transcript show: tableNode entity superTable name; cr.
 					superTableConnection := tableNode connectTo: (self tablesGroup nodeForEntity: tableNode entity superTable).
 					superTableConnection styleSheet color: Color red ] ].
 	self tablesGroup addInteractions: self defaultInteractionsList.
