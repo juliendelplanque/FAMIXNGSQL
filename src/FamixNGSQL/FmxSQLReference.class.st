@@ -94,6 +94,13 @@ FmxSQLReference >> sourceAnchor [
 ]
 
 { #category : #accessing }
+FmxSQLReference >> sourceAnchorIfNone: aBlock [
+	^ [ self sourceAnchor ]
+		on: FmxSQLNoSourceAnchor
+		do: [ aBlock value ]
+]
+
+{ #category : #accessing }
 FmxSQLReference >> sourceAnchorOrReferenceGroupSourceAnchor [
 	^ self sourceAnchor
 		ifNil: [ 

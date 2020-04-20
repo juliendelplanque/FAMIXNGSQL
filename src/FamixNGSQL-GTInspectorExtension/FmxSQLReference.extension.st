@@ -5,7 +5,7 @@ FmxSQLReference >> gtSourceCodeIn: composite [
 	<gtInspectorPresentationOrder: 0>
 	^ composite text
 		title: 'Source code';
-		display: [ self sourceAnchor ];
+		display: [ self sourceAnchorIfNone: [ nil ] ];
 		format: [ :t | 
 			[ self sourceAnchor entity sourceCodeAsText ] on: FmxSQLNoSourceAnchor do: [ 'No source anchor' asText ] ];
 		withLineNumbers: true;
