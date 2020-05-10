@@ -46,6 +46,12 @@ FmxSQLConceptsIdentifier >> classifyTriggers [
 ]
 
 { #category : #accessing }
+FmxSQLConceptsIdentifier >> entitiesToBeManuallyClassified [
+	^ self nonClassifiedEntities
+		reject: [ :e | { FmxSQLTrigger } includes: e class ]
+]
+
+{ #category : #accessing }
 FmxSQLConceptsIdentifier >> experiment [
 	^ experiment
 ]
@@ -53,6 +59,31 @@ FmxSQLConceptsIdentifier >> experiment [
 { #category : #accessing }
 FmxSQLConceptsIdentifier >> experiment: anObject [
 	experiment := anObject
+]
+
+{ #category : #'as yet unclassified' }
+FmxSQLConceptsIdentifier >> exportClassifiedEntitiesAsArray [
+	^ (self classifiedEntities collect: [ :e |
+		{
+			e className allButFirst: 'FmxSQL' size.
+			e name.
+			e concept
+		} ]) sorted: #first ascending, #second ascending.
+]
+
+{ #category : #accessing }
+FmxSQLConceptsIdentifier >> exportEntitiesToBeManuallyClassifiedAsArray [
+	^ self entitiesToBeManuallyClassified
+		collect: [ :e |
+			{
+				e className allButFirst: 'FmxSQL' size.
+				e name.
+				(e dependenciesForConcepts collect: #name as: Array) joinUsing: ', '.
+				(e dependenciesForConcepts collect: [ :d |
+					d hasConcept
+						ifTrue: [ d concept asString ]
+						ifFalse: [ '?' ] ]) asArray joinUsing: ', '
+			} ]
 ]
 
 { #category : #classify }
