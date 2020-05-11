@@ -61,7 +61,7 @@ FmxSQLConceptsIdentifier >> experiment: anObject [
 	experiment := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #export }
 FmxSQLConceptsIdentifier >> exportClassifiedEntitiesAsArray [
 	^ (self classifiedEntities collect: [ :e |
 		{
@@ -71,9 +71,17 @@ FmxSQLConceptsIdentifier >> exportClassifiedEntitiesAsArray [
 		} ]) sorted: #first ascending, #second ascending.
 ]
 
-{ #category : #accessing }
+{ #category : #csv }
+FmxSQLConceptsIdentifier >> exportClassifiedEntitiesAsCSVIn: fileReference [
+	^ fileReference writeStreamDo: [ :stream |
+		(NeoCSVWriter on: stream)
+			nextPut: #('Type' 'Name' 'Feature group');
+			nextPutAll: self exportClassifiedEntitiesAsArray ]
+]
+
+{ #category : #export }
 FmxSQLConceptsIdentifier >> exportEntitiesToBeManuallyClassifiedAsArray [
-	^ self entitiesToBeManuallyClassified
+	^ (self entitiesToBeManuallyClassified
 		collect: [ :e |
 			{
 				e className allButFirst: 'FmxSQL' size.
@@ -83,7 +91,15 @@ FmxSQLConceptsIdentifier >> exportEntitiesToBeManuallyClassifiedAsArray [
 					d hasConcept
 						ifTrue: [ d concept asString ]
 						ifFalse: [ '?' ] ]) asArray joinUsing: ', '
-			} ]
+			} ]) sorted: #first ascending, #second ascending.
+]
+
+{ #category : #csv }
+FmxSQLConceptsIdentifier >> exportEntitiesToBeManuallyClassifiedAsCSVIn: fileReference [
+	^ fileReference writeStreamDo: [ :stream |
+		(NeoCSVWriter on: stream)
+			nextPut: #('Type' 'Name' 'Entities it depends on' 'Feature groups of entitites it depends on');
+			nextPutAll: self exportEntitiesToBeManuallyClassifiedAsArray ]
 ]
 
 { #category : #classify }
