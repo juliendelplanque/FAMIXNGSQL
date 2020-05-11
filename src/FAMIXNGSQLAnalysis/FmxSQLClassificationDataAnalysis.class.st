@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #accessing }
+FmxSQLClassificationDataAnalysis >> allEntitiesToFeatureGroup [
+	^ (self classifiedEntitiesArray collect: [ :a | (a first: 2), {a last} ]) ,
+		(self evaluatedClassificationArray collect: [ :a | (a first: 2), {a last} ])
+]
+
+{ #category : #accessing }
 FmxSQLClassificationDataAnalysis >> classifiedEntitiesArray [
 	^ self classifiedEntitiesFile readStreamDo: [ :stream |
 		((NeoCSVReader on: stream)
@@ -28,8 +34,15 @@ FmxSQLClassificationDataAnalysis >> classifiedEntitiesFile [
 ]
 
 { #category : #statistics }
-FmxSQLClassificationDataAnalysis >> correctlyClassiedEntities [
-	self shouldBeImplemented
+FmxSQLClassificationDataAnalysis >> correctlyClassiedEntitiesExceptTables [
+	^ self evaluatedClassificationArray count: [ :a | a first ~= 'Table' and: [ a fourth ] ]
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> correctlyClassiedEntitiesPerType [
+	^ (self evaluatedClassificationArray groupedBy: #first)
+		collect: [ :arrays |
+			{ arrays count: [ :a | a fourth ] . arrays count: [ :a | a fourth not ] } ]
 ]
 
 { #category : #accessing }
@@ -76,4 +89,9 @@ FmxSQLClassificationDataAnalysis >> featureGroupsArray [
 { #category : #accessing }
 FmxSQLClassificationDataAnalysis >> featureGroupsFile [
 	^ self directory / 'feature_groups.csv'
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> incorrectlyClassiedEntitiesExceptTables [
+	^ self evaluatedClassificationArray count: [ :a | a first ~= 'Table' and: [ a fourth not ] ] 
 ]
