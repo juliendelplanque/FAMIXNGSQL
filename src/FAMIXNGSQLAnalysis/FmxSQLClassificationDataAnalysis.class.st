@@ -34,6 +34,30 @@ FmxSQLClassificationDataAnalysis >> classifiedEntitiesFile [
 ]
 
 { #category : #statistics }
+FmxSQLClassificationDataAnalysis >> correctlyAutomaticallyClassifiedStoredProceduresCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'StoredProcedure' and: [ array fourth ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> correctlyAutomaticallyClassifiedTriggerStoredProceduresCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'TriggerStoredProcedure' and: [ array fourth ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> correctlyAutomaticallyClassifiedTriggersCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'Trigger' and: [ array fourth ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> correctlyAutomaticallyClassifiedViewsCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'View' and: [ array fourth ] ]) size
+]
+
+{ #category : #statistics }
 FmxSQLClassificationDataAnalysis >> correctlyClassiedEntitiesExceptTables [
 	^ self evaluatedClassificationArray count: [ :a | a first ~= 'Table' and: [ a fourth ] ]
 ]
@@ -91,7 +115,98 @@ FmxSQLClassificationDataAnalysis >> featureGroupsFile [
 	^ self directory / 'feature_groups.csv'
 ]
 
+{ #category : #'as yet unclassified' }
+FmxSQLClassificationDataAnalysis >> importConceptsInModel: aModel [
+	self allEntitiesToFeatureGroup do: [ :array |
+		(aModel detect: [ :e |
+			(e className allButFirst: 'FmxSQL' size) = array first
+				and: [ e name = array second and: [ e hasConcept not ] ] ]) concept: array last ]
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> incorrectlyAutomaticallyClassifiedStoredProceduresCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'StoredProcedure' and: [ array fourth not ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> incorrectlyAutomaticallyClassifiedTriggerStoredProceduresCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'TriggerStoredProcedure' and: [ array fourth not ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> incorrectlyAutomaticallyClassifiedTriggersCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'Trigger' and: [ array fourth not ] ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> incorrectlyAutomaticallyClassifiedViewsCount [
+	^ (self evaluatedClassificationArray
+			select: [ :array | array first = 'View' and: [ array fourth not ] ]) size
+]
+
 { #category : #statistics }
 FmxSQLClassificationDataAnalysis >> incorrectlyClassiedEntitiesExceptTables [
 	^ self evaluatedClassificationArray count: [ :a | a first ~= 'Table' and: [ a fourth not ] ] 
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> manuallyClassifiedStoredProceduresCount [
+	^ (self classifiedEntitiesArray
+			select: [ :array | array first = 'StoredProcedure' ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> manuallyClassifiedTriggerStoredProceduresCount [
+	^ (self classifiedEntitiesArray
+			select: [ :array | array first = 'TriggerStoredProcedure' ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> manuallyClassifiedTriggersCount [
+	^ (self classifiedEntitiesArray
+			select: [ :array | array first = 'Trigger' ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> manuallyClassifiedViewsCount [
+	^ (self classifiedEntitiesArray
+			select: [ :array | array first = 'View' ]) size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> storedProceduresPerCategory [
+	^ ((self classifiedEntitiesArray , self evaluatedClassificationArray
+		select: [ :array | array first = 'StoredProcedure' ])
+		groupedBy: #last) collect: #size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> tablesPerCategory [
+	^ ((self evaluatedClassificationArray
+		select: [ :array | array first = 'Table' ])
+		groupedBy: #last) collect: #size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> triggerStoredProceduresPerCategory [
+	^ ((self classifiedEntitiesArray , self evaluatedClassificationArray
+		select: [ :array | array first = 'TriggerStoredProcedure' ])
+		groupedBy: #last) collect: #size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> triggersPerCategory [
+	^ ((self classifiedEntitiesArray , self evaluatedClassificationArray
+		select: [ :array | array first = 'Trigger' ])
+		groupedBy: #last) collect: #size
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> viewsPerCategory [
+	^ ((self classifiedEntitiesArray , self evaluatedClassificationArray
+		select: [ :array | array first = 'View' ])
+		groupedBy: #last) collect: #size
 ]
