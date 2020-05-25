@@ -102,6 +102,26 @@ FmxSQLConceptsIdentifier >> exportEntitiesToBeManuallyClassifiedAsCSVIn: fileRef
 			nextPutAll: self exportEntitiesToBeManuallyClassifiedAsArray ]
 ]
 
+{ #category : #export }
+FmxSQLConceptsIdentifier >> exportTriggerToBeClassifiedAfterAsArray [
+	^ (self nonClassifiedEntities
+		select: [ :e | { FmxSQLTrigger } includes: e class ]
+		thenCollect: [ :e |
+		{
+			e className allButFirst: 'FmxSQL' size.
+			e name.
+			e storedProcedure name
+		} ]) sorted: #first ascending, #second ascending.
+]
+
+{ #category : #csv }
+FmxSQLConceptsIdentifier >> exportTriggerToBeClassifiedAfterAsCSVIn: fileReference [
+	^ fileReference writeStreamDo: [ :stream |
+		(NeoCSVWriter on: stream)
+			nextPut: #('Type' 'Name' 'Stored Procedure called');
+			nextPutAll: self exportTriggerToBeClassifiedAfterAsArray ]
+]
+
 { #category : #classify }
 FmxSQLConceptsIdentifier >> floodClassify [
 	|previousSize|
