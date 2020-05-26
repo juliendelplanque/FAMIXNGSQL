@@ -1,5 +1,0 @@
-accessing
-view
-
-	<generated>
-	^ view

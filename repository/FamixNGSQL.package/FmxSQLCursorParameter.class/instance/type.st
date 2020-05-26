@@ -1,5 +1,0 @@
-accessing
-type
-
-	<generated>
-	^ type

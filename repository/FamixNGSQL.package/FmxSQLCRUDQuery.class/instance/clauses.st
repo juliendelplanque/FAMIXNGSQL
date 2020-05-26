@@ -1,5 +1,0 @@
-accessing
-clauses
-
-	<generated>
-	^ clauses

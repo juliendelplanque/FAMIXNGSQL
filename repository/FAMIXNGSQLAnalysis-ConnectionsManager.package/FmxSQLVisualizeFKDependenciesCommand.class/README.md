@@ -1,1 +1,0 @@
-Inspect the visualisation resulting from the connection's model provided to FmxSQLFKDependenciesVisualizer.

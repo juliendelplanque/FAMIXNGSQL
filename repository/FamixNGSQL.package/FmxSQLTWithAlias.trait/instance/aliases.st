@@ -1,5 +1,0 @@
-accessing
-aliases
-
-	<generated>
-	^ aliases

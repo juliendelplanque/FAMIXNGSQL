@@ -1,5 +1,0 @@
-accessing
-outgoingTableReferences
-
-	<generated>
-	^ outgoingTableReferences

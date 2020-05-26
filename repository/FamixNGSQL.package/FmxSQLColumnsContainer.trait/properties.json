@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "<historical>",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#columns => FMMany type: #FmxSQLColumn opposite: #columnsContainer"
-	],
-	"name" : "FmxSQLColumnsContainer"
-}

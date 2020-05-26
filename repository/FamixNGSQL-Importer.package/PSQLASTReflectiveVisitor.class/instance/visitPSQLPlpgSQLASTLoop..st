@@ -1,3 +1,0 @@
-visiting
-visitPSQLPlpgSQLASTLoop: aPSQLPlpgSQLASTLoop
-	self visitAll: aPSQLPlpgSQLASTLoop statements

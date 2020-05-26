@@ -1,5 +1,0 @@
-accessing
-outgoingColumnReferences
-
-	<generated>
-	^ outgoingColumnReferences

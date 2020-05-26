@@ -1,5 +1,0 @@
-accessing
-source
-
-	<generated>
-	^ source

@@ -1,5 +1,0 @@
-accessing
-returnType
-
-	<generated>
-	^ returnType

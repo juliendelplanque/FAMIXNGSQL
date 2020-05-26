@@ -1,5 +1,0 @@
-accessing
-outgoingCursorReferences
-
-	<generated>
-	^ outgoingCursorReferences

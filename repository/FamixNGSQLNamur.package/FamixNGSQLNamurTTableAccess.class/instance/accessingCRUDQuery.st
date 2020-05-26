@@ -1,6 +1,0 @@
-accessing
-accessingCRUDQuery
-
-	<container>
-
-	^ accessingCRUDQuery

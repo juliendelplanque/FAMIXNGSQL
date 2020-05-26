@@ -1,6 +1,0 @@
-accessing
-storedProcedure
-
-	<container>
-
-	^ storedProcedure

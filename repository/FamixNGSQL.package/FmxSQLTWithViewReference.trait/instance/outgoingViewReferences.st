@@ -1,5 +1,0 @@
-accessing
-outgoingViewReferences
-
-	<generated>
-	^ outgoingViewReferences

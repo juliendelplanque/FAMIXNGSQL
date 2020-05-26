@@ -1,6 +1,0 @@
-accessing
-viewDefined
-
-	<container>
-
-	^ viewDefined

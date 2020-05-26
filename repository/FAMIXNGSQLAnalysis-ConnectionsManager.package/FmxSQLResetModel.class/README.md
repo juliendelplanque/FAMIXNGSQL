@@ -1,1 +1,0 @@
-Reset the Famix model stored by the connection.

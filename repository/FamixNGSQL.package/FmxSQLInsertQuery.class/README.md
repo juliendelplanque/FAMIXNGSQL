@@ -1,1 +1,0 @@
-I am an INSERT query.

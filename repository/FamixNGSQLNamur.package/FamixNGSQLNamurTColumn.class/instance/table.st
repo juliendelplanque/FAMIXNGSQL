@@ -1,6 +1,0 @@
-accessing
-table
-
-	<container>
-
-	^ table

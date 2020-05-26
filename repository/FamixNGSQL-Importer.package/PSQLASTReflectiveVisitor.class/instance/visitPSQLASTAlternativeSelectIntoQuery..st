@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTAlternativeSelectIntoQuery: aPSQLASTAlternativeSelectIntoQuery
-	aPSQLASTAlternativeSelectIntoQuery childrenDo: [:aChild | aChild acceptVisitor: self]

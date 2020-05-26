@@ -1,5 +1,0 @@
-accessing
-derivedTablesDefined
-
-	<generated>
-	^ derivedTablesDefined

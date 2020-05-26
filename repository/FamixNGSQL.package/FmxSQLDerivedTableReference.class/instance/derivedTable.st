@@ -1,5 +1,0 @@
-accessing
-derivedTable
-
-	<generated>
-	^ derivedTable

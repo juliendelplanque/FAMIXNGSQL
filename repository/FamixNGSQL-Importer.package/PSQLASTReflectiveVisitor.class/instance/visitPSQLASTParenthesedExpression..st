@@ -1,3 +1,0 @@
-visiting
-visitPSQLASTParenthesedExpression: aPSQLASTParenthesedExpression
-	^ self visit: aPSQLASTParenthesedExpression expression

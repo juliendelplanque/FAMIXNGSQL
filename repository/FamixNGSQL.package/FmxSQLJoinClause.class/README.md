@@ -1,1 +1,0 @@
-I am a join clause

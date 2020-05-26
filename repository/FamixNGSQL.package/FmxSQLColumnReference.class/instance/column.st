@@ -1,5 +1,0 @@
-accessing
-column
-
-	<generated>
-	^ column

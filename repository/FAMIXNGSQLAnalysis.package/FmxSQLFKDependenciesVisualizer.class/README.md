@@ -1,1 +1,0 @@
-I allow to visualize FK dependencies using Mondrian and the sugiyama layout.

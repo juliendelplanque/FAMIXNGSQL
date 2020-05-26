@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "<historical>",
-	"classinstvars" : [ ],
-	"category" : "FamixNGSQL-Traits",
-	"instvars" : [
-		"#queries => FMMany type: #FmxSQLCRUDQuery opposite: #container"
-	],
-	"name" : "FmxSQLTQueryContainer"
-}

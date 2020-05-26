@@ -1,5 +1,0 @@
-accessing
-storedProceduresReturning
-
-	<generated>
-	^ storedProceduresReturning

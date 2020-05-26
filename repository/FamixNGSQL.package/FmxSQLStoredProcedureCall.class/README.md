@@ -1,1 +1,0 @@
-I am a call to a stored procedure of the model.

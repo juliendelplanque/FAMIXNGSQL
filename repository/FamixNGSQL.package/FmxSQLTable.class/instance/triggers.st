@@ -1,5 +1,0 @@
-accessing
-triggers
-
-	<generated>
-	^ triggers

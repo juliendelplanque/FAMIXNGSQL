@@ -1,3 +1,0 @@
-visiting
-visitPSQLPlpgSQLASTPositionalParameter: aPSQLPlpgSQLASTPositionalParameter
-	aPSQLPlpgSQLASTPositionalParameter childrenDo: [:aChild | aChild acceptVisitor: self]

@@ -1,5 +1,0 @@
-accessing
-arguments
-
-	<generated>
-	^ arguments
