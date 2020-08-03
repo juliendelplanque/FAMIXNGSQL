@@ -204,6 +204,31 @@ FmxSQLClassificationDataAnalysis >> triggersPerCategory [
 		groupedBy: #last) collect: #size
 ]
 
+{ #category : #accessing }
+FmxSQLClassificationDataAnalysis >> triggersToBeClassifiedAfterArray [
+	^ self triggersToBeClassifiedAfterFile readStreamDo: [ :stream |
+		((NeoCSVReader on: stream)
+			separator: $;;
+			skipHeader;
+			addField;
+			addField;
+			addField;
+			addIntegerField;
+			upToEnd) ]
+]
+
+{ #category : #accessing }
+FmxSQLClassificationDataAnalysis >> triggersToBeClassifiedAfterFile [
+	^ self directory / 'trigger-tobeclassified-after-filled.csv'
+]
+
+{ #category : #statistics }
+FmxSQLClassificationDataAnalysis >> triggersToBeClassifiedAfterPerCategory [
+	^ ((self triggersToBeClassifiedAfterArray
+		select: [ :array | array first = 'Trigger' ])
+		groupedBy: #last) collect: #size
+]
+
 { #category : #statistics }
 FmxSQLClassificationDataAnalysis >> viewsPerCategory [
 	^ ((self classifiedEntitiesArray , self evaluatedClassificationArray

@@ -11,9 +11,9 @@ Class {
 FmxSQLWebViewsVisualisation >> buildLegend [
 	super buildLegend.
 	self legend
-		description: 'Web views' forBorderShape: TLRectangle;
-		description: 'View' forColor: (self colorForEntityType at: FmxSQLView);
-		description: 'Table' forColor: (self colorForEntityType at: FmxSQLTable).
+		"description: 'Web views' forBorderShape: TLRectangle;"
+		description: 'View' forBorderShape: (self shapeForEntityType at: FmxSQLView);
+		description: 'Table' forBorderShape: (self shapeForEntityType at: FmxSQLTable).
 		"backgroundDescription: [ :entity | (entity conceptIdIfAbsent: [ 'No tag' ]) asString ]
 			forNodes: [ self viewsGroup allNodesRecursively ];"
 		"description: 'FK'
@@ -38,10 +38,11 @@ FmxSQLWebViewsVisualisation >> buildVisualization [
 	| colors otherEntities|
 	super buildVisualization.
 	colors := Color wheel: 11.
+	self shape: [ :e | (self shapeForEntityType at: e class) ].
+	
 	self webViewsGroup
 		addNodesFromEntities: self views;
-		layout: (TLLinearLayout gap: 20 perLine: 10);
-		shape: TLEllipse.
+		layout: (TLLinearLayout gap: 20 perLine: 10).
 	
 	"self webViewsGroup styleSheet
 		nodeLabel: #name position: #top."
@@ -54,7 +55,7 @@ FmxSQLWebViewsVisualisation >> buildVisualization [
 		addNodesFromEntities: otherEntities.
 		
 	self
-		backgroundColor: [ :e | self colorForEntityType at: e class ].
+		backgroundColor: [ :e | (self views includes: e) ifTrue:[ (Color r: 0.385 g: 0.7000000000000001 b: 0.07 alpha: 1.0) ] ifFalse: [ Color r: 0.7000000000000001 g: 0.07 b: 0.07 alpha: 1.0 ] ].
 	
 	"self otherEntitiesGroup styleSheet
 		nodeLabel: #name position: #top."
@@ -151,6 +152,13 @@ FmxSQLWebViewsVisualisation >> setOutgoingConnectionsHighlightStyleTo: aStyleshe
 				textColor: MDLColor blue ].
 	aDrawable isNode
 		ifTrue: [ aStylesheet nodeLabel: #name position: #top ]
+]
+
+{ #category : #accessing }
+FmxSQLWebViewsVisualisation >> shapeForEntityType [
+	^ { FmxSQLTable -> TLRectangle.
+		FmxSQLView -> TLEllipse
+	 } asDictionary
 ]
 
 { #category : #accessing }
