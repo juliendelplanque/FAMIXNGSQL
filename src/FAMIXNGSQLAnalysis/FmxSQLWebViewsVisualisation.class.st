@@ -38,11 +38,11 @@ FmxSQLWebViewsVisualisation >> buildVisualization [
 	| colors otherEntities|
 	super buildVisualization.
 	colors := Color wheel: 11.
-	self shape: [ :e | (self shapeForEntityType at: e class) ].
 	
 	self webViewsGroup
 		addNodesFromEntities: self views;
-		layout: (TLLinearLayout gap: 20 perLine: 10).
+		layout: (TLLinearLayout gap: 20 perLine: 10);
+		shape: [ :e | (self shapeForEntityType at: e class) ].
 	
 	"self webViewsGroup styleSheet
 		nodeLabel: #name position: #top."

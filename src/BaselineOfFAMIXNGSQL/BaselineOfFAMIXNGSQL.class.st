@@ -17,7 +17,8 @@ BaselineOfFAMIXNGSQL >> baseline: spec [
 						requires: #('PostgreSQLParser' 'PgMetadata' 'SymbolResolver' 'PetitParser') ];
 				package: #'FamixNGSQL-GTInspectorExtension'
 					with: [ spec requires: #('FamixNGSQL-Importer') ];
-				package: #FAMIXNGSQLAnalysis;
+				package: #FAMIXNGSQLAnalysis
+					with: [ spec requires: #('TelescopeCytoscape') ];
 				package: #FamixNGSQL with: [ spec requires: #('Famix') ];
 				package: #'FAMIXNGSQLAnalysis-ConnectionsManager'
 					with: [ spec requires: #('DBConnectionsManager') ].
@@ -46,5 +47,9 @@ BaselineOfFAMIXNGSQL >> baseline: spec [
 				baseline: 'DBConnectionsManager'
 				with: [ spec
 						repository: 'github://juliendelplanque/DBConnectionsManager/repository';
-						loads: 'pgmetadata' ] ]
+						loads: 'pgmetadata' ].
+			spec
+				baseline: 'TelescopeCytoscape'
+				with: [ spec
+						repository: 'github://TelescopeSt/TelescopeCytoscape:v2.x.x/src' ] ]
 ]
