@@ -88,6 +88,11 @@ FmxSQLTable >> constraintsSatisfying: aBlock [
 ]
 
 { #category : #accessing }
+FmxSQLTable >> exclusionConstraints [
+	^ self constraintsSatisfying: [ :c | c class = FmxSQLExclusionConstraint ]
+]
+
+{ #category : #accessing }
 FmxSQLTable >> foreignKeyConstraints [
 	^ self constraintsSatisfying: [ :c | c class = FmxSQLForeignKeyConstraint ]
 ]
