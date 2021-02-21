@@ -19,4 +19,4 @@ meta-model.
 If you modified the generator and want to re-generate the meta-model, you have
 to:
 1. Ensure that no more instances of the meta-model exist in the system.
-2. Run `FmxNewSQLMetamodelGenerator class>>#regenerateMetaModel`
+2. Run `FmxSQLMetamodelGenerator generate.`
