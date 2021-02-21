@@ -24,7 +24,8 @@ Class {
 		'tWithColumnReference',
 		'tWithTableReference',
 		'namespaceReference',
-		'tWithNamespaceReference'
+		'tWithNamespaceReference',
+		'exclusionConstraint'
 	],
 	#category : #FAMIXNGSQLMetamodelGenerator
 }
@@ -107,6 +108,11 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralEntities [
 		newClassNamed: #CheckConstraint
 		comment: self checkConstraintComment.
 	checkConstraint withTesting.
+	exclusionConstraint := builder
+		newClassNamed: #ExclusionConstraint
+		comment: self exclusionConstraintComment.
+	exclusionConstraint withTesting.
+	
 	primaryKeyConstraint := builder
 		newClassNamed: #PrimaryKeyConstraint
 		comment: self primaryKeyConstraintComment.
@@ -181,6 +187,8 @@ FmxSQLStructuralMetamodelGenerator >> defineStructuralHierarchy [
 	type --|> structuralEntity.
 	type --|> tAbstractType.
 	
+	checkConstraint --|> constraint.
+	exclusionConstraint --|> constraint.
 	primaryKeyConstraint --|> constraint.
 	foreignKeyConstraint --|> constraint.
 	notNullConstraint --|> constraint.
@@ -259,6 +267,11 @@ FmxSQLStructuralMetamodelGenerator >> defineTraits [
 { #category : #'comments - SQL' }
 FmxSQLStructuralMetamodelGenerator >> entityInNamespaceComment [
 	^ 'I am a trait that any entity which can be part of a namespace use.'
+]
+
+{ #category : #'comments - SQL' }
+FmxSQLStructuralMetamodelGenerator >> exclusionConstraintComment [
+	^ 'I represent an EXCLUSION constraint as defined in SQL standard.'
 ]
 
 { #category : #'comments - SQL' }

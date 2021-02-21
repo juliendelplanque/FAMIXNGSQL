@@ -103,6 +103,13 @@ FmxSQLEntity >> isExceptClause [
 ]
 
 { #category : #testing }
+FmxSQLEntity >> isExclusionConstraint [
+
+	<generated>
+	^ false
+]
+
+{ #category : #testing }
 FmxSQLEntity >> isForeignKey [
 	self deprecated: 'Use #isForeignKeyConstraint instead.' transformWith: '`@receiver isForeignKey' -> '`@receiver isForeignKeyConstraint'.
 	^ self isForeignKeyConstraint
